@@ -2,13 +2,21 @@
 About this Content
 ************************************************
 
-.. image:: images/uc2.gif
+About this document
+==================================
 
-This content is a crowd-sourced document. It currently in an experimental phase. Whether it lives, grows, and becomes a long term resource is up to the "crowd"!
+This content is: 
+
+* A crowd-sourced document. 
+* In an experimental phase.
+* Whether it evolves into a long term resource is up to the "crowd"!
+
+.. image:: images/uc2.gif
 
 What is an eHelp harness? 
 ===============================
 
+tbd
 
 Resources
 ==================
@@ -35,10 +43,8 @@ Contribute
 Contact
 =================
 
-Ideas, suggestion, complaint? Email ben (dot) rogers (at) gmail. 
+Ideas, suggestion, complaint? Email ben.rogers@gmail.com 
 
-Contents
-===============
 
 .. toctree:: 
    :maxdepth: 2
