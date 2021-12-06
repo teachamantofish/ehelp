@@ -7,16 +7,16 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Michigan Hanggliding and Paragliding'
-copyright = u'2020, Ben Rogers'
-
+project = u'Electric Hang Gliding Harnesses'
+copyright = u'2021, Ben Rogers'
+# 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
 
 # -- Options for HTML output ---------------------------------------------------
 
 
-html_theme = 'sphinx_rtd_theme'
+# html_theme = 'sphinx_rtd_theme'
 
 # override the default css
 html_context = {
@@ -50,11 +50,11 @@ html_theme_options = {
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = "Michigan Hanggliding and Paragliding"
+html_title = "Electric Hang Gliding Harnesses"
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 # maps to shorttitle|e
-html_short_title = "Michigan Hanggliding and Paragliding"
+html_short_title = "Electric Hang Gliding Harnesses"
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
