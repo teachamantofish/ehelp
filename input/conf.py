@@ -19,20 +19,20 @@ pygments_style = 'sphinx'
 # html_theme = 'sphinx_rtd_theme'
 
 # override the default css
-html_context = {
+# html_context = {
     'css_files': [
         '_static/css/theme_overrides.css',  
         ],
      }
 
 # Add relative template path.
-templates_path = ['../templates']
+# templates_path = ['../templates']
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the documentation.
 
 html_theme_options = {
-    'canonical_url': 'https://www.glidemichigan.com',
+    'canonical_url': 'https://ehelp.readthedocs.io/en/latest/',
     'logo_only': False,
     'display_version': True,
     'prev_next_buttons_location': 'top',
@@ -63,7 +63,7 @@ html_short_title = "Electric Hang Gliding Harnesses"
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
 # pixels large.
-html_favicon = 'images/logo64.ico'
+# html_favicon = 'images/logo64.ico'
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
