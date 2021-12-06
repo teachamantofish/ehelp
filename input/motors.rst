@@ -4,19 +4,20 @@ Motors
 
 .. image:: images/uc1.gif
 
-Notes
+TBD
 ==========================
 
 
 Manufacturers
 ================================
 
-Rotex: https://www.facebook.com/rotexelectric/
-Freerchobby: https://www.freerchobby.cc/
+todo: Replace this with a Google Sheets spreadsheet with links
+
+* Rotex: https://www.facebook.com/rotexelectric/
+* Freerchobby: https://www.freerchobby.cc/
 
 
-
-Future
+Future technology
 =================
 
 * Contra-rotating props: https://www.crflight.com/?utm_source=unmannedsystemstechnology.com&utm_medium=referral

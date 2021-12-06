@@ -4,6 +4,8 @@ Propellers
 
 .. image:: images/uc2.gif
 
+todo: Add a Google Sheet spreadsheet with links
+
 
 Choosing a propeller
 ==========================
@@ -14,6 +16,8 @@ Material
 Diameter
 -----------------
 
+Pitch
+------------------
 
 
 Propeller tutorial
