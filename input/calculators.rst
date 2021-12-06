@@ -2,18 +2,14 @@
 Calculators
 ************************************************
 
-.. image:: images/uc2.gif
-
 Required power
 ===================================
 
-Notes: 
+todo: convert to HG example
 
 To raise 400 kg takeoff weight to 1000', the energy needed is U(kWh) = 400*9.81*1000/(3.28 * 3600000) = 0.332 kWh. Assuming a glide ratio of 30 (will be less while the motor is out) and a prop efficiency of 70%, motor of 90%, inverter of 90%, battery of 95%, and everything else at 95%, you get energy needed:
 
 0.332 / ((1-1/30)*.7*.9*.9*.95*.95) = .332/.494 = 0.67 kWh. At the rate of 1000' per 6 mins, power required would be 6.7 kW.
-
-
 
 In a post above I calculated the power needed for 170 fpm climb. Let's say MTOW is 300 kg and 250 fpm is required.
 

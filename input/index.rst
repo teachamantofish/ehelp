@@ -28,11 +28,11 @@ Contents
 .. toctree:: 
    :maxdepth: 2
 
-   spec
    examples
+   spec
    motors
-   props
    batteries
+   props
    misc
    calculators
    glossary
