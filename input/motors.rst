@@ -8,9 +8,8 @@ Notes
 ==========================
 
 
-manufacturers: http://www.wind-drifter.com/manuf.php
 
-rotex: https://www.facebook.com/rotexelectric/
+
 
 
 
@@ -22,6 +21,13 @@ rotex: https://www.facebook.com/rotexelectric/
 
  folding prop and ultralight 12kw low rpm motors. 
 
+Manufacturers
+================================
+
+Rotex: https://www.facebook.com/rotexelectric/
+Freerchobby: https://www.freerchobby.cc/
+Freerchobby: 
+Freerchobby: 
 
 
 Future
