@@ -2,8 +2,15 @@
 Specing out a System (Sizing)
 ************************************************
 
-.. image:: images/uc2.gif
+.. image:: images/uc1.gif
 
-TBD
+
+
+Method 1: Copy others
 ==========================
+
+
+
+Method 2: Do the math
+============================== 
 
