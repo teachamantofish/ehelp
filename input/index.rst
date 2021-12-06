@@ -1,5 +1,5 @@
 ************************************************
-About this Content
+Electric Powered Hang Gliding Harnesses
 ************************************************
 
 About this document
