@@ -16,7 +16,6 @@ Electric Powered Hang Gliding Harnesses
    ideas
    glossary
 
-With 
 
 About this document
 ==================================
@@ -32,10 +31,9 @@ This content is:
 What is an eHelp harness? 
 ===============================
 
-tbd
+TBD
 
 * Simple, diy, 1500-3500 bucks, launch anywhere, climb and find a thermal or sustainer. 
-* Do not have to learn new launch techniques.
 * Investment quickly pays for itself since it reduces driving to launches, hang-waiting, tow costs, 
 
 Resources
