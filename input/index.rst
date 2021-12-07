@@ -2,6 +2,22 @@
 Electric Powered Hang Gliding Harnesses
 ************************************************
 
+.. toctree:: 
+   :maxdepth: 2
+   :hidden:
+
+   examples
+   spec
+   motors
+   batteries
+   props
+   parts
+   calculators
+   ideas
+   glossary
+
+
+
 About this document
 ==================================
 
@@ -18,14 +34,25 @@ What is an eHelp harness?
 
 tbd
 
+* Simple, diy, 1500-3500 bucks, launch anywhere, climb and find a thermal or sustainer. 
+* Do not have to learn new launch techniques.
+* Investment quickly pays for itself since it reduces driving to launches, hang-waiting, tow costs, 
+
 Resources
 ==================
 
-* Forum? 
-* Plans and open-sourced projectrs
-* FB page
-* Youtube
-* ?
+* This document includes: 
+
+    * `Editable spreadsheets for data and lists  <https://docs.google.com/spreadsheets/d/10IPnvWfLhx3g2CH97AFdCC4kw11yGukd6TUVxoGJ78g/edit#gid=0>`_
+    * `Editable content in github <https://github.com/teachamantofish/ehelp>`_
+
+* Forums: 
+   * `Charles Allen's ePowered Hang Gllider FB page <https://www.facebook.com/groups/904566026835865/posts/949203112372156/?comment_id=949389599020174&notif_id=1638830646052610&notif_t=group_comment&ref=notif>`_
+   * `OpenPPG: Same idea, great forum, lots of resources <https://openppg.com/?fbclid=IwAR04rX_1St1D1lqTpwBbaOdLskhpFOMahdXRiHXU1gmr4fSlUv0pwsC-RQg>`_
+
+
+* Plans and open-sourced projects
+
 
 Goals
 ==========================
@@ -46,16 +73,4 @@ Contact
 Ideas, suggestion, complaint? Email ben.rogers@gmail.com 
 
 
-.. toctree:: 
-   :maxdepth: 2
-   :hidden:
 
-   examples
-   spec
-   motors
-   batteries
-   props
-   misc
-   calculators
-   glossary
-   notes

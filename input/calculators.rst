@@ -58,4 +58,11 @@ Dynamic thrust
 Static thrust
 
 
+kv(v) = rpm 
+
+max kw - (.30) = max continuous power
+max power for batteries: (s rating)(voltage)(amps)
+
+
+
 `Aviation Converters and Calculators <http://www.csgnetwork.com/aviationconverters.html>`_ 

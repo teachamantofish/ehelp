@@ -23,6 +23,8 @@ Pitch
 Propeller tutorial
 ==========================
 
+tbd: https://ppg.e-props.fr/efficient_prop/#tit03
+
 https://aerotoolbox.com/thrust-cruise-speed/
 
 
@@ -35,6 +37,7 @@ Vendors
 ==================
 
 * Extensive line with 2-4 blades: https://ultraprops.com/
+* Extensive lin of PPG props with 2-6 blades: https://ppg.e-props.fr/index.php?cPath=1
 * Folding props: https://www.geigerengineering.de/en/avionics/products
 
 not vetted: 

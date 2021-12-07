@@ -11,7 +11,7 @@ I include here only videos with useful details.
 
 * Reidar's video w/ two ehelp tests: https://www.youtube.com/watch?v=aSM9u3zkhDI
 * E-Help Prep for flatland footstart flight: https://www.youtube.com/watch?v=mm0PRii-jXs>
-*  Flying tutorial: https://www.youtube.com/watch?v=hk-2uNuh5YU
+* Flying tutorial: https://www.youtube.com/watch?v=hk-2uNuh5YU
 
 Build videos
 ================================
@@ -31,7 +31,10 @@ Build videos
 
 .. image:: images/caehelpbuild.png
 
+Not a trike-not a harness
+=====================================
 
+* charles `Simple Russian design (seated but could be prone) <https://www.youtube.com/watch?v=KkwsizoLIQ8>`_
 
 
 
@@ -41,12 +44,4 @@ Commercial electric harness systems
 * https://toniroth.com/
 
 
-
-Related experiments and systems
-=====================================
-
-This document does not include trikes, ultralights, and paramotors. However, interesting rigs with unique or related ideas may appear here. 
-
-* Commercial seated trike-like setup: https://www.altigenerator.com/
-* Reidar's twin electric tractor (prone launch). 
-* Justin's paraglider Blimp drive. Interesting twin off-the-shelf parts setup. http://www.justine-haupt.com/blimpdrive/
+=
