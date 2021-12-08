@@ -8,6 +8,4 @@ Todo: fix width, add sorting.
 
 .. raw:: html
 
-  <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3EWgxOm1FVivVKzxjt5Js10Veu2BP6kLDEeKp3GV_AHPpyiO40gfmlKx7fDU8o6WWcErRfekOjOnu/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" ></iframe>
-
     <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTCOwbWEk6Bhpzv_mlxZXnjvh7HWVAHk9um_kBgtkFg21Or62Pwah23bdjnPxvpOrh8ur_NFDiaWJcN/pubhtml?widget=true&amp;headers=false" width="100%" height="1000px"></iframe>
