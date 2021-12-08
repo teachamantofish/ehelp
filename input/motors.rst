@@ -4,30 +4,26 @@ Motors
 
 .. image:: images/uc1.gif
 
-TBD
+Choosing a motor
 ==========================
 
 
 Manufacturers
 ================================
 
-todo: Replace this with a Google Sheets spreadsheet with links
+todo: fix width, add sort
 
-tbd: 
+.. raw:: html
 
-* Rotex: https://www.facebook.com/rotexelectric/
-* Freerchobby: https://www.freerchobby.cc/
+   <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3EWgxOm1FVivVKzxjt5Js10Veu2BP6kLDEeKp3GV_AHPpyiO40gfmlKx7fDU8o6WWcErRfekOjOnu/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" width="100%" height="1000px"></iframe>
 
 
-Plettenberg: spec table. May be too high RPM (7k) https://plettenberg-motoren.net/magic/show_image.php?id=337255&download=1
+Mating with a prop
+============================
 
-XOAR: https://shop.xoarintl.com/products: too small at 2.2kw
-
-E-Power Hobby – 120100 Outrunner brushless motor 80KV 25000W: https://epowerhobby.com/product/e-power-hobby-120100-sensored-outrunner-brushless-motor-80kv-25000w/
+The `e-props folks <https://ppg.e-props.fr/index.php?cPath=1>`_ match multiple props to each specific motor. It's worth checking out to get an idea of acceptbile combinations.
 
 
 tbd: 
 
-get a list of motors from https://ppg.e-props.fr/index.php?cPath=1. 
-
-tbd: INFO: https://forum.hanggliding.org/viewtopic.php?t=35303
+INFO: https://forum.hanggliding.org/viewtopic.php?t=35303

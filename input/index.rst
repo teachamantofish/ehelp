@@ -16,25 +16,18 @@ Electric Powered Hang Gliding Harnesses
    ideas
    glossary
 
+Why? Because for 1500-2500 bucks a DIYer can build a 20 pound eHelp harness and flatland foot launch from any location. No modified glider. No tow rig. Minimal learning curve.  The time and $$$ investment quickly pays for itself since it reduces driving to launches, hang-waiting, tow costs, alcoholic consumption while jonesing for some airtime.
+
+The systems are relatively simple, and energetic pioneers are paving the way with open source plans and Youtube videos. A multi-billion dollar drone industry (and others) are quickly driving the evolution of cheaper, lighter, and more powerful components.  
 
 About this document
 ==================================
 
 This content is: 
 
-* A crowd-sourced document. 
-* In an experimental phase.
+* A crowd-sourced document. You can ask to edit the source here: https://github.com/teacha.../ehelp/blob/main/input/index.rst
 * Whether it evolves into a long term resource is up to the "crowd"!
-
-.. image:: images/uc2.gif
-
-What is an eHelp harness? 
-===============================
-
-TBD
-
-* Simple, diy, 1500-3500 bucks, launch anywhere, climb and find a thermal or sustainer. 
-* Investment quickly pays for itself since it reduces driving to launches, hang-waiting, tow costs, 
+* Hopefully helpful, but always experimental. You assume responsibility for anything you do and should make your own educated decisions based on multiple sources.
 
 Resources
 ==================
@@ -45,11 +38,14 @@ Resources
     * `Editable content in github <https://github.com/teachamantofish/ehelp>`_
 
 * Forums: 
+* 
    * `Charles Allen's ePowered Hang Gllider FB page <https://www.facebook.com/groups/904566026835865/posts/949203112372156/?comment_id=949389599020174&notif_id=1638830646052610&notif_t=group_comment&ref=notif>`_
    * `OpenPPG: Same idea, great forum, lots of resources <https://openppg.com/?fbclid=IwAR04rX_1St1D1lqTpwBbaOdLskhpFOMahdXRiHXU1gmr4fSlUv0pwsC-RQg>`_
 
 
 * Plans and open-sourced projects
+
+   * tbd
 
 
 Goals
@@ -68,7 +64,7 @@ Contribute
 Contact
 =================
 
-Ideas, suggestion, complaint? Email ben.rogers@gmail.com 
+Ideas, suggestions, complaints? Email ben.rogers@gmail.com 
 
 
 
