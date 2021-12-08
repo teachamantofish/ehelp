@@ -1,16 +1,14 @@
 ************************************************
-Ideas and Related Experiments
+Ideas and Experiments
 ************************************************
 
-This document does not include trikes, ultralights, and paramotors. However, interesting rigs with unique or related ideas may appear here. 
-
-
+This document does not include trikes, ultralights, and paramotors. However, interesting rigs with unique or related ideas may appear here. Please forward any videos you find inspiring. 
 
 Prone launch configurations
 ================================
 
-* `Reidar's twin electric tractor <>`_
-* `Reidar's  bowsprit launch dolly <>`_
+* `Twin electric tractor (Reidar Bernsten) <https://www.youtube.com/watch?v=z-OrT9RGfFI>`_
+* `Bowsprit launch dolly (Reidar Bernsten) <https://www.youtube.com/watch?v=VLn4_wpWyus>`_
 * `Keel-harness hybrid frame <https://www.youtube.com/watch?v=UyrObtpiGWA&t=3s>`_
 
 .. image:: images/bielfeldprone.png
@@ -31,8 +29,6 @@ Propellers
     * https://www.crflight.com/?utm_source=unmannedsystemstechnology.com&utm_medium=referral
     * PPG discussion: https://community.openppg.com/t/co-axial-motors-with-counter-rotating-props/114
 
-* `Hub <https://www.f3aunlimited.com/airplane-accessories/falcon-82mm-carbon-fiber-spinner-with-cnc-cooling>`_. Functional but for tractor setups only. 
-
 Trike-ish
 ====================
 
@@ -42,3 +38,8 @@ From Paraglider land
 ========================
 
 * Justin's paraglider Blimp drive. Interesting twin off-the-shelf parts setup. http://www.justine-haupt.com/blimpdrive/
+
+Interesting hardware
+===========================
+
+* `Propeller hub <https://www.f3aunlimited.com/airplane-accessories/falcon-82mm-carbon-fiber-spinner-with-cnc-cooling>`_. Functional but for tractor setups only. 
