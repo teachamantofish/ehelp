@@ -34,9 +34,7 @@ Build videos
 Not a trike-not a harness
 =====================================
 
-* charles `Simple Russian design (seated but could be prone) <https://www.youtube.com/watch?v=KkwsizoLIQ8>`_
-
-
+* `Simple Russian design (seated but could be prone) <https://www.youtube.com/watch?v=KkwsizoLIQ8>`_
 
 Commercial electric harness systems
 =============================================

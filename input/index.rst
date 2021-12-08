@@ -40,7 +40,7 @@ Resources
 * Forums: 
 * 
    * `Charles Allen's ePowered Hang Gllider FB page <https://www.facebook.com/groups/904566026835865/posts/949203112372156/?comment_id=949389599020174&notif_id=1638830646052610&notif_t=group_comment&ref=notif>`_
-   * `OpenPPG: Same idea, great forum, lots of resources <https://openppg.com/?fbclid=IwAR04rX_1St1D1lqTpwBbaOdLskhpFOMahdXRiHXU1gmr4fSlUv0pwsC-RQg>`_
+   * `OpenPPG: Similar concepts, great forum, lots of resources <https://openppg.com/?fbclid=IwAR04rX_1St1D1lqTpwBbaOdLskhpFOMahdXRiHXU1gmr4fSlUv0pwsC-RQg>`_
 
 
 * Plans and open-sourced projects
