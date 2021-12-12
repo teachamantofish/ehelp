@@ -21,7 +21,7 @@ pygments_style = 'sphinx'
 # override the default css
 # html_context = { 'css_files': ['_static/css/theme_overrides.css', ],}
 
-# Add relative template path.
+# Add relative templatgit ae path.
 # templates_path = ['../templates']
 
 # Theme options are theme-specific and customize the look and feel of a theme

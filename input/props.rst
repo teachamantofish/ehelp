@@ -19,6 +19,14 @@ Diameter
 Pitch
 ------------------
 
+Number of blades
+---------------------------
+
+Resources: 
+
+* https://community.openppg.com/t/tri-vs-bi-prop-efficiency/3944
+* Also see PPG Youtube videos comparing configurations.
+
 
 Propeller tutorial
 ==========================

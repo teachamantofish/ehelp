@@ -37,11 +37,15 @@ Resources
     * `Editable spreadsheets for data and lists  <https://docs.google.com/spreadsheets/d/10IPnvWfLhx3g2CH97AFdCC4kw11yGukd6TUVxoGJ78g/edit#gid=0>`_
     * `Editable content in github <https://github.com/teachamantofish/ehelp>`_
 
-* Forums: 
-* 
-   * `Charles Allen's ePowered Hang Gllider FB page <https://www.facebook.com/groups/904566026835865/posts/949203112372156/?comment_id=949389599020174&notif_id=1638830646052610&notif_t=group_comment&ref=notif>`_
-   * `OpenPPG: Similar concepts, great forum, lots of resources <https://openppg.com/?fbclid=IwAR04rX_1St1D1lqTpwBbaOdLskhpFOMahdXRiHXU1gmr4fSlUv0pwsC-RQg>`_
+* Facebook pages: 
 
+   * `ePowered Hang Glider <https://www.facebook.com/groups/904566026835865>`_
+   * `FLPGH <https://www.facebook.com/groups/FLPHG>`_
+   * `FLPHG eHelp <https://www.facebook.com/groups/668143127181552>`_
+
+Forums: 
+   * `OpenPPG: Similar concepts, great forum, lots of resources <https://openppg.com/?fbclid=IwAR04rX_1St1D1lqTpwBbaOdLskhpFOMahdXRiHXU1gmr4fSlUv0pwsC-RQg>`_
+   * tbd Hanggliding.org
 
 * Plans and open-sourced projects
 

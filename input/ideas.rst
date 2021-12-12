@@ -17,9 +17,14 @@ Prone launch configurations
   
    * https://www.youtube.com/watch?v=82-JIf86bYs
    * https://www.youtube.com/watch?v=ZKZ9CX1SIWo
-   * Wheeled, one vertical support, very lightweight
 
 .. image:: images/jprone.png
+
+Seated
+=================================
+
+* `PPG-like backpack <https://www.youtube.com/watch?v=Q0gEOvI-T_s>`_
+* `Very lightweight Russian design <https://www.youtube.com/watch?v=KkwsizoLIQ8>`_
 
 Propellers
 ================================
@@ -34,7 +39,7 @@ Trike-ish
 
 * Commercial seated trike-like setup: https://www.altigenerator.com/
 
-From Paraglider land
+From Paraglider-land
 ========================
 
 * Justin's paraglider Blimp drive. Interesting twin off-the-shelf parts setup. http://www.justine-haupt.com/blimpdrive/
