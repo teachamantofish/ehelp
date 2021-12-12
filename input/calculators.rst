@@ -2,8 +2,15 @@
 Calculators
 ************************************************
 
+random notes. . . 
+
+Setting a performance goal
+=====================================
+
 Required power
 ===================================
+
+todo: total rewrite. 
 
 https://endless-sphere.com/forums/viewtopic.php?t=110570#p1626972
 
