@@ -130,13 +130,7 @@
 <li class="toctree-l2"><a class="reference internal" href="parts.html#battery-mounts">Battery mounts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parts.html#boom">Boom</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parts.html#motor-mount">Motor mount</a></li>
-<li class="toctree-l2"><a class="reference internal" href="parts.html#safety-features">Safety features</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="parts.html#quick-power-disconnect">Quick power disconnect</a></li>
-<li class="toctree-l3"><a class="reference internal" href="parts.html#heat-sensor">Heat sensor</a></li>
-<li class="toctree-l3"><a class="reference internal" href="parts.html#other-battery-alarm">Other battery alarm</a></li>
-<li class="toctree-l3"><a class="reference internal" href="parts.html#turbulence-sensors">Turbulence sensors</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="parts.html#safety-features">Safety features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parts.html#instrumentation">Instrumentation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parts.html#wheels">Wheels</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parts.html#material-supppliers">Material supppliers</a><ul>
@@ -147,6 +141,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="calculators.html">Calculators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="calculators.html#setting-a-performance-goal">Setting a performance goal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="calculators.html#required-power">Required power</a></li>
 <li class="toctree-l2"><a class="reference internal" href="calculators.html#propeller">Propeller</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="calculators.html#prop-pitch">Prop pitch</a></li>
@@ -169,14 +164,26 @@
 <li class="toctree-l1"><a class="reference internal" href="ideas.html">Ideas and Experiments</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="ideas.html#prone-launch-configurations">Prone launch configurations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ideas.html#seated">Seated</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ideas.html#propellers">Propellers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ideas.html#trike-ish">Trike-ish</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ideas.html#from-paraglider-land">From Paraglider-land</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ideas.html#interesting-hardware">Interesting hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ideas.html#propeller-ideas">Propeller ideas</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Safety</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#design-checklist">Design Checklist</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#battery">Battery</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#main-power-switch">Main power switch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#quick-disconnect">Quick disconnect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#status-monitor">Status monitor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#temperature-monitor-and-or-alarm">Temperature monitor and/or alarm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tbd">TBD</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#mechanical">Mechanical</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#glider-handling">Glider handling</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#turbulence-sensors">Turbulence sensors</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
@@ -256,14 +263,52 @@
 <span id="id1"></span><h1>Safety<a class="headerlink" href="#safety" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="design-checklist">
 <h2>Design Checklist<a class="headerlink" href="#design-checklist" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>todo: Battery power: mgm and hacker naturally also have esc for up to 120 volts. but only for professional applications. the 60 V regulation applies to diy e-bikes, e-karts, rc models, etc. Imagine building a 24 S battery. as soon as you touch both + / - once you are definitely dead with a battery that can deliver the impulse regardless of whether 12 S or up to 24 s up to 6000 amps. the body can cope with up to 60 V. from 18 S you get muscle cramps. from 22 S it becomes fatal at dc. take a look at a welding machine that produces the arc at full power at mostly 20 volts and 250 amps. imagine 20 times that going through your body through the heart. the heart is a sensitive muscle …</p>
+</div>
+</div>
+<div class="section" id="battery">
+<h2>Battery<a class="headerlink" href="#battery" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="main-power-switch">
+<h3>Main power switch<a class="headerlink" href="#main-power-switch" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="quick-disconnect">
+<h3>Quick disconnect<a class="headerlink" href="#quick-disconnect" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="status-monitor">
+<h3>Status monitor<a class="headerlink" href="#status-monitor" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="temperature-monitor-and-or-alarm">
+<h3>Temperature monitor and/or alarm<a class="headerlink" href="#temperature-monitor-and-or-alarm" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="tbd">
+<h3>TBD<a class="headerlink" href="#tbd" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="mechanical">
+<h2>Mechanical<a class="headerlink" href="#mechanical" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Boom length</p></li>
 <li><p>Prop clearances</p></li>
-<li><p>Battery overload</p></li>
-<li><p>Motor overheat</p></li>
-<li><p>Battery power: mgm and hacker naturally also have esc for up to 120 volts. but only for professional applications. the 60 V regulation applies to diy e-bikes, e-karts, rc models, etc. Imagine building a 24 S battery. as soon as you touch both + / - once you are definitely dead with a battery that can deliver the impulse regardless of whether 12 S or up to 24 s up to 6000 amps. the body can cope with up to 60 V. from 18 S you get muscle cramps. from 22 S it becomes fatal at dc. take a look at a welding machine that produces the arc at full power at mostly 20 volts and 250 amps. imagine 20 times that going through your body through the heart. the heart is a sensitive muscle …</p></li>
-<li><p>Glider stability: Thrust line</p></li>
+<li><p>Motor mounts</p></li>
 </ul>
+</div>
+<div class="section" id="glider-handling">
+<h2>Glider handling<a class="headerlink" href="#glider-handling" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>CG</p></li>
+<li><p>Center of mass</p></li>
+<li><p>Glider pitch stability: Thrust line</p></li>
+</ul>
+<div class="section" id="turbulence-sensors">
+<h3>Turbulence sensors<a class="headerlink" href="#turbulence-sensors" title="Permalink to this headline">¶</a></h3>
+<p>Some ideas from Charles Allen:</p>
+<ul class="simple">
+<li><p>Pitch and roll shutoff: IMU which could be wired up to shut motors if Pitch or Roll exceeds x angle.</p></li>
+<li><p>Preasure sensor on the carabiner to measure when weight is off and shut motors.</p></li>
+</ul>
+</div>
 </div>
 </div>
 

@@ -130,13 +130,7 @@
 <li class="toctree-l2"><a class="reference internal" href="parts.html#battery-mounts">Battery mounts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parts.html#boom">Boom</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parts.html#motor-mount">Motor mount</a></li>
-<li class="toctree-l2"><a class="reference internal" href="parts.html#safety-features">Safety features</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="parts.html#quick-power-disconnect">Quick power disconnect</a></li>
-<li class="toctree-l3"><a class="reference internal" href="parts.html#heat-sensor">Heat sensor</a></li>
-<li class="toctree-l3"><a class="reference internal" href="parts.html#other-battery-alarm">Other battery alarm</a></li>
-<li class="toctree-l3"><a class="reference internal" href="parts.html#turbulence-sensors">Turbulence sensors</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="parts.html#safety-features">Safety features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parts.html#instrumentation">Instrumentation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parts.html#wheels">Wheels</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parts.html#material-supppliers">Material supppliers</a><ul>
@@ -147,6 +141,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="calculators.html">Calculators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="calculators.html#setting-a-performance-goal">Setting a performance goal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="calculators.html#required-power">Required power</a></li>
 <li class="toctree-l2"><a class="reference internal" href="calculators.html#propeller">Propeller</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="calculators.html#prop-pitch">Prop pitch</a></li>
@@ -169,14 +164,26 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Ideas and Experiments</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#prone-launch-configurations">Prone launch configurations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#seated">Seated</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#propellers">Propellers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#trike-ish">Trike-ish</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#from-paraglider-land">From Paraglider-land</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#interesting-hardware">Interesting hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#propeller-ideas">Propeller ideas</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="safety.html">Safety</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="safety.html#design-checklist">Design Checklist</a></li>
+<li class="toctree-l2"><a class="reference internal" href="safety.html#battery">Battery</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="safety.html#main-power-switch">Main power switch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="safety.html#quick-disconnect">Quick disconnect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="safety.html#status-monitor">Status monitor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="safety.html#temperature-monitor-and-or-alarm">Temperature monitor and/or alarm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="safety.html#tbd">TBD</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="safety.html#mechanical">Mechanical</a></li>
+<li class="toctree-l2"><a class="reference internal" href="safety.html#glider-handling">Glider handling</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="safety.html#turbulence-sensors">Turbulence sensors</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
@@ -282,20 +289,6 @@
 <li><p><a class="reference external" href="https://www.youtube.com/watch?v=KkwsizoLIQ8">Very lightweight Russian design</a></p></li>
 </ul>
 </div>
-<div class="section" id="propellers">
-<h2>Propellers<a class="headerlink" href="#propellers" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Passive variable pitch prop: <a class="reference external" href="https://www.facebook.com/groups/904566026835865/permalink/944285446197256">https://www.facebook.com/groups/904566026835865/permalink/944285446197256</a></p></li>
-<li><dl class="simple">
-<dt>Contra-rotating prop:</dt><dd><ul>
-<li><p><a class="reference external" href="https://www.crflight.com/?utm_source=unmannedsystemstechnology.com&amp;utm_medium=referral">https://www.crflight.com/?utm_source=unmannedsystemstechnology.com&amp;utm_medium=referral</a></p></li>
-<li><p>PPG discussion: <a class="reference external" href="https://community.openppg.com/t/co-axial-motors-with-counter-rotating-props/114">https://community.openppg.com/t/co-axial-motors-with-counter-rotating-props/114</a></p></li>
-</ul>
-</dd>
-</dl>
-</li>
-</ul>
-</div>
 <div class="section" id="trike-ish">
 <h2>Trike-ish<a class="headerlink" href="#trike-ish" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -308,10 +301,22 @@
 <li><p>Justin’s paraglider Blimp drive. Interesting twin off-the-shelf parts setup. <a class="reference external" href="http://www.justine-haupt.com/blimpdrive/">http://www.justine-haupt.com/blimpdrive/</a></p></li>
 </ul>
 </div>
-<div class="section" id="interesting-hardware">
-<h2>Interesting hardware<a class="headerlink" href="#interesting-hardware" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="propeller-ideas">
+<h2>Propeller ideas<a class="headerlink" href="#propeller-ideas" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
+<li><p>Passive variable pitch prop: <a class="reference external" href="https://www.facebook.com/groups/904566026835865/permalink/944285446197256">https://www.facebook.com/groups/904566026835865/permalink/944285446197256</a></p></li>
+<li><dl class="simple">
+<dt>Contra-rotating prop:</dt><dd><ul>
+<li><p><a class="reference external" href="https://www.crflight.com/?utm_source=unmannedsystemstechnology.com&amp;utm_medium=referral">https://www.crflight.com/?utm_source=unmannedsystemstechnology.com&amp;utm_medium=referral</a></p></li>
+<li><p>PPG discussion: <a class="reference external" href="https://community.openppg.com/t/co-axial-motors-with-counter-rotating-props/114">https://community.openppg.com/t/co-axial-motors-with-counter-rotating-props/114</a></p></li>
+<li><ul>
 <li><p><a class="reference external" href="https://www.f3aunlimited.com/airplane-accessories/falcon-82mm-carbon-fiber-spinner-with-cnc-cooling">Propeller hub</a>. Functional but for tractor setups only.</p></li>
+</ul>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
 </ul>
 </div>
 </div>
