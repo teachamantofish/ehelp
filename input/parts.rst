@@ -51,7 +51,7 @@ Some ideas from Charles Allen:
 * Pitch and roll shutoff: IMU which could be wired up to shut motors if Pitch or Roll exceeds x angle. 
 * Preasure sensor on the carabiner to measure when weight is off and shut motors.
 
-Intrumentation
+Instrumentation
 ======================
 
 TBD. CA has a slick contraption in one of his vids. 

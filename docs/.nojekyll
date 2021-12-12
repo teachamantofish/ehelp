@@ -1,0 +1,266 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Open Source Plans &mdash; Rocket Stove Resources</title>
+  
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+<meta name="author" content="Ben Rogers" />
+<meta name='robots' content='index,follow'/>
+
+  
+  
+    <link rel="shortcut icon" href="_static/logo64.ico"/>
+  
+  
+  
+    <link rel="canonical" href="https://www.sprocketstove.complans.html"/>
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Materials" href="materials.html" />
+    <link rel="prev" title="Resources for Rocket Stove Developers" href="index.html" /> 
+  <style>
+  .wy-nav-content {max-width:90%}
+  td {font-size:130%}
+  </style>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+	  
+        <!-- @@@@@@@@@@@@@@@@ Custom @@@@@@@@@@@@@@@@ -->
+        <div class="pagelogo"><img src="_images/logo64.png" class="logo"/></div> 
+        <!-- @@@@@@@@@@@@@@@@ Custom @@@@@@@@@@@@@@@@ -->'
+         <div class="wy-side-nav-search"  style="background: #E7E7E7" >
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div>
+
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+
+          
+          <a href="index.html" class="icon icon-home"> Rocket Stove Resources
+          
+          
+          </a>
+
+          
+
+
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Open Source Plans</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-this">What is this?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#contribute">Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#contact">Contact</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="materials.html">Materials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="materials.html#firebox">Firebox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="materials.html#riser">Riser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="materials.html#other">Other</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="teg.html">Electrical Generation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="teg.html#teg-modules">TEG modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="teg.html#teg-systems">TEG systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="teg.html#alternatives">Alternatives</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="thermosiphon.html">Hot Water Heating</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="thermosiphon.html#designs">Designs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="thermosiphon.html#thermosiphon-systems">Thermosiphon systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="thermosiphon.html#pump-systems">Pump systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="thermosiphon.html#combi-systems">Combi systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="thermosiphon.html#checklist">Checklist</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="glossary.html#definitions">Definitions</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+  <!-- @@@@@@@@@@@@@@@@ Custom top bar @@@@@@@@@@@@@@@@ -->
+  <div class="fixedbar">
+    <a href="https://www.bioenergylists.org/stovesdoc/Still/Rocket%20Stove/Principles.html" class="topbarlink">10 Principles</a> 
+    <a href="http://batchrocket.eu/en/" class="topbarlink">Open Source Plans</a>
+    <a href="https://donkey32.proboards.com/" class="topbarlink"> Donkey's RS Forum</a> 
+    <a href="https://permies.com/f/125/rocket-stoves" class="topbarlink">Permies RS Forum</a>
+  </div>
+
+		
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Rocket Stove Resources</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Open Source Plans</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="materials.html" class="btn btn-neutral float-right" title="Materials" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Resources for Rocket Stove Developers" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="open-source-plans">
+<h1>Open Source Plans<a class="headerlink" href="#open-source-plans" title="Permalink to this headline">¶</a></h1>
+<p>Intro blurb</p>
+<p>TBD: Insert diagram.</p>
+<img alt="_images/uc2.gif" src="_images/uc2.gif" />
+<div class="section" id="what-is-this">
+<h2>What is this?<a class="headerlink" href="#what-is-this" title="Permalink to this headline">¶</a></h2>
+<p>Tumeric ipsum salvia migas, tofu taiyaki af celiac 8-bit elit XOXO pork belly commodo. Echo park tote bag schlitz salvia. Cray etsy mixtape, est nulla shaman shabby chic artisan sustainable pop-up fixie non disrupt. Fugiat elit kogi tumblr kitsch slow-carb. Sunt everyday carry air plant synth fixie biodiesel fam. Sriracha fanny pack occaecat disrupt 8-bit commodo brooklyn brunch. Aliquip eu minim prism affogato cornhole, activated charcoal drinking vinegar marfa vaporware.</p>
+</div>
+<div class="section" id="contribute">
+<h2>Contribute<a class="headerlink" href="#contribute" title="Permalink to this headline">¶</a></h2>
+<p>Tumeric ipsum salvia migas, tofu taiyaki af celiac 8-bit elit XOXO pork belly commodo. Echo park tote bag schlitz salvia. Cray etsy mixtape, est nulla shaman shabby chic artisan sustainable pop-up fixie non disrupt. Fugiat elit kogi tumblr kitsch slow-carb. Sunt everyday carry air plant synth fixie biodiesel fam. Sriracha fanny pack occaecat disrupt 8-bit commodo brooklyn brunch. Aliquip eu minim prism affogato cornhole, activated charcoal drinking vinegar marfa vaporware.</p>
+</div>
+<div class="section" id="contact">
+<h2>Contact<a class="headerlink" href="#contact" title="Permalink to this headline">¶</a></h2>
+<p>Tumeric ipsum salvia migas, tofu taiyaki af celiac 8-bit elit XOXO pork belly commodo. Echo park tote bag schlitz salvia. Cray etsy mixtape, est nulla shaman shabby chic artisan sustainable pop-up fixie non disrupt. Fugiat elit kogi tumblr kitsch slow-carb. Sunt everyday carry air plant synth fixie biodiesel fam. Sriracha fanny pack occaecat disrupt 8-bit commodo brooklyn brunch. Aliquip eu minim prism affogato cornhole, activated charcoal drinking vinegar marfa vaporware.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+      <span class="lastupdated">
+        Last updated on Jan 04, 2021.
+      </span>
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

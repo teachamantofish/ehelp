@@ -29,8 +29,7 @@ Build videos
 
 .. image:: images/caehelpbuild.png
 
-   * `Paul Martin <https://www.facebook.com/groups/668143127181552/posts/853592028636660/?comment_id=871739653488564&reply_comment_id=871853686810494&notif_id=1639125691695281&notif_t=group_comment&ref=notif>`_
-
+* `Paul Martin <https://www.facebook.com/groups/668143127181552/posts/853592028636660/?comment_id=871739653488564&reply_comment_id=871853686810494&notif_id=1639125691695281&notif_t=group_comment&ref=notif>`_
 
 Not a trike-not a harness
 =====================================

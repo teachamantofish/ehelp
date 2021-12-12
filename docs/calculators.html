@@ -13,6 +13,7 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme_overrides.css" type="text/css" />
 
   
   
@@ -37,7 +38,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Ideas and Related Experiments" href="ideas.html" />
+    <link rel="next" title="Ideas and Experiments" href="ideas.html" />
     <link rel="prev" title="Parts and Components" href="parts.html" /> 
 </head>
 
@@ -88,7 +89,7 @@
 <li class="toctree-l2"><a class="reference internal" href="examples.html#flying-videos">Flying videos</a></li>
 <li class="toctree-l2"><a class="reference internal" href="examples.html#build-videos">Build videos</a></li>
 <li class="toctree-l2"><a class="reference internal" href="examples.html#not-a-trike-not-a-harness">Not a trike-not a harness</a></li>
-<li class="toctree-l2"><a class="reference internal" href="examples.html#commercial-electric-harness-systems">Commercial electric harness systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#commercial-e-harness-systems">Commercial e-harness systems</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="spec.html">Specing out a System (Sizing)</a><ul>
@@ -97,8 +98,11 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="motors.html">Motors</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="motors.html#tbd">TBD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motors.html#top-considerations">Top considerations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#manufacturers">Manufacturers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motors.html#mating-with-a-prop">Mating with a prop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motors.html#duty-cycle-max-continuous-power">Duty cycle-Max continuous power</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motors.html#kv-reduction">KV reduction</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="batteries.html">Batteries</a><ul>
@@ -112,6 +116,7 @@
 <li class="toctree-l3"><a class="reference internal" href="props.html#material">Material</a></li>
 <li class="toctree-l3"><a class="reference internal" href="props.html#diameter">Diameter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="props.html#pitch">Pitch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="props.html#number-of-blades">Number of blades</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="props.html#propeller-tutorial">Propeller tutorial</a></li>
@@ -123,8 +128,8 @@
 <li class="toctree-l2"><a class="reference internal" href="parts.html#throttle">Throttle</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parts.html#backplate">Backplate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parts.html#battery-mounts">Battery mounts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="parts.html#boom-and-motor-mounts">Boom and motor mounts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="parts.html#wheels">Wheels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parts.html#boom">Boom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parts.html#motor-mount">Motor mount</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parts.html#safety-features">Safety features</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="parts.html#quick-power-disconnect">Quick power disconnect</a></li>
 <li class="toctree-l3"><a class="reference internal" href="parts.html#heat-sensor">Heat sensor</a></li>
@@ -132,9 +137,11 @@
 <li class="toctree-l3"><a class="reference internal" href="parts.html#turbulence-sensors">Turbulence sensors</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="parts.html#intrumentation">Intrumentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parts.html#instrumentation">Instrumentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parts.html#wheels">Wheels</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parts.html#material-supppliers">Material supppliers</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="parts.html#carbon-fiber">Carbon fiber</a></li>
+<li class="toctree-l3"><a class="reference internal" href="parts.html#aluminum">Aluminum</a></li>
 </ul>
 </li>
 </ul>
@@ -143,20 +150,33 @@
 <li class="toctree-l2"><a class="reference internal" href="#required-power">Required power</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#propeller">Propeller</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#prop-pitch">Prop pitch</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#static-thrust">Static thrust</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#static-thrust-and-horsepower">Static thrust and horsepower</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#tip-speed">Tip speed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#theoretical-speed">Theoretical speed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#static-thrust-required-engine-power">Static thrust: required engine power</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#static-thrust-and-horsepower">Static thrust and horsepower</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Tip speed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Theoretical speed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#other">Other</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#materials">Materials</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#metal-components">Metal components</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="ideas.html">Ideas and Related Experiments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#tbd-rc-whole-system">TBD: RC whole system?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ideas.html">Ideas and Experiments</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="ideas.html#prone-launch-configurations">Prone launch configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ideas.html#seated">Seated</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ideas.html#propellers">Propellers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ideas.html#trike-ish">Trike-ish</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ideas.html#from-paraglider-land">From Paraglider land</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ideas.html#from-paraglider-land">From Paraglider-land</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ideas.html#interesting-hardware">Interesting hardware</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="safety.html">Safety</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="safety.html#design-checklist">Design Checklist</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
@@ -220,7 +240,7 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="ideas.html" class="btn btn-neutral float-right" title="Ideas and Related Experiments" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="ideas.html" class="btn btn-neutral float-right" title="Ideas and Experiments" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="parts.html" class="btn btn-neutral float-left" title="Parts and Components" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -236,9 +256,20 @@
 <h1>Calculators<a class="headerlink" href="#calculators" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="required-power">
 <h2>Required power<a class="headerlink" href="#required-power" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://endless-sphere.com/forums/viewtopic.php?t=110570#p1626972">https://endless-sphere.com/forums/viewtopic.php?t=110570#p1626972</a></p>
 <p>todo: convert to HG example</p>
-<p>To raise 400 kg takeoff weight to 1000’, the energy needed is U(kWh) = 400*9.81*1000/(3.28 * 3600000) = 0.332 kWh. Assuming a glide ratio of 30 (will be less while the motor is out) and a prop efficiency of 70%, motor of 90%, inverter of 90%, battery of 95%, and everything else at 95%, you get energy needed:</p>
-<p>0.332 / ((1-1/30)*.7*.9*.9*.95*.95) = .332/.494 = 0.67 kWh. At the rate of 1000’ per 6 mins, power required would be 6.7 kW.</p>
+<p>Example: HG + pilot and gear = 300lbs or 136Kg</p>
+<p>At 100% efficiency for all components, to raise 136 kg takeoff weight to 1000’, the energy needed is U(kWh) = 136*9.81*1000/(3.28 * 3600000) = 0.113 kWh.</p>
+<p>Adjusting for reality:</p>
+<ul class="simple">
+<li><p>Glide ratio: 10</p></li>
+<li><p>Prop efficiency: 70%</p></li>
+<li><p>Motor efficiency: 90%</p></li>
+<li><p>Battery efficiency: 95%</p></li>
+<li><p>Everything else: 95%</p></li>
+</ul>
+<p>Then:</p>
+<p>0.113 / ((1-1/10)*.7*.9*.9*.95*.95) = .332/.494 = 0.67 kWh. At the rate of 1000’ per 6 mins, power required would be 6.7 kW.</p>
 <p>In a post above I calculated the power needed for 170 fpm climb. Let’s say MTOW is 300 kg and 250 fpm is required.</p>
 <p>The energy required is 0.25 kWh. After correcting for the losses, you get 0.5 kWh gross energy. Power required for 250 fpm will be 0.5 * 60 * 250 / 1000 = 7.5 kW.</p>
 <p>It appears you are seeking about 2 kWh of storage. The Samsung 21700 48G unit weight is 4 kg/kWh. With a 20% pack overhead, the 2kWh pack will weigh 10 kg. At 7.3C,the pack can supply 14.5 kW power. But you only need 7.5 kW of power. Even at 10 kW, you are well below the C limit of 14.5 kW.</p>
@@ -248,22 +279,34 @@
 <h2>Propeller<a class="headerlink" href="#propeller" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="prop-pitch">
 <h3>Prop pitch<a class="headerlink" href="#prop-pitch" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference external" href="http://www.culverprops.com/pitchselection.htm">http://www.culverprops.com/pitchselection.htm</a></p>
+<p><a class="reference external" href="http://www.culverprops.com/pitchselection.htm">Prop pitch recommendation</a> based on RPM, airspeed, and prop length. You can also view the <a class="reference external" href="http://www.culverprops.com/viewpitchtable.htm">tables</a></p>
 </div>
-<div class="section" id="static-thrust">
-<h3>Static thrust<a class="headerlink" href="#static-thrust" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="tip-speed">
+<h3>Tip speed<a class="headerlink" href="#tip-speed" title="Permalink to this headline">¶</a></h3>
+<p>The efficiency of a propeller is reduced as the tip speed approaches the speed of sound.  Beyond 80% of the speed of sound, increasing RPM has
+little affect on thrust. Ideally, keep tip speeds below 75%-80% of Mach.</p>
+<p>Optimum efficiency and less noise stems from tip speeds less than 700 feet per second or 475 mph. Over that, and air compression in front of the prop leading edge begins occuring which rapidly degrades propeller performance.</p>
+<p>TBD: Link to calculator.</p>
+</div>
+<div class="section" id="theoretical-speed">
+<h3>Theoretical speed<a class="headerlink" href="#theoretical-speed" title="Permalink to this headline">¶</a></h3>
+<p>See <a class="reference external" href="https://www.warpdriveprops.com/propspd2.html">https://www.warpdriveprops.com/propspd2.html</a></p>
+<p>To determine how fast your propeller can theoretically push or pull you through the air at a given rpm and pitch, multiply your propeller’s pitch in inches (usually measured at 75 percent of the prop disk radius) times the RPM. Then multiply that figure times .000947 which gives you your speed in miles per hour. Then multiply this figure by .85 if your aircraft is reasonably aerodynamically clean or by .80 or .75 if your aircraft is somewhat “draggy”. This last operation compensates for propeller slippage and some aircraft drag. The end result should be a reasonably accurate estimate of your aircraft’s airspeed potential. Use this process to help determine the amount of propeller pitch you need for your particular aircraft. Use the Theoretical Speed Calculator below.</p>
+</div>
+<div class="section" id="static-thrust-required-engine-power">
+<h3>Static thrust: required engine power<a class="headerlink" href="#static-thrust-required-engine-power" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://www.poweredparagliders.com.au/Calculators/Static_Thrust_Calculator.htm">https://www.poweredparagliders.com.au/Calculators/Static_Thrust_Calculator.htm</a></p>
 </div>
 <div class="section" id="static-thrust-and-horsepower">
 <h3>Static thrust and horsepower<a class="headerlink" href="#static-thrust-and-horsepower" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="http://www.csgnetwork.com/directhpthrustcalc.html">http://www.csgnetwork.com/directhpthrustcalc.html</a></p>
 </div>
-<div class="section" id="tip-speed">
-<h3>Tip speed<a class="headerlink" href="#tip-speed" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id1">
+<h3>Tip speed<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://warpdriveprops.com/propspd2.html">https://warpdriveprops.com/propspd2.html</a></p>
 </div>
-<div class="section" id="theoretical-speed">
-<h3>Theoretical speed<a class="headerlink" href="#theoretical-speed" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id2">
+<h3>Theoretical speed<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://warpdriveprops.com/propspd2.html">https://warpdriveprops.com/propspd2.html</a></p>
 </div>
 <div class="section" id="other">
@@ -277,6 +320,19 @@ Static thrust</p>
 max power for batteries: (s rating)(voltage)(amps)</p>
 <p><a class="reference external" href="http://www.csgnetwork.com/aviationconverters.html">Aviation Converters and Calculators</a></p>
 </div>
+</div>
+<div class="section" id="materials">
+<h2>Materials<a class="headerlink" href="#materials" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="metal-components">
+<h3>Metal components<a class="headerlink" href="#metal-components" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://www.onlinemetals.com/en/weight-calculator">https://www.onlinemetals.com/en/weight-calculator</a></p>
+</div>
+</div>
+<div class="section" id="tbd-rc-whole-system">
+<h2>TBD: RC whole system?<a class="headerlink" href="#tbd-rc-whole-system" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://www.ecalc.ch/motorcalc.php">https://www.ecalc.ch/motorcalc.php</a>
+<a class="reference external" href="https://www.ecalc.ch/motorcalc_mobile.php?hacker&amp;lang=en">https://www.ecalc.ch/motorcalc_mobile.php?hacker&amp;lang=en</a>
+<a class="reference external" href="https://www.kolins.cz/share/ecalc1/motorcalc_e9a45.htm">https://www.kolins.cz/share/ecalc1/motorcalc_e9a45.htm</a></p>
 </div>
 </div>
 
@@ -292,7 +348,7 @@ max power for batteries: (s rating)(voltage)(amps)</p>
   <div role="contentinfo">
     <p>
       <span class="lastupdated">
-        Last updated on Dec 07, 2021.
+        Last updated on Dec 11, 2021.
       </span>
 
     </p>

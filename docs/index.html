@@ -13,6 +13,7 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme_overrides.css" type="text/css" />
 
   
   
@@ -87,7 +88,7 @@
 <li class="toctree-l2"><a class="reference internal" href="examples.html#flying-videos">Flying videos</a></li>
 <li class="toctree-l2"><a class="reference internal" href="examples.html#build-videos">Build videos</a></li>
 <li class="toctree-l2"><a class="reference internal" href="examples.html#not-a-trike-not-a-harness">Not a trike-not a harness</a></li>
-<li class="toctree-l2"><a class="reference internal" href="examples.html#commercial-electric-harness-systems">Commercial electric harness systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#commercial-e-harness-systems">Commercial e-harness systems</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="spec.html">Specing out a System (Sizing)</a><ul>
@@ -96,8 +97,11 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="motors.html">Motors</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="motors.html#tbd">TBD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motors.html#top-considerations">Top considerations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#manufacturers">Manufacturers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motors.html#mating-with-a-prop">Mating with a prop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motors.html#duty-cycle-max-continuous-power">Duty cycle-Max continuous power</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motors.html#kv-reduction">KV reduction</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="batteries.html">Batteries</a><ul>
@@ -111,6 +115,7 @@
 <li class="toctree-l3"><a class="reference internal" href="props.html#material">Material</a></li>
 <li class="toctree-l3"><a class="reference internal" href="props.html#diameter">Diameter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="props.html#pitch">Pitch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="props.html#number-of-blades">Number of blades</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="props.html#propeller-tutorial">Propeller tutorial</a></li>
@@ -122,8 +127,8 @@
 <li class="toctree-l2"><a class="reference internal" href="parts.html#throttle">Throttle</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parts.html#backplate">Backplate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parts.html#battery-mounts">Battery mounts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="parts.html#boom-and-motor-mounts">Boom and motor mounts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="parts.html#wheels">Wheels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parts.html#boom">Boom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parts.html#motor-mount">Motor mount</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parts.html#safety-features">Safety features</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="parts.html#quick-power-disconnect">Quick power disconnect</a></li>
 <li class="toctree-l3"><a class="reference internal" href="parts.html#heat-sensor">Heat sensor</a></li>
@@ -131,9 +136,11 @@
 <li class="toctree-l3"><a class="reference internal" href="parts.html#turbulence-sensors">Turbulence sensors</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="parts.html#intrumentation">Intrumentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parts.html#instrumentation">Instrumentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parts.html#wheels">Wheels</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parts.html#material-supppliers">Material supppliers</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="parts.html#carbon-fiber">Carbon fiber</a></li>
+<li class="toctree-l3"><a class="reference internal" href="parts.html#aluminum">Aluminum</a></li>
 </ul>
 </li>
 </ul>
@@ -142,20 +149,33 @@
 <li class="toctree-l2"><a class="reference internal" href="calculators.html#required-power">Required power</a></li>
 <li class="toctree-l2"><a class="reference internal" href="calculators.html#propeller">Propeller</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="calculators.html#prop-pitch">Prop pitch</a></li>
-<li class="toctree-l3"><a class="reference internal" href="calculators.html#static-thrust">Static thrust</a></li>
-<li class="toctree-l3"><a class="reference internal" href="calculators.html#static-thrust-and-horsepower">Static thrust and horsepower</a></li>
 <li class="toctree-l3"><a class="reference internal" href="calculators.html#tip-speed">Tip speed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="calculators.html#theoretical-speed">Theoretical speed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calculators.html#static-thrust-required-engine-power">Static thrust: required engine power</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calculators.html#static-thrust-and-horsepower">Static thrust and horsepower</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calculators.html#id1">Tip speed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calculators.html#id2">Theoretical speed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="calculators.html#other">Other</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="calculators.html#materials">Materials</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="calculators.html#metal-components">Metal components</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="ideas.html">Ideas and Related Experiments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="calculators.html#tbd-rc-whole-system">TBD: RC whole system?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ideas.html">Ideas and Experiments</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="ideas.html#prone-launch-configurations">Prone launch configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ideas.html#seated">Seated</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ideas.html#propellers">Propellers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ideas.html#trike-ish">Trike-ish</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ideas.html#from-paraglider-land">From Paraglider land</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ideas.html#from-paraglider-land">From Paraglider-land</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ideas.html#interesting-hardware">Interesting hardware</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="safety.html">Safety</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="safety.html#design-checklist">Design Checklist</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
@@ -233,25 +253,30 @@
 <h1>Electric Powered Hang Gliding Harnesses<a class="headerlink" href="#electric-powered-hang-gliding-harnesses" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
-<p>With</p>
+<p>Why? Because for 1500-2500 bucks a DIYer can build a 20 pound eHelp harness and flatland foot launch from any location. No modified glider. No tow rig. Minimal learning curve.  The time and $$$ investment quickly pays for itself through reduced driving to launches, hang-waiting, tow costs, alcoholic consumption while jonesing for some airtime. But cost is relative to airtime, and only you can determine the ultimate payback.</p>
+<p>The systems are relatively simple, and energetic pioneers are paving the way with open source plans and Youtube videos. Multi-billion dollar drone, batter, and EV industries are quickly driving the evolution of cheaper, lighter, and more powerful components.</p>
+<p>In a few years, we’ll like have ligher and more powerful motors (axial), smaller and safer batteries, and a multitude of prebuilt ready-to-fly choices.</p>
 <div class="section" id="about-this-document">
 <h2>About this document<a class="headerlink" href="#about-this-document" title="Permalink to this headline">¶</a></h2>
 <p>This content is:</p>
 <ul class="simple">
-<li><p>A crowd-sourced document.</p></li>
-<li><p>In an experimental phase.</p></li>
+<li><p>A crowd-sourced document. You can ask to edit the source here: <a class="reference external" href="https://github.com/teacha.../ehelp/blob/main/input/index.rst">https://github.com/teacha…/ehelp/blob/main/input/index.rst</a></p></li>
 <li><p>Whether it evolves into a long term resource is up to the “crowd”!</p></li>
+<li><p>Hopefully helpful, but always experimental.</p></li>
+<li><p>An unfinished work in progress.</p></li>
+<li><p>There is no attempt here to make $$$, and there will never be.</p></li>
 </ul>
-<img alt="_images/uc2.gif" src="_images/uc2.gif" />
 </div>
-<div class="section" id="what-is-an-ehelp-harness">
-<h2>What is an eHelp harness?<a class="headerlink" href="#what-is-an-ehelp-harness" title="Permalink to this headline">¶</a></h2>
-<p>tbd</p>
-<ul class="simple">
-<li><p>Simple, diy, 1500-3500 bucks, launch anywhere, climb and find a thermal or sustainer.</p></li>
-<li><p>Do not have to learn new launch techniques.</p></li>
-<li><p>Investment quickly pays for itself since it reduces driving to launches, hang-waiting, tow costs,</p></li>
-</ul>
+<div class="section" id="danger-will-robinson">
+<h2>Danger Will Robinson<a class="headerlink" href="#danger-will-robinson" title="Permalink to this headline">¶</a></h2>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>You assume responsibility for anything you do and should make your own educated decisions based on multiple sources. There is no advice here. The information here derives from 3rd parties and may be erroneous.</p>
+</div>
+</div>
+<div class="section" id="if-you-see-your-photo-text">
+<h2>If you see your photo/text<a class="headerlink" href="#if-you-see-your-photo-text" title="Permalink to this headline">¶</a></h2>
+<p>If you see something here that originated with you and want it removed, just ask. I can also add credits and links back to your FB or home page as you desire.</p>
 </div>
 <div class="section" id="resources">
 <h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
@@ -264,35 +289,49 @@
 </ul>
 </div></blockquote>
 </li>
-<li><dl class="simple">
+<li><p>Facebook pages:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://www.facebook.com/groups/904566026835865">ePowered Hang Glider</a></p></li>
+<li><p><a class="reference external" href="https://www.facebook.com/groups/FLPHG">FLPGH</a></p></li>
+<li><p><a class="reference external" href="https://www.facebook.com/groups/668143127181552">FLPHG eHelp</a></p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<dl class="simple">
 <dt>Forums:</dt><dd><ul class="simple">
-<li><p><a class="reference external" href="https://www.facebook.com/groups/904566026835865/posts/949203112372156/?comment_id=949389599020174&amp;notif_id=1638830646052610&amp;notif_t=group_comment&amp;ref=notif">Charles Allen’s ePowered Hang Gllider FB page</a></p></li>
-<li><p><a class="reference external" href="https://openppg.com/?fbclid=IwAR04rX_1St1D1lqTpwBbaOdLskhpFOMahdXRiHXU1gmr4fSlUv0pwsC-RQg">OpenPPG: Same idea, great forum, lots of resources</a></p></li>
+<li><p><a class="reference external" href="https://openppg.com/?fbclid=IwAR04rX_1St1D1lqTpwBbaOdLskhpFOMahdXRiHXU1gmr4fSlUv0pwsC-RQg">OpenPPG: Similar concepts, great forum, lots of resources</a></p></li>
+<li><p>TBD: Hanggliding.org</p></li>
+<li><p>This community needs a focused forum. Doesn’t exist yet.</p></li>
 </ul>
 </dd>
 </dl>
+<ul>
+<li><p>Plans and open-sourced projects</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>TBD</p></li>
+</ul>
+</div></blockquote>
 </li>
-<li><p>Plans and open-sourced projects</p></li>
 </ul>
 </div>
 <div class="section" id="goals">
 <h2>Goals<a class="headerlink" href="#goals" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p><strong>Support DIY development</strong>: Concise details on existing projects should engage the community, increase participation, speed new approaches, and improve safety. There’s no need to reinvent the wheel, but there is a need to improve the wheel.</p></li>
+<li><p><strong>Support DIY development</strong>: Concise details on existing projects should engage the community, increase participation, speed new approaches, and improve safety. There’s no need to reinvent the wheel, but there is a need to improve the wheel and invent some wheel alternatives.</p></li>
 <li><p><strong>Advance the technology</strong>: Easily accessible information should speed and foster the development and use of functional designs.</p></li>
-<li><p><strong>Encourage growth in the sport of hang gliding</strong>: The decline of hang gliding is well known. Perhaps the ability to flatland launch with a simple DIY system will invigorate the sport.</p></li>
+<li><p><strong>Encourage growth in the sport of hang gliding</strong>: The decline of hang gliding is well-known. Perhaps the ability to flatland launch with a simple DIY system will invigorate the sport.</p></li>
 </ul>
 </div>
 <div class="section" id="contribute">
 <h2>Contribute<a class="headerlink" href="#contribute" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Send me any info, link, or informational tidbit. I’ll incorporate what makes sense.</p></li>
-<li><p>Ping <a class="reference external" href="mailto:ben&#46;rogers&#37;&#52;&#48;gmail&#46;com">ben<span>&#46;</span>rogers<span>&#64;</span>gmail<span>&#46;</span>com</a> if you’d like to directly contribute and edit the pages.</p></li>
+<li><p>Ask to directly contribute and edit the pages.</p></li>
+<li><p>Ideas, suggestions, complaints? Email <a class="reference external" href="mailto:ben&#46;rogers&#37;&#52;&#48;gmail&#46;com">ben<span>&#46;</span>rogers<span>&#64;</span>gmail<span>&#46;</span>com</a></p></li>
 </ul>
-</div>
-<div class="section" id="contact">
-<h2>Contact<a class="headerlink" href="#contact" title="Permalink to this headline">¶</a></h2>
-<p>Ideas, suggestion, complaint? Email <a class="reference external" href="mailto:ben&#46;rogers&#37;&#52;&#48;gmail&#46;com">ben<span>&#46;</span>rogers<span>&#64;</span>gmail<span>&#46;</span>com</a></p>
 </div>
 </div>
 
@@ -308,7 +347,7 @@
   <div role="contentinfo">
     <p>
       <span class="lastupdated">
-        Last updated on Dec 07, 2021.
+        Last updated on Dec 11, 2021.
       </span>
 
     </p>

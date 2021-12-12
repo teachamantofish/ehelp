@@ -13,6 +13,7 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme_overrides.css" type="text/css" />
 
   
   
@@ -88,7 +89,7 @@
 <li class="toctree-l2"><a class="reference internal" href="examples.html#flying-videos">Flying videos</a></li>
 <li class="toctree-l2"><a class="reference internal" href="examples.html#build-videos">Build videos</a></li>
 <li class="toctree-l2"><a class="reference internal" href="examples.html#not-a-trike-not-a-harness">Not a trike-not a harness</a></li>
-<li class="toctree-l2"><a class="reference internal" href="examples.html#commercial-electric-harness-systems">Commercial electric harness systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#commercial-e-harness-systems">Commercial e-harness systems</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="spec.html">Specing out a System (Sizing)</a><ul>
@@ -97,8 +98,11 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="motors.html">Motors</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="motors.html#tbd">TBD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motors.html#top-considerations">Top considerations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#manufacturers">Manufacturers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motors.html#mating-with-a-prop">Mating with a prop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motors.html#duty-cycle-max-continuous-power">Duty cycle-Max continuous power</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motors.html#kv-reduction">KV reduction</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="batteries.html">Batteries</a><ul>
@@ -112,6 +116,7 @@
 <li class="toctree-l3"><a class="reference internal" href="props.html#material">Material</a></li>
 <li class="toctree-l3"><a class="reference internal" href="props.html#diameter">Diameter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="props.html#pitch">Pitch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="props.html#number-of-blades">Number of blades</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="props.html#propeller-tutorial">Propeller tutorial</a></li>
@@ -123,8 +128,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#throttle">Throttle</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#backplate">Backplate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#battery-mounts">Battery mounts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#boom-and-motor-mounts">Boom and motor mounts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#wheels">Wheels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#boom">Boom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#motor-mount">Motor mount</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#safety-features">Safety features</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#quick-power-disconnect">Quick power disconnect</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#heat-sensor">Heat sensor</a></li>
@@ -132,9 +137,11 @@
 <li class="toctree-l3"><a class="reference internal" href="#turbulence-sensors">Turbulence sensors</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#intrumentation">Intrumentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#instrumentation">Instrumentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#wheels">Wheels</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#material-supppliers">Material supppliers</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#carbon-fiber">Carbon fiber</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#aluminum">Aluminum</a></li>
 </ul>
 </li>
 </ul>
@@ -143,20 +150,33 @@
 <li class="toctree-l2"><a class="reference internal" href="calculators.html#required-power">Required power</a></li>
 <li class="toctree-l2"><a class="reference internal" href="calculators.html#propeller">Propeller</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="calculators.html#prop-pitch">Prop pitch</a></li>
-<li class="toctree-l3"><a class="reference internal" href="calculators.html#static-thrust">Static thrust</a></li>
-<li class="toctree-l3"><a class="reference internal" href="calculators.html#static-thrust-and-horsepower">Static thrust and horsepower</a></li>
 <li class="toctree-l3"><a class="reference internal" href="calculators.html#tip-speed">Tip speed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="calculators.html#theoretical-speed">Theoretical speed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calculators.html#static-thrust-required-engine-power">Static thrust: required engine power</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calculators.html#static-thrust-and-horsepower">Static thrust and horsepower</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calculators.html#id1">Tip speed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calculators.html#id2">Theoretical speed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="calculators.html#other">Other</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="calculators.html#materials">Materials</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="calculators.html#metal-components">Metal components</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="ideas.html">Ideas and Related Experiments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="calculators.html#tbd-rc-whole-system">TBD: RC whole system?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ideas.html">Ideas and Experiments</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="ideas.html#prone-launch-configurations">Prone launch configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ideas.html#seated">Seated</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ideas.html#propellers">Propellers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ideas.html#trike-ish">Trike-ish</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ideas.html#from-paraglider-land">From Paraglider land</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ideas.html#from-paraglider-land">From Paraglider-land</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ideas.html#interesting-hardware">Interesting hardware</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="safety.html">Safety</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="safety.html#design-checklist">Design Checklist</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
@@ -245,11 +265,14 @@
 <div class="section" id="battery-mounts">
 <h2>Battery mounts<a class="headerlink" href="#battery-mounts" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="boom-and-motor-mounts">
-<h2>Boom and motor mounts<a class="headerlink" href="#boom-and-motor-mounts" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="boom">
+<h2>Boom<a class="headerlink" href="#boom" title="Permalink to this headline">¶</a></h2>
+<img alt="_images/boom1.png" src="_images/boom1.png" />
 </div>
-<div class="section" id="wheels">
-<h2>Wheels<a class="headerlink" href="#wheels" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="motor-mount">
+<h2>Motor mount<a class="headerlink" href="#motor-mount" title="Permalink to this headline">¶</a></h2>
+<img alt="_images/motormount1_p.png" src="_images/motormount1_p.png" />
+<img alt="_images/motormount2_r.png" src="_images/motormount2_r.png" />
 </div>
 <div class="section" id="safety-features">
 <h2>Safety features<a class="headerlink" href="#safety-features" title="Permalink to this headline">¶</a></h2>
@@ -272,19 +295,35 @@
 </ul>
 </div>
 </div>
-<div class="section" id="intrumentation">
-<h2>Intrumentation<a class="headerlink" href="#intrumentation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="instrumentation">
+<h2>Instrumentation<a class="headerlink" href="#instrumentation" title="Permalink to this headline">¶</a></h2>
 <p>TBD. CA has a slick contraption in one of his vids.</p>
 <img alt="_images/cainstrument.png" src="_images/cainstrument.png" />
+</div>
+<div class="section" id="wheels">
+<h2>Wheels<a class="headerlink" href="#wheels" title="Permalink to this headline">¶</a></h2>
+<p>Info and ideas:</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=npBn50XRphA">https://www.youtube.com/watch?v=npBn50XRphA</a></p>
 </div>
 <div class="section" id="material-supppliers">
 <h2>Material supppliers<a class="headerlink" href="#material-supppliers" title="Permalink to this headline">¶</a></h2>
 <p>TBD: Random list. May kill this later.</p>
+<p>General suppliers</p>
+<ul class="simple">
+<li><p><cite>Hobby King &lt;https://hobbyking.com/&gt;</cite>: Just about everything.</p></li>
+</ul>
 <div class="section" id="carbon-fiber">
 <h3>Carbon fiber<a class="headerlink" href="#carbon-fiber" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p><a class="reference external" href="https://dragonplate.com/carbon-fiber-products">https://dragonplate.com/carbon-fiber-products</a>: Includes technical specifications, CAD drawings, and connectors</p></li>
+<li><p><a class="reference external" href="https://dragonplate.com/carbon-fiber-products">Dragonplate</a>: Includes technical specifications, CAD drawings, and connectors</p></li>
 <li><p><a class="reference external" href="https://www.clearwatercomposites.com/products/carbon-fiber-tubes/round/">https://www.clearwatercomposites.com/products/carbon-fiber-tubes/round/</a></p></li>
+</ul>
+</div>
+<div class="section" id="aluminum">
+<h3>Aluminum<a class="headerlink" href="#aluminum" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.airpartsinc.com/default.asp">https://www.airpartsinc.com/default.asp</a></p></li>
+<li><p><a class="reference external" href="https://www.onlinemetals.com/">https://www.onlinemetals.com/</a></p></li>
 </ul>
 </div>
 </div>
@@ -302,7 +341,7 @@
   <div role="contentinfo">
     <p>
       <span class="lastupdated">
-        Last updated on Dec 07, 2021.
+        Last updated on Dec 11, 2021.
       </span>
 
     </p>

@@ -13,6 +13,7 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme_overrides.css" type="text/css" />
 
   
   
@@ -88,7 +89,7 @@
 <li class="toctree-l2"><a class="reference internal" href="examples.html#flying-videos">Flying videos</a></li>
 <li class="toctree-l2"><a class="reference internal" href="examples.html#build-videos">Build videos</a></li>
 <li class="toctree-l2"><a class="reference internal" href="examples.html#not-a-trike-not-a-harness">Not a trike-not a harness</a></li>
-<li class="toctree-l2"><a class="reference internal" href="examples.html#commercial-electric-harness-systems">Commercial electric harness systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#commercial-e-harness-systems">Commercial e-harness systems</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="spec.html">Specing out a System (Sizing)</a><ul>
@@ -97,8 +98,11 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Motors</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#tbd">TBD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#top-considerations">Top considerations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#manufacturers">Manufacturers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mating-with-a-prop">Mating with a prop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#duty-cycle-max-continuous-power">Duty cycle-Max continuous power</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#kv-reduction">KV reduction</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="batteries.html">Batteries</a><ul>
@@ -112,6 +116,7 @@
 <li class="toctree-l3"><a class="reference internal" href="props.html#material">Material</a></li>
 <li class="toctree-l3"><a class="reference internal" href="props.html#diameter">Diameter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="props.html#pitch">Pitch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="props.html#number-of-blades">Number of blades</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="props.html#propeller-tutorial">Propeller tutorial</a></li>
@@ -123,8 +128,8 @@
 <li class="toctree-l2"><a class="reference internal" href="parts.html#throttle">Throttle</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parts.html#backplate">Backplate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parts.html#battery-mounts">Battery mounts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="parts.html#boom-and-motor-mounts">Boom and motor mounts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="parts.html#wheels">Wheels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parts.html#boom">Boom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parts.html#motor-mount">Motor mount</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parts.html#safety-features">Safety features</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="parts.html#quick-power-disconnect">Quick power disconnect</a></li>
 <li class="toctree-l3"><a class="reference internal" href="parts.html#heat-sensor">Heat sensor</a></li>
@@ -132,9 +137,11 @@
 <li class="toctree-l3"><a class="reference internal" href="parts.html#turbulence-sensors">Turbulence sensors</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="parts.html#intrumentation">Intrumentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parts.html#instrumentation">Instrumentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parts.html#wheels">Wheels</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parts.html#material-supppliers">Material supppliers</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="parts.html#carbon-fiber">Carbon fiber</a></li>
+<li class="toctree-l3"><a class="reference internal" href="parts.html#aluminum">Aluminum</a></li>
 </ul>
 </li>
 </ul>
@@ -143,20 +150,33 @@
 <li class="toctree-l2"><a class="reference internal" href="calculators.html#required-power">Required power</a></li>
 <li class="toctree-l2"><a class="reference internal" href="calculators.html#propeller">Propeller</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="calculators.html#prop-pitch">Prop pitch</a></li>
-<li class="toctree-l3"><a class="reference internal" href="calculators.html#static-thrust">Static thrust</a></li>
-<li class="toctree-l3"><a class="reference internal" href="calculators.html#static-thrust-and-horsepower">Static thrust and horsepower</a></li>
 <li class="toctree-l3"><a class="reference internal" href="calculators.html#tip-speed">Tip speed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="calculators.html#theoretical-speed">Theoretical speed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calculators.html#static-thrust-required-engine-power">Static thrust: required engine power</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calculators.html#static-thrust-and-horsepower">Static thrust and horsepower</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calculators.html#id1">Tip speed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calculators.html#id2">Theoretical speed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="calculators.html#other">Other</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="calculators.html#materials">Materials</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="calculators.html#metal-components">Metal components</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="ideas.html">Ideas and Related Experiments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="calculators.html#tbd-rc-whole-system">TBD: RC whole system?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ideas.html">Ideas and Experiments</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="ideas.html#prone-launch-configurations">Prone launch configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ideas.html#seated">Seated</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ideas.html#propellers">Propellers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ideas.html#trike-ish">Trike-ish</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ideas.html#from-paraglider-land">From Paraglider land</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ideas.html#from-paraglider-land">From Paraglider-land</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ideas.html#interesting-hardware">Interesting hardware</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="safety.html">Safety</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="safety.html#design-checklist">Design Checklist</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
@@ -235,23 +255,32 @@
   <div class="section" id="motors">
 <h1>Motors<a class="headerlink" href="#motors" title="Permalink to this headline">¶</a></h1>
 <img alt="_images/uc1.gif" src="_images/uc1.gif" />
-<div class="section" id="tbd">
-<h2>TBD<a class="headerlink" href="#tbd" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="top-considerations">
+<h2>Top considerations<a class="headerlink" href="#top-considerations" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="manufacturers">
 <h2>Manufacturers<a class="headerlink" href="#manufacturers" title="Permalink to this headline">¶</a></h2>
-<p>todo: Replace this with a Google Sheets spreadsheet with links</p>
+<p>todo: fix width, add sort</p>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTZ5drQYvvp4srNMViieF0J0stG8gvPEdH_B7djQA4lOQ53DEMxsOmvscQ4TEEQP2fW-wIQpMl-eO5L/pubhtml?widget=true&amp;headers=false" width="100%" height="200px"></iframe></div>
+<div class="section" id="mating-with-a-prop">
+<h2>Mating with a prop<a class="headerlink" href="#mating-with-a-prop" title="Permalink to this headline">¶</a></h2>
+<p>Criteria:</p>
+<ol class="arabic simple">
+<li><p>one</p></li>
+<li><p>two</p></li>
+<li><p>three</p></li>
+</ol>
+<p>The <a class="reference external" href="https://ppg.e-props.fr/index.php?cPath=1">e-props folks</a> match multiple props to each specific motor. It’s worth checking out to get an idea of acceptable combinations.</p>
 <p>tbd:</p>
-<ul class="simple">
-<li><p>Rotex: <a class="reference external" href="https://www.facebook.com/rotexelectric/">https://www.facebook.com/rotexelectric/</a></p></li>
-<li><p>Freerchobby: <a class="reference external" href="https://www.freerchobby.cc/">https://www.freerchobby.cc/</a></p></li>
-</ul>
-<p>Plettenberg: spec table. May be too high RPM (7k) <a class="reference external" href="https://plettenberg-motoren.net/magic/show_image.php?id=337255&amp;download=1">https://plettenberg-motoren.net/magic/show_image.php?id=337255&amp;download=1</a></p>
-<p>XOAR: <a class="reference external" href="https://shop.xoarintl.com/products">https://shop.xoarintl.com/products</a>: too small at 2.2kw</p>
-<p>E-Power Hobby – 120100 Outrunner brushless motor 80KV 25000W: <a class="reference external" href="https://epowerhobby.com/product/e-power-hobby-120100-sensored-outrunner-brushless-motor-80kv-25000w/">https://epowerhobby.com/product/e-power-hobby-120100-sensored-outrunner-brushless-motor-80kv-25000w/</a></p>
-<p>tbd:</p>
-<p>get a list of motors from <a class="reference external" href="https://ppg.e-props.fr/index.php?cPath=1">https://ppg.e-props.fr/index.php?cPath=1</a>.</p>
-<p>tbd: INFO: <a class="reference external" href="https://forum.hanggliding.org/viewtopic.php?t=35303">https://forum.hanggliding.org/viewtopic.php?t=35303</a></p>
+<p>INFO: <a class="reference external" href="https://forum.hanggliding.org/viewtopic.php?t=35303">https://forum.hanggliding.org/viewtopic.php?t=35303</a></p>
+</div>
+<div class="section" id="duty-cycle-max-continuous-power">
+<h2>Duty cycle-Max continuous power<a class="headerlink" href="#duty-cycle-max-continuous-power" title="Permalink to this headline">¶</a></h2>
+<p>There is also a suggestion that the lower the no load kv value of the motor the greater the 100% duty cycle reduction factor. Probably useful to know if one of the larger diameter 35kv or 27kv motors marketed for use on paramotors is being considered.</p>
+</div>
+<div class="section" id="kv-reduction">
+<h2>KV reduction<a class="headerlink" href="#kv-reduction" title="Permalink to this headline">¶</a></h2>
+<img alt="_images/kvreduction.png" src="_images/kvreduction.png" />
 </div>
 </div>
 
@@ -267,7 +296,7 @@
   <div role="contentinfo">
     <p>
       <span class="lastupdated">
-        Last updated on Dec 07, 2021.
+        Last updated on Dec 11, 2021.
       </span>
 
     </p>
