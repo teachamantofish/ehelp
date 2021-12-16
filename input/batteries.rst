@@ -5,13 +5,10 @@ Batteries
 .. image:: images/uc2.gif
 
 
-Choosing a battery
+Battery considerations 
 ==========================
 
-Notes
-======================
 
-battery discussion: https://endless-sphere.com/forums/viewtopic.php?t=110570
 
 Products pilots have used
 =========================================
@@ -23,4 +20,12 @@ todo: Replace this with a Google Sheets spreadsheet with links
 
 
 
+Notes, todo, not reviewed
+=================================
+
+battery discussion: https://endless-sphere.com/forums/viewtopic.php?t=110570
+
+* Videos: 
+   * why choose a high C value battery. 
+   * why high voltage is better
 

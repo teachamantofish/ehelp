@@ -21,6 +21,13 @@ Boom
 
 .. image:: images/boom1.png
 
+.. image:: images/boomsquare_reidar.png    
+
+
+Boom to harness connection
+============================================
+
+.. image:: images/knuckle_charles.png    
 
 Motor mount
 ======================
@@ -28,6 +35,10 @@ Motor mount
 .. image:: images/motormount1_p.png
 
 .. image:: images/motormount2_r.png
+
+.. image:: images/motormount_charles.png
+
+.. image:: images/motormount_charles1.png
 
 Safety features
 ===========================

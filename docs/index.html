@@ -85,15 +85,18 @@
             
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">eHelp Examples</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="examples.html#flying-videos">Flying videos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="examples.html#build-videos">Build videos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#ehelp-harness">eHelp harness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#sustainers">Sustainers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="examples.html#not-a-trike-not-a-harness">Not a trike-not a harness</a></li>
 <li class="toctree-l2"><a class="reference internal" href="examples.html#commercial-e-harness-systems">Commercial e-harness systems</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="spec.html">Specing out a System (Sizing)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="spec.html#decision-path">Decision path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spec.html#determine-what-you-need">Determine what you need</a></li>
 <li class="toctree-l2"><a class="reference internal" href="spec.html#method-1-copy-others">Method 1: Copy others</a></li>
 <li class="toctree-l2"><a class="reference internal" href="spec.html#method-2-do-the-math">Method 2: Do the math</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spec.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="motors.html">Motors</a><ul>
@@ -102,12 +105,13 @@
 <li class="toctree-l2"><a class="reference internal" href="motors.html#mating-with-a-prop">Mating with a prop</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#duty-cycle-max-continuous-power">Duty cycle-Max continuous power</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#kv-reduction">KV reduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motors.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="batteries.html">Batteries</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="batteries.html#choosing-a-battery">Choosing a battery</a></li>
-<li class="toctree-l2"><a class="reference internal" href="batteries.html#notes">Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="batteries.html#battery-considerations">Battery considerations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="batteries.html#products-pilots-have-used">Products pilots have used</a></li>
+<li class="toctree-l2"><a class="reference internal" href="batteries.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="props.html">Propellers</a><ul>
@@ -121,6 +125,7 @@
 <li class="toctree-l2"><a class="reference internal" href="props.html#propeller-tutorial">Propeller tutorial</a></li>
 <li class="toctree-l2"><a class="reference internal" href="props.html#folding-props-diy-and-resources">Folding props DIY and resources</a></li>
 <li class="toctree-l2"><a class="reference internal" href="props.html#vendors">Vendors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="props.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="parts.html">Parts and Components</a><ul>
@@ -128,6 +133,7 @@
 <li class="toctree-l2"><a class="reference internal" href="parts.html#backplate">Backplate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parts.html#battery-mounts">Battery mounts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parts.html#boom">Boom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parts.html#boom-to-harness-connection">Boom to harness connection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parts.html#motor-mount">Motor mount</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parts.html#safety-features">Safety features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parts.html#instrumentation">Instrumentation</a></li>
@@ -140,7 +146,6 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="calculators.html">Calculators</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="calculators.html#setting-a-performance-goal">Setting a performance goal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="calculators.html#required-power">Required power</a></li>
 <li class="toctree-l2"><a class="reference internal" href="calculators.html#propeller">Propeller</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="calculators.html#prop-pitch">Prop pitch</a></li>
@@ -260,9 +265,9 @@
 <h1>Electric Powered Hang Gliding Harnesses<a class="headerlink" href="#electric-powered-hang-gliding-harnesses" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
-<p>Why? Because for 1500-2500 bucks a DIYer can build a 20 pound eHelp harness and flatland foot launch from any location. No modified glider. No tow rig. Minimal learning curve.  The time and $$$ investment quickly pays for itself through reduced driving to launches, hang-waiting, tow costs, alcoholic consumption while jonesing for some airtime. But cost is relative to airtime, and only you can determine the ultimate payback.</p>
-<p>The systems are relatively simple, and energetic pioneers are paving the way with open source plans and Youtube videos. Multi-billion dollar drone, batter, and EV industries are quickly driving the evolution of cheaper, lighter, and more powerful components.</p>
-<p>In a few years, we’ll like have ligher and more powerful motors (axial), smaller and safer batteries, and a multitude of prebuilt ready-to-fly choices.</p>
+<p>Why? Because for 1500-2500 bucks a DIYer can build a 20 pound eHelp harness and flatland foot launch from any location. No modified glider. No tow rig. Minimal learning curve.  The time and $$$ investment quickly pays for itself through reduced driving to launches, hang-waiting, tow costs, alcoholic consumption while jonesing for some airtime. Only the pilot can determine the ultimate payback.</p>
+<p>The systems are relatively simple, and energetic pioneers are paving the way with open source plans and Youtube videos. The multi-billion dollar drone, battery, and EV industries are quickly driving the evolution of cheaper, lighter, and more powerful components.</p>
+<p>In a few years, we’ll like have lighter and more powerful motors (axial), smaller and safer batteries, and (hopefully) a multitude of prebuilt ready-to-fly choices.</p>
 <div class="section" id="about-this-document">
 <h2>About this document<a class="headerlink" href="#about-this-document" title="Permalink to this headline">¶</a></h2>
 <p>This content is:</p>
@@ -271,8 +276,12 @@
 <li><p>Whether it evolves into a long term resource is up to the “crowd”!</p></li>
 <li><p>Hopefully helpful, but always experimental.</p></li>
 <li><p>An unfinished work in progress.</p></li>
-<li><p>There is no attempt here to make $$$, and there will never be.</p></li>
+<li><p>There is no attempt here to make $$$, and so shall it ever be.</p></li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Send me any info, link, or informational tidbit. I’ll incorporate what makes sense. Ideas, suggestions, complaints? Email <a class="reference external" href="mailto:ben&#46;rogers&#37;&#52;&#48;gmail&#46;com">ben<span>&#46;</span>rogers<span>&#64;</span>gmail<span>&#46;</span>com</a></p>
+</div>
 </div>
 <div class="section" id="danger-will-robinson">
 <h2>Danger Will Robinson<a class="headerlink" href="#danger-will-robinson" title="Permalink to this headline">¶</a></h2>
@@ -332,14 +341,6 @@
 <li><p><strong>Encourage growth in the sport of hang gliding</strong>: The decline of hang gliding is well-known. Perhaps the ability to flatland launch with a simple DIY system will invigorate the sport.</p></li>
 </ul>
 </div>
-<div class="section" id="contribute">
-<h2>Contribute<a class="headerlink" href="#contribute" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Send me any info, link, or informational tidbit. I’ll incorporate what makes sense.</p></li>
-<li><p>Ask to directly contribute and edit the pages.</p></li>
-<li><p>Ideas, suggestions, complaints? Email <a class="reference external" href="mailto:ben&#46;rogers&#37;&#52;&#48;gmail&#46;com">ben<span>&#46;</span>rogers<span>&#64;</span>gmail<span>&#46;</span>com</a></p></li>
-</ul>
-</div>
 </div>
 
 
@@ -354,7 +355,7 @@
   <div role="contentinfo">
     <p>
       <span class="lastupdated">
-        Last updated on Dec 11, 2021.
+        Last updated on Dec 15, 2021.
       </span>
 
     </p>

@@ -17,11 +17,11 @@ Electric Powered Hang Gliding Harnesses
    safety
    glossary
 
-Why? Because for 1500-2500 bucks a DIYer can build a 20 pound eHelp harness and flatland foot launch from any location. No modified glider. No tow rig. Minimal learning curve.  The time and $$$ investment quickly pays for itself through reduced driving to launches, hang-waiting, tow costs, alcoholic consumption while jonesing for some airtime. But cost is relative to airtime, and only you can determine the ultimate payback.
+Why? Because for 1500-2500 bucks a DIYer can build a 20 pound eHelp harness and flatland foot launch from any location. No modified glider. No tow rig. Minimal learning curve.  The time and $$$ investment quickly pays for itself through reduced driving to launches, hang-waiting, tow costs, alcoholic consumption while jonesing for some airtime. Only the pilot can determine the ultimate payback.
 
-The systems are relatively simple, and energetic pioneers are paving the way with open source plans and Youtube videos. Multi-billion dollar drone, batter, and EV industries are quickly driving the evolution of cheaper, lighter, and more powerful components.  
+The systems are relatively simple, and energetic pioneers are paving the way with open source plans and Youtube videos. The multi-billion dollar drone, battery, and EV industries are quickly driving the evolution of cheaper, lighter, and more powerful components.  
 
-In a few years, we'll like have ligher and more powerful motors (axial), smaller and safer batteries, and a multitude of prebuilt ready-to-fly choices.
+In a few years, we'll like have lighter and more powerful motors (axial), smaller and safer batteries, and (hopefully) a multitude of prebuilt ready-to-fly choices.
 
 About this document
 ==================================
@@ -32,8 +32,10 @@ This content is:
 * Whether it evolves into a long term resource is up to the "crowd"!
 * Hopefully helpful, but always experimental. 
 * An unfinished work in progress.
-* There is no attempt here to make $$$, and there will never be.
+* There is no attempt here to make $$$, and so shall it ever be.
 
+.. note:: Send me any info, link, or informational tidbit. I'll incorporate what makes sense. Ideas, suggestions, complaints? Email ben.rogers@gmail.com 
+   
 Danger Will Robinson
 ===========================
 
@@ -74,12 +76,6 @@ Goals
 * **Advance the technology**: Easily accessible information should speed and foster the development and use of functional designs.
 * **Encourage growth in the sport of hang gliding**: The decline of hang gliding is well-known. Perhaps the ability to flatland launch with a simple DIY system will invigorate the sport. 
 
-Contribute
-=========================
-
-* Send me any info, link, or informational tidbit. I'll incorporate what makes sense. 
-* Ask to directly contribute and edit the pages.
-* Ideas, suggestions, complaints? Email ben.rogers@gmail.com 
 
 
 

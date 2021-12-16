@@ -86,15 +86,18 @@
             
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="examples.html">eHelp Examples</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="examples.html#flying-videos">Flying videos</a></li>
-<li class="toctree-l2"><a class="reference internal" href="examples.html#build-videos">Build videos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#ehelp-harness">eHelp harness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#sustainers">Sustainers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="examples.html#not-a-trike-not-a-harness">Not a trike-not a harness</a></li>
 <li class="toctree-l2"><a class="reference internal" href="examples.html#commercial-e-harness-systems">Commercial e-harness systems</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Specing out a System (Sizing)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#decision-path">Decision path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#determine-what-you-need">Determine what you need</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#method-1-copy-others">Method 1: Copy others</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#method-2-do-the-math">Method 2: Do the math</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="motors.html">Motors</a><ul>
@@ -103,12 +106,13 @@
 <li class="toctree-l2"><a class="reference internal" href="motors.html#mating-with-a-prop">Mating with a prop</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#duty-cycle-max-continuous-power">Duty cycle-Max continuous power</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#kv-reduction">KV reduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motors.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="batteries.html">Batteries</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="batteries.html#choosing-a-battery">Choosing a battery</a></li>
-<li class="toctree-l2"><a class="reference internal" href="batteries.html#notes">Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="batteries.html#battery-considerations">Battery considerations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="batteries.html#products-pilots-have-used">Products pilots have used</a></li>
+<li class="toctree-l2"><a class="reference internal" href="batteries.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="props.html">Propellers</a><ul>
@@ -122,6 +126,7 @@
 <li class="toctree-l2"><a class="reference internal" href="props.html#propeller-tutorial">Propeller tutorial</a></li>
 <li class="toctree-l2"><a class="reference internal" href="props.html#folding-props-diy-and-resources">Folding props DIY and resources</a></li>
 <li class="toctree-l2"><a class="reference internal" href="props.html#vendors">Vendors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="props.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="parts.html">Parts and Components</a><ul>
@@ -129,6 +134,7 @@
 <li class="toctree-l2"><a class="reference internal" href="parts.html#backplate">Backplate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parts.html#battery-mounts">Battery mounts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parts.html#boom">Boom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parts.html#boom-to-harness-connection">Boom to harness connection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parts.html#motor-mount">Motor mount</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parts.html#safety-features">Safety features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parts.html#instrumentation">Instrumentation</a></li>
@@ -141,7 +147,6 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="calculators.html">Calculators</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="calculators.html#setting-a-performance-goal">Setting a performance goal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="calculators.html#required-power">Required power</a></li>
 <li class="toctree-l2"><a class="reference internal" href="calculators.html#propeller">Propeller</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="calculators.html#prop-pitch">Prop pitch</a></li>
@@ -262,14 +267,25 @@
   <div class="section" id="specing-out-a-system-sizing">
 <h1>Specing out a System (Sizing)<a class="headerlink" href="#specing-out-a-system-sizing" title="Permalink to this headline">¶</a></h1>
 <img alt="_images/uc1.gif" src="_images/uc1.gif" />
-<p>tbd: Is this correct?: find the prop/RPM combination that will give you both the thrust and efficiency you want, then work backwards from there to determine how much motor power is required and what motor KV/battery voltage you want to use. Then source the motor and controller.</p>
-<p>As a rough guideline look for a motor/battery configuration that has a no-load RPM that is 125% of your target full-throttle RPM.</p>
-<p>what percent of continuous power to use for a 5 minute climb?</p>
+<p>Navigating to final choices and a working system is difficult and time consuming. Until the eHelp harness idea is more widespread, advice will be scattered and design principles scattered across various Facebook pages and forums with pioneers helping where they can. With luck, the concepts here will gain enough traction that the hang gliding community can emulate what’s happening with <a class="reference external" href="https://openppg.com/">OpenPPG</a></p>
+<p>Until then, moving forward is a bit of work.</p>
+<div class="section" id="decision-path">
+<h2>Decision path<a class="headerlink" href="#decision-path" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="determine-what-you-need">
+<h2>Determine what you need<a class="headerlink" href="#determine-what-you-need" title="Permalink to this headline">¶</a></h2>
+</div>
 <div class="section" id="method-1-copy-others">
 <h2>Method 1: Copy others<a class="headerlink" href="#method-1-copy-others" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="method-2-do-the-math">
 <h2>Method 2: Do the math<a class="headerlink" href="#method-2-do-the-math" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="notes-todo-not-reviewed">
+<h2>Notes, todo, not reviewed<a class="headerlink" href="#notes-todo-not-reviewed" title="Permalink to this headline">¶</a></h2>
+<p>tbd: Is this correct?: find the prop/RPM combination that will give you both the thrust and efficiency you want, then work backwards from there to determine how much motor power is required and what motor KV/battery voltage you want to use. Then source the motor and controller.</p>
+<p>As a rough guideline look for a motor/battery configuration that has a no-load RPM that is 125% of your target full-throttle RPM.</p>
+<p>what percent of continuous power to use for a 5 minute climb?</p>
 </div>
 </div>
 
@@ -285,7 +301,7 @@
   <div role="contentinfo">
     <p>
       <span class="lastupdated">
-        Last updated on Dec 11, 2021.
+        Last updated on Dec 15, 2021.
       </span>
 
     </p>

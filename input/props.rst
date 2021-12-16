@@ -40,6 +40,7 @@ Folding props DIY and resources
 ============================================
 
 * `Charles Allen's DIY project video <https://www.youtube.com/watch?v=cyBJLpHkc7A>`_
+* `Icarus folding props <https://icare-icarus.3dcartstores.com/RASA-CFK-3-Blades-Propeller-Folding-342225-MAG-CAD-BIG_p_852.html>`_ See also Reidar's `video and commments <https://www.youtube.com/watch?v=-sIVpOLYoqg&t=144s>`_`
 
 Vendors
 ==================
@@ -48,6 +49,8 @@ Vendors
 * Extensive lin of PPG props with 2-6 blades: https://ppg.e-props.fr/index.php?cPath=1
 * Folding props: https://www.geigerengineering.de/en/avionics/products
 
-not vetted: 
+
+Notes, todo, not reviewed
+=================================
 
 * https://www.ebay.com/itm/154524832114?chn=ps&norover=1&mkevt=1&mkrid=711-117182-37290-0&mkcid=2&itemid=154524832114&targetid=1263094005506&device=c&mktype=&googleloc=1016367&poi=&campaignid=14859008593&mkgroupid=130497710760&rlsatarget=pla-1263094005506&abcId=9300678&merchantid=6296724&gclid=Cj0KCQiA47GNBhDrARIsAKfZ2rAgjjvUrh-abw9UZTIV9CeDeQPL8bB5YATLRvpgPy620nQxEJSnV1kaAnhPEALw_wcB

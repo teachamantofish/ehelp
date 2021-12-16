@@ -4,8 +4,7 @@ Calculators
 
 random notes. . . 
 
-Setting a performance goal
-=====================================
+Motor efficiency: Used power - heat. Heat is P=i squared * amps (resistance squared times amps)
 
 Required power
 ===================================
@@ -108,6 +107,12 @@ max power for batteries: (s rating)(voltage)(amps)
 
 
 `Aviation Converters and Calculators <http://www.csgnetwork.com/aviationconverters.html>`_ 
+
+Climb angle: https://wingsofaero.in/calculator/climb-angle-calculator-by-mohit-kudal/
+
+Climb/Descent gradients: http://www.luizmonteiro.com/Misc.aspx
+FPM climb angle: http://www.luizmonteiro.com/Misc.aspx
+Glide distance/ratio: http://www.luizmonteiro.com/Misc.aspx
 
 Materials
 ===================

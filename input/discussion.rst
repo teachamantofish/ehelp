@@ -1,4 +1,8 @@
 
+Notes, todo, not reviewed
+=================================
+
+
 Joe Stapleton: https://www.facebook.com/groups/904566026835865/permalink/946245972667870/?comment_id=952365935389207&notif_id=1639134326519757&notif_t=group_comment&ref=notif
 
 There is some extreme confusion going on here, you really can't use KV (no load RPM per volt) to try and determine prop RPM directly. KV is simply the inverse of KT the torque constant. KT tells you how much torque your motor will produce per amp. Applying a specific torque to your prop will generate a specific thrust, irrespective of airspeed. All that happens as your airspeed increases if you keep the torque/current the same is the RPM increases and therefore the power since power = torque x RPM.
