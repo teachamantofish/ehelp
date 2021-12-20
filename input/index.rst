@@ -2,40 +2,27 @@
 Electric Powered Hang Gliding Harnesses
 ************************************************
 
-.. toctree:: 
-   :maxdepth: 2
-   :hidden:
+.. caution:: In progress notes.
 
-   examples
-   spec
-   motors
-   batteries
-   props
-   parts
-   calculators
-   ideas
-   safety
-   glossary
-
-Why? Because for 1500-2500 bucks a DIYer can build a 20 pound eHelp harness and flatland foot launch from any location. No modified glider. No tow rig. Minimal learning curve.  The time and $$$ investment quickly pays for itself through reduced driving to launches, hang-waiting, tow costs, alcoholic consumption while jonesing for some airtime. Only the pilot can determine the ultimate payback.
+Why? Because for 2000-3000 bucks a DIYer can build a 20 pound eHelp harness and flatland foot launch from any location. No modified glider. No tow rig. Minimal learning curve.  The time and $$$ investment quickly pays for itself through reduced driving to launches, hang-waiting, tow costs, alcoholic consumption while jonesing for some airtime. Only the pilot can determine the ultimate payback.
 
 The systems are relatively simple, and energetic pioneers are paving the way with open source plans and Youtube videos. The multi-billion dollar drone, battery, and EV industries are quickly driving the evolution of cheaper, lighter, and more powerful components.  
 
-In a few years, we'll like have lighter and more powerful motors (axial), smaller and safer batteries, and (hopefully) a multitude of prebuilt ready-to-fly choices.
+In a few years, we'll like have lighter and more powerful motors (axial), smaller and safer batteries (solid state), and (with luck) commercial ready-to-fly choices, kits, manuals, and parts.
 
 About this document
 ==================================
 
 This content is: 
 
-* A crowd-sourced document. You can ask to edit the source here: https://github.com/teacha.../ehelp/blob/main/input/index.rst
+* A crowd-sourced document. You can ask to edit the source here: https://github.com/teacha.../ehelp/blob/main/input/index.rst.
 * Whether it evolves into a long term resource is up to the "crowd"!
 * Hopefully helpful, but always experimental. 
 * An unfinished work in progress.
 * There is no attempt here to make $$$, and so shall it ever be.
 
 .. note:: Send me any info, link, or informational tidbit. I'll incorporate what makes sense. Ideas, suggestions, complaints? Email ben.rogers@gmail.com 
-   
+
 Danger Will Robinson
 ===========================
 

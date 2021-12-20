@@ -47,12 +47,12 @@ Propeller
 Prop pitch
 -----------------------------
 
-`Prop pitch recommendation <http://www.culverprops.com/pitchselection.htm>`_ based on RPM, airspeed, and prop length. You can also view the `tables <http://www.culverprops.com/viewpitchtable.htm>`_
+`Prop pitch recommendation (for cruise?) <http://www.culverprops.com/pitchselection.htm>`_ based on RPM, airspeed, and prop length. You can also view the `tables <http://www.culverprops.com/viewpitchtable.htm>`_
 
 Tip speed
 --------------------------
 
-The efficiency of a propeller is reduced as the tip speed approaches the speed of sound.  Beyond 80% of the speed of sound, increasing RPM has 
+Propeller efficiency reduces as the tip speed approaches the speed of sound.  Beyond 80% of the speed of sound, increasing RPM has 
 little affect on thrust. Ideally, keep tip speeds below 75%-80% of Mach. 
 
 Optimum efficiency and less noise stems from tip speeds less than 700 feet per second or 475 mph. Over that, and air compression in front of the prop leading edge begins occuring which rapidly degrades propeller performance.
@@ -78,6 +78,8 @@ Static thrust and horsepower
 ----------------------------------
 
 http://www.csgnetwork.com/directhpthrustcalc.html
+
+https://rcplanes.online/calc_thrust.htm
 
 Tip speed 
 ----------------

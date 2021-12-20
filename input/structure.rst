@@ -1,17 +1,20 @@
 ************************************************
-Parts and Components 
+Structural-Mechanical
 ************************************************
 
 .. image:: images/uc1.gif
 
 TBD: overview
 
-Throttle
-==========================
-
 
 Backplate
 ==================================
+
+
+Boom to harness connection
+============================================
+
+.. image:: images/knuckle_charles.png    
 
 Battery mounts
 ======================
@@ -19,15 +22,16 @@ Battery mounts
 Boom 
 ========================
 
+CA: boom: 
+Paul Marin: By the way, if you just want to bolt a tube on to get up and running anything from 1.75” x 17swg is fine. That size just happens to be a really common size in old hang gliders i
+
+weights of cf vs al
+
+Pauls doc. 
+
 .. image:: images/boom1.png
 
-.. image:: images/boomsquare_reidar.png    
-
-
-Boom to harness connection
-============================================
-
-.. image:: images/knuckle_charles.png    
+.. image:: images/boomsquare_reidar.png
 
 Motor mount
 ======================
@@ -45,12 +49,7 @@ Safety features
 
 See :ref:`safety`
 
-Instrumentation
-======================
 
-TBD. CA has a slick contraption in one of his vids. 
-
-.. image:: images/cainstrument.png
 
 Wheels
 ==================
@@ -78,9 +77,15 @@ Carbon fiber
 Aluminum
 ------------------
 
-* https://www.airpartsinc.com/default.asp
 * https://www.onlinemetals.com/
 
+
+Aircraft parts
+---------------------
+
+* https://www.airpartsinc.com/default.asp
+* https://www.leadingedgeairfoils.com/
+* 
 
 
 

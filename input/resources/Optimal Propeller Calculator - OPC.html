@@ -1,0 +1,437 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><script type="text/javascript" async="" src="Optimal%20Propeller%20Calculator%20-%20OPC_files/ga.js"></script><script src="Optimal%20Propeller%20Calculator%20-%20OPC_files/analytics.js" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app28.us.archive.org';v.server_ms=599;archive_analytics.send_pageview({});});</script>
+<script type="text/javascript" src="Optimal%20Propeller%20Calculator%20-%20OPC_files/bundle-playback.js" charset="utf-8"></script>
+<script type="text/javascript" src="Optimal%20Propeller%20Calculator%20-%20OPC_files/wombat.js" charset="utf-8"></script>
+<script type="text/javascript">
+  __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://www.godolloairport.hu:80/calc/opc_eng/index.html","20200707141236","https://web.archive.org/","web","/_static/",
+	      "1594131156");
+</script>
+<link rel="stylesheet" type="text/css" href="Optimal%20Propeller%20Calculator%20-%20OPC_files/banner-styles.css">
+<link rel="stylesheet" type="text/css" href="Optimal%20Propeller%20Calculator%20-%20OPC_files/iconochive.css">
+<!-- End Wayback Rewrite JS Include -->
+
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
+    <title>Optimal Propeller Calculator - OPC</title>
+    
+    <meta name="keywords" content="Optimal Propeller Calculator, Propeller diameter, Estimated flying speed, Thrust">
+    
+    <script language="JavaScript">
+	<!--
+	function MM_openBrWindow(theURL,winName,features) { //v2.0
+	window.open(theURL,winName,features);
+	}
+	//-->
+	</script>
+	
+    <script language="JavaScript" type="text/JavaScript">	
+	
+// © All rights reserved! Minden jog fenntartva!
+	
+	var error = "";
+	var file = "PropTabla2_DATA.xml";
+	try //Internet Explorer
+		{
+		xmlDoc=new ActiveXObject("Microsoft.XMLDOM");
+		xmlDoc.async=false;
+		xmlDoc.load(file);
+		}
+	catch(e)
+	{
+	try //Firefox, Mozilla, Opera, etc.
+		{
+		xmlDoc=document.implementation.createDocument("","",null);
+		xmlDoc.async=false;
+		xmlDoc.load(file);
+		}
+	catch(e)
+	{
+	try //Google Chrome
+		{
+		var xmlhttp = new window.XMLHttpRequest();
+		xmlhttp.open("GET",file,false);
+		xmlhttp.send(null);
+		xmlDoc = xmlhttp.responseXML.documentElement;
+		}
+	catch(e)
+	{
+	error=e.message;
+	}
+	}
+	}
+	
+//  OLD METHOD	
+//    var xmlDoc; 
+//    
+//    function loadXML(xmlFile)
+//    { 
+//        var MFF = (typeof document.implementation != 'undefined') && (typeof document.implementation.createDocument != 'undefined'); 
+//
+//        if (MFF)
+//        { 
+//            xmlDoc = document.implementation.createDocument("", "", null);
+//        } 
+//        else
+//        { 
+//            xmlDoc = new ActiveXObject("Microsoft.XMLDOM"); 
+//            xmlDoc.onreadystatechange = verify; 
+//
+//        }  
+//        xmlDoc.async = false; 
+//        xmlDoc.load(xmlFile); 
+//    }
+       
+    function verify()
+    {  
+        if (xmlDoc.readyState != 4) 
+        {  
+            return false;  
+        } 
+    }
+    
+    function addCell(row, size, text, align, BColor, TColor)
+    {
+        var cell = row.insertCell(row.cells.length);
+
+        if (! BColor) { BColor = '#ffffff'; }
+        if (! TColor) { TColor = '#000000'; }
+       
+        cell.innerHTML= '<font size="' + size + '" color="' + TColor + '" face="Arial">' + text + '</font>';
+        cell.align = align;
+        cell.bgColor = BColor;
+    }
+
+    function addTableRow(data1, data2, data3, data4, data5, data6, data7, data8, data9, data10, FordulatBColor, FordulatTColor ,KerSebBColor, KerSebTColor)
+    {
+        var table = document.getElementById('tableResult');
+        var row = table.insertRow(table.rows.length);
+        //
+        //addCell(row, 2, row.rowIndex - 1 , "center");
+        //
+        addCell(row, 2, data1, "center");
+        addCell(row, 2, data2, "center");
+        addCell(row, 2, data3, "center", FordulatBColor, FordulatTColor);
+        addCell(row, 2, data4, "center", KerSebBColor, KerSebTColor);
+        addCell(row, 2, data5, "center");
+        addCell(row, 2, data6, "center");
+        addCell(row, 2, data7, "center");
+        addCell(row, 2, data8, "center");
+        addCell(row, 2, data9, "center");
+        addCell(row, 2, data10, "center");
+    }    
+    
+    function calcFordulat()
+    {
+        var res
+        return 
+    }
+    
+    function isNumber(szam)
+    {
+        if ( szam.length >0 && szam !=" " && !isNaN (szam) )
+        { 
+            return true 
+        } 
+        else 
+        { 
+            return false;
+        }
+    }
+    
+    function clearTable()
+    {
+        var table = document.getElementById('tableResult');
+        while (table.rows.length > 2) { table.deleteRow(table.rows.length - 1); }
+    }
+    
+    function szamol()
+    {
+        clearTable();
+   
+//        loadXML('PropTabla2_DATA.xml');
+
+        var r = xmlDoc.getElementsByTagName("Row");
+        var NincsJo = true;
+        if (r.length > 0)
+        {
+            var objtxtLE = document.getElementById('txtLE');            //$N$2
+            var objtxtMinRPM = document.getElementById('txtMinRPM');    //$N$3
+            var objtxtMaxRPM = document.getElementById('txtMaxRPM');    //$N$4
+            
+            if (objtxtLE && objtxtMinRPM && objtxtMaxRPM)
+            {
+                if (isNumber(objtxtLE.value) && isNumber(objtxtMinRPM.value) && isNumber(objtxtMaxRPM.value))
+                {
+                    for(var i=0; i < r.length; i++)
+                    { 
+                        var c = r[i].getElementsByTagName("Cell");
+                        if (c.length == 2)
+                        {
+                            var d1 = c[0].getElementsByTagName("Data");
+                            var d2 = c[1].getElementsByTagName("Data");
+
+                            if ((d1[0].getAttribute("ss:Type") == 'Number') && (d2[0].getAttribute("ss:Type") == 'Number'))
+                            {
+                                var Atmero = d1[0].firstChild.nodeValue;        //A2
+                                var Emelkedes = d2[0].firstChild.nodeValue;     //B2
+                                var Fordulat = Math.pow(objtxtLE.value / (Emelkedes / Math.pow(10.23,17)) / Math.pow(Atmero,4), 1/3);   //C2
+                                //=($N$2/(B2/10.23^17)/(A2^4))^(1/3)
+                                
+                                var KerSeb = 2 * (((Atmero * 2.54) / 100) / 2) * 3.14 * (Fordulat / 60); //D2
+                                //=2 * (((A2*2.54)/100)/2) * 3.14 * (C2/60)
+                                
+                                var VonoeroKG = Math.pow(Fordulat,2) * Math.pow(Atmero,4) * ( 1.21621735872 / Math.pow(10, 12));    //E2
+                                //=(C2^2)*(A2^4)*1.21621735872E-12
+
+                                var VonoeroFont = Math.pow(Fordulat,2) * Math.pow(Atmero,4) * ( 1.21621735872 / Math.pow(10, 12)) * 2.204623;    //F2
+                                //=E2*2.204623
+                                
+                                var VonoeroOZ = Math.pow(Fordulat,2) * Math.pow(Atmero,4) * ( 1.21621735872 / Math.pow(10, 12)) * 35.273962;    //G2
+                                //=E2*35.273962
+                            
+                                var FlySpeedKM = Fordulat * Emelkedes * 0.001523988;    //H2
+                                //=C2*B2*0.001523988
+                                
+                                var FlySpeedMiles = FlySpeedKM * 0.621371;    //I2
+                                //=H2*0.621371
+                            
+                                var FlySpeedKnot = FlySpeedKM * 0.539957;    //J2
+                                //=H2*0.539957
+                                
+                                var FordulatBColor, FordulatTColor, KerSebBColor, KerSebTColor;
+                                var FordulatError = true, KersebError = true, addRow = false;
+                                
+                                if ((Fordulat >= objtxtMinRPM.value) && (Fordulat <= objtxtMaxRPM.value))   //green
+                                {
+                                    FordulatBColor = '#00CC00';
+                                    FordulatTColor = '#ffffff';
+                                    FordulatError = false;
+                                }
+                                else if (Fordulat >= objtxtMaxRPM.value) //red
+                                {
+                                    FordulatBColor = '#990000';
+                                    FordulatTColor = '#FF3300';
+                                }
+                                else    //grey
+                                { 
+                                    FordulatBColor = '#666666';
+                                    FordulatTColor = '#999999';
+                                }
+                                
+                                if ((KerSeb >= 100) && (KerSeb <= 300)) //green
+                                {
+                                    KerSebBColor = '#00CC00'; 
+                                    KerSebTColor = '#ffffff';
+                                    KersebError = false;
+                                }
+                                else if (KerSeb > 300) //red
+                                {
+                                    KerSebBColor = '#990000';
+                                    KerSebTColor = '#FF3300';
+                                }
+                                else    //grey
+                                { 
+                                    KerSebBColor = '#666666';
+                                    KerSebTColor = '#999999';
+                                }
+                                
+                                addRow = (! FordulatError ) && (! KersebError); 
+                                
+                                if (addRow)
+                                {
+                                    NincsJo = false;
+                                    addTableRow(Atmero, Emelkedes, Fordulat.toFixed(0) + ' RPM', Math.round(KerSeb) + ' m/s', 
+                                                VonoeroKG.toFixed(2) + ' kg', VonoeroFont.toFixed(2) + ' pound', VonoeroOZ.toFixed(2) + ' oz',
+                                                FlySpeedKM.toFixed(1) + ' km/h', FlySpeedMiles.toFixed(1) + ' mph', FlySpeedKnot.toFixed(1) + ' knots',
+                                                FordulatBColor, FordulatTColor, KerSebBColor, KerSebTColor);
+                                }
+                            }
+                        }
+                    }
+                }
+                //else { alert("nem szamol..."); }
+            }
+            //else { alert("bug.."); }
+        }
+        if (NincsJo) 
+        {
+        addTableRow(' The entered data might be wrong or there is no suitable RC propeller!');
+        }
+    }
+    </script>
+    </head>
+<body bgcolor="#003366"><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+  /*min-width:800px !important;*/
+}
+</style>
+<script>__wm.rw(0);</script>
+<div id="wm-ipp-base" style="display: block; direction: ltr;" lang="en">
+</div><div id="wm-ipp-print">The Wayback Machine - https://web.archive.org/web/20200707141236/http://www.godolloairport.hu:80/calc/opc_eng/index.html</div>
+<div id="donato" style="position: relative; width: 100%; height: 245px;">
+  <div id="donato-base" style="height: 245px;">
+    <iframe id="donato-if" src="Optimal%20Propeller%20Calculator%20-%20OPC_files/donate.htm" scrolling="no" style="width:100%; height:100%" frameborder="0">
+    </iframe>
+  </div>
+</div><script type="text/javascript">
+__wm.bt(650,27,25,2,"web","http://www.godolloairport.hu/calc/opc_eng/index.html","20200707141236",1996,"/_static/",["/_static/css/banner-styles.css?v=omkqRugM","/_static/css/iconochive.css?v=qtvMKcIJ"], false);
+  __wm.rw(1);
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+    <form id="form1">
+        <font face="Arial" color="#ffffff">
+                <table id="table2" width="100%">
+                    <tbody><tr><td align="center"><b><font size="6" color="#FFFFFF">
+						Optimal Propeller Calculator</font></b></td></tr>
+                    <tr><td align="center"><font color="#FFFFFF"><b>(Designed 
+						for RC Aircraft Models)</b></font></td></tr>
+                </tbody></table>
+            </font>
+        
+        <table id="tableFrame" width="100%">
+            <tbody><tr> 
+                <td width="400" valign="top">
+                    <table id="table1" style="font-family: Arial" width="400" cellspacing="0" cellpadding="5" border="1" align="left"> 
+                        <tbody><tr bgcolor="#0033cc" align="left">
+                            <td width="90%" height="23" align="right">
+                                <font color="#FFFFFF">The</font><font size="3" face="Arial" color="#ffffff">
+								engine's maximum performance. Horsepower:</font>
+                            </td>
+                            <td width="10%" height="23" align="center">
+                                <input tabindex="1" size="12" id="txtLE" name="txtLE" value="15" type="text">
+                            </td>
+                        </tr>
+                        <tr bgcolor="#0033cc" align="left">
+                            <td height="23" align="right">
+                                <font color="#FFFFFF">The RPM from which 
+								the torque is good and the engine can produce the given 
+								performance:</font></td>
+                            <td height="23" align="center">
+                                <input tabindex="2" size="12" id="txtMinRPM" name="txtMinRPM" value="3000" type="text">
+                            </td>
+                        </tr>
+                        <tr bgcolor="#0033cc" align="left">
+                            <td height="23" align="right">
+                                <font color="#FFFFFF">The engine's  
+								maximum RPM. Not the possible, but the 
+								safest maximum:</font>
+                            </td>
+                            <td height="23" align="center">
+                                <input tabindex="3" size="12" id="txtMaxRPM" name="txtMaxRPM" value="6700" type="text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                            </td>
+                        </tr>
+                        <tr bgcolor="#0033cc" align="left">
+                            <td width="90%" height="23" align="right">
+                                <font size="3" face="Arial" color="#ffffff">
+								Important Information »»»
+                                </font></td>
+                            <td width="10%" height="23" align="center">
+                            <input type="button" value="Read" onclick="MM_openBrWindow('OPC_informations.html','','toolbar=0,scrollbars=1,resizable=0,directories=0,status=0,menubar=0,width=680,height=520')">
+                            </td>
+                        </tr> 
+                        <tr bgcolor="#0033cc" align="left">
+                            <td width="90%" height="23" align="right">
+                                <font face="Arial" color="#ffffff">After 
+								manually modifying the entered data, hit the 
+								Calculate button </font>
+								<font size="3" color="#ffffff">&nbsp;»»»</font>
+                            </td>
+                             <td width="10%" height="23" align="center">
+                                <font face="Arial">
+								<input onclick="szamol();" value="Calculate" type="button"></font>
+                            </td>
+                        </tr>                        
+                    </tbody></table> 
+                </td>
+                <td valign="top">
+                    <table id="tableResult" style="font-family: Arial" width="100%" cellspacing="0" cellpadding="5" border="1">
+                        <tbody>
+                            <tr>
+                                <th colspan="10" bgcolor="#cc6600">
+								<font color="#FFFFFF">Optimal Propeller 
+								Configurations</font></th>
+                            </tr>
+                            <tr>
+                                <th bgcolor="#cc6600">
+								<font size="1" color="#FFFFFF">Diameter</font></th>
+                                <th bgcolor="#cc6600">
+								<font size="1" color="#FFFFFF">Pitch</font></th>
+                                <th bgcolor="#cc6600">
+								<font size="1" color="#FFFFFF">RPM</font></th>
+                                <th bgcolor="#cc6600">
+								<font size="1" color="#FFFFFF">Perimeter Speed</font></th>
+                                <th bgcolor="#cc6600">
+								<font size="1" face="Arial" color="#ffffff">
+								Thrust kg</font></th>
+                                <th bgcolor="#cc6600">
+								<font size="1" face="Arial" color="#ffffff">
+								Thrust pound</font></th>
+                                <th bgcolor="#cc6600">
+								<font size="1" face="Arial" color="#ffffff">
+								Thrust oz</font></th>
+                                <th bgcolor="#cc6600"><font size="1" face="Arial" color="#ffffff">
+								Fly speed km/h</font></th>
+                                <th bgcolor="#cc6600"><font size="1" face="Arial" color="#ffffff">
+								Fly speed mph</font></th>
+                                <th bgcolor="#cc6600"><font size="1" face="Arial" color="#ffffff">
+								Fly speed knots</font></th>
+                            </tr>
+                        <tr><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">34</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">12</font></td><td bgcolor="#00CC00" align="center"><font size="2" face="Arial" color="#ffffff">5164 RPM</font></td><td bgcolor="#00CC00" align="center"><font size="2" face="Arial" color="#ffffff">233 m/s</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">43.34 kg</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">95.54 pound</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">1528.63 oz</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">94.4 km/h</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">58.7 mph</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">51.0 knots</font></td></tr><tr><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">34</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">10</font></td><td bgcolor="#00CC00" align="center"><font size="2" face="Arial" color="#ffffff">5487 RPM</font></td><td bgcolor="#00CC00" align="center"><font size="2" face="Arial" color="#ffffff">248 m/s</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">48.94 kg</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">107.89 pound</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">1726.19 oz</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">83.6 km/h</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">52.0 mph</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">45.2 knots</font></td></tr><tr><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">33</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">12</font></td><td bgcolor="#00CC00" align="center"><font size="2" face="Arial" color="#ffffff">5373 RPM</font></td><td bgcolor="#00CC00" align="center"><font size="2" face="Arial" color="#ffffff">236 m/s</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">41.64 kg</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">91.81 pound</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">1468.98 oz</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">98.3 km/h</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">61.1 mph</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">53.1 knots</font></td></tr><tr><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">33</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">10</font></td><td bgcolor="#00CC00" align="center"><font size="2" face="Arial" color="#ffffff">5710 RPM</font></td><td bgcolor="#00CC00" align="center"><font size="2" face="Arial" color="#ffffff">250 m/s</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">47.03 kg</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">103.68 pound</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">1658.83 oz</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">87.0 km/h</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">54.1 mph</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">47.0 knots</font></td></tr><tr><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">32</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">12</font></td><td bgcolor="#00CC00" align="center"><font size="2" face="Arial" color="#ffffff">5598 RPM</font></td><td bgcolor="#00CC00" align="center"><font size="2" face="Arial" color="#ffffff">238 m/s</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">39.97 kg</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">88.12 pound</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">1409.92 oz</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">102.4 km/h</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">63.6 mph</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">55.3 knots</font></td></tr><tr><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">32</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">10</font></td><td bgcolor="#00CC00" align="center"><font size="2" face="Arial" color="#ffffff">5949 RPM</font></td><td bgcolor="#00CC00" align="center"><font size="2" face="Arial" color="#ffffff">253 m/s</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">45.14 kg</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">99.51 pound</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">1592.15 oz</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">90.7 km/h</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">56.3 mph</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">49.0 knots</font></td></tr><tr><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">30</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">13</font></td><td bgcolor="#00CC00" align="center"><font size="2" face="Arial" color="#ffffff">5941 RPM</font></td><td bgcolor="#00CC00" align="center"><font size="2" face="Arial" color="#ffffff">237 m/s</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">34.77 kg</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">76.65 pound</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">1226.45 oz</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">117.7 km/h</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">73.1 mph</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">63.6 knots</font></td></tr><tr><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">30</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">12</font></td><td bgcolor="#00CC00" align="center"><font size="2" face="Arial" color="#ffffff">6102 RPM</font></td><td bgcolor="#00CC00" align="center"><font size="2" face="Arial" color="#ffffff">243 m/s</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">36.67 kg</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">80.85 pound</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">1293.67 oz</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">111.6 km/h</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">69.3 mph</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">60.3 knots</font></td></tr><tr><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">30</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">10</font></td><td bgcolor="#00CC00" align="center"><font size="2" face="Arial" color="#ffffff">6484 RPM</font></td><td bgcolor="#00CC00" align="center"><font size="2" face="Arial" color="#ffffff">259 m/s</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">41.41 kg</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">91.30 pound</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">1460.87 oz</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">98.8 km/h</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">61.4 mph</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">53.4 knots</font></td></tr><tr><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">29</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">12</font></td><td bgcolor="#00CC00" align="center"><font size="2" face="Arial" color="#ffffff">6384 RPM</font></td><td bgcolor="#00CC00" align="center"><font size="2" face="Arial" color="#ffffff">246 m/s</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">35.05 kg</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">77.28 pound</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">1236.50 oz</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">116.7 km/h</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">72.5 mph</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">63.0 knots</font></td></tr><tr><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">28</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">12</font></td><td bgcolor="#00CC00" align="center"><font size="2" face="Arial" color="#ffffff">6689 RPM</font></td><td bgcolor="#00CC00" align="center"><font size="2" face="Arial" color="#ffffff">249 m/s</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">33.45 kg</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">73.75 pound</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">1179.98 oz</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">122.3 km/h</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">76.0 mph</font></td><td bgcolor="#ffffff" align="center"><font size="2" face="Arial" color="#000000">66.1 knots</font></td></tr></tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody></table>
+    </form><hr>
+	<p align="right"><font size="1" face="Arial" color="#ffffff">OPC - Version 
+	2.3 - Engineered by
+	Szabolcs Füzesi and programmed by László 
+	Kapczy<br>© All rights reserved! Copying and any other than this online website usage is prohibited!<br>
+	</font><font size="1" face="Arial" color="#FFFFFF"><br>
+	Hungarian</font><font size="1" face="Arial" color="#ffffff"> version:
+	<a href="https://web.archive.org/web/20200707141236/http://www.godolloairport.hu/calc/opc/index.html">
+<img src="Optimal%20Propeller%20Calculator%20-%20OPC_files/hungarian-flag.gif" alt="Kattintson ide a magyar változathoz." width="61" height="36" border="0" align="absbottom"></a></font></p>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-340961-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://web.archive.org/web/20200707141236/https://ssl' : 'https://web.archive.org/web/20200707141236/http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+</body></html>
+<!--
+     FILE ARCHIVED ON 14:12:36 Jul 07, 2020 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 04:29:59 Dec 19, 2021.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 264.523
+  exclusion.robots: 0.283
+  exclusion.robots.policy: 0.27
+  RedisCDXSource: 21.578
+  esindex: 0.012
+  LoadShardBlock: 222.474 (3)
+  PetaboxLoader3.datanode: 250.66 (4)
+  CDXLines.iter: 16.441 (3)
+  load_resource: 328.587
+  PetaboxLoader3.resolve: 50.905
+-->

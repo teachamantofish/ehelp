@@ -1,15 +1,11 @@
 ************************************************
-Electronics
+Electronic Speed Controller
 ************************************************
 
 .. image:: images/uc1.gif
 
-To do
-==========================
 
-
-
-Electronic Speed Controller (ESC)
+TBD
 =========================================
 
 
@@ -20,18 +16,15 @@ Worthwhile reads
 -------------------------
 
 Larger is better: 
+
  * https://www.youtube.com/watch?v=PgBSfwIY578
  * https://oscarliang.com/choose-esc-racing-drones/
- * 
-
-Throttle
-==============
-
-49.00 palm throttle: https://minne.us/shop/throttle/
+  
 
 
 Notes, todo, not reviewed
 =================================
+
 
 INFO: https://forum.hanggliding.org/viewtopic.php?t=35303
 

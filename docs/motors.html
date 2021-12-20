@@ -38,7 +38,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Batteries" href="batteries.html" />
+    <link rel="next" title="Electronic Speed Controller" href="esc.html" />
     <link rel="prev" title="Specing out a System (Sizing)" href="spec.html" /> 
 </head>
 
@@ -53,7 +53,7 @@
           
 
           
-            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Electric Hang Gliding Harnesses
+            <a href="toc.html" class="icon icon-home" alt="Documentation Home"> Electric Hang Gliding Harnesses
           
 
           
@@ -84,7 +84,16 @@
               
             
             
-              <ul class="current">
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Electric Powered Hang Gliding Harnesses</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#about-this-document">About this document</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#danger-will-robinson">Danger Will Robinson</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#if-you-see-your-photo-text">If you see your photo/text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#resources">Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#goals">Goals</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">eHelp Examples</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="examples.html#ehelp-harness">eHelp harness</a></li>
 <li class="toctree-l2"><a class="reference internal" href="examples.html#sustainers">Sustainers</a></li>
@@ -100,52 +109,84 @@
 <li class="toctree-l2"><a class="reference internal" href="spec.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
 </ul>
 </li>
+</ul>
+<p class="caption"><span class="caption-text">Components</span></p>
+<ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Motors</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#top-considerations">Top considerations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#manufacturers">Manufacturers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sensored-versus-sensorless">Sensored versus sensorless</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#mating-with-a-prop">Mating with a prop</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#duty-cycle-max-continuous-power">Duty cycle-Max continuous power</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#kv-reduction">KV reduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#custom-motors">Custom motors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="esc.html">Electronic Speed Controller</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="esc.html#tbd">TBD</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#worthwhile-reads">Worthwhile reads</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="esc.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="batteries.html">Batteries</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="batteries.html#battery-considerations">Battery considerations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="batteries.html#products-pilots-have-used">Products pilots have used</a></li>
+<li class="toctree-l2"><a class="reference internal" href="batteries.html#battery-considerations">Battery considerations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="batteries.html#type">Type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="batteries.html#size">Size</a></li>
+<li class="toctree-l3"><a class="reference internal" href="batteries.html#price">Price</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="batteries.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="props.html">Propellers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="props.html#getting-started">Getting started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="props.html#choosing-a-propeller">Choosing a propeller</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="props.html#material">Material</a></li>
-<li class="toctree-l3"><a class="reference internal" href="props.html#diameter">Diameter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="props.html#the-3-try-eyeball-method">The 3 try eyeball method</a></li>
+<li class="toctree-l3"><a class="reference internal" href="props.html#other-forumulas">Other forumulas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="props.html#copycat-method">Copycat method</a></li>
 <li class="toctree-l3"><a class="reference internal" href="props.html#pitch">Pitch</a></li>
 <li class="toctree-l3"><a class="reference internal" href="props.html#number-of-blades">Number of blades</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="props.html#propeller-tutorial">Propeller tutorial</a></li>
 <li class="toctree-l2"><a class="reference internal" href="props.html#folding-props-diy-and-resources">Folding props DIY and resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="props.html#propeller-innovation">Propeller innovation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="props.html#vendors">Vendors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="props.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="parts.html">Parts and Components</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="parts.html#throttle">Throttle</a></li>
-<li class="toctree-l2"><a class="reference internal" href="parts.html#backplate">Backplate</a></li>
-<li class="toctree-l2"><a class="reference internal" href="parts.html#battery-mounts">Battery mounts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="parts.html#boom">Boom</a></li>
-<li class="toctree-l2"><a class="reference internal" href="parts.html#boom-to-harness-connection">Boom to harness connection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="parts.html#motor-mount">Motor mount</a></li>
-<li class="toctree-l2"><a class="reference internal" href="parts.html#safety-features">Safety features</a></li>
-<li class="toctree-l2"><a class="reference internal" href="parts.html#instrumentation">Instrumentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="parts.html#wheels">Wheels</a></li>
-<li class="toctree-l2"><a class="reference internal" href="parts.html#material-supppliers">Material supppliers</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="parts.html#carbon-fiber">Carbon fiber</a></li>
-<li class="toctree-l3"><a class="reference internal" href="parts.html#aluminum">Aluminum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="structure.html">Structural-Mechanical</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#backplate">Backplate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#boom-to-harness-connection">Boom to harness connection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#battery-mounts">Battery mounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#boom">Boom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#motor-mount">Motor mount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#safety-features">Safety features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#wheels">Wheels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#material-supppliers">Material supppliers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="structure.html#carbon-fiber">Carbon fiber</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structure.html#aluminum">Aluminum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structure.html#aircraft-parts">Aircraft parts</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="electrical.html">Electronic-Instrumentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="electrical.html#throttle">Throttle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="electrical.html#battery-managent-system">Battery managent system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="electrical.html#instrumentation">Instrumentation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="electrical.html#battery-and-power-monitoring">Battery and power monitoring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="electrical.html#motor-monitoring">Motor monitoring</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Useful Info</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="calculators.html">Calculators</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="calculators.html#required-power">Required power</a></li>
 <li class="toctree-l2"><a class="reference internal" href="calculators.html#propeller">Propeller</a><ul>
@@ -171,7 +212,6 @@
 <li class="toctree-l2"><a class="reference internal" href="ideas.html#seated">Seated</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ideas.html#trike-ish">Trike-ish</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ideas.html#from-paraglider-land">From Paraglider-land</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ideas.html#propeller-ideas">Propeller ideas</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="safety.html">Safety</a><ul>
@@ -207,7 +247,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">Electric Hang Gliding Harnesses</a>
+          <a href="toc.html">Electric Hang Gliding Harnesses</a>
         
       </nav>
 
@@ -236,7 +276,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><a href="toc.html" class="icon icon-home"></a> &raquo;</li>
         
       <li>Motors</li>
     
@@ -252,7 +292,7 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="batteries.html" class="btn btn-neutral float-right" title="Batteries" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="esc.html" class="btn btn-neutral float-right" title="Electronic Speed Controller" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="spec.html" class="btn btn-neutral float-left" title="Specing out a System (Sizing)" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -269,11 +309,18 @@
 <img alt="_images/uc1.gif" src="_images/uc1.gif" />
 <div class="section" id="top-considerations">
 <h2>Top considerations<a class="headerlink" href="#top-considerations" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>Higher voltage lower current will be more efficient as electrical losses (heat) is proportional to the square of the current.</p>
+</div></blockquote>
 </div>
 <div class="section" id="manufacturers">
 <h2>Manufacturers<a class="headerlink" href="#manufacturers" title="Permalink to this headline">¶</a></h2>
 <p>todo: fix width, add sort</p>
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTZ5drQYvvp4srNMViieF0J0stG8gvPEdH_B7djQA4lOQ53DEMxsOmvscQ4TEEQP2fW-wIQpMl-eO5L/pubhtml?widget=true&amp;headers=false" width="100%" height="600px"></iframe></div>
+<div class="section" id="sensored-versus-sensorless">
+<h2>Sensored versus sensorless<a class="headerlink" href="#sensored-versus-sensorless" title="Permalink to this headline">¶</a></h2>
+<p>You don’t need a sensored motor. While sensorless brushless motors perform poorly at low speed, their performance at flying speeds is excellent. ESC manufactures improve efficiency and performance by using  sensorless synchronization at high speed to alter the timing for the sequence of power pulses sent to the motors windings. Sensorless motors are lighter, less complicated, and less prone to failure.</p>
+</div>
 <div class="section" id="mating-with-a-prop">
 <h2>Mating with a prop<a class="headerlink" href="#mating-with-a-prop" title="Permalink to this headline">¶</a></h2>
 <p>Criteria:</p>
@@ -292,12 +339,22 @@
 <h2>KV reduction<a class="headerlink" href="#kv-reduction" title="Permalink to this headline">¶</a></h2>
 <img alt="_images/kvreduction.png" src="_images/kvreduction.png" />
 </div>
+<div class="section" id="custom-motors">
+<h2>Custom motors<a class="headerlink" href="#custom-motors" title="Permalink to this headline">¶</a></h2>
+<p>Custom rewinds change the KV rating and RPM.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=-sIVpOLYoqg&amp;t=144sA">Rewind your own motor</a></p></li>
+<li><p>MAD motor and Alien Power Systems will motors rewind for low cost.</p></li>
+<li><p>Charles Allen reports that APS made him a custom motor with a hollow shaft for ~$25 extra so I could have a rod go through to articulate a variable pitch prop.</p></li>
+</ul>
+</div>
 <div class="section" id="notes-todo-not-reviewed">
 <h2>Notes, todo, not reviewed<a class="headerlink" href="#notes-todo-not-reviewed" title="Permalink to this headline">¶</a></h2>
 <p>Mike Z Dillon: Nearly everything you might need or want to know about the Geiger products is in their handbook - <a class="reference external" href="https://www.geigerengineering.de/.../Handbuch_Manual_E...GEIGERENGINEERING.DE">https://www.geigerengineering.de/…/Handbuch_Manual_E…GEIGERENGINEERING.DE</a></p>
 <p>Mike Z Dillon
 This is one of my favorite Geiger documents - <a class="reference external" href="https://www.geigerengineering.de/.../Intertec_UN_38_3">https://www.geigerengineering.de/…/Intertec_UN_38_3</a>…</p>
 <p>INFO: <a class="reference external" href="https://forum.hanggliding.org/viewtopic.php?t=35303">https://forum.hanggliding.org/viewtopic.php?t=35303</a></p>
+<p>Joe Stapleton: Open frame motors provide much better airflow. The MAD m50 I’m testing for my trike is extremely well made, but I don’t think it uses super thin stator lams so efficiency will start to suffer if pushed to too high an ERPM exactly the same as the APS/Freerchobby motors (0.35mm lams). Basically thin stator lams are very expensive and therefore not used on cheap motors except for the Rotomax 150 (0.2mm lams) for some reason. Eddy losses in the iron stator core induced by the magnetic field switching as the rotor magnets fly past are proportional to the square of the lamination thickness x the square of the rpm. This why motors with thick lams can suddenly slam into an RPM wall and just turn into heaters and not go any faster.</p>
 </div>
 </div>
 
@@ -313,7 +370,7 @@ This is one of my favorite Geiger documents - <a class="reference external" href
   <div role="contentinfo">
     <p>
       <span class="lastupdated">
-        Last updated on Dec 15, 2021.
+        Last updated on Dec 19, 2021.
       </span>
 
     </p>

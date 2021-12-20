@@ -26,6 +26,8 @@ Ivan Melero `double tail wheel (not electric) <https://www.youtube.com/watch?v=l
 
 .. image:: images/prone_ivan.png
 
+Not electric, but some prone configurations: https://www.youtube.com/watch?v=7in0pW-uOF0
+
 Seated
 =================================
 
@@ -44,14 +46,6 @@ From Paraglider-land
 
 * Justin's paraglider Blimp drive. Interesting twin off-the-shelf parts setup. http://www.justine-haupt.com/blimpdrive/
 
-Propeller ideas
-================================
-
-* Passive variable pitch prop: https://www.facebook.com/groups/904566026835865/permalink/944285446197256
-* Contra-rotating prop: 
-    * https://www.crflight.com/?utm_source=unmannedsystemstechnology.com&utm_medium=referral
-    * PPG discussion: https://community.openppg.com/t/co-axial-motors-with-counter-rotating-props/114
-    * * `Propeller hub <https://www.f3aunlimited.com/airplane-accessories/falcon-82mm-carbon-fiber-spinner-with-cnc-cooling>`_. Functional but for tractor setups only. 
 
 
 
