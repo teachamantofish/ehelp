@@ -19,6 +19,21 @@ Example: HG + pilot and gear = 300lbs or 136Kg
 
 At 100% efficiency for all components, to raise 136 kg takeoff weight to 1000', the energy needed is U(kWh) = 136*9.81*1000/(3.28 * 3600000) = 0.113 kWh. 
 
+convert to meters
+3.6000000) (1000 watts * seconds an hour) + 
+
+kwh: all of that gets you the theoretical energy to get the mass to a given height. . 
+
+kwh/effecienty = actual energy to a height. Then you need to add in the rate. 
+
+.67 kwh/ 6 minutes of flight time/60 minutes in an hour. = 6.7kw  
+.67 kwh/ 10 minutes of flight time/60 minutes in an hour. = 4 kw
+E =f*d
+electiral : P*T
+
+kwh: energy
+power = watts/ energy rate
+
 Adjusting for reality: 
 
 * Glide ratio: 10
