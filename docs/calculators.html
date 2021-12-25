@@ -103,9 +103,15 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="spec.html">Specing out a System (Sizing)</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="spec.html#decision-path">Decision path</a></li>
-<li class="toctree-l2"><a class="reference internal" href="spec.html#determine-what-you-need">Determine what you need</a></li>
-<li class="toctree-l2"><a class="reference internal" href="spec.html#method-1-copy-others">Method 1: Copy others</a></li>
-<li class="toctree-l2"><a class="reference internal" href="spec.html#method-2-do-the-math">Method 2: Do the math</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spec.html#required-power-method-1">Required power: Method 1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="spec.html#theoretical-energy">Theoretical energy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="spec.html#adjust-for-inefficiency">Adjust for inefficiency</a></li>
+<li class="toctree-l3"><a class="reference internal" href="spec.html#add-the-energy-rate">Add the energy rate</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="spec.html#required-power-method-2">Required power: Method 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spec.html#system-design-copy-others">System design: Copy others</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spec.html#system-design-diy">System design: DIY</a></li>
 <li class="toctree-l2"><a class="reference internal" href="spec.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
 </ul>
 </li>
@@ -120,7 +126,10 @@
 <li class="toctree-l2"><a class="reference internal" href="motors.html#duty-cycle-max-continuous-power">Duty cycle-Max continuous power</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#kv-reduction">KV reduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#custom-motors">Custom motors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="motors.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motors.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="motors.html#paul-martin">Paul Martin:</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="esc.html">Electronic Speed Controller</a><ul>
@@ -166,6 +175,7 @@
 <li class="toctree-l2"><a class="reference internal" href="structure.html#motor-mount">Motor mount</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#safety-features">Safety features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#wheels">Wheels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#hang-glider-hardware">Hang glider hardware</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#material-supppliers">Material supppliers</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="structure.html#carbon-fiber">Carbon fiber</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structure.html#aluminum">Aluminum</a></li>
@@ -188,13 +198,13 @@
 <p class="caption"><span class="caption-text">Useful Info</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Calculators</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#required-power">Required power</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#motor">Motor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#propeller">Propeller</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#prop-pitch">Prop pitch</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#tip-speed">Tip speed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#theoretical-speed">Theoretical speed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#static-thrust-required-engine-power">Static thrust: required engine power</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#static-thrust-and-horsepower">Static thrust and horsepower</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tip-speed">Tip speed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id1">Tip speed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id2">Theoretical speed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#other">Other</a></li>
@@ -307,41 +317,15 @@
   <div class="section" id="calculators">
 <h1>Calculators<a class="headerlink" href="#calculators" title="Permalink to this headline">¶</a></h1>
 <p>random notes…</p>
+<div class="section" id="motor">
+<h2>Motor<a class="headerlink" href="#motor" title="Permalink to this headline">¶</a></h2>
 <p>Motor efficiency: Used power - heat. Heat is P=i squared * amps (resistance squared times amps)</p>
-<div class="section" id="required-power">
-<h2>Required power<a class="headerlink" href="#required-power" title="Permalink to this headline">¶</a></h2>
-<p>todo: total rewrite.</p>
-<p><a class="reference external" href="https://endless-sphere.com/forums/viewtopic.php?t=110570#p1626972">https://endless-sphere.com/forums/viewtopic.php?t=110570#p1626972</a></p>
-<p>todo: convert to HG example</p>
-<p>Example: HG + pilot and gear = 300lbs or 136Kg</p>
-<p>At 100% efficiency for all components, to raise 136 kg takeoff weight to 1000’, the energy needed is U(kWh) = 136*9.81*1000/(3.28 * 3600000) = 0.113 kWh.</p>
-<p>Adjusting for reality:</p>
-<ul class="simple">
-<li><p>Glide ratio: 10</p></li>
-<li><p>Prop efficiency: 70%</p></li>
-<li><p>Motor efficiency: 90%</p></li>
-<li><p>Battery efficiency: 95%</p></li>
-<li><p>Everything else: 95%</p></li>
-</ul>
-<p>Then:</p>
-<p>0.113 / ((1-1/10)*.7*.9*.9*.95*.95) = .332/.494 = 0.67 kWh. At the rate of 1000’ per 6 mins, power required would be 6.7 kW.</p>
-<p>In a post above I calculated the power needed for 170 fpm climb. Let’s say MTOW is 300 kg and 250 fpm is required.</p>
-<p>The energy required is 0.25 kWh. After correcting for the losses, you get 0.5 kWh gross energy. Power required for 250 fpm will be 0.5 * 60 * 250 / 1000 = 7.5 kW.</p>
-<p>It appears you are seeking about 2 kWh of storage. The Samsung 21700 48G unit weight is 4 kg/kWh. With a 20% pack overhead, the 2kWh pack will weigh 10 kg. At 7.3C,the pack can supply 14.5 kW power. But you only need 7.5 kW of power. Even at 10 kW, you are well below the C limit of 14.5 kW.</p>
-<p>Power is F*v, so while the force is m*g/(L/D), the drag losses are m*g/(L/D) * v. The v term is going to always be around 25m/s, almost independent of the glider.</p>
 </div>
 <div class="section" id="propeller">
 <h2>Propeller<a class="headerlink" href="#propeller" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="prop-pitch">
 <h3>Prop pitch<a class="headerlink" href="#prop-pitch" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="http://www.culverprops.com/pitchselection.htm">Prop pitch recommendation (for cruise?)</a> based on RPM, airspeed, and prop length. You can also view the <a class="reference external" href="http://www.culverprops.com/viewpitchtable.htm">tables</a></p>
-</div>
-<div class="section" id="tip-speed">
-<h3>Tip speed<a class="headerlink" href="#tip-speed" title="Permalink to this headline">¶</a></h3>
-<p>Propeller efficiency reduces as the tip speed approaches the speed of sound.  Beyond 80% of the speed of sound, increasing RPM has
-little affect on thrust. Ideally, keep tip speeds below 75%-80% of Mach.</p>
-<p>Optimum efficiency and less noise stems from tip speeds less than 700 feet per second or 475 mph. Over that, and air compression in front of the prop leading edge begins occuring which rapidly degrades propeller performance.</p>
-<p>TBD: Link to calculator.</p>
 </div>
 <div class="section" id="theoretical-speed">
 <h3>Theoretical speed<a class="headerlink" href="#theoretical-speed" title="Permalink to this headline">¶</a></h3>
@@ -357,8 +341,15 @@ little affect on thrust. Ideally, keep tip speeds below 75%-80% of Mach.</p>
 <p><a class="reference external" href="http://www.csgnetwork.com/directhpthrustcalc.html">http://www.csgnetwork.com/directhpthrustcalc.html</a></p>
 <p><a class="reference external" href="https://rcplanes.online/calc_thrust.htm">https://rcplanes.online/calc_thrust.htm</a></p>
 </div>
+<div class="section" id="tip-speed">
+<h3>Tip speed<a class="headerlink" href="#tip-speed" title="Permalink to this headline">¶</a></h3>
+</div>
 <div class="section" id="id1">
 <h3>Tip speed<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Propeller efficiency reduces as the tip speed approaches the speed of sound.  Beyond 80% of the speed of sound, increasing RPM has
+little affect on thrust. Ideally, keep tip speeds below 75%-80% of Mach.</p>
+<p>Optimum efficiency and less noise stems from tip speeds less than 700 feet per second or 475 mph. Over that, and air compression in front of the prop leading edge begins occuring which rapidly degrades propeller performance.</p>
+<p>TBD: Link to calculator.</p>
 <p><a class="reference external" href="https://warpdriveprops.com/propspd2.html">https://warpdriveprops.com/propspd2.html</a></p>
 </div>
 <div class="section" id="id2">
@@ -408,7 +399,7 @@ Glide distance/ratio: <a class="reference external" href="http://www.luizmonteir
   <div role="contentinfo">
     <p>
       <span class="lastupdated">
-        Last updated on Dec 19, 2021.
+        Last updated on Dec 24, 2021.
       </span>
 
     </p>

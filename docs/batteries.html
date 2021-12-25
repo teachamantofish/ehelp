@@ -103,9 +103,15 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="spec.html">Specing out a System (Sizing)</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="spec.html#decision-path">Decision path</a></li>
-<li class="toctree-l2"><a class="reference internal" href="spec.html#determine-what-you-need">Determine what you need</a></li>
-<li class="toctree-l2"><a class="reference internal" href="spec.html#method-1-copy-others">Method 1: Copy others</a></li>
-<li class="toctree-l2"><a class="reference internal" href="spec.html#method-2-do-the-math">Method 2: Do the math</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spec.html#required-power-method-1">Required power: Method 1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="spec.html#theoretical-energy">Theoretical energy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="spec.html#adjust-for-inefficiency">Adjust for inefficiency</a></li>
+<li class="toctree-l3"><a class="reference internal" href="spec.html#add-the-energy-rate">Add the energy rate</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="spec.html#required-power-method-2">Required power: Method 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spec.html#system-design-copy-others">System design: Copy others</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spec.html#system-design-diy">System design: DIY</a></li>
 <li class="toctree-l2"><a class="reference internal" href="spec.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
 </ul>
 </li>
@@ -120,7 +126,10 @@
 <li class="toctree-l2"><a class="reference internal" href="motors.html#duty-cycle-max-continuous-power">Duty cycle-Max continuous power</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#kv-reduction">KV reduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#custom-motors">Custom motors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="motors.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motors.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="motors.html#paul-martin">Paul Martin:</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="esc.html">Electronic Speed Controller</a><ul>
@@ -166,6 +175,7 @@
 <li class="toctree-l2"><a class="reference internal" href="structure.html#motor-mount">Motor mount</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#safety-features">Safety features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#wheels">Wheels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#hang-glider-hardware">Hang glider hardware</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#material-supppliers">Material supppliers</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="structure.html#carbon-fiber">Carbon fiber</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structure.html#aluminum">Aluminum</a></li>
@@ -188,13 +198,13 @@
 <p class="caption"><span class="caption-text">Useful Info</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="calculators.html">Calculators</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="calculators.html#required-power">Required power</a></li>
+<li class="toctree-l2"><a class="reference internal" href="calculators.html#motor">Motor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="calculators.html#propeller">Propeller</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="calculators.html#prop-pitch">Prop pitch</a></li>
-<li class="toctree-l3"><a class="reference internal" href="calculators.html#tip-speed">Tip speed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="calculators.html#theoretical-speed">Theoretical speed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="calculators.html#static-thrust-required-engine-power">Static thrust: required engine power</a></li>
 <li class="toctree-l3"><a class="reference internal" href="calculators.html#static-thrust-and-horsepower">Static thrust and horsepower</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calculators.html#tip-speed">Tip speed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="calculators.html#id1">Tip speed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="calculators.html#id2">Theoretical speed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="calculators.html#other">Other</a></li>
@@ -309,35 +319,53 @@
 <img alt="_images/uc2.gif" src="_images/uc2.gif" />
 <div class="section" id="battery-considerations">
 <h2>Battery considerations<a class="headerlink" href="#battery-considerations" title="Permalink to this headline">¶</a></h2>
+<p>Before you spec your system, you need to understand volts, amps, S rating, C rating, and kilowatts. Here’s a start:</p>
+<ul class="simple">
+<li><p>Total battery power is Kwh = volts * amps. (S rating * 3.7 * mAH). Divide available Kwh by how any Kw you need per minute to determine how long you can run your motor.</p></li>
+<li><p>The S rating is the number of cells times the cell voltage (3.7 for LiPO). Most systems use 44.4 volts and higher. You’ll may need multiple batteries. Wired in series, voltage is cumulative. Connected in parallel, voltage stays the same.</p></li>
+<li><p>The C rating is the discharge rate or the max amps you can draw from the battery. Multiply the C rating by the amp hours to find the max current/amps/draw. A 16000mAH battery is 16AH. A 10C rating means you can draw 10*16 (160) amps. Wired in series, amperage stays the same. Connected in parallel, amperage is additive. It’s a good idea to spec your batteries allowing for 100% headroom (or double what you might need). eHelp drives can pull well over 100 amps.</p></li>
+</ul>
+<p>The math is easy, but here’s a calculator: <a class="reference external" href="https://power-calculation.com/battery-storage-calculator.php">https://power-calculation.com/battery-storage-calculator.php</a></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Some of the working examples in this document use 2 12S 22000mAH batteries.</p>
+</div>
 <div class="section" id="type">
 <h3>Type<a class="headerlink" href="#type" title="Permalink to this headline">¶</a></h3>
-<p>LiPO examples:</p>
+<p>LiPO batteries are currently the first choice for a number of reasons, including their energy density, high discharge rate, lifespan, and so on.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It’s worth reading this <a class="reference external" href="./resources/batterycomparison.pdf">forum snippet</a> as well as the entire <a class="reference external" href="https://community.openppg.com/t/new-battery-option-better-power-density/2274/42">thread here</a>.</p>
+</div>
+<div class="section" id="lipo">
+<h4>LiPO<a class="headerlink" href="#lipo" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
-<li><p>Premium: <a class="reference external" href="https://www.genstattu.com/6s-22-2-v-lipo-battery.html?sort=pricedesc">Tattu, Tattuplus (smart batteries)</a>, Bonkas (see OpenPPG)</p></li>
+<li><p>Premium: <a class="reference external" href="https://www.genstattu.com/6s-22-2-v-lipo-battery.html?sort=pricedesc">Tattu, Tattuplus (smart batteries)</a></p></li>
+<li><p>Bonkas (see OpenPPG)</p></li>
 <li><p>DIY build your own: A pia but 1/2 the cost.</p></li>
-<li><p>Budget batteries: zee? yawoo? don’t go to low.</p></li>
+<li><p>Budget batteries: Example: Zeee are about 1/2 the cost of Tattu.</p></li>
 </ul>
-<p>LiPO graphene</p>
+</div>
+<div class="section" id="lipo-graphene">
+<h4>LiPO graphene<a class="headerlink" href="#lipo-graphene" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li><p>Some advantages, but not weight</p></li>
 <li><p>link</p></li>
 <li><p>todo</p></li>
 </ul>
-<p>Semi solid state:</p>
+</div>
+<div class="section" id="semi-solid-state-lipo">
+<h4>Semi solid state LiPO:<a class="headerlink" href="#semi-solid-state-lipo" title="Permalink to this headline">¶</a></h4>
+<p>The technology is rapidly evolving. Manufacturer’s claim a higher energy density, lighter weight, higher discharge rates, and a longer cycle life. For example, a 7s 1kw Foxtech setup is around 3 lbs lighter than a Tattu 6s Lipo setup. The C rating is likely two low unless run in parallel.</p>
 <ul class="simple">
-<li><p>The technology is rapidly evolving. Manufacture claims a higher energy density, lighter weight, higher discharge rates, and a longer cycle life.</p></li>
-<li><p>Details here: <a class="reference external" href="https://www.foxtechfpv.com/foxtech-diamond-6s-22000mah-semi-solid-state-li-ion-battery.html">https://www.foxtechfpv.com/foxtech-diamond-6s-22000mah-semi-solid-state-li-ion-battery.html</a></p></li>
-<li><p>A 7s 1kw Foxtech setup is around 3 lbs lighter than a Tattu 6s Lipo setup.</p></li>
+<li><p><a class="reference external" href="https://www.foxtechfpv.com/foxtech-diamond-6s-22000mah-semi-solid-state-li-ion-battery.html">Foxtech spec charts</a></p></li>
+<li><p>See also Welion, YANGDA Thunder Stone</p></li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>It’s worth reading this <a class="reference external" href="./resources/batterycomparison.pdf">forum snippet</a> as well as the entire <a class="reference external" href="https://community.openppg.com/t/new-battery-option-better-power-density/2274/42">thread here</a>.</p>
 </div>
 </div>
 <div class="section" id="size">
 <h3>Size<a class="headerlink" href="#size" title="Permalink to this headline">¶</a></h3>
 <p>Your flying consumes kilowatt hours: Kwh = volts X amps. For example, two 6s (22.2 volts) 22000mAH batteries will = about 1 Kw. How much and what kind of flying you can do with 1 Kwh can’t be known until you’ve gone through the steps in <a class="reference internal" href="spec.html#spec"><span class="std std-ref">Specing out a System (Sizing)</span></a>.</p>
-<p>Calculator: <a class="reference external" href="https://power-calculation.com/battery-storage-calculator.php">https://power-calculation.com/battery-storage-calculator.php</a></p>
 </div>
 <div class="section" id="price">
 <h3>Price<a class="headerlink" href="#price" title="Permalink to this headline">¶</a></h3>
@@ -370,7 +398,7 @@
   <div role="contentinfo">
     <p>
       <span class="lastupdated">
-        Last updated on Dec 19, 2021.
+        Last updated on Dec 24, 2021.
       </span>
 
     </p>

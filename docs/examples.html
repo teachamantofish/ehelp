@@ -103,9 +103,15 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="spec.html">Specing out a System (Sizing)</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="spec.html#decision-path">Decision path</a></li>
-<li class="toctree-l2"><a class="reference internal" href="spec.html#determine-what-you-need">Determine what you need</a></li>
-<li class="toctree-l2"><a class="reference internal" href="spec.html#method-1-copy-others">Method 1: Copy others</a></li>
-<li class="toctree-l2"><a class="reference internal" href="spec.html#method-2-do-the-math">Method 2: Do the math</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spec.html#required-power-method-1">Required power: Method 1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="spec.html#theoretical-energy">Theoretical energy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="spec.html#adjust-for-inefficiency">Adjust for inefficiency</a></li>
+<li class="toctree-l3"><a class="reference internal" href="spec.html#add-the-energy-rate">Add the energy rate</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="spec.html#required-power-method-2">Required power: Method 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spec.html#system-design-copy-others">System design: Copy others</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spec.html#system-design-diy">System design: DIY</a></li>
 <li class="toctree-l2"><a class="reference internal" href="spec.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
 </ul>
 </li>
@@ -120,7 +126,10 @@
 <li class="toctree-l2"><a class="reference internal" href="motors.html#duty-cycle-max-continuous-power">Duty cycle-Max continuous power</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#kv-reduction">KV reduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#custom-motors">Custom motors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="motors.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motors.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="motors.html#paul-martin">Paul Martin:</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="esc.html">Electronic Speed Controller</a><ul>
@@ -166,6 +175,7 @@
 <li class="toctree-l2"><a class="reference internal" href="structure.html#motor-mount">Motor mount</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#safety-features">Safety features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#wheels">Wheels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#hang-glider-hardware">Hang glider hardware</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#material-supppliers">Material supppliers</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="structure.html#carbon-fiber">Carbon fiber</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structure.html#aluminum">Aluminum</a></li>
@@ -188,13 +198,13 @@
 <p class="caption"><span class="caption-text">Useful Info</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="calculators.html">Calculators</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="calculators.html#required-power">Required power</a></li>
+<li class="toctree-l2"><a class="reference internal" href="calculators.html#motor">Motor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="calculators.html#propeller">Propeller</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="calculators.html#prop-pitch">Prop pitch</a></li>
-<li class="toctree-l3"><a class="reference internal" href="calculators.html#tip-speed">Tip speed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="calculators.html#theoretical-speed">Theoretical speed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="calculators.html#static-thrust-required-engine-power">Static thrust: required engine power</a></li>
 <li class="toctree-l3"><a class="reference internal" href="calculators.html#static-thrust-and-horsepower">Static thrust and horsepower</a></li>
+<li class="toctree-l3"><a class="reference internal" href="calculators.html#tip-speed">Tip speed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="calculators.html#id1">Tip speed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="calculators.html#id2">Theoretical speed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="calculators.html#other">Other</a></li>
@@ -372,7 +382,7 @@
   <div role="contentinfo">
     <p>
       <span class="lastupdated">
-        Last updated on Dec 19, 2021.
+        Last updated on Dec 24, 2021.
       </span>
 
     </p>

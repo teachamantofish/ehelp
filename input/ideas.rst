@@ -26,12 +26,18 @@ Ivan Melero `double tail wheel (not electric) <https://www.youtube.com/watch?v=l
 
 .. image:: images/prone_ivan.png
 
-Not electric, but some prone configurations: https://www.youtube.com/watch?v=7in0pW-uOF0
+Not electric, but some prone configurations: 
+
+* https://www.youtube.com/watch?v=7in0pW-uOF0
+* Flyped: https://www.youtube.com/watch?v=gynjOMZDDJo
+* https://www.youtube.com/watch?v=7BBTrvMpG30
+* 
 
 Seated
 =================================
 
 * `PPG-like backpack <https://www.youtube.com/watch?v=Q0gEOvI-T_s>`_
+* `Altigenerator. Interesting keel mount <https://www.youtube.com/watch?v=nPbz7o6wtM0>`_
 * `Very lightweight Russian design <https://www.youtube.com/watch?v=KkwsizoLIQ8>`_
 * Interesting ideas: suprone, wheels: https://www.youtube.com/watch?v=npBn50XRphA
 

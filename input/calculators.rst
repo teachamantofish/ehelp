@@ -4,57 +4,10 @@ Calculators
 
 random notes. . . 
 
+Motor
+============
+
 Motor efficiency: Used power - heat. Heat is P=i squared * amps (resistance squared times amps)
-
-Required power
-===================================
-
-todo: total rewrite. 
-
-https://endless-sphere.com/forums/viewtopic.php?t=110570#p1626972
-
-todo: convert to HG example
-
-Example: HG + pilot and gear = 300lbs or 136Kg
-
-At 100% efficiency for all components, to raise 136 kg takeoff weight to 1000', the energy needed is U(kWh) = 136*9.81*1000/(3.28 * 3600000) = 0.113 kWh. 
-
-convert to meters
-3.6000000) (1000 watts * seconds an hour) + 
-
-kwh: all of that gets you the theoretical energy to get the mass to a given height. . 
-
-kwh/effecienty = actual energy to a height. Then you need to add in the rate. 
-
-.67 kwh/ 6 minutes of flight time/60 minutes in an hour. = 6.7kw  
-.67 kwh/ 10 minutes of flight time/60 minutes in an hour. = 4 kw
-E =f*d
-electiral : P*T
-
-kwh: energy
-power = watts/ energy rate
-
-Adjusting for reality: 
-
-* Glide ratio: 10
-* Prop efficiency: 70%
-* Motor efficiency: 90%
-* Battery efficiency: 95%
-* Everything else: 95%
-
-Then: 
-
-0.113 / ((1-1/10)*.7*.9*.9*.95*.95) = .332/.494 = 0.67 kWh. At the rate of 1000' per 6 mins, power required would be 6.7 kW.
-
-In a post above I calculated the power needed for 170 fpm climb. Let's say MTOW is 300 kg and 250 fpm is required.
-
-The energy required is 0.25 kWh. After correcting for the losses, you get 0.5 kWh gross energy. Power required for 250 fpm will be 0.5 * 60 * 250 / 1000 = 7.5 kW.
-
-It appears you are seeking about 2 kWh of storage. The Samsung 21700 48G unit weight is 4 kg/kWh. With a 20% pack overhead, the 2kWh pack will weigh 10 kg. At 7.3C,the pack can supply 14.5 kW power. But you only need 7.5 kW of power. Even at 10 kW, you are well below the C limit of 14.5 kW.
-
-
-Power is F*v, so while the force is m*g/(L/D), the drag losses are m*g/(L/D) * v. The v term is going to always be around 25m/s, almost independent of the glider.
-
 
 Propeller
 ==========================
@@ -63,16 +16,6 @@ Prop pitch
 -----------------------------
 
 `Prop pitch recommendation (for cruise?) <http://www.culverprops.com/pitchselection.htm>`_ based on RPM, airspeed, and prop length. You can also view the `tables <http://www.culverprops.com/viewpitchtable.htm>`_
-
-Tip speed
---------------------------
-
-Propeller efficiency reduces as the tip speed approaches the speed of sound.  Beyond 80% of the speed of sound, increasing RPM has 
-little affect on thrust. Ideally, keep tip speeds below 75%-80% of Mach. 
-
-Optimum efficiency and less noise stems from tip speeds less than 700 feet per second or 475 mph. Over that, and air compression in front of the prop leading edge begins occuring which rapidly degrades propeller performance.
-
-TBD: Link to calculator. 
 
 Theoretical speed
 ---------------------------
@@ -85,8 +28,6 @@ To determine how fast your propeller can theoretically push or pull you through 
 Static thrust: required engine power
 ------------------------------------------
 
-
-
 https://www.poweredparagliders.com.au/Calculators/Static_Thrust_Calculator.htm
 
 Static thrust and horsepower
@@ -96,8 +37,19 @@ http://www.csgnetwork.com/directhpthrustcalc.html
 
 https://rcplanes.online/calc_thrust.htm
 
-Tip speed 
-----------------
+Tip speed
+---------------
+
+Tip speed
+--------------------------
+
+Propeller efficiency reduces as the tip speed approaches the speed of sound.  Beyond 80% of the speed of sound, increasing RPM has 
+little affect on thrust. Ideally, keep tip speeds below 75%-80% of Mach. 
+
+Optimum efficiency and less noise stems from tip speeds less than 700 feet per second or 475 mph. Over that, and air compression in front of the prop leading edge begins occuring which rapidly degrades propeller performance.
+
+TBD: Link to calculator. 
+
 
 https://warpdriveprops.com/propspd2.html
 

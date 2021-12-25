@@ -19,3 +19,39 @@ So we can now calculate the phase current we need to produce 25Nm of torque whic
 
 Hopefully it is obvious that this is all true whether the motor is 1000kg electric train or a 10 gram rc model motor. This is why the continuous current, max voltage / max RPM of the motor are also important.
 
+
+-----------------------
+
+
+Let's pretend these numbers are accurate.
+
+Questions:
+
+If watts = v * a, can we assume that reducing v and increasing the amps results in the same input power as above? For example, 98*61 is about 6kw. Could we use 55v for batteries and assume that if we set the throttle to draw 109 amps we'd have the same input power? The math works, but does the system perform that way? 
+
+    Q1. yes Watts =VI. For you yes its the same. What you will find with the controller is that if you set the power limits and current limits then its can act a bit like a transformer so when say you have 50% throttle and the prop needs more power it will draw more current up to the maximums. So say your maximum current was 180A it could draw that but in reality the power demand from the propeller is a parabolic / geometric curve so at partial rpms ie not maximum the current requirement wont be your maximum current setting. It also means that as the battery volatge drains down it will want to keep the same power and do that by addimng current.
+
+
+
+
+RPM = Kv*volts So published KV numbers are always no load numbers and also = max RPM? 
+
+    Q2. The Kv is no load becaus ereally its a measure of the back emf the motor makes as a generator. Its just that the common vanacular interpretation is volts applied = rpm but if you dont exceed the maximum torque thats also what you should expect to be able to spin the propeller up to. I've etsted under loads and it does pretty well. I will send you my latest Part 2 it may help. The rpm is governed by the voltage and kv rating in theory. the torque is the reciprocal of kv which is Kt and thats multiplied by the maximum current your motor can handle. I use max constinuous to prevent things from melting.. That combination determines your torque. .Knowing your output power and dividing that by your toque gives tyou your rpm. You have to do a bit of manipulation to keep the units correct as rpm isnt SI but it works out in the wash.
+
+
+So the RPM is the number Kv*V*(some reduction factor caused by the prop) in real use. Is there a formula (that's not too complex) to guesstimate the RPM reduction caused by a props diameter/pitch?
+
+    Q3. I do allow an 80% efficiency factor when I am calculating the output power. So for example is you had 52v in and a maximum current of 180A I would times them together and then by 0.8 to give me a maximum power of 7.5kW. That would be the power I would use if I was trying to match a propeller to it. Basically if your propeller wants more power then it means also the torque demand is too much so what will happen is that it will reduce in rpm. The power requirement will drop and an equilibrium spot will be found. Or another way to do it is that you can actually set your controller so the motor will only spin to a maximum speed. say that calculated when your batteries are at the lower end. The propeller wont spin and faster even if you have more power. So when the battery is fresh you have more torque than you need and when low down you still have just enough.
+
+
+I'm not sure how to ask this question, but if I was to ask for a custom wound motor to change the KV so I could get an adequate RPM/torque at a lower voltage, is there a formula? The reason I ask that question is I want a bit more power than the M30, but I don't want to run 98 volts on an M40 which has a low KV.
+
+    Q4  Ive never looked it that way but you are close. Thrust is power out x propeller efficiency. At the zero sink tootling about the efficiecncy will be about 55% and full power climb its 42%. again my Part 2 notes have some graphs in fact my Part 1 I loaded up today or yesterday has a graph at the end. I plotted efficiency against what is known as advance ratio. It was buigging me so much that prop data was scarce I created my oen. Thats one of the reasons why I am buy a range of props. I am testing them as I go so the calculations and assumptions get more and more accurate.
+    all great questions. Ive attached the files they are live and at this moment Part2 isnt finished but there is enough for you. I am happy to do work through it with you step by step.
+
+
+Seems like the relationship between thrust and torque is generally torque/thrust = about 60% at the throttle ranges we'd normally use. Is that generally true? 
+
+
+
+

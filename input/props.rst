@@ -89,6 +89,8 @@ Folding props DIY and resources
 * `Charles Allen's DIY project video <https://www.youtube.com/watch?v=cyBJLpHkc7A>`_
 * `Icarus folding props <https://icare-icarus.3dcartstores.com/RASA-CFK-3-Blades-Propeller-Folding-342225-MAG-CAD-BIG_p_852.html>`_ See also Reidar's `video and commments <https://www.youtube.com/watch?v=-sIVpOLYoqg&t=144s>`_
 * `Geiger folding props (expensive) <https://www.geigerengineering.de/en/avionics/products>`_
+* `Open source folding prop hub design <http://graal-aero.fr/hub_e.html>`_
+* Interesting forward folding prop:  https://www.youtube.com/watch?app=desktop&v=wuhSRdffuDw&t=295&fbclid=IwAR1d04qJ8gJxdnokDxZHgMgBG0L7G1J2QcmDmnfWWiDHTK9bdoyb82HxvZg
 
 
 Propeller innovation
