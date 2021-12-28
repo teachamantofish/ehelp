@@ -120,12 +120,19 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Motors</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#top-considerations">Top considerations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reading-motor-specs">Reading motor specs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#manufacturers">Manufacturers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#sensored-versus-sensorless">Sensored versus sensorless</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#mating-with-a-prop">Mating with a prop</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#duty-cycle-max-continuous-power">Duty cycle-Max continuous power</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#kv-reduction">KV reduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#custom-motors">Custom motors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#worthwhile-reading">Worthwhile reading</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#basics">Basics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#advanced-topics">Advanced topics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vendor-specific">Vendor specific</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#notes-todo-not-reviewed">Notes, todo, not reviewed</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#paul-martin">Paul Martin:</a></li>
 </ul>
@@ -133,10 +140,18 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="esc.html">Electronic Speed Controller</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="esc.html#tbd">TBD</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="esc.html#worthwhile-reads">Worthwhile reads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esc.html#choose-an-esc">Choose an ESC</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#sizing">Sizing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#features">Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#location">Location</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="esc.html#throttle">Throttle</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#throttle-power-disconnect">Throttle-power disconnect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#vendors">Vendors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="esc.html#worthwhile-reads">Worthwhile reads</a></li>
 <li class="toctree-l2"><a class="reference internal" href="esc.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
 </ul>
 </li>
@@ -147,6 +162,7 @@
 <li class="toctree-l3"><a class="reference internal" href="batteries.html#price">Price</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="batteries.html#worthwhile-reading">Worthwhile reading</a></li>
 <li class="toctree-l2"><a class="reference internal" href="batteries.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
 </ul>
 </li>
@@ -180,18 +196,24 @@
 <li class="toctree-l3"><a class="reference internal" href="structure.html#carbon-fiber">Carbon fiber</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structure.html#aluminum">Aluminum</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structure.html#aircraft-parts">Aircraft parts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structure.html#couplers">Couplers</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#note-tbd-todo">note, tbd, todo</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="electrical.html">Electronic-Instrumentation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="electrical.html#throttle">Throttle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="electrical.html">Instrumentation, Telemetry</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="electrical.html#telemetry">Telemetry</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="electrical.html#connections">Connections</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="electrical.html#battery-managent-system">Battery managent system</a></li>
 <li class="toctree-l2"><a class="reference internal" href="electrical.html#instrumentation">Instrumentation</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="electrical.html#battery-and-power-monitoring">Battery and power monitoring</a></li>
 <li class="toctree-l3"><a class="reference internal" href="electrical.html#motor-monitoring">Motor monitoring</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="electrical.html#tbd-notes-todo">tbd, notes, todo</a></li>
 </ul>
 </li>
 </ul>
@@ -319,13 +341,25 @@
 <img alt="_images/uc1.gif" src="_images/uc1.gif" />
 <div class="section" id="top-considerations">
 <h2>Top considerations<a class="headerlink" href="#top-considerations" title="Permalink to this headline">¶</a></h2>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
+<li><p>Total power is power minus heat. Heat is bad. Design for less heat: higher volts, less amps, largers wires, lots of headroom in all components, cooling, etc.</p></li>
 <li><p>Higher voltage and lower current is more efficient as electrical losses (heat) is proportional to the square of the current.</p></li>
-<li><p>Speed increases approximately proportionally with the operating voltage.</p></li>
-<li><p>Torque increases approximately proportionally with the current consumed, increasing.</p></li>
+<li><p>Speed increases proportionally with the operating voltage.</p></li>
+<li><p>Torque increases proportionally with the current consumed.</p></li>
+<li><p>Engine power increases approximately proportionally with the speed. This means that the highest power can only be used at maximum speed (From Lehner).</p></li>
 </ul>
-</div></blockquote>
+</div>
+<div class="section" id="reading-motor-specs">
+<h2>Reading motor specs<a class="headerlink" href="#reading-motor-specs" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>N and P numbers: something like “36N30P”. The number before the letter N is the quantity of electromagnets in the stator, and the number before P is the quantity of permanent magnets in the motor.  Lower KV motors have more electromagnets and permanent magnets to increase torque.</p></li>
+<li><p>Dimensions:</p></li>
+<li><p>Rated voltage:</p></li>
+<li><p>KV:</p></li>
+<li><p>No load current: TBD.</p></li>
+<li><p>Internal resistance: Lower is better since resistance = heat.</p></li>
+<li><p>Max current: You need to spec a system that does not exceed the max current. Moreover, max current is limited to a short period of time (usually minutes). It’s a good idea to design a system that’s operates around 50-70% of max current most of the time.</p></li>
+</ul>
 </div>
 <div class="section" id="manufacturers">
 <h2>Manufacturers<a class="headerlink" href="#manufacturers" title="Permalink to this headline">¶</a></h2>
@@ -362,21 +396,41 @@
 <li><p>Charles Allen reports that APS made him a custom motor with a hollow shaft for ~$25 extra so I could have a rod go through to articulate a variable pitch prop.</p></li>
 </ul>
 </div>
+<div class="section" id="worthwhile-reading">
+<h2>Worthwhile reading<a class="headerlink" href="#worthwhile-reading" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="basics">
+<h3>Basics<a class="headerlink" href="#basics" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://oscarliang.com/quadcopter-motor-propeller/">Motor basics</a></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=WqlQJw9YXhE">KV and efficiency video</a>: Motor resistance (ohms) waste heat = P=I*I*R. Lower KV = more windings = supports higher voltage = smaller wire = more resistance (and waste heat/power loss) = same power at less amps.</p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=xi7jxIkX2vY">Kt, torque, volts, amps video</a>: Kt = 1/kv (torque constant) not the same as actual torque: Torque = kt*I. The same motor at different Kvs doesn’t change the output torque. Volt and amps can change, but V*I won’t change.</p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=k2VDvL4wtJs">Motor size and torque</a>: Diameter vs length. T = F*D. Bigger diameter motors procude more torque (basically more leverage), but so to longer motors.</p></li>
+</ul>
+</div>
+<div class="section" id="advanced-topics">
+<h3>Advanced topics<a class="headerlink" href="#advanced-topics" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://community.openppg.com/t/paraglider-self-launching-system/2186/41">Motor mass, size, and waste heat</a></p></li>
+<li><p><a class="reference external" href="https://forum.hanggliding.org/viewtopic.php?t=35303">Stator laminations</a>: Without super thin stator lams, efficiency will start to suffer if pushed to too high an ERPM exactly the same as the APS/Freerchobby motors (0.35mm lams). Basically thin stator lams are very expensive and therefore not used on cheap motors except for the Rotomax 150 (0.2mm lams) for some reason. Eddy losses in the iron stator core induced by the magnetic field switching as the rotor magnets fly past are proportional to the square of the lamination thickness x the square of the rpm. This why motors with thick lams can suddenly slam into an RPM wall and just turn into heaters and not go any faster.</p></li>
+</ul>
+</div>
+<div class="section" id="vendor-specific">
+<h3>Vendor specific<a class="headerlink" href="#vendor-specific" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>MAD motor quality discussion: <a class="reference external" href="https://community.openppg.com/t/electric-ppg-one-motor-project/2596/26">https://community.openppg.com/t/electric-ppg-one-motor-project/2596/26</a></p></li>
+<li><p>Geiger docs:</p>
+<ul>
+<li><p><a class="reference external" href="https://www.geigerengineering.de/en/avionics/downloads">https://www.geigerengineering.de/en/avionics/downloads</a></p></li>
+<li><p><a class="reference external" href="https://community.openppg.com/uploads/short-url/z9MJbg8s0FVoaRLhLJGppvysBao.pdf">https://community.openppg.com/uploads/short-url/z9MJbg8s0FVoaRLhLJGppvysBao.pdf</a></p></li>
+<li><p><a class="reference external" href="https://community.openppg.com/uploads/short-url/20r15azC5ZyuEw0qG1rehnrVrVY.pdf">https://community.openppg.com/uploads/short-url/20r15azC5ZyuEw0qG1rehnrVrVY.pdf</a></p></li>
+<li><p><a class="reference external" href="https://community.openppg.com/uploads/short-url/AmbK6TvFtUvk00lRsNZhH0MNywT.pdf">https://community.openppg.com/uploads/short-url/AmbK6TvFtUvk00lRsNZhH0MNywT.pdf</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
 <div class="section" id="notes-todo-not-reviewed">
 <h2>Notes, todo, not reviewed<a class="headerlink" href="#notes-todo-not-reviewed" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://www.geigerengineering.de/en/avionics/downloads">https://www.geigerengineering.de/en/avionics/downloads</a>
-<a class="reference external" href="https://community.openppg.com/uploads/short-url/z9MJbg8s0FVoaRLhLJGppvysBao.pdf">https://community.openppg.com/uploads/short-url/z9MJbg8s0FVoaRLhLJGppvysBao.pdf</a>
-<a class="reference external" href="https://community.openppg.com/uploads/short-url/20r15azC5ZyuEw0qG1rehnrVrVY.pdf">https://community.openppg.com/uploads/short-url/20r15azC5ZyuEw0qG1rehnrVrVY.pdf</a>
-<a class="reference external" href="https://community.openppg.com/uploads/short-url/AmbK6TvFtUvk00lRsNZhH0MNywT.pdf">https://community.openppg.com/uploads/short-url/AmbK6TvFtUvk00lRsNZhH0MNywT.pdf</a></p>
-<p>INFO: <a class="reference external" href="https://forum.hanggliding.org/viewtopic.php?t=35303">https://forum.hanggliding.org/viewtopic.php?t=35303</a></p>
-<p>Joe Stapleton: Open frame motors provide much better airflow. The MAD m50 I’m testing for my trike is extremely well made, but I don’t think it uses super thin stator lams so efficiency will start to suffer if pushed to too high an ERPM exactly the same as the APS/Freerchobby motors (0.35mm lams). Basically thin stator lams are very expensive and therefore not used on cheap motors except for the Rotomax 150 (0.2mm lams) for some reason. Eddy losses in the iron stator core induced by the magnetic field switching as the rotor magnets fly past are proportional to the square of the lamination thickness x the square of the rpm. This why motors with thick lams can suddenly slam into an RPM wall and just turn into heaters and not go any faster.</p>
-<p>MAD motor quality issues: <a class="reference external" href="https://community.openppg.com/t/electric-ppg-one-motor-project/2596/26">https://community.openppg.com/t/electric-ppg-one-motor-project/2596/26</a></p>
-<p>From Lehner:</p>
-<p>The achievable engine power increases approximately proportionally with the speed. This means that the highest power can only be used at maximum speed.</p>
-<p>TorQstar 7040 at 20.000 U/min approx. 20 KW (bei ŋ / Pmax)
-TorQstar 7050 at 20.000 U/min approx. 24 KW (bei ŋ / Pmax)</p>
-<p>The speed increases approximately proportionally with the operating voltage.</p>
-<p>The torque increases approximately proportionally with the current consumed.</p>
 <div class="section" id="paul-martin">
 <h3>Paul Martin:<a class="headerlink" href="#paul-martin" title="Permalink to this headline">¶</a></h3>
 <p>If you want a quick sizing guide.</p>
@@ -385,17 +439,6 @@ TorQstar 7050 at 20.000 U/min approx. 24 KW (bei ŋ / Pmax)</p>
 <li><p>a 120100 80 to 85kv and a 40D18P propeller will get you between 200 and 250 fpm climb.</p></li>
 <li><p>15470 even with it limited to 55kv ( though I reckon you could get it rewound) of 16s li-Po you’d have more torque and still have 3700 rpm. A bigger prop would be handy but it might be custom even so with the 40D20P you would be around 48kgf thrust on 250A draw which equates to about 38kgf at 12m/s which gives you over 400 fpm climb rate. Hope that helps</p></li>
 </ul>
-<p><a class="reference external" href="https://www.youtube.com/watch?v=WqlQJw9YXhE">https://www.youtube.com/watch?v=WqlQJw9YXhE</a>
-Spec: motor resistance (ohms) waste heat = P=I*I*R
-lower KV = more windings = supports higher voltage = smaller wire = more resistance (and waste heat/power loss) = same power at less amps.</p>
-<p><a class="reference external" href="https://www.youtube.com/watch?v=xi7jxIkX2vY">https://www.youtube.com/watch?v=xi7jxIkX2vY</a>
-Kt = 1/kv (torque constant) not the same as actual torque: Torque = kt*I
-the same motor at different Kvs doesn’t change the output torque. Volt and amps can change, but V*I won’t change.</p>
-<p><a class="reference external" href="https://www.youtube.com/watch?v=k2VDvL4wtJs">https://www.youtube.com/watch?v=k2VDvL4wtJs</a>
-Diameter vs length
-T = F*D,
-so a bigger diameter produces more torque (basically more leverage)
-longer motors also produce more torque</p>
 </div>
 </div>
 </div>
@@ -412,7 +455,7 @@ longer motors also produce more torque</p>
   <div role="contentinfo">
     <p>
       <span class="lastupdated">
-        Last updated on Dec 24, 2021.
+        Last updated on Dec 28, 2021.
       </span>
 
     </p>

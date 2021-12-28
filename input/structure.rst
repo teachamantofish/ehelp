@@ -60,11 +60,15 @@ Wheels
 * `Worth a look: rollerblade wheels (see All Terrain) <https://www.inlinewarehouse.com/fitlc/wheels/inline-wheel-buying-guide.html?from=gsearch&gclid=Cj0KCQiA2ZCOBhDiARIsAMRfv9JcTo6xq2XnzXZtbFxOVJDOL5OP7p2-DCL7usgi224nwBz6HVJbqUEaAhLIEALw_wcB>`_
 
 
+Wheel pants, wheel fairings
+
+* `Aircraft Spruce <https://www.aircraftspruce.com/menus/ap/wheelfairings.html>`_
+
 Hang glider hardware
 =============================
 
 * `Downtubes <https://www.willswing.com/accessories/wills-wing-control-bars/>`_
-
+* `Airfoil brackets (all types) <https://delta-goodies.com/product/speed-bar-and-upright-brackets-holders-6-8-mm>`_
 
 Material supppliers
 ===========================
@@ -96,5 +100,13 @@ Aircraft parts
 
 1x1/8 wall t6061 tubing is .52lbs/ft; cf 1x1.125 is .87 for 6 feet
 
+Couplers
+-----------------
+
+https://www.kippusa.com/us/en/Products/Tube-Connectors.html
 
 
+note, tbd, todo
+=======================
+
+Project update: After going back and forth on frame material I got some 1" aluminum EMT conduit. It’s 6005, roughly 27mm OD with 2mm walls. It seems plenty strong, it’s light, and it’s cheap! It can also be easily bent with a conduit bender. I’m going to bend up a frame in a day or two to check fitment on my harness.

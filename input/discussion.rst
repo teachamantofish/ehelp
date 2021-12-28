@@ -52,6 +52,9 @@ I'm not sure how to ask this question, but if I was to ask for a custom wound mo
 
 Seems like the relationship between thrust and torque is generally torque/thrust = about 60% at the throttle ranges we'd normally use. Is that generally true? 
 
+nikita: 1 604 725 5889
+
+
 
 
 

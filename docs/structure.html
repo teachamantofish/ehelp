@@ -38,7 +38,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Electronic-Instrumentation" href="electrical.html" />
+    <link rel="next" title="Instrumentation, Telemetry" href="electrical.html" />
     <link rel="prev" title="Propellers" href="props.html" /> 
 </head>
 
@@ -120,12 +120,19 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="motors.html">Motors</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#top-considerations">Top considerations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motors.html#reading-motor-specs">Reading motor specs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#manufacturers">Manufacturers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#sensored-versus-sensorless">Sensored versus sensorless</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#mating-with-a-prop">Mating with a prop</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#duty-cycle-max-continuous-power">Duty cycle-Max continuous power</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#kv-reduction">KV reduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#custom-motors">Custom motors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motors.html#worthwhile-reading">Worthwhile reading</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="motors.html#basics">Basics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="motors.html#advanced-topics">Advanced topics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="motors.html#vendor-specific">Vendor specific</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="motors.html#paul-martin">Paul Martin:</a></li>
 </ul>
@@ -133,10 +140,18 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="esc.html">Electronic Speed Controller</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="esc.html#tbd">TBD</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="esc.html#worthwhile-reads">Worthwhile reads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esc.html#choose-an-esc">Choose an ESC</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#sizing">Sizing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#features">Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#location">Location</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="esc.html#throttle">Throttle</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#throttle-power-disconnect">Throttle-power disconnect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#vendors">Vendors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="esc.html#worthwhile-reads">Worthwhile reads</a></li>
 <li class="toctree-l2"><a class="reference internal" href="esc.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
 </ul>
 </li>
@@ -147,6 +162,7 @@
 <li class="toctree-l3"><a class="reference internal" href="batteries.html#price">Price</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="batteries.html#worthwhile-reading">Worthwhile reading</a></li>
 <li class="toctree-l2"><a class="reference internal" href="batteries.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
 </ul>
 </li>
@@ -180,18 +196,24 @@
 <li class="toctree-l3"><a class="reference internal" href="#carbon-fiber">Carbon fiber</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#aluminum">Aluminum</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#aircraft-parts">Aircraft parts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#couplers">Couplers</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#note-tbd-todo">note, tbd, todo</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="electrical.html">Electronic-Instrumentation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="electrical.html#throttle">Throttle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="electrical.html">Instrumentation, Telemetry</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="electrical.html#telemetry">Telemetry</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="electrical.html#connections">Connections</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="electrical.html#battery-managent-system">Battery managent system</a></li>
 <li class="toctree-l2"><a class="reference internal" href="electrical.html#instrumentation">Instrumentation</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="electrical.html#battery-and-power-monitoring">Battery and power monitoring</a></li>
 <li class="toctree-l3"><a class="reference internal" href="electrical.html#motor-monitoring">Motor monitoring</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="electrical.html#tbd-notes-todo">tbd, notes, todo</a></li>
 </ul>
 </li>
 </ul>
@@ -302,7 +324,7 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="electrical.html" class="btn btn-neutral float-right" title="Electronic-Instrumentation" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="electrical.html" class="btn btn-neutral float-right" title="Instrumentation, Telemetry" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="props.html" class="btn btn-neutral float-left" title="Propellers" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -356,11 +378,16 @@ Paul Marin: By the way, if you just want to bolt a tube on to get up and running
 <li><p><a class="reference external" href="http://www.pioneercastors.net/UHMW-PE-wheels.php">Example UHMW wheel mfg</a></p></li>
 <li><p><a class="reference external" href="https://www.inlinewarehouse.com/fitlc/wheels/inline-wheel-buying-guide.html?from=gsearch&amp;gclid=Cj0KCQiA2ZCOBhDiARIsAMRfv9JcTo6xq2XnzXZtbFxOVJDOL5OP7p2-DCL7usgi224nwBz6HVJbqUEaAhLIEALw_wcB">Worth a look: rollerblade wheels (see All Terrain)</a></p></li>
 </ul>
+<p>Wheel pants, wheel fairings</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.aircraftspruce.com/menus/ap/wheelfairings.html">Aircraft Spruce</a></p></li>
+</ul>
 </div>
 <div class="section" id="hang-glider-hardware">
 <h2>Hang glider hardware<a class="headerlink" href="#hang-glider-hardware" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.willswing.com/accessories/wills-wing-control-bars/">Downtubes</a></p></li>
+<li><p><a class="reference external" href="https://delta-goodies.com/product/speed-bar-and-upright-brackets-holders-6-8-mm">Airfoil brackets (all types)</a></p></li>
 </ul>
 </div>
 <div class="section" id="material-supppliers">
@@ -392,6 +419,14 @@ Paul Marin: By the way, if you just want to bolt a tube on to get up and running
 </ul>
 <p>1x1/8 wall t6061 tubing is .52lbs/ft; cf 1x1.125 is .87 for 6 feet</p>
 </div>
+<div class="section" id="couplers">
+<h3>Couplers<a class="headerlink" href="#couplers" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://www.kippusa.com/us/en/Products/Tube-Connectors.html">https://www.kippusa.com/us/en/Products/Tube-Connectors.html</a></p>
+</div>
+</div>
+<div class="section" id="note-tbd-todo">
+<h2>note, tbd, todo<a class="headerlink" href="#note-tbd-todo" title="Permalink to this headline">¶</a></h2>
+<p>Project update: After going back and forth on frame material I got some 1” aluminum EMT conduit. It’s 6005, roughly 27mm OD with 2mm walls. It seems plenty strong, it’s light, and it’s cheap! It can also be easily bent with a conduit bender. I’m going to bend up a frame in a day or two to check fitment on my harness.</p>
 </div>
 </div>
 
@@ -407,7 +442,7 @@ Paul Marin: By the way, if you just want to bolt a tube on to get up and running
   <div role="contentinfo">
     <p>
       <span class="lastupdated">
-        Last updated on Dec 24, 2021.
+        Last updated on Dec 28, 2021.
       </span>
 
     </p>

@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Electronic-Instrumentation &mdash; Electric Hang Gliding Harnesses</title>
+  <title>Instrumentation, Telemetry &mdash; Electric Hang Gliding Harnesses</title>
   
 
   
@@ -120,12 +120,19 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="motors.html">Motors</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#top-considerations">Top considerations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motors.html#reading-motor-specs">Reading motor specs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#manufacturers">Manufacturers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#sensored-versus-sensorless">Sensored versus sensorless</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#mating-with-a-prop">Mating with a prop</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#duty-cycle-max-continuous-power">Duty cycle-Max continuous power</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#kv-reduction">KV reduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#custom-motors">Custom motors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motors.html#worthwhile-reading">Worthwhile reading</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="motors.html#basics">Basics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="motors.html#advanced-topics">Advanced topics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="motors.html#vendor-specific">Vendor specific</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="motors.html#paul-martin">Paul Martin:</a></li>
 </ul>
@@ -133,10 +140,18 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="esc.html">Electronic Speed Controller</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="esc.html#tbd">TBD</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="esc.html#worthwhile-reads">Worthwhile reads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esc.html#choose-an-esc">Choose an ESC</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#sizing">Sizing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#features">Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#location">Location</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="esc.html#throttle">Throttle</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#throttle-power-disconnect">Throttle-power disconnect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#vendors">Vendors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="esc.html#worthwhile-reads">Worthwhile reads</a></li>
 <li class="toctree-l2"><a class="reference internal" href="esc.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
 </ul>
 </li>
@@ -147,6 +162,7 @@
 <li class="toctree-l3"><a class="reference internal" href="batteries.html#price">Price</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="batteries.html#worthwhile-reading">Worthwhile reading</a></li>
 <li class="toctree-l2"><a class="reference internal" href="batteries.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
 </ul>
 </li>
@@ -180,18 +196,24 @@
 <li class="toctree-l3"><a class="reference internal" href="structure.html#carbon-fiber">Carbon fiber</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structure.html#aluminum">Aluminum</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structure.html#aircraft-parts">Aircraft parts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structure.html#couplers">Couplers</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#note-tbd-todo">note, tbd, todo</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Electronic-Instrumentation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#throttle">Throttle</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Instrumentation, Telemetry</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#telemetry">Telemetry</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#connections">Connections</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#battery-managent-system">Battery managent system</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#instrumentation">Instrumentation</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#battery-and-power-monitoring">Battery and power monitoring</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#motor-monitoring">Motor monitoring</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#tbd-notes-todo">tbd, notes, todo</a></li>
 </ul>
 </li>
 </ul>
@@ -288,7 +310,7 @@
     
       <li><a href="toc.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Electronic-Instrumentation</li>
+      <li>Instrumentation, Telemetry</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -314,16 +336,34 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="electronic-instrumentation">
-<h1>Electronic-Instrumentation<a class="headerlink" href="#electronic-instrumentation" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="instrumentation-telemetry">
+<h1>Instrumentation, Telemetry<a class="headerlink" href="#instrumentation-telemetry" title="Permalink to this headline">¶</a></h1>
 <img alt="_images/uc1.gif" src="_images/uc1.gif" />
 <p>TBD: overview</p>
-<div class="section" id="throttle">
-<h2>Throttle<a class="headerlink" href="#throttle" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>PPG 49.00 palm throttle: <a class="reference external" href="https://minne.us/shop/throttle/">https://minne.us/shop/throttle/</a></p></li>
-<li><p><a class="reference external" href="https://alienpowersystem.com/product-category/electric-throttle/">https://alienpowersystem.com/product-category/electric-throttle/</a></p></li>
-</ul>
+<div class="section" id="telemetry">
+<h2>Telemetry<a class="headerlink" href="#telemetry" title="Permalink to this headline">¶</a></h2>
+<p>First talk about what data you want and where it comes from.</p>
+<p>table: bms vs esc</p>
+<p>bms features:
+temp probe
+temp
+voltage
+current
+charge remaining, capacity
+indiv cell monitoring</p>
+<p>esc
+rpm
+internal temp
+input v
+bus current
+phase current
+power
+throttle input
+motor duty cycle</p>
+<div class="section" id="connections">
+<h3>Connections<a class="headerlink" href="#connections" title="Permalink to this headline">¶</a></h3>
+<p>bluetooth, hardwired</p>
+</div>
 </div>
 <div class="section" id="battery-managent-system">
 <h2>Battery managent system<a class="headerlink" href="#battery-managent-system" title="Permalink to this headline">¶</a></h2>
@@ -345,6 +385,40 @@
 <h3>Motor monitoring<a class="headerlink" href="#motor-monitoring" title="Permalink to this headline">¶</a></h3>
 </div>
 </div>
+<div class="section" id="tbd-notes-todo">
+<h2>tbd, notes, todo<a class="headerlink" href="#tbd-notes-todo" title="Permalink to this headline">¶</a></h2>
+<p>bratwurst (from openPPG)</p>
+<p>Hi Peter,</p>
+<p>The fact is that all displays that I have sold to pilots have worked flawlessly to this day. everyone used it for what it was intended for. if you want a system that is completely individual for you, you will find many companies that specialize in it. I and all my colleagues will continue to fly with the 18063, 25063, 50063 for the next few years. never change a perfectly functioning system is my opinion.</p>
+<p>xxx</p>
+<p>re: PCB board:</p>
+<p>The system is the controller that comes with the X4 or sp140, depending on which one to want to monitor. I’m not sure exactly what you want to display but both controllers already show most of the relevant info. It’s probably easier than you think to simply modify the open source code and assemble your own Arduino with a screen to display what you want.</p>
+<p>xxx</p>
+<p><a class="reference external" href="https://community.openppg.com/t/paraglider-self-launching-system/2186/18">https://community.openppg.com/t/paraglider-self-launching-system/2186/18</a></p>
+<p>Are you saying 4 meters of wire between the batteries and ESC or between the ESC and the motor? Are you familiar with voltage spikes from induction caused by long wires. You will burn up your ESC if the wires between the batteries and the ESC are too long. Search induction on this forum for more details.</p>
+<p>additional info about heat, loads, props, motors</p>
+<p>xxx</p>
+<p><a class="reference external" href="https://community.openppg.com/t/sp140-motor-sold-separately/3084/4">https://community.openppg.com/t/sp140-motor-sold-separately/3084/4</a></p>
+<p>hello, all you need is a standard throttle or cameleon 2/3 and connect it to a linear potentiometer. a tension spring and a return spring depending on how the handling should be. i always set it like the spring pressure on petrol ppg. also from the distance. so i was able to fly about 50 pilots with my e ppg without someone having noticed a difference when accelerating to a petrol ppg. only at thermik eppg do i use my different throttle system which has a utility model protection at the german patent office in munich. However, this is only useful for thermal / ascent eppg. if you want to see pictures of components (poti, electronics etc.) i can make some.</p>
+<p>xxx</p>
+<p>prebuilt throttle with telemetry: <a class="reference external" href="https://ppgsmoke.com/products/smart-throttle">https://ppgsmoke.com/products/smart-throttle</a></p>
+<p>xxx</p>
+<p><a class="reference external" href="https://usa.banggood.com/DALY-Smart-BMS-Accessory-bluetooth-Module-USB-to-UART-or-RS485-Cable-CANbus-Module-Power-Display-Panel-Touch-LCD-Screen-p-1872195.html?utm_source=googleshopping&amp;utm_medium=cpc_organic&amp;gmcCountry=US&amp;utm_content=minha&amp;utm_campaign=minha-usg-pc&amp;currency=USD&amp;cur_warehouse=CN&amp;createTmp=1&amp;ID=6310487&amp;utm_source=googleshopping&amp;utm_medium=cpc_bgs&amp;utm_content=sandra&amp;utm_campaign=sandra-pla-usg-all-0506&amp;ad_id=519518637596&amp;gclid=Cj0KCQiAwqCOBhCdARIsAEPyW9kt19-gqlxlKW-USW0PbmHttu5lexbUaQ_X9HCoDZh_qG4-9i9D6wsaApAiEALw_wcB">https://usa.banggood.com/DALY-Smart-BMS-Accessory-bluetooth-Module-USB-to-UART-or-RS485-Cable-CANbus-Module-Power-Display-Panel-Touch-LCD-Screen-p-1872195.html?utm_source=googleshopping&amp;utm_medium=cpc_organic&amp;gmcCountry=US&amp;utm_content=minha&amp;utm_campaign=minha-usg-pc&amp;currency=USD&amp;cur_warehouse=CN&amp;createTmp=1&amp;ID=6310487&amp;utm_source=googleshopping&amp;utm_medium=cpc_bgs&amp;utm_content=sandra&amp;utm_campaign=sandra-pla-usg-all-0506&amp;ad_id=519518637596&amp;gclid=Cj0KCQiAwqCOBhCdARIsAEPyW9kt19-gqlxlKW-USW0PbmHttu5lexbUaQ_X9HCoDZh_qG4-9i9D6wsaApAiEALw_wcB</a></p>
+<p><a class="reference external" href="https://www.lithiumbatterypcb.com/product/13s-to-20s-li-ion-or-lifepo4-smart-bms-relay-solution/">https://www.lithiumbatterypcb.com/product/13s-to-20s-li-ion-or-lifepo4-smart-bms-relay-solution/</a></p>
+<p><a class="reference external" href="https://www.aliexpress.com/item/4001202028077.html?spm=a2g0o.productlist.0.0.6efb3d73dFSwNi&amp;algo_pvid=44317b5a-bac3-4c98-a688-1253b79ffbe5&amp;algo_exp_id=44317b5a-bac3-4c98-a688-1253b79ffbe5-13&amp;pdp_ext_f=%7B%22sku_id%22%3A%2212000022994987764%22%7D&amp;pdp_pi=-1%3B48.72%3B-1%3B-1%400%3BUSD%3Bsearch-mainSearch">https://www.aliexpress.com/item/4001202028077.html?spm=a2g0o.productlist.0.0.6efb3d73dFSwNi&amp;algo_pvid=44317b5a-bac3-4c98-a688-1253b79ffbe5&amp;algo_exp_id=44317b5a-bac3-4c98-a688-1253b79ffbe5-13&amp;pdp_ext_f=%7B%22sku_id%22%3A%2212000022994987764%22%7D&amp;pdp_pi=-1%3B48.72%3B-1%3B-1%400%3BUSD%3Bsearch-mainSearch</a></p>
+<p>bms features:
+temp probe
+temp
+voltage
+current
+charge remaining, capacity
+indiv cell monitoring
+current control
+charge/discharge balancing and protections
+bluetooth
+parallel battery connections (check!)
+weight</p>
+</div>
 </div>
 
 
@@ -359,7 +433,7 @@
   <div role="contentinfo">
     <p>
       <span class="lastupdated">
-        Last updated on Dec 24, 2021.
+        Last updated on Dec 28, 2021.
       </span>
 
     </p>

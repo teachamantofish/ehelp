@@ -120,12 +120,19 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="motors.html">Motors</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#top-considerations">Top considerations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motors.html#reading-motor-specs">Reading motor specs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#manufacturers">Manufacturers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#sensored-versus-sensorless">Sensored versus sensorless</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#mating-with-a-prop">Mating with a prop</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#duty-cycle-max-continuous-power">Duty cycle-Max continuous power</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#kv-reduction">KV reduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#custom-motors">Custom motors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motors.html#worthwhile-reading">Worthwhile reading</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="motors.html#basics">Basics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="motors.html#advanced-topics">Advanced topics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="motors.html#vendor-specific">Vendor specific</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="motors.html#paul-martin">Paul Martin:</a></li>
 </ul>
@@ -133,10 +140,18 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="esc.html">Electronic Speed Controller</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="esc.html#tbd">TBD</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="esc.html#worthwhile-reads">Worthwhile reads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esc.html#choose-an-esc">Choose an ESC</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#sizing">Sizing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#features">Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#location">Location</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="esc.html#throttle">Throttle</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#throttle-power-disconnect">Throttle-power disconnect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#vendors">Vendors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="esc.html#worthwhile-reads">Worthwhile reads</a></li>
 <li class="toctree-l2"><a class="reference internal" href="esc.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
 </ul>
 </li>
@@ -147,6 +162,7 @@
 <li class="toctree-l3"><a class="reference internal" href="batteries.html#price">Price</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="batteries.html#worthwhile-reading">Worthwhile reading</a></li>
 <li class="toctree-l2"><a class="reference internal" href="batteries.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
 </ul>
 </li>
@@ -180,18 +196,24 @@
 <li class="toctree-l3"><a class="reference internal" href="structure.html#carbon-fiber">Carbon fiber</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structure.html#aluminum">Aluminum</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structure.html#aircraft-parts">Aircraft parts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structure.html#couplers">Couplers</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#note-tbd-todo">note, tbd, todo</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="electrical.html">Electronic-Instrumentation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="electrical.html#throttle">Throttle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="electrical.html">Instrumentation, Telemetry</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="electrical.html#telemetry">Telemetry</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="electrical.html#connections">Connections</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="electrical.html#battery-managent-system">Battery managent system</a></li>
 <li class="toctree-l2"><a class="reference internal" href="electrical.html#instrumentation">Instrumentation</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="electrical.html#battery-and-power-monitoring">Battery and power monitoring</a></li>
 <li class="toctree-l3"><a class="reference internal" href="electrical.html#motor-monitoring">Motor monitoring</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="electrical.html#tbd-notes-todo">tbd, notes, todo</a></li>
 </ul>
 </li>
 </ul>
@@ -415,6 +437,7 @@
 <li><p>Most motor vendors pair props with motors.</p></li>
 <li><p>eCalc recommends props with their configurations.</p></li>
 <li><p><a class="reference external" href="https://www.mejzlik.eu/product">https://www.mejzlik.eu/product</a>: 2 and 3 blade.</p></li>
+<li><p><a class="reference external" href="https://www.aircraftinternational.com/Products/Propellers.aspx">Aircraft International (all types)</a></p></li>
 </ul>
 </div>
 <div class="section" id="notes-todo-not-reviewed">
@@ -422,6 +445,9 @@
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.ebay.com/itm/154524832114?chn=ps&amp;norover=1&amp;mkevt=1&amp;mkrid=711-117182-37290-0&amp;mkcid=2&amp;itemid=154524832114&amp;targetid=1263094005506&amp;device=c&amp;mktype=&amp;googleloc=1016367&amp;poi=&amp;campaignid=14859008593&amp;mkgroupid=130497710760&amp;rlsatarget=pla-1263094005506&amp;abcId=9300678&amp;merchantid=6296724&amp;gclid=Cj0KCQiA47GNBhDrARIsAKfZ2rAgjjvUrh-abw9UZTIV9CeDeQPL8bB5YATLRvpgPy620nQxEJSnV1kaAnhPEALw_wcB">https://www.ebay.com/itm/154524832114?chn=ps&amp;norover=1&amp;mkevt=1&amp;mkrid=711-117182-37290-0&amp;mkcid=2&amp;itemid=154524832114&amp;targetid=1263094005506&amp;device=c&amp;mktype=&amp;googleloc=1016367&amp;poi=&amp;campaignid=14859008593&amp;mkgroupid=130497710760&amp;rlsatarget=pla-1263094005506&amp;abcId=9300678&amp;merchantid=6296724&amp;gclid=Cj0KCQiA47GNBhDrARIsAKfZ2rAgjjvUrh-abw9UZTIV9CeDeQPL8bB5YATLRvpgPy620nQxEJSnV1kaAnhPEALw_wcB</a></p></li>
 </ul>
+<p>xxx</p>
+<p>search diameter to pitch ratio</p>
+<p>A quick aside on the prop pitch thing: I was running a fixed wing UAV development program for a while and we ended up settling on that same 3:2 diameter to pitch ratio for maximum endurance. That is usually about the highest pitch you can get without stalling the prop blades at zero airspeed. Pushing the pitch higher will continue to increase the specific thrust (grams of thrust per watt) even higher, but weird things start happening when the prop disc is stalling, or stalling unevenly with uneven airflow. 3:2 seemed to be the magic ratio for that vehicle, and it seems (according to eCalc) to be the magic ratio here as well.</p>
 </div>
 </div>
 
@@ -437,7 +463,7 @@
   <div role="contentinfo">
     <p>
       <span class="lastupdated">
-        Last updated on Dec 24, 2021.
+        Last updated on Dec 28, 2021.
       </span>
 
     </p>

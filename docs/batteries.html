@@ -120,12 +120,19 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="motors.html">Motors</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#top-considerations">Top considerations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motors.html#reading-motor-specs">Reading motor specs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#manufacturers">Manufacturers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#sensored-versus-sensorless">Sensored versus sensorless</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#mating-with-a-prop">Mating with a prop</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#duty-cycle-max-continuous-power">Duty cycle-Max continuous power</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#kv-reduction">KV reduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#custom-motors">Custom motors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motors.html#worthwhile-reading">Worthwhile reading</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="motors.html#basics">Basics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="motors.html#advanced-topics">Advanced topics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="motors.html#vendor-specific">Vendor specific</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="motors.html#paul-martin">Paul Martin:</a></li>
 </ul>
@@ -133,10 +140,18 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="esc.html">Electronic Speed Controller</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="esc.html#tbd">TBD</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="esc.html#worthwhile-reads">Worthwhile reads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esc.html#choose-an-esc">Choose an ESC</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#sizing">Sizing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#features">Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#location">Location</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="esc.html#throttle">Throttle</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#throttle-power-disconnect">Throttle-power disconnect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#vendors">Vendors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="esc.html#worthwhile-reads">Worthwhile reads</a></li>
 <li class="toctree-l2"><a class="reference internal" href="esc.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
 </ul>
 </li>
@@ -147,6 +162,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#price">Price</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#worthwhile-reading">Worthwhile reading</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
 </ul>
 </li>
@@ -180,18 +196,24 @@
 <li class="toctree-l3"><a class="reference internal" href="structure.html#carbon-fiber">Carbon fiber</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structure.html#aluminum">Aluminum</a></li>
 <li class="toctree-l3"><a class="reference internal" href="structure.html#aircraft-parts">Aircraft parts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="structure.html#couplers">Couplers</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#note-tbd-todo">note, tbd, todo</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="electrical.html">Electronic-Instrumentation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="electrical.html#throttle">Throttle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="electrical.html">Instrumentation, Telemetry</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="electrical.html#telemetry">Telemetry</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="electrical.html#connections">Connections</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="electrical.html#battery-managent-system">Battery managent system</a></li>
 <li class="toctree-l2"><a class="reference internal" href="electrical.html#instrumentation">Instrumentation</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="electrical.html#battery-and-power-monitoring">Battery and power monitoring</a></li>
 <li class="toctree-l3"><a class="reference internal" href="electrical.html#motor-monitoring">Motor monitoring</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="electrical.html#tbd-notes-todo">tbd, notes, todo</a></li>
 </ul>
 </li>
 </ul>
@@ -321,15 +343,21 @@
 <h2>Battery considerations<a class="headerlink" href="#battery-considerations" title="Permalink to this headline">¶</a></h2>
 <p>Before you spec your system, you need to understand volts, amps, S rating, C rating, and kilowatts. Here’s a start:</p>
 <ul class="simple">
-<li><p>Total battery power is Kwh = volts * amps. (S rating * 3.7 * mAH). Divide available Kwh by how any Kw you need per minute to determine how long you can run your motor.</p></li>
-<li><p>The S rating is the number of cells times the cell voltage (3.7 for LiPO). Most systems use 44.4 volts and higher. You’ll may need multiple batteries. Wired in series, voltage is cumulative. Connected in parallel, voltage stays the same.</p></li>
-<li><p>The C rating is the discharge rate or the max amps you can draw from the battery. Multiply the C rating by the amp hours to find the max current/amps/draw. A 16000mAH battery is 16AH. A 10C rating means you can draw 10*16 (160) amps. Wired in series, amperage stays the same. Connected in parallel, amperage is additive. It’s a good idea to spec your batteries allowing for 100% headroom (or double what you might need). eHelp drives can pull well over 100 amps.</p></li>
+<li><p><strong>Kwh or mAH</strong>: Available battery energy (how much gas is in the tank) is Kwh = volts * amps. (S rating * 3.7 * mAH). Divide available Kwh by how any Kw you need per minute to determine how long you can run your motor.</p></li>
+<li><p><strong>Voltage</strong>: The S rating indicates the total voltagle. It is the number of cells times the cell voltage (3.7 for LiPO). Most systems use 44.4 volts and higher. You’ll may need multiple batteries. Wired in series, voltage is cumulative. Connected in parallel, voltage stays the same.</p></li>
+<li><p><strong>Amperage-Capacity</strong>: The C rating tells you the flow rate of electricty in and out of the battery. It is the discharge rate or the max amps you can draw. Multiply the C rating by the amp hours to find the max current/amps/draw. A 16000mAH battery is 16AH. A 10C rating means you can draw 10*16 (160) amps. Wired in series, amperage stays the same. Connected in parallel, amperage is additive. It’s a good idea to spec your batteries as well as the ESC with 60-100% headroom (or double what you might need). eHelp drives can pull well over 100 amps.</p></li>
+<li><p><strong>P rating</strong>: The P rating indicates how many parallel strings exist in the battery. Adding parallel strings increases available amperage out of a battery (a higher C rating). For example, 14.8V 5000 mAh 4S2P is a 4-cell  battery consisting of 2 strings of 2500 mAh capacity cells wired in parallel to provide a combined 5000 mAh rating. While a higher P rating increases capacity and discharge rates, it may lower reliability and recharge cycles.</p></li>
 </ul>
 <p>The math is easy, but here’s a calculator: <a class="reference external" href="https://power-calculation.com/battery-storage-calculator.php">https://power-calculation.com/battery-storage-calculator.php</a></p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Some of the working examples in this document use 2 12S 22000mAH batteries.</p>
 </div>
+<p><strong>Research links</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.genstattu.com/bw/">https://www.genstattu.com/bw/</a></p></li>
+<li><p><a class="reference external" href="https://rightbattery.com/tag/p-rating/">https://rightbattery.com/tag/p-rating/</a></p></li>
+</ul>
 <div class="section" id="type">
 <h3>Type<a class="headerlink" href="#type" title="Permalink to this headline">¶</a></h3>
 <p>LiPO batteries are currently the first choice for a number of reasons, including their energy density, high discharge rate, lifespan, and so on.</p>
@@ -342,7 +370,7 @@
 <ul class="simple">
 <li><p>Premium: <a class="reference external" href="https://www.genstattu.com/6s-22-2-v-lipo-battery.html?sort=pricedesc">Tattu, Tattuplus (smart batteries)</a></p></li>
 <li><p>Bonkas (see OpenPPG)</p></li>
-<li><p>DIY build your own: A pia but 1/2 the cost.</p></li>
+<li><p>DIY build your own: Extra work, but 1/2 the cost. <a class="reference external" href="https://community.openppg.com/t/building-a-14sx15p-18650-battery-pack/2251/22">See OpenPPG</a></p></li>
 <li><p>Budget batteries: Example: Zeee are about 1/2 the cost of Tattu.</p></li>
 </ul>
 </div>
@@ -362,6 +390,10 @@
 <li><p>See also Welion, YANGDA Thunder Stone</p></li>
 </ul>
 </div>
+<div class="section" id="lico">
+<h4>LiCo<a class="headerlink" href="#lico" title="Permalink to this headline">¶</a></h4>
+<p>tbd: <a class="reference external" href="https://hobbyking.com/en_us/turnigy-nano-tech-5000mah-8s-65-130c-lipo-pack-xt90.html?queryID=d0c1dc6dde899982bc604d4f4b1f2511&amp;objectID=71442&amp;indexName=hbk_live_products_analytics">https://hobbyking.com/en_us/turnigy-nano-tech-5000mah-8s-65-130c-lipo-pack-xt90.html?queryID=d0c1dc6dde899982bc604d4f4b1f2511&amp;objectID=71442&amp;indexName=hbk_live_products_analytics</a></p>
+</div>
 </div>
 <div class="section" id="size">
 <h3>Size<a class="headerlink" href="#size" title="Permalink to this headline">¶</a></h3>
@@ -372,10 +404,11 @@
 <p>Cheap batteries can kill you, have short lifespans, or perform poorly. Be careful.</p>
 </div>
 </div>
-<div class="section" id="notes-todo-not-reviewed">
-<h2>Notes, todo, not reviewed<a class="headerlink" href="#notes-todo-not-reviewed" title="Permalink to this headline">¶</a></h2>
-<p>battery discussion: <a class="reference external" href="https://endless-sphere.com/forums/viewtopic.php?t=110570">https://endless-sphere.com/forums/viewtopic.php?t=110570</a></p>
+<div class="section" id="worthwhile-reading">
+<h2>Worthwhile reading<a class="headerlink" href="#worthwhile-reading" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
+<li><p>Care, use, selection: <a class="reference external" href="https://www.rchelicopterfun.com/lipo-batteries.html">https://www.rchelicopterfun.com/lipo-batteries.html</a></p></li>
+<li><p>Forum discussion: <a class="reference external" href="https://endless-sphere.com/forums/viewtopic.php?t=110570">https://endless-sphere.com/forums/viewtopic.php?t=110570</a></p></li>
 <li><p>Videos:</p></li>
 <li><ul>
 <li><p>why choose a high C value battery.</p></li>
@@ -383,6 +416,9 @@
 </ul>
 </li>
 </ul>
+</div>
+<div class="section" id="notes-todo-not-reviewed">
+<h2>Notes, todo, not reviewed<a class="headerlink" href="#notes-todo-not-reviewed" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -398,7 +434,7 @@
   <div role="contentinfo">
     <p>
       <span class="lastupdated">
-        Last updated on Dec 24, 2021.
+        Last updated on Dec 28, 2021.
       </span>
 
     </p>

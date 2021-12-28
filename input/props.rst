@@ -112,9 +112,15 @@ Vendors
 * Most motor vendors pair props with motors. 
 * eCalc recommends props with their configurations.
 * https://www.mejzlik.eu/product: 2 and 3 blade.
-
+* `Aircraft International (all types) <https://www.aircraftinternational.com/Products/Propellers.aspx>`_
 
 Notes, todo, not reviewed
 =================================
 
 * https://www.ebay.com/itm/154524832114?chn=ps&norover=1&mkevt=1&mkrid=711-117182-37290-0&mkcid=2&itemid=154524832114&targetid=1263094005506&device=c&mktype=&googleloc=1016367&poi=&campaignid=14859008593&mkgroupid=130497710760&rlsatarget=pla-1263094005506&abcId=9300678&merchantid=6296724&gclid=Cj0KCQiA47GNBhDrARIsAKfZ2rAgjjvUrh-abw9UZTIV9CeDeQPL8bB5YATLRvpgPy620nQxEJSnV1kaAnhPEALw_wcB
+
+xxx 
+
+search diameter to pitch ratio
+
+A quick aside on the prop pitch thing: I was running a fixed wing UAV development program for a while and we ended up settling on that same 3:2 diameter to pitch ratio for maximum endurance. That is usually about the highest pitch you can get without stalling the prop blades at zero airspeed. Pushing the pitch higher will continue to increase the specific thrust (grams of thrust per watt) even higher, but weird things start happening when the prop disc is stalling, or stalling unevenly with uneven airflow. 3:2 seemed to be the magic ratio for that vehicle, and it seems (according to eCalc) to be the magic ratio here as well.
