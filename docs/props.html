@@ -24,28 +24,17 @@
   
 
   
-  <script>
-    const test = document.getElementsByTagName('li')
-
-    document.getElementsByTagName("li").innerHTML = "Hello World!"; 
-
+<script type="text/javascript">
+  Array.from(document.getElementsByTagName('h2')).forEach(el => {
+    const a = document.createElement('a')
+    a.innerText="feedback"
+    a.href="https://google.com"
+    a.target="_blank"
+    a.style["margin-left"]="5px"
+    a.style["font-size"]="0.6em"
+    el.appendChild(a)
+  });
 </script>
-
-
-<script>
-  ol.before('before'); // insert string "before" before <ol>
-  ol.after('after'); // insert string "after" after <ol>
-
-  let liFirst = document.createElement('li');
-  liFirst.innerHTML = 'prepend';
-  ol.prepend(liFirst); // insert liFirst at the beginning of <ol>
-
-  let liLast = document.createElement('li');
-  liLast.innerHTML = 'append';
-  ol.append(liLast); // insert liLast at the end of <ol>
-</script>
-
-
 
   <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
@@ -456,12 +445,16 @@
 <div class="section" id="folding-props-diy-and-resources">
 <h2>Folding props DIY and resources<a class="headerlink" href="#folding-props-diy-and-resources" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p><a class="reference external" href="https://www.youtube.com/watch?v=cyBJLpHkc7A">Charles Allen’s DIY project video</a></p></li>
 <li><p><a class="reference external" href="https://icare-icarus.3dcartstores.com/RASA-CFK-3-Blades-Propeller-Folding-342225-MAG-CAD-BIG_p_852.html">Icarus folding props</a> See also Reidar’s <a class="reference external" href="https://www.youtube.com/watch?v=-sIVpOLYoqg&amp;t=144s">video and commments</a></p></li>
 <li><p><a class="reference external" href="https://www.geigerengineering.de/en/avionics/products">Geiger folding props (expensive)</a></p></li>
 <li><p><a class="reference external" href="http://graal-aero.fr/hub_e.html">Open source folding prop hub design</a></p></li>
 <li><p>Interesting forward folding prop:  <a class="reference external" href="https://www.youtube.com/watch?app=desktop&amp;v=wuhSRdffuDw&amp;t=295&amp;fbclid=IwAR1d04qJ8gJxdnokDxZHgMgBG0L7G1J2QcmDmnfWWiDHTK9bdoyb82HxvZg">https://www.youtube.com/watch?app=desktop&amp;v=wuhSRdffuDw&amp;t=295&amp;fbclid=IwAR1d04qJ8gJxdnokDxZHgMgBG0L7G1J2QcmDmnfWWiDHTK9bdoyb82HxvZg</a></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=cyBJLpHkc7A">Charles Allen’s DIY project video</a></p></li>
 </ul>
+<div class="figure align-default" id="id1">
+<img alt="images/diyfoldingca.png:target:https://www.youtube.com/watch?v=cyBJLpHkc7A" src="images/diyfoldingca.png:target:https://www.youtube.com/watch?v=cyBJLpHkc7A" />
+<p class="caption"><span class="caption-text">Credit: Charles Allen</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
 </div>
 <div class="section" id="propeller-innovation">
 <h2>Propeller innovation<a class="headerlink" href="#propeller-innovation" title="Permalink to this headline">¶</a></h2>

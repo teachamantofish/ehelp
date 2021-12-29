@@ -24,28 +24,17 @@
   
 
   
-  <script>
-    const test = document.getElementsByTagName('li')
-
-    document.getElementsByTagName("li").innerHTML = "Hello World!"; 
-
+<script type="text/javascript">
+  Array.from(document.getElementsByTagName('h2')).forEach(el => {
+    const a = document.createElement('a')
+    a.innerText="feedback"
+    a.href="https://google.com"
+    a.target="_blank"
+    a.style["margin-left"]="5px"
+    a.style["font-size"]="0.6em"
+    el.appendChild(a)
+  });
 </script>
-
-
-<script>
-  ol.before('before'); // insert string "before" before <ol>
-  ol.after('after'); // insert string "after" after <ol>
-
-  let liFirst = document.createElement('li');
-  liFirst.innerHTML = 'prepend';
-  ol.prepend(liFirst); // insert liFirst at the beginning of <ol>
-
-  let liLast = document.createElement('li');
-  liLast.innerHTML = 'append';
-  ol.append(liLast); // insert liLast at the end of <ol>
-</script>
-
-
 
   <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
