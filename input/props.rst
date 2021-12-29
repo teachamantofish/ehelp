@@ -6,9 +6,9 @@ Propellers
 
 I'm going to punt here for a while. The topic is complex. This section includes some rules of thumb and links to folks who know more (and don't often agree). It's worth reading a `prop overview <https://aerotoolbox.com/thrust-cruise-speed/>`_.
 
-Driveline design often starts with the prop. To fly, you need to move air in the opposite direction. Bigger is better but you have to worry about toes, keel, and ground. Faster is *sometimes* better but there are limits. Pitch (the angle that determines the bite into the air) should be selected for your airspeed and either climb or cruise. The prop is going to slow your motor down, and it's design must be compatible with the motor's power and speed. 
+Driveline design often starts with the prop. To fly, you need to move air in the opposite direction. Bigger is better but you have to worry about toes, keel, and ground. Faster is *sometimes* better but there are limits. Prop pitch (the angle that determines the bite into the air) should be selected for your airspeed and either climb or cruise. The prop is going to slow your motor down, and it's design must be compatible with the motor's power and speed. 
 
-Your driveline decisions about motor, power source, and propeller are intertwined. You'll need to verify they work together to achieve what you're trying to accomplish. 
+Your driveline decisions about motor, power source, and propeller are intertwined. You'll need to verify they work together to achieve your goals. 
 
 Getting started
 ==========================
@@ -16,21 +16,19 @@ Getting started
 In general, you can do what other folks are doing or use your motor's manufacturer recommendations.
 
 * Slower speeds and bigger propellers produce more thrust. 
-* Static thrust (not moving) is always far lower than dynamic thrust. 
+* Static thrust (not moving) is always far higher than dynamic thrust. 
 * Don't trust manufacturer numbers. 
-* You usually need a higher pitch for climb. Design for climb or cruise. 
+* A higher pitch performs better during climb and slow speeds. Design for climb or cruise. 
 * A 100kv 34x14 setup is somewhat similar to an 80kv 36x16 setup. 
-
-
-* Material. Carbon fiber is stronger, lighter, more responsive, but more expensive. Wood is cheap and a good choice for learning, experimenting, and conditions where damage is likely. 
-* Diameter: 
+* More blades might yeild a bit more thrust (e.g. 5%), but it's more drag if they don't fold.
+* Carbon fiber is stronger, lighter, more responsive, but more expensive. 
+* Wood is cheap and a good choice for learning, experimenting, and conditions where damage is likely. 
+* Typical sizes range from 36"-44".
 
 Choosing a propeller
 ==========================
 
-Choose a propeller requires knowing how much thrust you need for a specific flying goal; for example, a 300 fpm climb, cruising at 35mph. You'll need to know some basic number about your wing and go through some basic calculations here TBD. 
-
-
+Choose a propeller requires knowing how much thrust you need for a specific flying goal; for example, a 300 fpm climb, cruising at 24 mph. You'll need to know some basic number about your wing and go through some basic calculations here TBD. 
 
 The 3 try eyeball method
 --------------------------
@@ -44,23 +42,21 @@ Use what you know. In this case, 30kg of thrust
 * Plug in your prop choice and motor data to verify thrust
     * `e-props:  <https://ppg.e-props.fr/calculator_PROPS.php?language=en>`_
     * https://rcplanes.online/calc_thrust.htm
+* `Mejzlik prop calculators <https://www.mejzlik.eu/technical-data/propeller_calculatorf>`_
 
-
-Get these: Mejzlik Static thrust calculator_Version1
-
+    * Disk loading
+    * Dynamic thrust
+    * Static thrust
 
 Other forumulas
 -----------------------
 
-Check 
+TBD
 
 Copycat method
 ---------------------------------
 
-
-
-
-
+TBD
 
 Pitch
 ------------------
@@ -72,7 +68,7 @@ According to vendor data, a 3 blade prop delivers 3-6% more thrust at the same d
 
   * https://community.openppg.com/t/tri-vs-bi-prop-efficiency/3944
   * Also see PPG Youtube videos comparing configurations.
-  * See e-props website.
+  * `e-props has data <https://aircraft.e-props.fr/efficient_prop/#tit02>`_.
 
 
 Propeller tutorial

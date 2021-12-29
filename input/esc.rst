@@ -24,6 +24,16 @@ Location
 * Placing the ESC in a cooling airstream is a good idea. 
 * Wire inductance will kill ESC mosfets and may even blow the capacitors. Try to  keep battery wires as short as practical and less than 12". To mitigate this problem for longer wire scenarios, install an `inline capacitor <https://shop.powerdrives.net/?product=capacitor-bank&fbclid=IwAR345aKaj9M2BJzZwV_NAd3vLRXp9YmLa2eXJmiUIgXKAgl6n67gCPUVgts>`_.
 
+Wiring
+------------------------
+
+* Choose a gauge that can easily handle the max amperage. See TBD. 
+* Choose a wire type. Silicone wire is more flexible, heat resistant, and lighter than PVC,  but it is also more expensive. `Compare <https://www.warwickts.com/4739/Guide-on-PVC-vs-Silicone-Test-Lead-Cables>`_. 
+* Keep the wires as short as possible. 
+* Twist the wires in a spiral fashion from the ESC to the motor. 
+* Connectors: TBD
+
+
 
 Throttle
 ==============
@@ -37,6 +47,7 @@ Vendors
 * PPG 49.00 palm throttle: https://minne.us/shop/throttle/
 * https://alienpowersystem.com/product-category/electric-throttle/
 * https://ppgsmoke.com/products/smart-throttle
+* PPG 250.00 with LCD: https://epowerhobby.com/product/electric-paramotor-throttle/
 
 
 Worthwhile reads

@@ -7,7 +7,7 @@ source_suffix = '.rst'
 master_doc = 'toc'
 
 # General information about the project.
-project = u'Electric Hang Gliding Harnesses'
+project = u'Electric Hang Gliding Harness'
 copyright = u'2021, Ben Rogers'
 # 
 # The name of the Pygments (syntax highlighting) style to use.
@@ -28,7 +28,7 @@ templates_path = ['../templates']
 # further.  For a list of options available for each theme, see the documentation.
 
 html_theme_options = {
-    'canonical_url': 'https://ehelp.readthedocs.io/en/latest/',
+    'canonical_url': 'https://teachamantofish.github.io/ehelp/index.html',
     'logo_only': False,
     'display_version': True,
     'prev_next_buttons_location': 'top',
@@ -46,11 +46,11 @@ html_theme_options = {
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = "Electric Hang Gliding Harnesses"
+html_title = "Electric Hang Gliding Harness"
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 # maps to shorttitle|e
-html_short_title = "Electric Hang Gliding Harnesses"
+html_short_title = "Electric Hang Gliding Harness"
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.

@@ -9,7 +9,7 @@ TBD: overview
 Telemetry
 ======================
 
-First talk about what data you want and where it comes from. 
+TBD: what data you want and where it comes from. 
 
 table: bms vs esc
 
@@ -58,7 +58,7 @@ TBD. CA has a slick contraption in one of his vids.
 * 
 
 
-Battery and power monitoring
+Battery monitoring
 ----------------------------------
 
 Motor monitoring

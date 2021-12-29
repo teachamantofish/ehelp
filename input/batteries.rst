@@ -11,7 +11,7 @@ Before you spec your system, you need to understand volts, amps, S rating, C rat
 
 * **Kwh or mAH**: Available battery energy (how much gas is in the tank) is Kwh = volts * amps. (S rating * 3.7 * mAH). Divide available Kwh by how any Kw you need per minute to determine how long you can run your motor. 
 * **Voltage**: The S rating indicates the total voltagle. It is the number of cells times the cell voltage (3.7 for LiPO). Most systems use 44.4 volts and higher. You'll may need multiple batteries. Wired in series, voltage is cumulative. Connected in parallel, voltage stays the same. 
-* **Amperage-Capacity**: The C rating tells you the flow rate of electricty in and out of the battery. It is the discharge rate or the max amps you can draw. Multiply the C rating by the amp hours to find the max current/amps/draw. A 16000mAH battery is 16AH. A 10C rating means you can draw 10*16 (160) amps. Wired in series, amperage stays the same. Connected in parallel, amperage is additive. It's a good idea to spec your batteries as well as the ESC with 60-100% headroom (or double what you might need). eHelp drives can pull well over 100 amps.
+* **Amperage-Capacity**: The C rating tells you the flow rate of electricty in and out of the battery. Your battery must be able to supply enough amps (current) to power your motor, and since the motor will try to draw what it needs, you need to use batteries which have a higher dicharge capacity than will be used during max draw (climb). Multiply the C rating by the amp hours to find the max amps. A 16000mAH battery is 16AH. A 10C rating means you can draw 10*16 (160) amps. Wired in series, amperage stays the same. Connected in parallel, amperage is additive. It's a good idea to spec your batteries as well as the ESC with 60-100% headroom (or double what you might need). eHelp drives can pull well over 100 amps.
 * **P rating**: The P rating indicates how many parallel strings exist in the battery. Adding parallel strings increases available amperage out of a battery (a higher C rating). For example, 14.8V 5000 mAh 4S2P is a 4-cell  battery consisting of 2 strings of 2500 mAh capacity cells wired in parallel to provide a combined 5000 mAh rating. While a higher P rating increases capacity and discharge rates, it may lower reliability and recharge cycles.
 
 The math is easy, but here's a calculator: https://power-calculation.com/battery-storage-calculator.php
@@ -74,12 +74,9 @@ Worthwhile reading
 
 * Care, use, selection: https://www.rchelicopterfun.com/lipo-batteries.html
 * Forum discussion: https://endless-sphere.com/forums/viewtopic.php?t=110570
-
-* Videos: 
-* 
-   * why choose a high C value battery. 
-   * why high voltage is better
-
+* `Determining an accurate (real world) C rating <https://www.youtube.com/watch?v=xwxFQy-jqZ0>`_
+* add vid link: why choose a high C value battery. 
+* add vid link: why high voltage is better
 
 
 Notes, todo, not reviewed

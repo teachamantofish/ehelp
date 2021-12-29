@@ -1,8 +1,8 @@
 ************************************************
-Electric Powered Hang Gliding Harnesses
+e-Powered Hang Gliding Harnesses
 ************************************************
 
-.. caution:: In progress notes.
+.. caution:: In progress!.
 
 Why? Because for 2000-3000 bucks a DIYer can build a 20 pound eHelp harness and flatland foot launch from any location. No modified glider. No tow rig. Minimal learning curve.  The time and $$$ investment quickly pays for itself through reduced driving to launches, hang-waiting, tow costs, alcoholic consumption while jonesing for some airtime. Only the pilot can determine the ultimate payback.
 

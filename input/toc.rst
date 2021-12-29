@@ -1,12 +1,12 @@
 ************************************************
-Electric Powered Hang Gliding Harnesses
+e-Powered Hang Gliding Harnesses
 ************************************************
+
 
 
 .. toctree:: 
    :caption: Getting Started
-   :maxdepth: 2
-   :hidden:
+   :maxdepth: 3
 
    index
    examples
@@ -14,8 +14,7 @@ Electric Powered Hang Gliding Harnesses
 
 .. toctree:: 
    :caption: Components
-   :maxdepth: 2
-   :hidden:
+   :maxdepth: 3
 
    motors
    esc
@@ -26,8 +25,7 @@ Electric Powered Hang Gliding Harnesses
 
 .. toctree:: 
    :caption: Useful Info
-   :maxdepth: 2
-   :hidden:
+   :maxdepth: 3
 
    calculators
    ideas

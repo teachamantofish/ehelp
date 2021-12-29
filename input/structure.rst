@@ -98,12 +98,23 @@ Aircraft parts
 * https://www.airpartsinc.com/default.asp
 * https://www.leadingedgeairfoils.com/
 
+Tubing
+------------------
+
+* https://www.shapirosupply.com/aluminum/tube-and-pipe?cat=27
+* https://www.airpartsinc.com/default.asp
+* https://www.leadingedgeairfoils.com/
+
+
+
 1x1/8 wall t6061 tubing is .52lbs/ft; cf 1x1.125 is .87 for 6 feet
 
 Couplers
 -----------------
 
-https://www.kippusa.com/us/en/Products/Tube-Connectors.html
+* PPG tubing fittings: https://epowerhobby.com/product/4-x-aluminum-paramotor-cage-90-degree-tube-connectors/
+* https://www.kippusa.com/us/en/Products/Tube-Connectors.html
+
 
 
 note, tbd, todo

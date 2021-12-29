@@ -7,6 +7,8 @@ This document does not include trikes, ultralights, and paramotors. However, int
 Prone launch configurations
 ================================
 
+The reason I include these here is because prone launching removes the need to control a throttle and glider during a running launch. There's no immediate altitude with a flat land launch so simplicity has its advantages.
+
 Reidar Bernsten
 
 * `Twin electric tractor <https://www.youtube.com/watch?v=z-OrT9RGfFI>`_
@@ -26,12 +28,17 @@ Ivan Melero `double tail wheel (not electric) <https://www.youtube.com/watch?v=l
 
 .. image:: images/prone_ivan.png
 
+Schwarze Minimum Trike
+
+.. image:: images/proneshwarz.png
+
+
 Not electric, but some prone configurations: 
 
 * https://www.youtube.com/watch?v=7in0pW-uOF0
 * Flyped: https://www.youtube.com/watch?v=gynjOMZDDJo
 * https://www.youtube.com/watch?v=7BBTrvMpG30
-* 
+
 
 Seated
 =================================
