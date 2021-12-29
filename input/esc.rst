@@ -2,7 +2,7 @@
 Electronic Speed Controller
 ************************************************
 
-.. image:: images/uc1.gif
+.. figure:: images/uc1.gif
 
 
 Choose an ESC

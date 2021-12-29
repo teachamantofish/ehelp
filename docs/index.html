@@ -24,6 +24,29 @@
   
 
   
+  <script>
+    const test = document.getElementsByTagName('li')
+
+    document.getElementsByTagName("li").innerHTML = "Hello World!"; 
+
+</script>
+
+
+<script>
+  ol.before('before'); // insert string "before" before <ol>
+  ol.after('after'); // insert string "after" after <ol>
+
+  let liFirst = document.createElement('li');
+  liFirst.innerHTML = 'prepend';
+  ol.prepend(liFirst); // insert liFirst at the beginning of <ol>
+
+  let liLast = document.createElement('li');
+  liLast.innerHTML = 'append';
+  ol.append(liLast); // insert liLast at the end of <ol>
+</script>
+
+
+
   <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
     
@@ -195,11 +218,12 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="structure.html">Structural-Mechanical</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="structure.html#backplate">Backplate</a></li>
-<li class="toctree-l2"><a class="reference internal" href="structure.html#boom-to-harness-connection">Boom to harness connection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="structure.html#battery-mounts">Battery mounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#backplate-connection">Backplate connection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#boom">Boom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#boom-to-harness-connection">Boom to harness connection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#motor-mount">Motor mount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#battery-mounts">Battery mounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#kickstand">Kickstand</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#safety-features">Safety features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#wheels">Wheels</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#hang-glider-hardware">Hang glider hardware</a></li>
@@ -352,19 +376,22 @@
 <h1>e-Powered Hang Gliding Harnesses<a class="headerlink" href="#e-powered-hang-gliding-harnesses" title="Permalink to this headline">¶</a></h1>
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
-<p>In progress!.</p>
+<p>Under construction.</p>
 </div>
 <p>Why? Because for 2000-3000 bucks a DIYer can build a 20 pound eHelp harness and flatland foot launch from any location. No modified glider. No tow rig. Minimal learning curve.  The time and $$$ investment quickly pays for itself through reduced driving to launches, hang-waiting, tow costs, alcoholic consumption while jonesing for some airtime. Only the pilot can determine the ultimate payback.</p>
 <p>The systems are relatively simple, and energetic pioneers are paving the way with open source plans and Youtube videos. The multi-billion dollar drone, battery, and EV industries are quickly driving the evolution of cheaper, lighter, and more powerful components.</p>
-<p>In a few years, we’ll like have lighter and more powerful motors (axial), smaller and safer batteries (solid state), and (with luck) commercial ready-to-fly choices, kits, manuals, and parts.</p>
+<p>In a few years, we’ll like have lighter and more powerful motors (axial), smaller and safer batteries (solid state, and (with luck) commercial ready-to-fly choices, kits, manuals, and parts.</p>
+<ol class="arabic simple">
+<li><p>one</p></li>
+<li><p>two</p></li>
+<li><p>three</p></li>
+</ol>
 <div class="section" id="about-this-document">
 <h2>About this document<a class="headerlink" href="#about-this-document" title="Permalink to this headline">¶</a></h2>
 <p>This content is:</p>
 <ul class="simple">
-<li><p>A crowd-sourced document. You can ask to edit the source here: <a class="reference external" href="https://github.com/teacha.../ehelp/blob/main/input/index.rst">https://github.com/teacha…/ehelp/blob/main/input/index.rst</a>.</p></li>
-<li><p>Whether it evolves into a long term resource is up to the “crowd”!</p></li>
-<li><p>Hopefully helpful, but always experimental.</p></li>
-<li><p>An unfinished work in progress.</p></li>
+<li><p>A crowd-sourced document. You can ask to edit the source here: <a class="reference external" href="https://github.com/teacha.../ehelp/blob/main/input/index.rst">https://github.com/teacha…/ehelp/blob/main/input/index.rst</a>. Without community participation, this document will fade.</p></li>
+<li><p>An experimental and unfinished work.</p></li>
 <li><p>There is no attempt here to make $$$, and so shall it ever be.</p></li>
 </ul>
 <div class="admonition note">
@@ -447,7 +474,7 @@
     <p>
     <img src="_images/dq1.jpg"  class="endimage"/>
       <span class="lastupdated">&nbsp;&nbsp;&nbsp;
-        Last updated on Dec 28, 2021.
+        Last updated on Dec 29, 2021.
         
       </span>
     </p>

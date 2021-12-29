@@ -24,6 +24,29 @@
   
 
   
+  <script>
+    const test = document.getElementsByTagName('li')
+
+    document.getElementsByTagName("li").innerHTML = "Hello World!"; 
+
+</script>
+
+
+<script>
+  ol.before('before'); // insert string "before" before <ol>
+  ol.after('after'); // insert string "after" after <ol>
+
+  let liFirst = document.createElement('li');
+  liFirst.innerHTML = 'prepend';
+  ol.prepend(liFirst); // insert liFirst at the beginning of <ol>
+
+  let liLast = document.createElement('li');
+  liLast.innerHTML = 'append';
+  ol.append(liLast); // insert liLast at the end of <ol>
+</script>
+
+
+
   <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
     
@@ -195,11 +218,12 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="structure.html">Structural-Mechanical</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="structure.html#backplate">Backplate</a></li>
-<li class="toctree-l2"><a class="reference internal" href="structure.html#boom-to-harness-connection">Boom to harness connection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="structure.html#battery-mounts">Battery mounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#backplate-connection">Backplate connection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#boom">Boom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#boom-to-harness-connection">Boom to harness connection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#motor-mount">Motor mount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#battery-mounts">Battery mounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#kickstand">Kickstand</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#safety-features">Safety features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#wheels">Wheels</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#hang-glider-hardware">Hang glider hardware</a></li>
@@ -360,17 +384,25 @@
 <li><p><a class="reference external" href="https://www.youtube.com/watch?v=VLn4_wpWyus">Bowsprit launch dolly</a></p></li>
 <li><p><a class="reference external" href="https://www.youtube.com/watch?v=UyrObtpiGWA&amp;t=3s">Keel-harness hybrid frame</a></p></li>
 </ul>
+<div class="figure align-default">
 <img alt="_images/bielfeldprone.png" src="_images/bielfeldprone.png" />
+</div>
 <p>Japanese prone setup:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.youtube.com/watch?v=82-JIf86bYs">https://www.youtube.com/watch?v=82-JIf86bYs</a></p></li>
 <li><p><a class="reference external" href="https://www.youtube.com/watch?v=ZKZ9CX1SIWo">https://www.youtube.com/watch?v=ZKZ9CX1SIWo</a></p></li>
 </ul>
+<div class="figure align-default">
 <img alt="_images/jprone.png" src="_images/jprone.png" />
+</div>
 <p>Ivan Melero <a class="reference external" href="https://www.youtube.com/watch?v=lNPEsNZPsUg">double tail wheel (not electric)</a></p>
+<div class="figure align-default">
 <img alt="_images/prone_ivan.png" src="_images/prone_ivan.png" />
+</div>
 <p>Schwarze Minimum Trike</p>
+<div class="figure align-default">
 <img alt="_images/proneshwarz.png" src="_images/proneshwarz.png" />
+</div>
 <p>Not electric, but some prone configurations:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.youtube.com/watch?v=7in0pW-uOF0">https://www.youtube.com/watch?v=7in0pW-uOF0</a></p></li>
@@ -417,7 +449,7 @@
     <p>
     <img src="_images/dq1.jpg"  class="endimage"/>
       <span class="lastupdated">&nbsp;&nbsp;&nbsp;
-        Last updated on Dec 28, 2021.
+        Last updated on Dec 29, 2021.
         
       </span>
     </p>

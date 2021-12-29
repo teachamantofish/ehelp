@@ -2,7 +2,7 @@
 Instrumentation, Telemetry
 ************************************************
 
-.. image:: images/uc1.gif
+.. figure:: images/uc1.gif
 
 TBD: overview
 
@@ -43,7 +43,7 @@ Battery managent system
 
 https://www.energusps.com/shop/product/tiny-bms-s516-150a-750a-36
 
-.. image:: images/bms1.png
+.. figure:: images/bms1.png
 
 
 Instrumentation
@@ -52,7 +52,7 @@ Instrumentation
 
 TBD. CA has a slick contraption in one of his vids. 
 
-.. image:: images/cainstrument.png
+.. figure:: images/cainstrument.png
 
 * OpenPPG board: https://openppg.com/shop/paramotors/replacement-parts/frame-pcb/
 * 

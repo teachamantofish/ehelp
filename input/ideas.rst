@@ -15,22 +15,22 @@ Reidar Bernsten
 * `Bowsprit launch dolly <https://www.youtube.com/watch?v=VLn4_wpWyus>`_
 * `Keel-harness hybrid frame <https://www.youtube.com/watch?v=UyrObtpiGWA&t=3s>`_
 
-.. image:: images/bielfeldprone.png
+.. figure:: images/bielfeldprone.png
 
 Japanese prone setup: 
   
 * https://www.youtube.com/watch?v=82-JIf86bYs
 * https://www.youtube.com/watch?v=ZKZ9CX1SIWo
 
-.. image:: images/jprone.png
+.. figure:: images/jprone.png
 
 Ivan Melero `double tail wheel (not electric) <https://www.youtube.com/watch?v=lNPEsNZPsUg>`_
 
-.. image:: images/prone_ivan.png
+.. figure:: images/prone_ivan.png
 
 Schwarze Minimum Trike
 
-.. image:: images/proneshwarz.png
+.. figure:: images/proneshwarz.png
 
 
 Not electric, but some prone configurations: 

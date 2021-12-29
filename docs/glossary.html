@@ -24,6 +24,29 @@
   
 
   
+  <script>
+    const test = document.getElementsByTagName('li')
+
+    document.getElementsByTagName("li").innerHTML = "Hello World!"; 
+
+</script>
+
+
+<script>
+  ol.before('before'); // insert string "before" before <ol>
+  ol.after('after'); // insert string "after" after <ol>
+
+  let liFirst = document.createElement('li');
+  liFirst.innerHTML = 'prepend';
+  ol.prepend(liFirst); // insert liFirst at the beginning of <ol>
+
+  let liLast = document.createElement('li');
+  liLast.innerHTML = 'append';
+  ol.append(liLast); // insert liLast at the end of <ol>
+</script>
+
+
+
   <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
     
@@ -194,11 +217,12 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="structure.html">Structural-Mechanical</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="structure.html#backplate">Backplate</a></li>
-<li class="toctree-l2"><a class="reference internal" href="structure.html#boom-to-harness-connection">Boom to harness connection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="structure.html#battery-mounts">Battery mounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#backplate-connection">Backplate connection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#boom">Boom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#boom-to-harness-connection">Boom to harness connection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#motor-mount">Motor mount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#battery-mounts">Battery mounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#kickstand">Kickstand</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#safety-features">Safety features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#wheels">Wheels</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#hang-glider-hardware">Hang glider hardware</a></li>
@@ -366,7 +390,7 @@
     <p>
     <img src="_images/dq1.jpg"  class="endimage"/>
       <span class="lastupdated">&nbsp;&nbsp;&nbsp;
-        Last updated on Dec 28, 2021.
+        Last updated on Dec 29, 2021.
         
       </span>
     </p>

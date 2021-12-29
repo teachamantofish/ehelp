@@ -15,16 +15,19 @@ eHelp harness
    * E-Help Prep for flatland footstart flight: https://www.youtube.com/watch?v=mm0PRii-jXs>
    * Flying tutorial: https://www.youtube.com/watch?v=hk-2uNuh5YU
 
-.. image:: images/reidarehelp.png
+.. figure:: images/reidarehelp.png
+      :target: https://www.youtube.com/watch?v=KIY1k8jz4v0
 
+      Credit: Reidar Bernsten
 
 * Charles Allen ehelp harness build: 
       * `Build video with specs <https://www.youtube.com/watch?v=kMv0oyVrDfs>`_
       * `Fly video <https://www.myqnapcloud.com/share/6d31j23k4l6p70551946x13z_696R5Pm#/home>`_
       * `Design files + BOM <https://www.myqnapcloud.com/share/6d31j23k4l6p70551946x13z_696R5Pm#/home>`_
 
+.. figure:: images/caehelpbuild.png
 
-.. image:: images/caehelpbuild.png
+   Credit: Charles Allen
 
 * `Paul Martin <https://www.facebook.com/groups/668143127181552/posts/853592028636660/?comment_id=871739653488564&reply_comment_id=871853686810494&notif_id=1639125691695281&notif_t=group_comment&ref=notif>`_
 
@@ -42,6 +45,3 @@ Commercial e-harness systems
 =============================================
 
 * https://toniroth.com/
-
-
-=

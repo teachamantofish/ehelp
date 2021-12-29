@@ -34,6 +34,29 @@
   {% endif %}
 
   {# JAVASCRIPTS #}
+  <script>
+    const test = document.getElementsByTagName('li')
+
+    document.getElementsByTagName("li").innerHTML = "Hello World!"; 
+
+</script>
+
+
+<script>
+  ol.before('before'); // insert string "before" before <ol>
+  ol.after('after'); // insert string "after" after <ol>
+
+  let liFirst = document.createElement('li');
+  liFirst.innerHTML = 'prepend';
+  ol.prepend(liFirst); // insert liFirst at the beginning of <ol>
+
+  let liLast = document.createElement('li');
+  liLast.innerHTML = 'append';
+  ol.append(liLast); // insert liLast at the end of <ol>
+</script>
+
+
+
   <script type="text/javascript" src="{{ pathto('_static/js/modernizr.min.js', 1) }}"></script>
   {%- if not embedded %}
   {# XXX Sphinx 1.8.0 made this an external js-file, quick fix until we refactor the template to inherert more blocks directly from sphinx #}

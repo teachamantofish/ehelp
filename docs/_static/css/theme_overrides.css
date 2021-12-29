@@ -1,12 +1,23 @@
 
 .header-img {
     width: 100%;
+    margin-left:  300px;
 
     background: url('https://teachamantofish.github.io/ehelp/');
     background-size: cover;
   }
 
 .wy-body-for-nav, .wy-nav-content-wrap, .wy-nav-content {background-color: #fcfcfc;}
+
+
+.alert {
+  padding: 15px;
+  border: 1px solid #d6e9c6;
+  border-radius: 4px;
+  color: #3c763d;
+  background-color: #dff0d8;
+}
+
 
 /**
 .wy-nav-side {
@@ -18,4 +29,10 @@
   #anchor {
     scroll-margin-top: 100px;
   }
+
+  h2::after {
+  content: 'image or text';
+}
+
+
 **/

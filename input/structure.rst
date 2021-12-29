@@ -2,54 +2,73 @@
 Structural-Mechanical
 ************************************************
 
-.. image:: images/uc1.gif
+.. figure:: images/uc1.gif
 
 TBD: overview
 
 
-Backplate
+Backplate connection
 ==================================
 
-
-Boom to harness connection
-============================================
-
-.. image:: images/knuckle_charles.png    
-
-Battery mounts
-======================
+TBD
 
 Boom 
 ========================
 
-CA: boom: 
-Paul Marin: By the way, if you just want to bolt a tube on to get up and running anything from 1.75” x 17swg is fine. That size just happens to be a really common size in old hang gliders i
+While weights vary by diameter and wall thickness, carbon fiber is generally 200-300% lighter than aluminum. On the other hand, we don't need much material and aluminum is easier to work with. My approach is to use aluminum for the initial version and testing and CF for a final version. 
 
-weights of cf vs al
+Paul Martin reports  that if you just want to bolt a tube on to get up and running anything, from 1.75” x 17 swg is fine (commonly used in old hang gliders).
 
-Pauls doc. 
+TBD: Add link to Paul's engineering doc. 
 
-.. image:: images/boom1.png
+.. figure:: images/boom1.png
 
-.. image:: images/boomsquare_reidar.png
+   Credit: Paul Martin
+
+.. figure:: images/boomsquare_reidar.png
+
+   Credit: Reidar Bernsten
+
+Boom to harness connection
+============================================
+
+.. figure:: images/knuckle_charles.png
+
+   Credit: Charles Allen
 
 Motor mount
 ======================
 
-.. image:: images/motormount1_p.png
+.. figure:: images/motormount1_p.png
 
-.. image:: images/motormount2_r.png
+   Credit: Paul Martin
 
-.. image:: images/motormount_charles.png
+.. figure:: images/motormount2_r.png
 
-.. image:: images/motormount_charles1.png
+   Credit: Reidar Bernsten
+
+.. figure:: images/motormount_charles.png
+
+   Credit: Charles Allen
+
+.. figure:: images/motormount_charles1.png
+ 
+   Credit: Charles Allen
+
+Battery mounts
+======================
+
+TBD
+
+Kickstand
+======================
+
+TBD
 
 Safety features
 ===========================
 
 See :ref:`safety`
-
-
 
 Wheels
 ==================

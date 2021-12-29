@@ -24,6 +24,29 @@
   
 
   
+  <script>
+    const test = document.getElementsByTagName('li')
+
+    document.getElementsByTagName("li").innerHTML = "Hello World!"; 
+
+</script>
+
+
+<script>
+  ol.before('before'); // insert string "before" before <ol>
+  ol.after('after'); // insert string "after" after <ol>
+
+  let liFirst = document.createElement('li');
+  liFirst.innerHTML = 'prepend';
+  ol.prepend(liFirst); // insert liFirst at the beginning of <ol>
+
+  let liLast = document.createElement('li');
+  liLast.innerHTML = 'append';
+  ol.append(liLast); // insert liLast at the end of <ol>
+</script>
+
+
+
   <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
     
@@ -195,11 +218,12 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="structure.html">Structural-Mechanical</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="structure.html#backplate">Backplate</a></li>
-<li class="toctree-l2"><a class="reference internal" href="structure.html#boom-to-harness-connection">Boom to harness connection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="structure.html#battery-mounts">Battery mounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#backplate-connection">Backplate connection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#boom">Boom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#boom-to-harness-connection">Boom to harness connection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#motor-mount">Motor mount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#battery-mounts">Battery mounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#kickstand">Kickstand</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#safety-features">Safety features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#wheels">Wheels</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#hang-glider-hardware">Hang glider hardware</a></li>
@@ -350,7 +374,9 @@
             
   <div class="section" id="propellers">
 <h1>Propellers<a class="headerlink" href="#propellers" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-default">
 <img alt="_images/uc2.gif" src="_images/uc2.gif" />
+</div>
 <p>I’m going to punt here for a while. The topic is complex. This section includes some rules of thumb and links to folks who know more (and don’t often agree). It’s worth reading a <a class="reference external" href="https://aerotoolbox.com/thrust-cruise-speed/">prop overview</a>.</p>
 <p>Driveline design often starts with the prop. To fly, you need to move air in the opposite direction. Bigger is better but you have to worry about toes, keel, and ground. Faster is <em>sometimes</em> better but there are limits. Prop pitch (the angle that determines the bite into the air) should be selected for your airspeed and either climb or cruise. The prop is going to slow your motor down, and it’s design must be compatible with the motor’s power and speed.</p>
 <p>Your driveline decisions about motor, power source, and propeller are intertwined. You’ll need to verify they work together to achieve your goals.</p>
@@ -489,7 +515,7 @@
     <p>
     <img src="_images/dq1.jpg"  class="endimage"/>
       <span class="lastupdated">&nbsp;&nbsp;&nbsp;
-        Last updated on Dec 28, 2021.
+        Last updated on Dec 29, 2021.
         
       </span>
     </p>

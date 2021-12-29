@@ -2,7 +2,7 @@
 Batteries
 ************************************************
 
-.. image:: images/uc2.gif
+.. figure:: images/uc2.gif
 
 Battery considerations 
 ==========================

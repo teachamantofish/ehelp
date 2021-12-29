@@ -24,6 +24,29 @@
   
 
   
+  <script>
+    const test = document.getElementsByTagName('li')
+
+    document.getElementsByTagName("li").innerHTML = "Hello World!"; 
+
+</script>
+
+
+<script>
+  ol.before('before'); // insert string "before" before <ol>
+  ol.after('after'); // insert string "after" after <ol>
+
+  let liFirst = document.createElement('li');
+  liFirst.innerHTML = 'prepend';
+  ol.prepend(liFirst); // insert liFirst at the beginning of <ol>
+
+  let liLast = document.createElement('li');
+  liLast.innerHTML = 'append';
+  ol.append(liLast); // insert liLast at the end of <ol>
+</script>
+
+
+
   <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
     
@@ -195,11 +218,12 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Structural-Mechanical</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#backplate">Backplate</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#boom-to-harness-connection">Boom to harness connection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#battery-mounts">Battery mounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#backplate-connection">Backplate connection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#boom">Boom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#boom-to-harness-connection">Boom to harness connection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#motor-mount">Motor mount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#battery-mounts">Battery mounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#kickstand">Kickstand</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#safety-features">Safety features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#wheels">Wheels</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#hang-glider-hardware">Hang glider hardware</a></li>
@@ -350,33 +374,61 @@
             
   <div class="section" id="structural-mechanical">
 <h1>Structural-Mechanical<a class="headerlink" href="#structural-mechanical" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-default">
 <img alt="_images/uc1.gif" src="_images/uc1.gif" />
+</div>
 <p>TBD: overview</p>
-<div class="section" id="backplate">
-<h2>Backplate<a class="headerlink" href="#backplate" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="boom-to-harness-connection">
-<h2>Boom to harness connection<a class="headerlink" href="#boom-to-harness-connection" title="Permalink to this headline">¶</a></h2>
-<img alt="_images/knuckle_charles.png" src="_images/knuckle_charles.png" />
-</div>
-<div class="section" id="battery-mounts">
-<h2>Battery mounts<a class="headerlink" href="#battery-mounts" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="backplate-connection">
+<h2>Backplate connection<a class="headerlink" href="#backplate-connection" title="Permalink to this headline">¶</a></h2>
+<p>TBD</p>
 </div>
 <div class="section" id="boom">
 <h2>Boom<a class="headerlink" href="#boom" title="Permalink to this headline">¶</a></h2>
-<p>CA: boom:
-Paul Marin: By the way, if you just want to bolt a tube on to get up and running anything from 1.75” x 17swg is fine. That size just happens to be a really common size in old hang gliders i</p>
-<p>weights of cf vs al</p>
-<p>Pauls doc.</p>
+<p>While weights vary by diameter and wall thickness, carbon fiber is generally 200-300% lighter than aluminum. On the other hand, we don’t need much material and aluminum is easier to work with. My approach is to use aluminum for the initial version and testing and CF for a final version.</p>
+<p>Paul Martin reports  that if you just want to bolt a tube on to get up and running anything, from 1.75” x 17 swg is fine (commonly used in old hang gliders).</p>
+<p>TBD: Add link to Paul’s engineering doc.</p>
+<div class="figure align-default" id="id1">
 <img alt="_images/boom1.png" src="_images/boom1.png" />
+<p class="caption"><span class="caption-text">Credit: Paul Martin</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="id2">
 <img alt="_images/boomsquare_reidar.png" src="_images/boomsquare_reidar.png" />
+<p class="caption"><span class="caption-text">Credit: Reidar Bernsten</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="boom-to-harness-connection">
+<h2>Boom to harness connection<a class="headerlink" href="#boom-to-harness-connection" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default" id="id3">
+<img alt="_images/knuckle_charles.png" src="_images/knuckle_charles.png" />
+<p class="caption"><span class="caption-text">Credit: Charles Allen</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
 </div>
 <div class="section" id="motor-mount">
 <h2>Motor mount<a class="headerlink" href="#motor-mount" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default" id="id4">
 <img alt="_images/motormount1_p.png" src="_images/motormount1_p.png" />
+<p class="caption"><span class="caption-text">Credit: Paul Martin</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="id5">
 <img alt="_images/motormount2_r.png" src="_images/motormount2_r.png" />
+<p class="caption"><span class="caption-text">Credit: Reidar Bernsten</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="id6">
 <img alt="_images/motormount_charles.png" src="_images/motormount_charles.png" />
+<p class="caption"><span class="caption-text">Credit: Charles Allen</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="id7">
 <img alt="_images/motormount_charles1.png" src="_images/motormount_charles1.png" />
+<p class="caption"><span class="caption-text">Credit: Charles Allen</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="battery-mounts">
+<h2>Battery mounts<a class="headerlink" href="#battery-mounts" title="Permalink to this headline">¶</a></h2>
+<p>TBD</p>
+</div>
+<div class="section" id="kickstand">
+<h2>Kickstand<a class="headerlink" href="#kickstand" title="Permalink to this headline">¶</a></h2>
+<p>TBD</p>
 </div>
 <div class="section" id="safety-features">
 <h2>Safety features<a class="headerlink" href="#safety-features" title="Permalink to this headline">¶</a></h2>
@@ -468,7 +520,7 @@ Paul Marin: By the way, if you just want to bolt a tube on to get up and running
     <p>
     <img src="_images/dq1.jpg"  class="endimage"/>
       <span class="lastupdated">&nbsp;&nbsp;&nbsp;
-        Last updated on Dec 28, 2021.
+        Last updated on Dec 29, 2021.
         
       </span>
     </p>

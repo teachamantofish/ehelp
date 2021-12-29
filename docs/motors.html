@@ -24,6 +24,29 @@
   
 
   
+  <script>
+    const test = document.getElementsByTagName('li')
+
+    document.getElementsByTagName("li").innerHTML = "Hello World!"; 
+
+</script>
+
+
+<script>
+  ol.before('before'); // insert string "before" before <ol>
+  ol.after('after'); // insert string "after" after <ol>
+
+  let liFirst = document.createElement('li');
+  liFirst.innerHTML = 'prepend';
+  ol.prepend(liFirst); // insert liFirst at the beginning of <ol>
+
+  let liLast = document.createElement('li');
+  liLast.innerHTML = 'append';
+  ol.append(liLast); // insert liLast at the end of <ol>
+</script>
+
+
+
   <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
     
@@ -195,11 +218,12 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="structure.html">Structural-Mechanical</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="structure.html#backplate">Backplate</a></li>
-<li class="toctree-l2"><a class="reference internal" href="structure.html#boom-to-harness-connection">Boom to harness connection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="structure.html#battery-mounts">Battery mounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#backplate-connection">Backplate connection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#boom">Boom</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#boom-to-harness-connection">Boom to harness connection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#motor-mount">Motor mount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#battery-mounts">Battery mounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#kickstand">Kickstand</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#safety-features">Safety features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#wheels">Wheels</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#hang-glider-hardware">Hang glider hardware</a></li>
@@ -350,7 +374,9 @@
             
   <div class="section" id="motors">
 <h1>Motors<a class="headerlink" href="#motors" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-default">
 <img alt="_images/uc1.gif" src="_images/uc1.gif" />
+</div>
 <div class="section" id="top-considerations">
 <h2>Top considerations<a class="headerlink" href="#top-considerations" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -397,7 +423,9 @@
 </div>
 <div class="section" id="kv-reduction">
 <h2>KV reduction<a class="headerlink" href="#kv-reduction" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default">
 <img alt="_images/kvreduction.png" src="_images/kvreduction.png" />
+</div>
 </div>
 <div class="section" id="custom-motors">
 <h2>Custom motors<a class="headerlink" href="#custom-motors" title="Permalink to this headline">¶</a></h2>
@@ -412,23 +440,26 @@
 <h2>Worthwhile reading<a class="headerlink" href="#worthwhile-reading" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="basics">
 <h3>Basics<a class="headerlink" href="#basics" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
+<ul>
 <li><p><a class="reference external" href="https://oscarliang.com/quadcopter-motor-propeller/">Motor basics</a></p></li>
-</ul>
-<p><a class="reference external" href="https://www.youtube.com/c/RCexplained/videos">Awesome motor videos</a>:</p>
-<ul class="simple">
+<li><p><a class="reference external" href="https://www.youtube.com/c/RCexplained/videos">Awesome motor videos</a>:</p>
+<blockquote>
+<div><ul class="simple">
 <li><p><a class="reference external" href="https://www.youtube.com/watch?v=WqlQJw9YXhE">KV and efficiency video</a>: Motor resistance (ohms) waste heat = P=I*I*R. Lower KV = more windings = supports higher voltage = smaller wire = more resistance (and waste heat/power loss) = same power at less amps.</p></li>
 <li><p><a class="reference external" href="https://www.youtube.com/watch?v=xi7jxIkX2vY">Kt, torque, volts, amps video</a>: Kt = 1/kv (torque constant) not the same as actual torque: Torque = kt*I. The same motor at different Kvs doesn’t change the output torque. Volt and amps can change, but V*I won’t change.</p></li>
 <li><p><a class="reference external" href="https://www.youtube.com/watch?v=k2VDvL4wtJs">Motor size and torque</a>: Diameter vs length. T = F*D. Bigger diameter motors procude more torque (basically more leverage), but so to longer motors.</p></li>
 <li><p><cite>Reason to run motors on rated voltage &lt;https://www.youtube.com/watch?v=0W07RLdj6w4&gt;</cite>. Lower voltage = lower input power. Calculations explained.</p></li>
 <li><p><a class="reference external" href="https://www.youtube.com/watch?v=uRZlX6t7Xv4">KV, efficiency, and changing voltage</a>. Measuring efficiency as voltage changes for different Kv motors. High rpm (high kv) is less efficient than a low Kv, higher voltage set up. Trade off is a heavier battery and bigger ESC.</p></li>
 </ul>
+</div></blockquote>
+</li>
+</ul>
 </div>
 <div class="section" id="advanced-topics">
 <h3>Advanced topics<a class="headerlink" href="#advanced-topics" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://community.openppg.com/t/paraglider-self-launching-system/2186/41">Motor mass, size, and waste heat</a></p></li>
-<li><p><a class="reference external" href="https://forum.hanggliding.org/viewtopic.php?t=35303">Stator laminations</a>: Without super thin stator lams, efficiency will start to suffer if pushed to too high an ERPM exactly the same as the APS/Freerchobby motors (0.35mm lams). Basically thin stator lams are very expensive and therefore not used on cheap motors except for the Rotomax 150 (0.2mm lams) for some reason. Eddy losses in the iron stator core induced by the magnetic field switching as the rotor magnets fly past are proportional to the square of the lamination thickness x the square of the rpm. This why motors with thick lams can suddenly slam into an RPM wall and just turn into heaters and not go any faster.</p></li>
+<li><p><a class="reference external" href="https://forum.hanggliding.org/viewtopic.php?t=35303">Stator laminations</a>: Without super thin stator lams, efficiency suffers at high rpms. But cheaper motors like APS/Freerchobby motors use 0.35mm lams because thin stator lams are very expensive (with the exception of Rotomax 150 at 0.2mm lams). Eddy losses in the iron stator core induced by the magnetic field switching as the rotor magnets fly past are proportional to the square of the lamination thickness x the square of the rpm. This why motors with thick lams can suddenly slam into an RPM wall and just turn into heaters and not go any faster.</p></li>
 </ul>
 </div>
 <div class="section" id="vendor-specific">
@@ -475,7 +506,7 @@
     <p>
     <img src="_images/dq1.jpg"  class="endimage"/>
       <span class="lastupdated">&nbsp;&nbsp;&nbsp;
-        Last updated on Dec 28, 2021.
+        Last updated on Dec 29, 2021.
         
       </span>
     </p>
