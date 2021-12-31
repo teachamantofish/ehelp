@@ -11,7 +11,17 @@ Telemetry
 
 TBD: what data you want and where it comes from. 
 
-table: bms vs esc
+table: bms vs es
+
+Nikita notes: 
+
+data from ESC
+sends data 22bytes of data coni: rpm battery level, current, :
+Arduino: listens for data. ADP documents how to parse
+ADP provides code, just do code. Cus5tomer: need to 
+Arduino: complex. Choose python over C++
+
+ doesn't know temp: hook up thermistors to batteries and motor. 
 
 bms features: 
 temp probe

@@ -63,7 +63,9 @@ TBD
 Kickstand
 ======================
 
-TBD
+.. figure:: images/pmkickstand.png
+
+   Credit: Paul Martin
 
 Safety features
 ===========================

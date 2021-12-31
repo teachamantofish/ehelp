@@ -49,6 +49,8 @@ Vendors
 * https://ppgsmoke.com/products/smart-throttle
 * PPG 250.00 with LCD: https://epowerhobby.com/product/electric-paramotor-throttle/
 
+ VESC 75/300 controller which includes RPM limit, battery amps limit,
+
 
 Worthwhile reads
 ================================
@@ -81,3 +83,7 @@ The specs (max voltage and continuous current) are usually constructed from the 
 xxx
 
 hello, all you need is a standard throttle or cameleon 2/3 and connect it to a linear potentiometer. a tension spring and a return spring depending on how the handling should be.
+
+xxx
+
+things you could care about: specify things like magnet type, bearing type, or make, type of core lamination (thinner stator plates equal increased efficiency though reduced eddycurrents) whether they are single wound, bifiliar or trifiliar, even expected service life. 

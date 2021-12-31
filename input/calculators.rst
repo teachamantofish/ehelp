@@ -9,6 +9,9 @@ Motor
 
 Motor efficiency: Used power - heat. Heat is P=i squared * amps (resistance squared times amps)
 
+
+-Power P=M*n/9.55 means that you need 47Nm torque@3000rpm for 15kW output. kV 50 means you’ll need at least 246A output at 60v to get this torque.
+
 Propeller
 ==========================
 

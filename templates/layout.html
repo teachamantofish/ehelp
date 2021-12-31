@@ -33,17 +33,17 @@
     <link rel="canonical" href="{{ theme_canonical_url }}{{ pagename }}.html"/>
   {% endif %}
 
-  {# JAVASCRIPTS #}
 <script type="text/javascript">
+  window.onload = function () {
   Array.from(document.getElementsByTagName('h2')).forEach(el => {
     const a = document.createElement('a')
-    a.innerText="feedback"
-    a.href="https://google.com"
+    a.innerText="Feedback"
+    a.href="mailto:ben.rogers@gmail.com"
     a.target="_blank"
-    a.style["margin-left"]="5px"
-    a.style["font-size"]="0.6em"
+    a.class="feedback"
     el.appendChild(a)
   });
+}
 </script>
 
   <script type="text/javascript" src="{{ pathto('_static/js/modernizr.min.js', 1) }}"></script>

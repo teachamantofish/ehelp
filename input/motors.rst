@@ -17,7 +17,7 @@ Top considerations
 Reading motor specs
 ============================
 
-* N and P numbers: something like “36N30P”. The number before the letter N is the quantity of electromagnets in the stator, and the number before P is the quantity of permanent magnets in the motor.  Lower KV motors have more electromagnets and permanent magnets to increase torque.
+* N and P numbers: something like “36N30P”. The number before the letter N is the quantity of electromagnets in the stator, and the number before P is the quantity of permanent magnets in the motor.  Lower KV motors have more permanent magnets to increase torque.
 * Dimensions: 
 * Rated voltage: 
 * KV: 
@@ -27,10 +27,18 @@ Reading motor specs
 
   
 
-Manufacturers
+Example motor list
 ================================
 
-todo: fix width, add sort
+Unfortunately, comparing motors based on published specs is like comparing apples and maggots. Note the following: 
+
+* For reference: Mosquito 10.4 kw, Wasp 10.4kw, Mossi 11.2kw: but an IC engine can run 100% and elec continuous power is far less.
+* Some motors are marketed by others at higher prices. For example, APS sells Freerchobby motors. It's worth checking Alibaba, Amazon, eBay
+* You can't trust published data. 
+* Some data points are undefined. For example, "continuous current" doesn't mean much unless you know the timeframe. Some vendors user 1 minute, others 2 to 5 minutes or more.
+* Thrust values are static thrust on a stand. In flight, dynamic thrust is far less. Published data varies by volts, amps, RPM, and propeller. You'll have to use a combination of math, guessing, data table reading to formulate an idea. You should have already calculated what you need; for example: 30Kg of thrust at 50-70% throttle for 5 climb minutes with 12s batteries to climb to 1000'. 
+* Max RPM is a no load number. RPM in data tables reflect a value for the specific test propeller. 
+* The table below is a reference point only. You can start there, but don't end there.
 
 .. raw:: html
 

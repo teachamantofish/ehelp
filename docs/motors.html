@@ -23,17 +23,17 @@
     <link rel="canonical" href="https://teachamantofish.github.io/ehelp/index.htmlmotors.html"/>
   
 
-  
 <script type="text/javascript">
+  window.onload = function () {
   Array.from(document.getElementsByTagName('h2')).forEach(el => {
     const a = document.createElement('a')
-    a.innerText="feedback"
-    a.href="https://google.com"
+    a.innerText="Feedback"
+    a.href="mailto:ben.rogers@gmail.com"
     a.target="_blank"
-    a.style["margin-left"]="5px"
-    a.style["font-size"]="0.6em"
+    a.class="feedback"
     el.appendChild(a)
   });
+}
 </script>
 
   <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
@@ -143,7 +143,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Motors</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#top-considerations">Top considerations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#reading-motor-specs">Reading motor specs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#manufacturers">Manufacturers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example-motor-list">Example motor list</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#sensored-versus-sensorless">Sensored versus sensorless</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#mating-with-a-prop">Mating with a prop</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#duty-cycle-max-continuous-power">Duty cycle-Max continuous power</a></li>
@@ -379,7 +379,7 @@
 <div class="section" id="reading-motor-specs">
 <h2>Reading motor specs<a class="headerlink" href="#reading-motor-specs" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>N and P numbers: something like “36N30P”. The number before the letter N is the quantity of electromagnets in the stator, and the number before P is the quantity of permanent magnets in the motor.  Lower KV motors have more electromagnets and permanent magnets to increase torque.</p></li>
+<li><p>N and P numbers: something like “36N30P”. The number before the letter N is the quantity of electromagnets in the stator, and the number before P is the quantity of permanent magnets in the motor.  Lower KV motors have more permanent magnets to increase torque.</p></li>
 <li><p>Dimensions:</p></li>
 <li><p>Rated voltage:</p></li>
 <li><p>KV:</p></li>
@@ -388,9 +388,18 @@
 <li><p>Max current: You need to spec a system that does not exceed the max current. Moreover, max current is limited to a short period of time (usually minutes). It’s a good idea to design a system that’s operates around 50-70% of max current most of the time.</p></li>
 </ul>
 </div>
-<div class="section" id="manufacturers">
-<h2>Manufacturers<a class="headerlink" href="#manufacturers" title="Permalink to this headline">¶</a></h2>
-<p>todo: fix width, add sort</p>
+<div class="section" id="example-motor-list">
+<h2>Example motor list<a class="headerlink" href="#example-motor-list" title="Permalink to this headline">¶</a></h2>
+<p>Unfortunately, comparing motors based on published specs is like comparing apples and maggots. Note the following:</p>
+<ul class="simple">
+<li><p>For reference: Mosquito 10.4 kw, Wasp 10.4kw, Mossi 11.2kw: but an IC engine can run 100% and elec continuous power is far less.</p></li>
+<li><p>Some motors are marketed by others at higher prices. For example, APS sells Freerchobby motors. It’s worth checking Alibaba, Amazon, eBay</p></li>
+<li><p>You can’t trust published data.</p></li>
+<li><p>Some data points are undefined. For example, “continuous current” doesn’t mean much unless you know the timeframe. Some vendors user 1 minute, others 2 to 5 minutes or more.</p></li>
+<li><p>Thrust values are static thrust on a stand. In flight, dynamic thrust is far less. Published data varies by volts, amps, RPM, and propeller. You’ll have to use a combination of math, guessing, data table reading to formulate an idea. You should have already calculated what you need; for example: 30Kg of thrust at 50-70% throttle for 5 climb minutes with 12s batteries to climb to 1000’.</p></li>
+<li><p>Max RPM is a no load number. RPM in data tables reflect a value for the specific test propeller.</p></li>
+<li><p>The table below is a reference point only. You can start there, but don’t end there.</p></li>
+</ul>
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTZ5drQYvvp4srNMViieF0J0stG8gvPEdH_B7djQA4lOQ53DEMxsOmvscQ4TEEQP2fW-wIQpMl-eO5L/pubhtml?widget=true&amp;headers=false" width="100%" height="600px"></iframe></div>
 <div class="section" id="sensored-versus-sensorless">
 <h2>Sensored versus sensorless<a class="headerlink" href="#sensored-versus-sensorless" title="Permalink to this headline">¶</a></h2>
@@ -495,7 +504,7 @@
     <p>
     <img src="_images/dq1.jpg"  class="endimage"/>
       <span class="lastupdated">&nbsp;&nbsp;&nbsp;
-        Last updated on Dec 29, 2021.
+        Last updated on Dec 31, 2021.
         
       </span>
     </p>
