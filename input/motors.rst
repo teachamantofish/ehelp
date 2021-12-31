@@ -19,9 +19,10 @@ Reading motor specs
 
 * N and P numbers: something like “36N30P”. The number before the letter N is the quantity of electromagnets in the stator, and the number before P is the quantity of permanent magnets in the motor.  Lower KV motors have more permanent magnets to increase torque.
 * Dimensions: 
-* Rated voltage: 
-* KV: 
-* No load current: TBD. 
+* Rated voltage: Provided in either volts or an S rating. (``S rating = number*3.7volts``)
+* KV: Number of revolutions per volt. You'll like want 50-150. 
+* Continuous current: How many amps the motor can handle for the number of minutes specified by the manufacturer until it overheats. Varies widely. You may need "continuous" for your climb duration. 
+* Max (burst) current: How many amps you can draw 
 * Internal resistance: Lower is better since resistance = heat. 
 * Max current: You need to spec a system that does not exceed the max current. Moreover, max current is limited to a short period of time (usually minutes). It's a good idea to design a system that's operates around 50-70% of max current most of the time. 
 
@@ -42,7 +43,7 @@ Unfortunately, comparing motors based on published specs is like comparing apple
 
 .. raw:: html
 
-    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTZ5drQYvvp4srNMViieF0J0stG8gvPEdH_B7djQA4lOQ53DEMxsOmvscQ4TEEQP2fW-wIQpMl-eO5L/pubhtml?widget=true&amp;headers=false" width="100%" height="600px"></iframe>
+    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTZ5drQYvvp4srNMViieF0J0stG8gvPEdH_B7djQA4lOQ53DEMxsOmvscQ4TEEQP2fW-wIQpMl-eO5L/pubhtml?widget=true&amp;headers=false" width="100%" height="850px"></iframe>
 
 Sensored versus sensorless
 =============================

@@ -25,7 +25,9 @@ Example: HG + Joey Pilot and gear = 300lbs (136Kg). How many kilowatts will it t
 Theoretical energy
 ------------------------
 
-The first step is to calculate the theoretical energy required with 100% efficiency for all components. Note that newtons, joules, and gravity are metric constructs???. The formula is: 
+The first step is to calculate the theoretical energy required with 100% efficiency for all components. If a stone was at 1000', how much energy does it store? 
+
+Note that the forumulas are metric (newtons, joules, and gravity (m/s squared). The formula is: 
 
 :: 
 
@@ -38,7 +40,7 @@ Adjust for inefficiency
 
 While .113 kwh is the theoretical energy, we have to adjusting for reality since no part of the system is 100% efficient. Some reasonable guesstimates:  
 
-* Glide ratio: 12
+* Glide ratio (L/D): 12
 * Prop efficiency: 70%
 * Motor efficiency: 90%
 * Battery efficiency: 95%

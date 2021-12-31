@@ -43,6 +43,7 @@
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -328,6 +329,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -339,7 +342,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
         
       </li>
     
@@ -348,10 +351,10 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="esc.html" class="btn btn-neutral float-right" title="Electronic Speed Controller" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="esc.html" class="btn btn-neutral float-right" title="Electronic Speed Controller" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
       
       
-        <a href="spec.html" class="btn btn-neutral float-left" title="Specing out a System (Sizing)" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="spec.html" class="btn btn-neutral float-left" title="Specing out a System (Sizing)" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
       
   </div>
   
@@ -381,9 +384,10 @@
 <ul class="simple">
 <li><p>N and P numbers: something like “36N30P”. The number before the letter N is the quantity of electromagnets in the stator, and the number before P is the quantity of permanent magnets in the motor.  Lower KV motors have more permanent magnets to increase torque.</p></li>
 <li><p>Dimensions:</p></li>
-<li><p>Rated voltage:</p></li>
-<li><p>KV:</p></li>
-<li><p>No load current: TBD.</p></li>
+<li><p>Rated voltage: Provided in either volts or an S rating. (<code class="docutils literal notranslate"><span class="pre">S</span> <span class="pre">rating</span> <span class="pre">=</span> <span class="pre">number*3.7volts</span></code>)</p></li>
+<li><p>KV: Number of revolutions per volt. You’ll like want 50-150.</p></li>
+<li><p>Continuous current: How many amps the motor can handle for the number of minutes specified by the manufacturer until it overheats. Varies widely. You may need “continuous” for your climb duration.</p></li>
+<li><p>Max (burst) current: How many amps you can draw</p></li>
 <li><p>Internal resistance: Lower is better since resistance = heat.</p></li>
 <li><p>Max current: You need to spec a system that does not exceed the max current. Moreover, max current is limited to a short period of time (usually minutes). It’s a good idea to design a system that’s operates around 50-70% of max current most of the time.</p></li>
 </ul>
@@ -400,7 +404,7 @@
 <li><p>Max RPM is a no load number. RPM in data tables reflect a value for the specific test propeller.</p></li>
 <li><p>The table below is a reference point only. You can start there, but don’t end there.</p></li>
 </ul>
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTZ5drQYvvp4srNMViieF0J0stG8gvPEdH_B7djQA4lOQ53DEMxsOmvscQ4TEEQP2fW-wIQpMl-eO5L/pubhtml?widget=true&amp;headers=false" width="100%" height="600px"></iframe></div>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTZ5drQYvvp4srNMViieF0J0stG8gvPEdH_B7djQA4lOQ53DEMxsOmvscQ4TEEQP2fW-wIQpMl-eO5L/pubhtml?widget=true&amp;headers=false" width="100%" height="850px"></iframe></div>
 <div class="section" id="sensored-versus-sensorless">
 <h2>Sensored versus sensorless<a class="headerlink" href="#sensored-versus-sensorless" title="Permalink to this headline">¶</a></h2>
 <p>You don’t need a sensored motor. While sensorless brushless motors perform poorly at low speed, their performance at flying speeds is excellent. ESC manufactures improve efficiency and performance by using  sensorless synchronization at high speed to alter the timing for the sequence of power pulses sent to the motors windings. Sensorless motors are lighter, less complicated, and less prone to failure.</p>
