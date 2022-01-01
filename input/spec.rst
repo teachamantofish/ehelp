@@ -4,6 +4,11 @@
 Specing out a System (Sizing)
 ************************************************
 
+.. figure:: images/uc2.gif
+   :scale: 40%
+
+   Under construction
+
 Navigating to final choices and a working system is difficult and time consuming. Until the eHelp harness idea is more widespread, design principles will remain relatively inaccessible while advice is scattered across various Facebook pages and forums with pioneers helping where they can. With luck, the ehelp paradigm will gain enough traction that the hang gliding community can emulate aspects of `OpenPPG <https://openppg.com/>`_ and create its own easy-to-traverse path.
 
 Until then, moving forward is a bit of work. 
@@ -27,7 +32,10 @@ Theoretical energy
 
 The first step is to calculate the theoretical energy required with 100% efficiency for all components. If a stone was at 1000', how much energy does it store? 
 
-Note that the forumulas are metric (newtons, joules, and gravity (m/s squared). The formula is: 
+Note that the forumulas are metric (newtons, joules, and Earth's gravitational constant (m/s squared). The formula is: 
+
+=(B4*1000*9.8)/(3.28 * 3600000)
+
 
 :: 
 
@@ -90,6 +98,11 @@ power = watts/ energy rate
 
 Power is F*v, so while the force is m*g/(L/D), the drag losses are m*g/(L/D) * v. The v term is going to always be around 25m/s, almost independent of the glider.
 
+Determine required thrust
+---------------------------------
+
+
+
 Required power: Method 2
 ===================================
 
@@ -116,7 +129,7 @@ what percent of continuous power to use for a 5 minute climb?
 
 ------------------
 
-Here's some more thinking: Since I know higher V means less amps for the same power, I wanted to look at two motors that can handle diff V's and compare.
+ higher V means less amps for the same power, I wanted to look at two motors that can handle diff V's and compare.
 
 Below you can see the M30 w/ 2 higher AH batteries can't run as long, create way more heat, and have a higher RPM than the M40. Same battery price. Seems safer, quieter, longer flight time (and that's at full climb--cruise would be even better). Tradeoff is the moter is 250 more and the batteries weigh 1lb more.
 
@@ -130,3 +143,12 @@ Mad30: 14s 75% throttle 123 amps for 30kg thrust w/ 40x13 80kv 3440
 https://www.mad-motor.com/products/mad-components-m40c30-pro-ipe.html
 Mad40  24s 60% throttle 50.4 amps for 30kg thrust w/ 47x13 43kv RPM 2455
 4 22.2v 12AH batteries=1kw 1040.00 12.8 lbs and last 14 minutes
+
+.. raw:: html
+
+  <iframe src="https://docs.google.com/spreadsheets/d/1SGGLd6JsmiGmKMnI21ic4D_j7ZkVzq27hZ3CX9GggdU/edit?usp=sharing;headers=false"
+  height=1100
+  width=1000></iframe>
+
+
+  https://blog.crunchprank.net/google-sheets-to-html-table/

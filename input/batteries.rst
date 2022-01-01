@@ -2,7 +2,10 @@
 Batteries
 ************************************************
 
-.. figure:: images/uc2.gif
+.. figure:: images/uc3.gif
+   :scale: 30%
+
+   Under construction
 
 Battery considerations 
 ==========================

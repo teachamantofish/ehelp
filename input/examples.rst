@@ -2,6 +2,10 @@
 eHelp Examples
 ************************************************
 
+.. figure:: images/uc3.gif
+   :scale: 30%
+
+   Under construction
 
 eHelp harness
 ================================

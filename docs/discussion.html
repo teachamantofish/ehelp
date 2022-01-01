@@ -25,16 +25,22 @@
 
 <script type="text/javascript">
   window.onload = function () {
-  Array.from(document.getElementsByTagName('h2')).forEach(el => {
+  Array.from(document.querySelectorAll('h2,h3')).forEach(el => {
     const a = document.createElement('a')
     a.innerText="Feedback"
     a.href="mailto:ben.rogers@gmail.com"
     a.target="_blank"
-    a.class="feedback"
+    a.style["float"] = "right"
+    a.style["font-size"] = ".6em"
+    a.style["font-family"] = "verdana, arial, helvetica, san-serif"
+    a.style["padding-top"] = "10px"
     el.appendChild(a)
   });
 }
 </script>
+
+
+
 
   <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
@@ -43,7 +49,6 @@
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -128,6 +133,7 @@
 <li class="toctree-l3"><a class="reference internal" href="spec.html#theoretical-energy">Theoretical energy</a></li>
 <li class="toctree-l3"><a class="reference internal" href="spec.html#adjust-for-inefficiency">Adjust for inefficiency</a></li>
 <li class="toctree-l3"><a class="reference internal" href="spec.html#add-the-energy-rate">Add the energy rate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="spec.html#determine-required-thrust">Determine required thrust</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="spec.html#required-power-method-2">Required power: Method 2</a></li>
@@ -142,11 +148,11 @@
 <li class="toctree-l1"><a class="reference internal" href="motors.html">Motors</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#top-considerations">Top considerations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#reading-motor-specs">Reading motor specs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motors.html#duty-cycle-max-continuous-power">Duty cycle-Max continuous power</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motors.html#kv-reduction">KV reduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#example-motor-list">Example motor list</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#sensored-versus-sensorless">Sensored versus sensorless</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#mating-with-a-prop">Mating with a prop</a></li>
-<li class="toctree-l2"><a class="reference internal" href="motors.html#duty-cycle-max-continuous-power">Duty cycle-Max continuous power</a></li>
-<li class="toctree-l2"><a class="reference internal" href="motors.html#kv-reduction">KV reduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#custom-motors">Custom motors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#worthwhile-reading">Worthwhile reading</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="motors.html#basics">Basics</a></li>
@@ -208,7 +214,8 @@
 <li class="toctree-l1"><a class="reference internal" href="structure.html">Structural-Mechanical</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#backplate-connection">Backplate connection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#boom">Boom</a></li>
-<li class="toctree-l2"><a class="reference internal" href="structure.html#boom-to-harness-connection">Boom to harness connection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#boom-to-boom-hinge-connection">Boom to boom hinge connection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#id1">Backplate connection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#motor-mount">Motor mount</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#battery-mounts">Battery mounts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#kickstand">Kickstand</a></li>
@@ -327,8 +334,6 @@
 
 
 
-
-
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -340,7 +345,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-          
+            
         
       </li>
     
@@ -379,14 +384,17 @@
 <p>So the RPM is the number Kv*V*(some reduction factor caused by the prop) in real use. Is there a formula (that’s not too complex) to guesstimate the RPM reduction caused by a props diameter/pitch?</p>
 <blockquote>
 <div><p>Q3. I do allow an 80% efficiency factor when I am calculating the output power. So for example is you had 52v in and a maximum current of 180A I would times them together and then by 0.8 to give me a maximum power of 7.5kW. That would be the power I would use if I was trying to match a propeller to it. Basically if your propeller wants more power then it means also the torque demand is too much so what will happen is that it will reduce in rpm. The power requirement will drop and an equilibrium spot will be found. Or another way to do it is that you can actually set your controller so the motor will only spin to a maximum speed. say that calculated when your batteries are at the lower end. The propeller wont spin and faster even if you have more power. So when the battery is fresh you have more torque than you need and when low down you still have just enough.</p>
+<p>xxx</p>
+<p><a class="reference external" href="https://www.rchelicopterfun.com/lipo-batteries.html">https://www.rchelicopterfun.com/lipo-batteries.html</a></p>
+<p>xxx</p>
+<p>PM: Manufacturer’s data suggest that the 12090 has a maximum rated current quoted around 180A and that drops to about 140A for maximum continuous. I’ve seen propeller data using a 12090 run at 138A but for how long is still a mystery. Bench testing results suggests that the maximum value may be only sustainable for a few minutes before the motor becomes very hot or gets to around 120C which may be a critical insulation temperature. Alien datasheets suggest that the peak power is 15kW and the continuous rated is 7.5kW. The maximum rated voltage is 70v which suggests that the peak current is around 214A and the continual rating half that at 107A. But the continual rating is likely to be for at least 60 minutes so a simple two point line may be plotted as shown in Figure 1. Pragmatically, most e-help set up aren’t likely to run in total for more than 30 minutes and that would be the case for a flat land take-off, which is even more infrequent. Testing of the motor does not appear to include a forward velocity and the effect of cooling the moving air would have. But as a safe starting point without being over conservative take the peak current and divide by √2.</p>
 </div></blockquote>
-<p>I’m not sure how to ask this question, but if I was to ask for a custom wound motor to change the KV so I could get an adequate RPM/torque at a lower voltage, is there a formula? The reason I ask that question is I want a bit more power than the M30, but I don’t want to run 98 volts on an M40 which has a low KV.</p>
-<blockquote>
-<div><p>Q4  Ive never looked it that way but you are close. Thrust is power out x propeller efficiency. At the zero sink tootling about the efficiecncy will be about 55% and full power climb its 42%. again my Part 2 notes have some graphs in fact my Part 1 I loaded up today or yesterday has a graph at the end. I plotted efficiency against what is known as advance ratio. It was buigging me so much that prop data was scarce I created my oen. Thats one of the reasons why I am buy a range of props. I am testing them as I go so the calculations and assumptions get more and more accurate.
-all great questions. Ive attached the files they are live and at this moment Part2 isnt finished but there is enough for you. I am happy to do work through it with you step by step.</p>
-</div></blockquote>
-<p>Seems like the relationship between thrust and torque is generally torque/thrust = about 60% at the throttle ranges we’d normally use. Is that generally true?</p>
+<p>Looking at it in very simple thermodynamic and heat transfer terms, the heat is generated by the product of current2 x resistance because heat transfer is measured in watts. The current doubles in magnitude so quadruples its contribution to the heating equation. If it is assumed that the steady state temperature is around 80C and peak 120C then the increase in winding resistance due to the 40C temperature rise equates to 0.393% per C or 15.7% and the nett effect is 4.63 times increase in heat generated to be dissipated. Based on these assumptions setting a maximum current (continuous for e-help purposes) at √2 of the peak it would be expected that the motor running temperature would comfortably remain under 100C. As motors seem to have a 180C rating for the wire and 220C for the magnets the thinking is that the possible running temperature is a safe way off those limits.</p>
 <p>nikita: 1 604 725 5889</p>
+<p>xxx</p>
+<p>From: <a class="reference external" href="https://endless-sphere.com/forums/viewtopic.php?t=110570#p1626972">https://endless-sphere.com/forums/viewtopic.php?t=110570#p1626972</a></p>
+<p>xxx</p>
+<p>torque is about 60% thrust? : Q4  Ive never looked it that way but you are close. Thrust is power out x propeller efficiency. At the zero sink tootling about the efficiecncy will be about 55% and full power climb its 42%. again my Part 2 notes have some graphs in fact my Part 1 I loaded up today or yesterday has a graph at the end. I plotted efficiency against what is known as advance ratio. It was buigging me so much that prop data was scarce I created my oen. Thats one of the reasons why I am buy a range of props. I am testing them as I go so the calculations and assumptions get more and more accurate.</p>
 </div>
 
 
@@ -404,7 +412,7 @@ all great questions. Ive attached the files they are live and at this moment Par
     <p>
     <img src="_images/dq1.jpg"  class="endimage"/>
       <span class="lastupdated">&nbsp;&nbsp;&nbsp;
-        Last updated on Dec 31, 2021.
+        Last updated on Jan 01, 2022.
         
       </span>
     </p>

@@ -2,7 +2,10 @@
 Calculators
 ************************************************
 
-random notes. . . 
+.. figure:: images/uc2.gif
+   :scale: 30%
+
+   Under construction
 
 Motor
 ============

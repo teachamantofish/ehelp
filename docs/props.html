@@ -25,16 +25,22 @@
 
 <script type="text/javascript">
   window.onload = function () {
-  Array.from(document.getElementsByTagName('h2')).forEach(el => {
+  Array.from(document.querySelectorAll('h2,h3')).forEach(el => {
     const a = document.createElement('a')
     a.innerText="Feedback"
     a.href="mailto:ben.rogers@gmail.com"
     a.target="_blank"
-    a.class="feedback"
+    a.style["float"] = "right"
+    a.style["font-size"] = ".6em"
+    a.style["font-family"] = "verdana, arial, helvetica, san-serif"
+    a.style["padding-top"] = "10px"
     el.appendChild(a)
   });
 }
 </script>
+
+
+
 
   <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
@@ -43,7 +49,6 @@
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -130,6 +135,7 @@
 <li class="toctree-l3"><a class="reference internal" href="spec.html#theoretical-energy">Theoretical energy</a></li>
 <li class="toctree-l3"><a class="reference internal" href="spec.html#adjust-for-inefficiency">Adjust for inefficiency</a></li>
 <li class="toctree-l3"><a class="reference internal" href="spec.html#add-the-energy-rate">Add the energy rate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="spec.html#determine-required-thrust">Determine required thrust</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="spec.html#required-power-method-2">Required power: Method 2</a></li>
@@ -144,11 +150,11 @@
 <li class="toctree-l1"><a class="reference internal" href="motors.html">Motors</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#top-considerations">Top considerations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#reading-motor-specs">Reading motor specs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motors.html#duty-cycle-max-continuous-power">Duty cycle-Max continuous power</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motors.html#kv-reduction">KV reduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#example-motor-list">Example motor list</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#sensored-versus-sensorless">Sensored versus sensorless</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#mating-with-a-prop">Mating with a prop</a></li>
-<li class="toctree-l2"><a class="reference internal" href="motors.html#duty-cycle-max-continuous-power">Duty cycle-Max continuous power</a></li>
-<li class="toctree-l2"><a class="reference internal" href="motors.html#kv-reduction">KV reduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#custom-motors">Custom motors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#worthwhile-reading">Worthwhile reading</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="motors.html#basics">Basics</a></li>
@@ -210,7 +216,8 @@
 <li class="toctree-l1"><a class="reference internal" href="structure.html">Structural-Mechanical</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#backplate-connection">Backplate connection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#boom">Boom</a></li>
-<li class="toctree-l2"><a class="reference internal" href="structure.html#boom-to-harness-connection">Boom to harness connection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#boom-to-boom-hinge-connection">Boom to boom hinge connection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#id1">Backplate connection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#motor-mount">Motor mount</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#battery-mounts">Battery mounts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#kickstand">Kickstand</a></li>
@@ -329,8 +336,6 @@
 
 
 
-
-
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -342,7 +347,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-          
+            
         
       </li>
     
@@ -351,10 +356,10 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="structure.html" class="btn btn-neutral float-right" title="Structural-Mechanical" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="structure.html" class="btn btn-neutral float-right" title="Structural-Mechanical" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="batteries.html" class="btn btn-neutral float-left" title="Batteries" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="batteries.html" class="btn btn-neutral float-left" title="Batteries" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
   </div>
   
@@ -366,8 +371,9 @@
             
   <div class="section" id="propellers">
 <h1>Propellers<a class="headerlink" href="#propellers" title="Permalink to this headline">¶</a></h1>
-<div class="figure align-default">
-<img alt="_images/uc2.gif" src="_images/uc2.gif" />
+<div class="figure align-default" id="id1">
+<a class="reference internal image-reference" href="_images/uc3.gif"><img alt="_images/uc3.gif" src="_images/uc3.gif" style="width: 144.0px; height: 81.0px;" /></a>
+<p class="caption"><span class="caption-text">Under construction</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <p>I’m going to punt here for a while. The topic is complex. This section includes some rules of thumb and links to folks who know more (and don’t often agree). It’s worth reading a <a class="reference external" href="https://aerotoolbox.com/thrust-cruise-speed/">prop overview</a>.</p>
 <p>Driveline design often starts with the prop. To fly, you need to move air in the opposite direction. Bigger is better but you have to worry about toes, keel, and ground. Faster is <em>sometimes</em> better but there are limits. Prop pitch (the angle that determines the bite into the air) should be selected for your airspeed and either climb or cruise. The prop is going to slow your motor down, and it’s design must be compatible with the motor’s power and speed.</p>
@@ -454,9 +460,9 @@
 <li><p>Interesting forward folding prop:  <a class="reference external" href="https://www.youtube.com/watch?app=desktop&amp;v=wuhSRdffuDw&amp;t=295&amp;fbclid=IwAR1d04qJ8gJxdnokDxZHgMgBG0L7G1J2QcmDmnfWWiDHTK9bdoyb82HxvZg">https://www.youtube.com/watch?app=desktop&amp;v=wuhSRdffuDw&amp;t=295&amp;fbclid=IwAR1d04qJ8gJxdnokDxZHgMgBG0L7G1J2QcmDmnfWWiDHTK9bdoyb82HxvZg</a></p></li>
 <li><p><a class="reference external" href="https://www.youtube.com/watch?v=cyBJLpHkc7A">Charles Allen’s DIY project video</a></p></li>
 </ul>
-<div class="figure align-default" id="id1">
+<div class="figure align-default" id="id2">
 <img alt="images/diyfoldingca.png:target:https://www.youtube.com/watch?v=cyBJLpHkc7A" src="images/diyfoldingca.png:target:https://www.youtube.com/watch?v=cyBJLpHkc7A" />
-<p class="caption"><span class="caption-text">Credit: Charles Allen</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Credit: Charles Allen</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="propeller-innovation">
@@ -511,7 +517,7 @@
     <p>
     <img src="_images/dq1.jpg"  class="endimage"/>
       <span class="lastupdated">&nbsp;&nbsp;&nbsp;
-        Last updated on Dec 31, 2021.
+        Last updated on Jan 01, 2022.
         
       </span>
     </p>

@@ -2,7 +2,10 @@
 Electronic Speed Controller
 ************************************************
 
-.. figure:: images/uc1.gif
+.. figure:: images/uc2.gif
+   :scale: 50%
+
+   Under construction
 
 
 Choose an ESC

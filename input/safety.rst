@@ -4,6 +4,10 @@
 Safety
 ************************************************
 
+.. figure:: images/uc3.gif
+   :scale: 30%
+
+   Under construction
 
 Design Checklist
 ===================================

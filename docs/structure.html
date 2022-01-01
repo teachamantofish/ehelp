@@ -25,16 +25,22 @@
 
 <script type="text/javascript">
   window.onload = function () {
-  Array.from(document.getElementsByTagName('h2')).forEach(el => {
+  Array.from(document.querySelectorAll('h2,h3')).forEach(el => {
     const a = document.createElement('a')
     a.innerText="Feedback"
     a.href="mailto:ben.rogers@gmail.com"
     a.target="_blank"
-    a.class="feedback"
+    a.style["float"] = "right"
+    a.style["font-size"] = ".6em"
+    a.style["font-family"] = "verdana, arial, helvetica, san-serif"
+    a.style["padding-top"] = "10px"
     el.appendChild(a)
   });
 }
 </script>
+
+
+
 
   <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
@@ -43,7 +49,6 @@
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -130,6 +135,7 @@
 <li class="toctree-l3"><a class="reference internal" href="spec.html#theoretical-energy">Theoretical energy</a></li>
 <li class="toctree-l3"><a class="reference internal" href="spec.html#adjust-for-inefficiency">Adjust for inefficiency</a></li>
 <li class="toctree-l3"><a class="reference internal" href="spec.html#add-the-energy-rate">Add the energy rate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="spec.html#determine-required-thrust">Determine required thrust</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="spec.html#required-power-method-2">Required power: Method 2</a></li>
@@ -144,11 +150,11 @@
 <li class="toctree-l1"><a class="reference internal" href="motors.html">Motors</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#top-considerations">Top considerations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#reading-motor-specs">Reading motor specs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motors.html#duty-cycle-max-continuous-power">Duty cycle-Max continuous power</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motors.html#kv-reduction">KV reduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#example-motor-list">Example motor list</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#sensored-versus-sensorless">Sensored versus sensorless</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#mating-with-a-prop">Mating with a prop</a></li>
-<li class="toctree-l2"><a class="reference internal" href="motors.html#duty-cycle-max-continuous-power">Duty cycle-Max continuous power</a></li>
-<li class="toctree-l2"><a class="reference internal" href="motors.html#kv-reduction">KV reduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#custom-motors">Custom motors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#worthwhile-reading">Worthwhile reading</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="motors.html#basics">Basics</a></li>
@@ -210,7 +216,8 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Structural-Mechanical</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#backplate-connection">Backplate connection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#boom">Boom</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#boom-to-harness-connection">Boom to harness connection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#boom-to-boom-hinge-connection">Boom to boom hinge connection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">Backplate connection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#motor-mount">Motor mount</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#battery-mounts">Battery mounts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#kickstand">Kickstand</a></li>
@@ -329,8 +336,6 @@
 
 
 
-
-
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -342,7 +347,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-          
+            
         
       </li>
     
@@ -351,10 +356,10 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="electrical.html" class="btn btn-neutral float-right" title="Instrumentation, Telemetry" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="electrical.html" class="btn btn-neutral float-right" title="Instrumentation, Telemetry" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="props.html" class="btn btn-neutral float-left" title="Propellers" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="props.html" class="btn btn-neutral float-left" title="Propellers" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
   </div>
   
@@ -366,10 +371,10 @@
             
   <div class="section" id="structural-mechanical">
 <h1>Structural-Mechanical<a class="headerlink" href="#structural-mechanical" title="Permalink to this headline">¶</a></h1>
-<div class="figure align-default">
-<img alt="_images/uc1.gif" src="_images/uc1.gif" />
+<div class="figure align-default" id="id2">
+<a class="reference internal image-reference" href="_images/uc4.gif"><img alt="_images/uc4.gif" src="_images/uc4.gif" style="width: 144.0px; height: 106.2px;" /></a>
+<p class="caption"><span class="caption-text">Under construction</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
-<p>TBD: overview</p>
 <div class="section" id="backplate-connection">
 <h2>Backplate connection<a class="headerlink" href="#backplate-connection" title="Permalink to this headline">¶</a></h2>
 <p>TBD</p>
@@ -379,39 +384,54 @@
 <p>While weights vary by diameter and wall thickness, carbon fiber is generally 200-300% lighter than aluminum. On the other hand, we don’t need much material and aluminum is easier to work with. My approach is to use aluminum for the initial version and testing and CF for a final version.</p>
 <p>Paul Martin reports  that if you just want to bolt a tube on to get up and running anything, from 1.75” x 17 swg is fine (commonly used in old hang gliders).</p>
 <p>TBD: Add link to Paul’s engineering doc.</p>
-<div class="figure align-default" id="id1">
-<img alt="_images/boom1.png" src="_images/boom1.png" />
-<p class="caption"><span class="caption-text">Credit: Paul Martin</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</div>
-<div class="figure align-default" id="id2">
-<img alt="_images/boomsquare_reidar.png" src="_images/boomsquare_reidar.png" />
-<p class="caption"><span class="caption-text">Credit: Reidar Bernsten</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-<div class="section" id="boom-to-harness-connection">
-<h2>Boom to harness connection<a class="headerlink" href="#boom-to-harness-connection" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-default" id="id3">
+<img alt="_images/boom1.png" src="_images/boom1.png" />
+<p class="caption"><span class="caption-text">Credit: Paul Martin</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="id4">
+<img alt="_images/boomsquare_reidar.png" src="_images/boomsquare_reidar.png" />
+<p class="caption"><span class="caption-text">Credit: Reidar Bernsten</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="boom-to-boom-hinge-connection">
+<h2>Boom to boom hinge connection<a class="headerlink" href="#boom-to-boom-hinge-connection" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default" id="id5">
 <img alt="_images/knuckle_charles.png" src="_images/knuckle_charles.png" />
-<p class="caption"><span class="caption-text">Credit: Charles Allen</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Credit: Charles Allen</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>Backplate connection<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>TBD: explanation. We don’t know the shear strength.</p>
+<ol class="arabic simple">
+<li><p>Make or buy a mechanical fastener that provides both a non-crushable metal bolt sleeve as well as a top and bottom surface for the fastener: T nut, weld nut, grommet, TBD. Stainless steel is NOT epoxy friendly.</p></li>
+<li><p>Mark and drill the backplate holes.</p></li>
+<li><p>Abrade and degrease the backplate and fastener.</p></li>
+<li><p>Bond with a high strength epoxy to both sides of the hole.</p></li>
+<li><p>Clamp. Compressing with a nylon bolt may be easier than a tool.</p></li>
+</ol>
+<div class="figure align-default" id="id6">
+<img alt="_images/pmbackplate.png" src="_images/pmbackplate.png" />
+<p class="caption"><span class="caption-text">Credit: Paul Martin</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="motor-mount">
 <h2>Motor mount<a class="headerlink" href="#motor-mount" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-default" id="id4">
-<img alt="_images/motormount1_p.png" src="_images/motormount1_p.png" />
-<p class="caption"><span class="caption-text">Credit: Paul Martin</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
-</div>
-<div class="figure align-default" id="id5">
-<img alt="_images/motormount2_r.png" src="_images/motormount2_r.png" />
-<p class="caption"><span class="caption-text">Credit: Reidar Bernsten</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
-</div>
-<div class="figure align-default" id="id6">
-<img alt="_images/motormount_charles.png" src="_images/motormount_charles.png" />
-<p class="caption"><span class="caption-text">Credit: Charles Allen</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
-</div>
 <div class="figure align-default" id="id7">
+<img alt="_images/motormount1_p.png" src="_images/motormount1_p.png" />
+<p class="caption"><span class="caption-text">Credit: Paul Martin</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="id8">
+<img alt="_images/motormount2_r.png" src="_images/motormount2_r.png" />
+<p class="caption"><span class="caption-text">Credit: Reidar Bernsten</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="id9">
+<img alt="_images/motormount_charles.png" src="_images/motormount_charles.png" />
+<p class="caption"><span class="caption-text">Credit: Charles Allen</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="id10">
 <img alt="_images/motormount_charles1.png" src="_images/motormount_charles1.png" />
-<p class="caption"><span class="caption-text">Credit: Charles Allen</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Credit: Charles Allen</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="battery-mounts">
@@ -420,9 +440,9 @@
 </div>
 <div class="section" id="kickstand">
 <h2>Kickstand<a class="headerlink" href="#kickstand" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-default" id="id8">
+<div class="figure align-default" id="id11">
 <img alt="_images/pmkickstand.png" src="_images/pmkickstand.png" />
-<p class="caption"><span class="caption-text">Credit: Paul Martin</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Credit: Paul Martin</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="safety-features">
@@ -515,7 +535,7 @@
     <p>
     <img src="_images/dq1.jpg"  class="endimage"/>
       <span class="lastupdated">&nbsp;&nbsp;&nbsp;
-        Last updated on Dec 31, 2021.
+        Last updated on Jan 01, 2022.
         
       </span>
     </p>

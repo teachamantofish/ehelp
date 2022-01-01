@@ -3,8 +3,16 @@ Instrumentation, Telemetry
 ************************************************
 
 .. figure:: images/uc1.gif
+   :scale: 50%
+
+   Under construction
 
 TBD: overview
+
+.. figure:: images/wiring_ng.png
+
+   Credit Nikita Gazarov
+
 
 Telemetry
 ======================

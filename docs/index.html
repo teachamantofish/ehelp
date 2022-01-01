@@ -25,16 +25,22 @@
 
 <script type="text/javascript">
   window.onload = function () {
-  Array.from(document.getElementsByTagName('h2')).forEach(el => {
+  Array.from(document.querySelectorAll('h2,h3')).forEach(el => {
     const a = document.createElement('a')
     a.innerText="Feedback"
     a.href="mailto:ben.rogers@gmail.com"
     a.target="_blank"
-    a.class="feedback"
+    a.style["float"] = "right"
+    a.style["font-size"] = ".6em"
+    a.style["font-family"] = "verdana, arial, helvetica, san-serif"
+    a.style["padding-top"] = "10px"
     el.appendChild(a)
   });
 }
 </script>
+
+
+
 
   <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
@@ -43,7 +49,6 @@
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -130,6 +135,7 @@
 <li class="toctree-l3"><a class="reference internal" href="spec.html#theoretical-energy">Theoretical energy</a></li>
 <li class="toctree-l3"><a class="reference internal" href="spec.html#adjust-for-inefficiency">Adjust for inefficiency</a></li>
 <li class="toctree-l3"><a class="reference internal" href="spec.html#add-the-energy-rate">Add the energy rate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="spec.html#determine-required-thrust">Determine required thrust</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="spec.html#required-power-method-2">Required power: Method 2</a></li>
@@ -144,11 +150,11 @@
 <li class="toctree-l1"><a class="reference internal" href="motors.html">Motors</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#top-considerations">Top considerations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#reading-motor-specs">Reading motor specs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motors.html#duty-cycle-max-continuous-power">Duty cycle-Max continuous power</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motors.html#kv-reduction">KV reduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#example-motor-list">Example motor list</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#sensored-versus-sensorless">Sensored versus sensorless</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#mating-with-a-prop">Mating with a prop</a></li>
-<li class="toctree-l2"><a class="reference internal" href="motors.html#duty-cycle-max-continuous-power">Duty cycle-Max continuous power</a></li>
-<li class="toctree-l2"><a class="reference internal" href="motors.html#kv-reduction">KV reduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#custom-motors">Custom motors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#worthwhile-reading">Worthwhile reading</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="motors.html#basics">Basics</a></li>
@@ -210,7 +216,8 @@
 <li class="toctree-l1"><a class="reference internal" href="structure.html">Structural-Mechanical</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#backplate-connection">Backplate connection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#boom">Boom</a></li>
-<li class="toctree-l2"><a class="reference internal" href="structure.html#boom-to-harness-connection">Boom to harness connection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#boom-to-boom-hinge-connection">Boom to boom hinge connection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#id1">Backplate connection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#motor-mount">Motor mount</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#battery-mounts">Battery mounts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#kickstand">Kickstand</a></li>
@@ -329,8 +336,6 @@
 
 
 
-
-
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -342,7 +347,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-          
+            
         
       </li>
     
@@ -351,10 +356,10 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="examples.html" class="btn btn-neutral float-right" title="eHelp Examples" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="examples.html" class="btn btn-neutral float-right" title="eHelp Examples" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="toc.html" class="btn btn-neutral float-left" title="e-Powered Hang Gliding Harnesses" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="toc.html" class="btn btn-neutral float-left" title="e-Powered Hang Gliding Harnesses" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
   </div>
   
@@ -366,29 +371,22 @@
             
   <div class="section" id="e-powered-hang-gliding-harnesses">
 <h1>e-Powered Hang Gliding Harnesses<a class="headerlink" href="#e-powered-hang-gliding-harnesses" title="Permalink to this headline">¶</a></h1>
-<div class="admonition caution">
-<p class="admonition-title">Caution</p>
-<p>Under construction.</p>
+<div class="figure align-default" id="id1">
+<a class="reference internal image-reference" href="_images/uc4.gif"><img alt="_images/uc4.gif" src="_images/uc4.gif" style="width: 144.0px; height: 106.2px;" /></a>
+<p class="caption"><span class="caption-text">Under construction</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
-<p>Why? Because for 2000-3000 bucks a DIYer can build a 20 pound eHelp harness and flatland foot launch from any location. No modified glider. No tow rig. Minimal learning curve.  The time and $$$ investment quickly pays for itself through reduced driving to launches, hang-waiting, tow costs, alcoholic consumption while jonesing for some airtime. Only the pilot can determine the ultimate payback.</p>
+<p>Why ehelp? Because for 2000-3000 bucks a DIYer can build a 20 pound eHelp harness and flatland foot launch. No mountain. No towing. No modified glider. No tow rig.  The time and $$$ investment quickly pays for itself through reduced driving to launches, hang-waiting, tow costs, alcoholic consumption while jonesing for some airtime. Only the pilot can determine the ultimate payback.</p>
 <p>The systems are relatively simple, and energetic pioneers are paving the way with open source plans and Youtube videos. The multi-billion dollar drone, battery, and EV industries are quickly driving the evolution of cheaper, lighter, and more powerful components.</p>
 <p>In a few years, we’ll like have lighter and more powerful motors (axial), smaller and safer batteries (solid state, and (with luck) commercial ready-to-fly choices, kits, manuals, and parts.</p>
-<ol class="arabic simple">
-<li><p>one</p></li>
-<li><p>two</p></li>
-<li><p>three</p></li>
-</ol>
 <div class="section" id="about-this-document">
 <h2>About this document<a class="headerlink" href="#about-this-document" title="Permalink to this headline">¶</a></h2>
-<p>This content is:</p>
-<ul class="simple">
-<li><p>A crowd-sourced document. You can ask to edit the source here: <a class="reference external" href="https://github.com/teacha.../ehelp/blob/main/input/index.rst">https://github.com/teacha…/ehelp/blob/main/input/index.rst</a>. Without community participation, this document will fade.</p></li>
-<li><p>An experimental and unfinished work.</p></li>
-<li><p>There is no attempt here to make $$$, and so shall it ever be.</p></li>
-</ul>
+<p>This content is an attempt to provide a quick start manual to the DIY community. It is an experimental and unfinished work. There is no attempt here to make $$$, and so shall it ever be.</p>
+<blockquote>
+<div><p>Ideally, these pages will become a crowd-sourced document. Ccontribute via the <strong>Feedback</strong> links or ask to edit the source here: <a class="reference external" href="https://github.com/teacha.../ehelp/blob/main/input/index.rst">https://github.com/teacha…/ehelp/blob/main/input/index.rst</a>. Without community participation, this document will fade.</p>
+</div></blockquote>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Send me any info, link, or informational tidbit. I’ll incorporate what makes sense. Ideas, suggestions, complaints? Email <a class="reference external" href="mailto:ben&#46;rogers&#37;&#52;&#48;gmail&#46;com">ben<span>&#46;</span>rogers<span>&#64;</span>gmail<span>&#46;</span>com</a></p>
+<p>Send me any info, link, or informational tidbit. I’ll incorporate what makes sense.</p>
 </div>
 </div>
 <div class="section" id="danger-will-robinson">
@@ -400,7 +398,7 @@
 </div>
 <div class="section" id="if-you-see-your-photo-text">
 <h2>If you see your photo/text<a class="headerlink" href="#if-you-see-your-photo-text" title="Permalink to this headline">¶</a></h2>
-<p>If you see something here that originated with you and want it removed, just ask. I can also add credits and links back to your FB or home page as you desire.</p>
+<p>If you see something here that originated with you and want it removed, just ask. I can add credits and links back to your FB or home page if you prefer.</p>
 </div>
 <div class="section" id="resources">
 <h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
@@ -423,14 +421,13 @@
 </div></blockquote>
 </li>
 </ul>
-<dl class="simple">
-<dt>Forums:</dt><dd><ul class="simple">
+<p>Forums:</p>
+<blockquote>
+<div><ul class="simple">
 <li><p><a class="reference external" href="https://openppg.com/?fbclid=IwAR04rX_1St1D1lqTpwBbaOdLskhpFOMahdXRiHXU1gmr4fSlUv0pwsC-RQg">OpenPPG: Similar concepts, great forum, lots of resources</a></p></li>
-<li><p>TBD: Hanggliding.org</p></li>
 <li><p>This community needs a focused forum. Doesn’t exist yet.</p></li>
 </ul>
-</dd>
-</dl>
+</div></blockquote>
 <ul>
 <li><p>Plans and open-sourced projects</p>
 <blockquote>
@@ -466,7 +463,7 @@
     <p>
     <img src="_images/dq1.jpg"  class="endimage"/>
       <span class="lastupdated">&nbsp;&nbsp;&nbsp;
-        Last updated on Dec 31, 2021.
+        Last updated on Jan 01, 2022.
         
       </span>
     </p>

@@ -2,7 +2,10 @@
 Motors
 ************************************************
 
-.. figure:: images/uc1.gif
+.. figure:: images/uc4.gif
+   :scale: 30%
+
+   Under construction
 
 Top considerations
 ==========================
@@ -17,6 +20,7 @@ Top considerations
 Reading motor specs
 ============================
 
+
 * N and P numbers: something like “36N30P”. The number before the letter N is the quantity of electromagnets in the stator, and the number before P is the quantity of permanent magnets in the motor.  Lower KV motors have more permanent magnets to increase torque.
 * Dimensions: 
 * Rated voltage: Provided in either volts or an S rating. (``S rating = number*3.7volts``)
@@ -26,7 +30,17 @@ Reading motor specs
 * Internal resistance: Lower is better since resistance = heat. 
 * Max current: You need to spec a system that does not exceed the max current. Moreover, max current is limited to a short period of time (usually minutes). It's a good idea to design a system that's operates around 50-70% of max current most of the time. 
 
-  
+
+Duty cycle-Max continuous power
+===============================
+
+
+There is also a suggestion that the lower the no load kv value of the motor the greater the 100% duty cycle reduction factor. Probably useful to know if one of the larger diameter 35kv or 27kv motors marketed for use on paramotors is being considered.
+
+KV reduction
+========================
+
+.. figure:: images/kvreduction.png
 
 Example motor list
 ================================
@@ -37,9 +51,9 @@ Unfortunately, comparing motors based on published specs is like comparing apple
 * Some motors are marketed by others at higher prices. For example, APS sells Freerchobby motors. It's worth checking Alibaba, Amazon, eBay
 * You can't trust published data. 
 * Some data points are undefined. For example, "continuous current" doesn't mean much unless you know the timeframe. Some vendors user 1 minute, others 2 to 5 minutes or more.
-* Thrust values are static thrust on a stand. In flight, dynamic thrust is far less. Published data varies by volts, amps, RPM, and propeller. You'll have to use a combination of math, guessing, data table reading to formulate an idea. You should have already calculated what you need; for example: 30Kg of thrust at 50-70% throttle for 5 climb minutes with 12s batteries to climb to 1000'. 
+* Thrust values are static thrust on a stand. In flight, dynamic thrust is far less. Published data varies by volts, amps, RPM, and propeller. You'll have to use a combination of math, data table reading, and dice rolling to formulate an idea about what's likely true. You should have already calculated what you need; for example: 25Kg of thrust at 50-70% throttle for 5 climb minutes with 12s batteries to climb to 1000'. 
 * Max RPM is a no load number. RPM in data tables reflect a value for the specific test propeller. 
-* The table below is a reference point only. You can start there, but don't end there.
+* The table below is a startiong point only. Begin there, but don't end there.
 
 .. raw:: html
 
@@ -48,7 +62,7 @@ Unfortunately, comparing motors based on published specs is like comparing apple
 Sensored versus sensorless
 =============================
 
-You don't need a sensored motor. While sensorless brushless motors perform poorly at low speed, their performance at flying speeds is excellent. ESC manufactures improve efficiency and performance by using  sensorless synchronization at high speed to alter the timing for the sequence of power pulses sent to the motors windings. Sensorless motors are lighter, less complicated, and less prone to failure.
+You don't need a sensored motor. While sensorless brushless motors perform poorly at low speed, their performance at flying speeds is excellent. ESC manufactures improve efficiency and performance by using sensorless synchronization at high speed to alter the timing for the sequence of power pulses sent to the motors windings. Sensorless motors are lighter, less complicated, and less prone to failure.
 
 Mating with a prop
 ============================
@@ -63,25 +77,14 @@ Criteria:
 The `e-props folks <https://ppg.e-props.fr/index.php?cPath=1>`_ match multiple props to each specific motor. It's worth checking out to get an idea of acceptable combinations.
 
 
-Duty cycle-Max continuous power
-===============================
-
-
-There is also a suggestion that the lower the no load kv value of the motor the greater the 100% duty cycle reduction factor. Probably useful to know if one of the larger diameter 35kv or 27kv motors marketed for use on paramotors is being considered.
-
-KV reduction
-========================
-
-.. figure:: images/kvreduction.png
-
 Custom motors
 ======================
 
 Custom rewinds change the KV rating and RPM.
 
 * `Rewind your own motor <https://www.youtube.com/watch?v=-sIVpOLYoqg&t=144sA>`_
-* MAD motor and Alien Power Systems will motors rewind for low cost.
-* Charles Allen reports that APS made him a custom motor with a hollow shaft for ~$25 extra so I could have a rod go through to articulate a variable pitch prop. 
+* MAD motor and Alien Power Systems will motors rewind for low cost; T-Motor for zero cost.
+* Charles Allen reports that APS provided a custom motor with a hollow shaft for ~$25 extra so he could use a rod  to articulate a variable pitch prop. 
 
 Worthwhile reading
 ========================

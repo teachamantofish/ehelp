@@ -25,16 +25,22 @@
 
 <script type="text/javascript">
   window.onload = function () {
-  Array.from(document.getElementsByTagName('h2')).forEach(el => {
+  Array.from(document.querySelectorAll('h2,h3')).forEach(el => {
     const a = document.createElement('a')
     a.innerText="Feedback"
     a.href="mailto:ben.rogers@gmail.com"
     a.target="_blank"
-    a.class="feedback"
+    a.style["float"] = "right"
+    a.style["font-size"] = ".6em"
+    a.style["font-family"] = "verdana, arial, helvetica, san-serif"
+    a.style["padding-top"] = "10px"
     el.appendChild(a)
   });
 }
 </script>
+
+
+
 
   <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
@@ -43,7 +49,6 @@
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -130,6 +135,7 @@
 <li class="toctree-l3"><a class="reference internal" href="spec.html#theoretical-energy">Theoretical energy</a></li>
 <li class="toctree-l3"><a class="reference internal" href="spec.html#adjust-for-inefficiency">Adjust for inefficiency</a></li>
 <li class="toctree-l3"><a class="reference internal" href="spec.html#add-the-energy-rate">Add the energy rate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="spec.html#determine-required-thrust">Determine required thrust</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="spec.html#required-power-method-2">Required power: Method 2</a></li>
@@ -144,11 +150,11 @@
 <li class="toctree-l1"><a class="reference internal" href="motors.html">Motors</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#top-considerations">Top considerations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#reading-motor-specs">Reading motor specs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motors.html#duty-cycle-max-continuous-power">Duty cycle-Max continuous power</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motors.html#kv-reduction">KV reduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#example-motor-list">Example motor list</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#sensored-versus-sensorless">Sensored versus sensorless</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#mating-with-a-prop">Mating with a prop</a></li>
-<li class="toctree-l2"><a class="reference internal" href="motors.html#duty-cycle-max-continuous-power">Duty cycle-Max continuous power</a></li>
-<li class="toctree-l2"><a class="reference internal" href="motors.html#kv-reduction">KV reduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#custom-motors">Custom motors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#worthwhile-reading">Worthwhile reading</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="motors.html#basics">Basics</a></li>
@@ -210,7 +216,8 @@
 <li class="toctree-l1"><a class="reference internal" href="structure.html">Structural-Mechanical</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#backplate-connection">Backplate connection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#boom">Boom</a></li>
-<li class="toctree-l2"><a class="reference internal" href="structure.html#boom-to-harness-connection">Boom to harness connection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#boom-to-boom-hinge-connection">Boom to boom hinge connection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#id1">Backplate connection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#motor-mount">Motor mount</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#battery-mounts">Battery mounts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#kickstand">Kickstand</a></li>
@@ -329,8 +336,6 @@
 
 
 
-
-
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -342,7 +347,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-          
+            
         
       </li>
     
@@ -351,10 +356,10 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="glossary.html" class="btn btn-neutral float-right" title="Glossary" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="glossary.html" class="btn btn-neutral float-right" title="Glossary" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="ideas.html" class="btn btn-neutral float-left" title="Ideas and Experiments" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="ideas.html" class="btn btn-neutral float-left" title="Ideas and Experiments" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
   </div>
   
@@ -366,6 +371,10 @@
             
   <div class="section" id="safety">
 <span id="id1"></span><h1>Safety<a class="headerlink" href="#safety" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-default" id="id2">
+<a class="reference internal image-reference" href="_images/uc3.gif"><img alt="_images/uc3.gif" src="_images/uc3.gif" style="width: 144.0px; height: 81.0px;" /></a>
+<p class="caption"><span class="caption-text">Under construction</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
 <div class="section" id="design-checklist">
 <h2>Design Checklist<a class="headerlink" href="#design-checklist" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
@@ -432,7 +441,7 @@
     <p>
     <img src="_images/dq1.jpg"  class="endimage"/>
       <span class="lastupdated">&nbsp;&nbsp;&nbsp;
-        Last updated on Dec 31, 2021.
+        Last updated on Jan 01, 2022.
         
       </span>
     </p>

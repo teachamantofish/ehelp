@@ -25,16 +25,22 @@
 
 <script type="text/javascript">
   window.onload = function () {
-  Array.from(document.getElementsByTagName('h2')).forEach(el => {
+  Array.from(document.querySelectorAll('h2,h3')).forEach(el => {
     const a = document.createElement('a')
     a.innerText="Feedback"
     a.href="mailto:ben.rogers@gmail.com"
     a.target="_blank"
-    a.class="feedback"
+    a.style["float"] = "right"
+    a.style["font-size"] = ".6em"
+    a.style["font-family"] = "verdana, arial, helvetica, san-serif"
+    a.style["padding-top"] = "10px"
     el.appendChild(a)
   });
 }
 </script>
+
+
+
 
   <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
@@ -43,7 +49,6 @@
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -130,6 +135,7 @@
 <li class="toctree-l3"><a class="reference internal" href="spec.html#theoretical-energy">Theoretical energy</a></li>
 <li class="toctree-l3"><a class="reference internal" href="spec.html#adjust-for-inefficiency">Adjust for inefficiency</a></li>
 <li class="toctree-l3"><a class="reference internal" href="spec.html#add-the-energy-rate">Add the energy rate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="spec.html#determine-required-thrust">Determine required thrust</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="spec.html#required-power-method-2">Required power: Method 2</a></li>
@@ -144,11 +150,11 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Motors</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#top-considerations">Top considerations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#reading-motor-specs">Reading motor specs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#duty-cycle-max-continuous-power">Duty cycle-Max continuous power</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#kv-reduction">KV reduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#example-motor-list">Example motor list</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#sensored-versus-sensorless">Sensored versus sensorless</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#mating-with-a-prop">Mating with a prop</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#duty-cycle-max-continuous-power">Duty cycle-Max continuous power</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#kv-reduction">KV reduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#custom-motors">Custom motors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#worthwhile-reading">Worthwhile reading</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#basics">Basics</a></li>
@@ -210,7 +216,8 @@
 <li class="toctree-l1"><a class="reference internal" href="structure.html">Structural-Mechanical</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#backplate-connection">Backplate connection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#boom">Boom</a></li>
-<li class="toctree-l2"><a class="reference internal" href="structure.html#boom-to-harness-connection">Boom to harness connection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#boom-to-boom-hinge-connection">Boom to boom hinge connection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#id1">Backplate connection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#motor-mount">Motor mount</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#battery-mounts">Battery mounts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#kickstand">Kickstand</a></li>
@@ -329,8 +336,6 @@
 
 
 
-
-
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -342,7 +347,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-          
+            
         
       </li>
     
@@ -351,10 +356,10 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="esc.html" class="btn btn-neutral float-right" title="Electronic Speed Controller" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="esc.html" class="btn btn-neutral float-right" title="Electronic Speed Controller" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="spec.html" class="btn btn-neutral float-left" title="Specing out a System (Sizing)" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="spec.html" class="btn btn-neutral float-left" title="Specing out a System (Sizing)" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
   </div>
   
@@ -366,8 +371,9 @@
             
   <div class="section" id="motors">
 <h1>Motors<a class="headerlink" href="#motors" title="Permalink to this headline">¶</a></h1>
-<div class="figure align-default">
-<img alt="_images/uc1.gif" src="_images/uc1.gif" />
+<div class="figure align-default" id="id1">
+<a class="reference internal image-reference" href="_images/uc4.gif"><img alt="_images/uc4.gif" src="_images/uc4.gif" style="width: 144.0px; height: 106.2px;" /></a>
+<p class="caption"><span class="caption-text">Under construction</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="top-considerations">
 <h2>Top considerations<a class="headerlink" href="#top-considerations" title="Permalink to this headline">¶</a></h2>
@@ -392,6 +398,16 @@
 <li><p>Max current: You need to spec a system that does not exceed the max current. Moreover, max current is limited to a short period of time (usually minutes). It’s a good idea to design a system that’s operates around 50-70% of max current most of the time.</p></li>
 </ul>
 </div>
+<div class="section" id="duty-cycle-max-continuous-power">
+<h2>Duty cycle-Max continuous power<a class="headerlink" href="#duty-cycle-max-continuous-power" title="Permalink to this headline">¶</a></h2>
+<p>There is also a suggestion that the lower the no load kv value of the motor the greater the 100% duty cycle reduction factor. Probably useful to know if one of the larger diameter 35kv or 27kv motors marketed for use on paramotors is being considered.</p>
+</div>
+<div class="section" id="kv-reduction">
+<h2>KV reduction<a class="headerlink" href="#kv-reduction" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default">
+<img alt="_images/kvreduction.png" src="_images/kvreduction.png" />
+</div>
+</div>
 <div class="section" id="example-motor-list">
 <h2>Example motor list<a class="headerlink" href="#example-motor-list" title="Permalink to this headline">¶</a></h2>
 <p>Unfortunately, comparing motors based on published specs is like comparing apples and maggots. Note the following:</p>
@@ -400,14 +416,14 @@
 <li><p>Some motors are marketed by others at higher prices. For example, APS sells Freerchobby motors. It’s worth checking Alibaba, Amazon, eBay</p></li>
 <li><p>You can’t trust published data.</p></li>
 <li><p>Some data points are undefined. For example, “continuous current” doesn’t mean much unless you know the timeframe. Some vendors user 1 minute, others 2 to 5 minutes or more.</p></li>
-<li><p>Thrust values are static thrust on a stand. In flight, dynamic thrust is far less. Published data varies by volts, amps, RPM, and propeller. You’ll have to use a combination of math, guessing, data table reading to formulate an idea. You should have already calculated what you need; for example: 30Kg of thrust at 50-70% throttle for 5 climb minutes with 12s batteries to climb to 1000’.</p></li>
+<li><p>Thrust values are static thrust on a stand. In flight, dynamic thrust is far less. Published data varies by volts, amps, RPM, and propeller. You’ll have to use a combination of math, data table reading, and dice rolling to formulate an idea about what’s likely true. You should have already calculated what you need; for example: 25Kg of thrust at 50-70% throttle for 5 climb minutes with 12s batteries to climb to 1000’.</p></li>
 <li><p>Max RPM is a no load number. RPM in data tables reflect a value for the specific test propeller.</p></li>
-<li><p>The table below is a reference point only. You can start there, but don’t end there.</p></li>
+<li><p>The table below is a startiong point only. Begin there, but don’t end there.</p></li>
 </ul>
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTZ5drQYvvp4srNMViieF0J0stG8gvPEdH_B7djQA4lOQ53DEMxsOmvscQ4TEEQP2fW-wIQpMl-eO5L/pubhtml?widget=true&amp;headers=false" width="100%" height="850px"></iframe></div>
 <div class="section" id="sensored-versus-sensorless">
 <h2>Sensored versus sensorless<a class="headerlink" href="#sensored-versus-sensorless" title="Permalink to this headline">¶</a></h2>
-<p>You don’t need a sensored motor. While sensorless brushless motors perform poorly at low speed, their performance at flying speeds is excellent. ESC manufactures improve efficiency and performance by using  sensorless synchronization at high speed to alter the timing for the sequence of power pulses sent to the motors windings. Sensorless motors are lighter, less complicated, and less prone to failure.</p>
+<p>You don’t need a sensored motor. While sensorless brushless motors perform poorly at low speed, their performance at flying speeds is excellent. ESC manufactures improve efficiency and performance by using sensorless synchronization at high speed to alter the timing for the sequence of power pulses sent to the motors windings. Sensorless motors are lighter, less complicated, and less prone to failure.</p>
 </div>
 <div class="section" id="mating-with-a-prop">
 <h2>Mating with a prop<a class="headerlink" href="#mating-with-a-prop" title="Permalink to this headline">¶</a></h2>
@@ -419,23 +435,13 @@
 </ol>
 <p>The <a class="reference external" href="https://ppg.e-props.fr/index.php?cPath=1">e-props folks</a> match multiple props to each specific motor. It’s worth checking out to get an idea of acceptable combinations.</p>
 </div>
-<div class="section" id="duty-cycle-max-continuous-power">
-<h2>Duty cycle-Max continuous power<a class="headerlink" href="#duty-cycle-max-continuous-power" title="Permalink to this headline">¶</a></h2>
-<p>There is also a suggestion that the lower the no load kv value of the motor the greater the 100% duty cycle reduction factor. Probably useful to know if one of the larger diameter 35kv or 27kv motors marketed for use on paramotors is being considered.</p>
-</div>
-<div class="section" id="kv-reduction">
-<h2>KV reduction<a class="headerlink" href="#kv-reduction" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-default">
-<img alt="_images/kvreduction.png" src="_images/kvreduction.png" />
-</div>
-</div>
 <div class="section" id="custom-motors">
 <h2>Custom motors<a class="headerlink" href="#custom-motors" title="Permalink to this headline">¶</a></h2>
 <p>Custom rewinds change the KV rating and RPM.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.youtube.com/watch?v=-sIVpOLYoqg&amp;t=144sA">Rewind your own motor</a></p></li>
-<li><p>MAD motor and Alien Power Systems will motors rewind for low cost.</p></li>
-<li><p>Charles Allen reports that APS made him a custom motor with a hollow shaft for ~$25 extra so I could have a rod go through to articulate a variable pitch prop.</p></li>
+<li><p>MAD motor and Alien Power Systems will motors rewind for low cost; T-Motor for zero cost.</p></li>
+<li><p>Charles Allen reports that APS provided a custom motor with a hollow shaft for ~$25 extra so he could use a rod  to articulate a variable pitch prop.</p></li>
 </ul>
 </div>
 <div class="section" id="worthwhile-reading">
@@ -508,7 +514,7 @@
     <p>
     <img src="_images/dq1.jpg"  class="endimage"/>
       <span class="lastupdated">&nbsp;&nbsp;&nbsp;
-        Last updated on Dec 31, 2021.
+        Last updated on Jan 01, 2022.
         
       </span>
     </p>

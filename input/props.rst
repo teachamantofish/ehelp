@@ -2,7 +2,10 @@
 Propellers
 ************************************************
 
-.. figure:: images/uc2.gif
+.. figure:: images/uc3.gif
+   :scale: 30%
+
+   Under construction
 
 I'm going to punt here for a while. The topic is complex. This section includes some rules of thumb and links to folks who know more (and don't often agree). It's worth reading a `prop overview <https://aerotoolbox.com/thrust-cruise-speed/>`_.
 

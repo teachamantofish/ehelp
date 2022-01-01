@@ -2,28 +2,26 @@
 e-Powered Hang Gliding Harnesses
 ************************************************
 
-.. caution:: Under construction.
+.. figure:: images/uc4.gif
+   :scale: 30%
 
-Why? Because for 2000-3000 bucks a DIYer can build a 20 pound eHelp harness and flatland foot launch from any location. No modified glider. No tow rig. Minimal learning curve.  The time and $$$ investment quickly pays for itself through reduced driving to launches, hang-waiting, tow costs, alcoholic consumption while jonesing for some airtime. Only the pilot can determine the ultimate payback.
+   Under construction
+
+Why ehelp? Because for 2000-3000 bucks a DIYer can build a 20 pound eHelp harness and flatland foot launch. No mountain. No towing. No modified glider. No tow rig.  The time and $$$ investment quickly pays for itself through reduced driving to launches, hang-waiting, tow costs, alcoholic consumption while jonesing for some airtime. Only the pilot can determine the ultimate payback.
 
 The systems are relatively simple, and energetic pioneers are paving the way with open source plans and Youtube videos. The multi-billion dollar drone, battery, and EV industries are quickly driving the evolution of cheaper, lighter, and more powerful components.  
 
 In a few years, we'll like have lighter and more powerful motors (axial), smaller and safer batteries (solid state, and (with luck) commercial ready-to-fly choices, kits, manuals, and parts.
 
-#. one
-#. two
-#. three
 
 About this document
 ==================================
 
-This content is: 
+This content is an attempt to provide a quick start manual to the DIY community. It is an experimental and unfinished work. There is no attempt here to make $$$, and so shall it ever be.
 
-* A crowd-sourced document. You can ask to edit the source here: https://github.com/teacha.../ehelp/blob/main/input/index.rst. Without community participation, this document will fade.
-* An experimental and unfinished work.
-* There is no attempt here to make $$$, and so shall it ever be.
+ Ideally, these pages will become a crowd-sourced document. Ccontribute via the **Feedback** links or ask to edit the source here: https://github.com/teacha.../ehelp/blob/main/input/index.rst. Without community participation, this document will fade.
 
-.. note:: Send me any info, link, or informational tidbit. I'll incorporate what makes sense. Ideas, suggestions, complaints? Email ben.rogers@gmail.com 
+.. note:: Send me any info, link, or informational tidbit. I'll incorporate what makes sense.
 
 Danger Will Robinson
 ===========================
@@ -33,7 +31,7 @@ Danger Will Robinson
 If you see your photo/text
 =================================
 
-If you see something here that originated with you and want it removed, just ask. I can also add credits and links back to your FB or home page as you desire. 
+If you see something here that originated with you and want it removed, just ask. I can add credits and links back to your FB or home page if you prefer. 
 
 Resources
 ==================
@@ -50,8 +48,8 @@ Resources
    * `FLPHG eHelp <https://www.facebook.com/groups/668143127181552>`_
 
 Forums: 
+
    * `OpenPPG: Similar concepts, great forum, lots of resources <https://openppg.com/?fbclid=IwAR04rX_1St1D1lqTpwBbaOdLskhpFOMahdXRiHXU1gmr4fSlUv0pwsC-RQg>`_
-   * TBD: Hanggliding.org
    * This community needs a focused forum. Doesn't exist yet. 
 
 * Plans and open-sourced projects

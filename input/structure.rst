@@ -2,9 +2,10 @@
 Structural-Mechanical
 ************************************************
 
-.. figure:: images/uc1.gif
+.. figure:: images/uc4.gif
+   :scale: 30%
 
-TBD: overview
+   Under construction
 
 
 Backplate connection
@@ -29,12 +30,28 @@ TBD: Add link to Paul's engineering doc.
 
    Credit: Reidar Bernsten
 
-Boom to harness connection
+Boom to boom hinge connection
 ============================================
 
 .. figure:: images/knuckle_charles.png
 
    Credit: Charles Allen
+
+Backplate connection
+==================================
+
+TBD: explanation. We don't know the shear strength.
+
+#. Make or buy a mechanical fastener that provides both a non-crushable metal bolt sleeve as well as a top and bottom surface for the fastener: T nut, weld nut, grommet, TBD. Stainless steel is NOT epoxy friendly. 
+#. Mark and drill the backplate holes.
+#. Abrade and degrease the backplate and fastener.
+#. Bond with a high strength epoxy to both sides of the hole.
+#. Clamp. Compressing with a nylon bolt may be easier than a tool.
+
+.. figure:: images/pmbackplate.png
+
+   Credit: Paul Martin
+
 
 Motor mount
 ======================

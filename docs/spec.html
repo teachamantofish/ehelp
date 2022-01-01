@@ -25,16 +25,22 @@
 
 <script type="text/javascript">
   window.onload = function () {
-  Array.from(document.getElementsByTagName('h2')).forEach(el => {
+  Array.from(document.querySelectorAll('h2,h3')).forEach(el => {
     const a = document.createElement('a')
     a.innerText="Feedback"
     a.href="mailto:ben.rogers@gmail.com"
     a.target="_blank"
-    a.class="feedback"
+    a.style["float"] = "right"
+    a.style["font-size"] = ".6em"
+    a.style["font-family"] = "verdana, arial, helvetica, san-serif"
+    a.style["padding-top"] = "10px"
     el.appendChild(a)
   });
 }
 </script>
+
+
+
 
   <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
@@ -43,7 +49,6 @@
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -130,6 +135,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#theoretical-energy">Theoretical energy</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#adjust-for-inefficiency">Adjust for inefficiency</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#add-the-energy-rate">Add the energy rate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#determine-required-thrust">Determine required thrust</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#required-power-method-2">Required power: Method 2</a></li>
@@ -144,11 +150,11 @@
 <li class="toctree-l1"><a class="reference internal" href="motors.html">Motors</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#top-considerations">Top considerations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#reading-motor-specs">Reading motor specs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motors.html#duty-cycle-max-continuous-power">Duty cycle-Max continuous power</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motors.html#kv-reduction">KV reduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#example-motor-list">Example motor list</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#sensored-versus-sensorless">Sensored versus sensorless</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#mating-with-a-prop">Mating with a prop</a></li>
-<li class="toctree-l2"><a class="reference internal" href="motors.html#duty-cycle-max-continuous-power">Duty cycle-Max continuous power</a></li>
-<li class="toctree-l2"><a class="reference internal" href="motors.html#kv-reduction">KV reduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#custom-motors">Custom motors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#worthwhile-reading">Worthwhile reading</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="motors.html#basics">Basics</a></li>
@@ -210,7 +216,8 @@
 <li class="toctree-l1"><a class="reference internal" href="structure.html">Structural-Mechanical</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#backplate-connection">Backplate connection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#boom">Boom</a></li>
-<li class="toctree-l2"><a class="reference internal" href="structure.html#boom-to-harness-connection">Boom to harness connection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#boom-to-boom-hinge-connection">Boom to boom hinge connection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html#id1">Backplate connection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#motor-mount">Motor mount</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#battery-mounts">Battery mounts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure.html#kickstand">Kickstand</a></li>
@@ -329,8 +336,6 @@
 
 
 
-
-
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -342,7 +347,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-          
+            
         
       </li>
     
@@ -351,10 +356,10 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="motors.html" class="btn btn-neutral float-right" title="Motors" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="motors.html" class="btn btn-neutral float-right" title="Motors" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="examples.html" class="btn btn-neutral float-left" title="eHelp Examples" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="examples.html" class="btn btn-neutral float-left" title="eHelp Examples" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
   </div>
   
@@ -366,6 +371,10 @@
             
   <div class="section" id="specing-out-a-system-sizing">
 <span id="spec"></span><h1>Specing out a System (Sizing)<a class="headerlink" href="#specing-out-a-system-sizing" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-default" id="id1">
+<a class="reference internal image-reference" href="_images/uc2.gif"><img alt="_images/uc2.gif" src="_images/uc2.gif" style="width: 150.0px; height: 112.4px;" /></a>
+<p class="caption"><span class="caption-text">Under construction</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
 <p>Navigating to final choices and a working system is difficult and time consuming. Until the eHelp harness idea is more widespread, design principles will remain relatively inaccessible while advice is scattered across various Facebook pages and forums with pioneers helping where they can. With luck, the ehelp paradigm will gain enough traction that the hang gliding community can emulate aspects of <a class="reference external" href="https://openppg.com/">OpenPPG</a> and create its own easy-to-traverse path.</p>
 <p>Until then, moving forward is a bit of work.</p>
 <div class="section" id="decision-path">
@@ -379,7 +388,9 @@
 <p>Example: HG + Joey Pilot and gear = 300lbs (136Kg). How many kilowatts will it take to climb at 200fpm to 1000’?</p>
 <div class="section" id="theoretical-energy">
 <h3>Theoretical energy<a class="headerlink" href="#theoretical-energy" title="Permalink to this headline">¶</a></h3>
-<p>The first step is to calculate the theoretical energy required with 100% efficiency for all components. Note that newtons, joules, and gravity are metric constructs???. The formula is:</p>
+<p>The first step is to calculate the theoretical energy required with 100% efficiency for all components. If a stone was at 1000’, how much energy does it store?</p>
+<p>Note that the forumulas are metric (newtons, joules, and Earth’s gravitational constant (m/s squared). The formula is:</p>
+<p>=(B4*1000*9.8)/(3.28 * 3600000)</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">kwh</span><span class="o">=</span><span class="n">weight</span> <span class="n">X</span> <span class="mf">9.81</span> <span class="p">(</span><span class="n">gravity</span><span class="p">)</span> <span class="n">X</span> <span class="n">feet</span><span class="o">/</span><span class="mf">3.28</span> <span class="p">(</span><span class="n">convert</span> <span class="n">to</span> <span class="n">meters</span><span class="p">)</span> <span class="n">X</span> <span class="mi">1000</span> <span class="n">watts</span> <span class="n">X</span> <span class="mi">36000</span> <span class="p">(</span><span class="n">sec</span><span class="o">.</span> <span class="n">per</span> <span class="n">hour</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -389,7 +400,7 @@
 <h3>Adjust for inefficiency<a class="headerlink" href="#adjust-for-inefficiency" title="Permalink to this headline">¶</a></h3>
 <p>While .113 kwh is the theoretical energy, we have to adjusting for reality since no part of the system is 100% efficient. Some reasonable guesstimates:</p>
 <ul class="simple">
-<li><p>Glide ratio: 12</p></li>
+<li><p>Glide ratio (L/D): 12</p></li>
 <li><p>Prop efficiency: 70%</p></li>
 <li><p>Motor efficiency: 90%</p></li>
 <li><p>Battery efficiency: 95%</p></li>
@@ -440,6 +451,9 @@
 <p>power = watts/ energy rate</p>
 <p>Power is F*v, so while the force is m*g/(L/D), the drag losses are m*g/(L/D) * v. The v term is going to always be around 25m/s, almost independent of the glider.</p>
 </div>
+<div class="section" id="determine-required-thrust">
+<h3>Determine required thrust<a class="headerlink" href="#determine-required-thrust" title="Permalink to this headline">¶</a></h3>
+</div>
 </div>
 <div class="section" id="required-power-method-2">
 <h2>Required power: Method 2<a class="headerlink" href="#required-power-method-2" title="Permalink to this headline">¶</a></h2>
@@ -459,7 +473,9 @@
 <p>As a rough guideline look for a motor/battery configuration that has a no-load RPM that is 125% of your target full-throttle RPM.</p>
 <p>what percent of continuous power to use for a 5 minute climb?</p>
 <hr class="docutils" />
-<p>Here’s some more thinking: Since I know higher V means less amps for the same power, I wanted to look at two motors that can handle diff V’s and compare.</p>
+<blockquote>
+<div><p>higher V means less amps for the same power, I wanted to look at two motors that can handle diff V’s and compare.</p>
+</div></blockquote>
 <p>Below you can see the M30 w/ 2 higher AH batteries can’t run as long, create way more heat, and have a higher RPM than the M40. Same battery price. Seems safer, quieter, longer flight time (and that’s at full climb–cruise would be even better). Tradeoff is the moter is 250 more and the batteries weigh 1lb more.</p>
 <p>Is my thinking correct? More batteries in a series is better?</p>
 <p><a class="reference external" href="https://www.mad-motor.com/products/mad-components-m30-pro.html">https://www.mad-motor.com/products/mad-components-m30-pro.html</a>
@@ -468,7 +484,12 @@ Mad30: 14s 75% throttle 123 amps for 30kg thrust w/ 40x13 80kv 3440
 <p><a class="reference external" href="https://www.mad-motor.com/products/mad-components-m40c30-pro-ipe.html">https://www.mad-motor.com/products/mad-components-m40c30-pro-ipe.html</a>
 Mad40  24s 60% throttle 50.4 amps for 30kg thrust w/ 47x13 43kv RPM 2455
 4 22.2v 12AH batteries=1kw 1040.00 12.8 lbs and last 14 minutes</p>
-</div>
+<iframe src="https://docs.google.com/spreadsheets/d/1SGGLd6JsmiGmKMnI21ic4D_j7ZkVzq27hZ3CX9GggdU/edit?usp=sharing;headers=false"
+height=1100
+width=1000></iframe>
+
+
+https://blog.crunchprank.net/google-sheets-to-html-table/</div>
 </div>
 
 
@@ -486,7 +507,7 @@ Mad40  24s 60% throttle 50.4 amps for 30kg thrust w/ 47x13 43kv RPM 2455
     <p>
     <img src="_images/dq1.jpg"  class="endimage"/>
       <span class="lastupdated">&nbsp;&nbsp;&nbsp;
-        Last updated on Dec 31, 2021.
+        Last updated on Jan 01, 2022.
         
       </span>
     </p>
