@@ -22,16 +22,18 @@ In general, you can do what other folks are doing or use your motor's manufactur
 * Static thrust (not moving) is always far higher than dynamic thrust. 
 * Don't trust manufacturer numbers. 
 * A higher pitch performs better during climb and slow speeds. Design for climb or cruise. 
-* A 100kv 34x14 setup is somewhat similar to an 80kv 36x16 setup. 
-* More blades might yeild a bit more thrust (e.g. 5%), but it's more drag if they don't fold.
-* Carbon fiber is stronger, lighter, more responsive, but more expensive. 
+* A 150kv 34x14 setup *could be somewhat* similar to an 80kv 36x16 setup. In other words: Spin smaller and lower pitch props faster and vice versa. 
+* More blades might yield a bit more thrust (e.g. 5%), but it's more drag if they don't fold.
+* Carbon fiber is stronger, lighter, more responsive as well as more expensive. 
 * Wood is cheap and a good choice for learning, experimenting, and conditions where damage is likely. 
-* Typical sizes range from 36"-44".
+* Typical sizes range from 36"-44". Pitches range from 14-20.
+
+TBD: insert pitch/d diagram
 
 Choosing a propeller
 ==========================
 
-Choose a propeller requires knowing how much thrust you need for a specific flying goal; for example, a 300 fpm climb, cruising at 24 mph. You'll need to know some basic number about your wing and go through some basic calculations here TBD. 
+Choosing a propeller requires knowing how much thrust you need for a specific flying goal; for example, a 300 fpm climb at 24 mph. You'll need to know some basic numbes about your wing and go through some basic calculations here TBD. 
 
 The 3 try eyeball method
 --------------------------

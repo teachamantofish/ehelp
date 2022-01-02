@@ -18,50 +18,39 @@ Decision path
 
 TBD
 
-Required power: Method 1
-===================================
+How much energy?: Method 1
+============================================
 
-Margins are thin with electric powered aircraft primarily due to the low battery energy density. Powered flight time is measured in minutes, with 10 or 20 available for many systems. Couple that with a wide range of wing specs and pilot weights, and it should be obvious that some minimal number crunching is required. At a 300 fpm climb, there's a big difference between 5 minutes and 10 minutes.
+**Theoretical power x efficiency** 
 
-todo: total rewrite. From: https://endless-sphere.com/forums/viewtopic.php?t=110570#p1626972
+Margins are thin with electric powered aircraft primarily due to the low battery energy density. Powered flight time is measured in minutes, with 10 or 20 available for many systems. Couple that with a wide range of wing specs and pilot weights, and it should be obvious that some minimal number crunching is required. At a 200 fpm climb, there's a big difference between 5 minutes and 10 minutes.
 
 Example: HG + Joey Pilot and gear = 300lbs (136Kg). How many kilowatts will it take to climb at 200fpm to 1000'?
 
-Theoretical energy
-------------------------
 
-The first step is to calculate the theoretical energy required with 100% efficiency for all components. If a stone was at 1000', how much energy does it store? 
+.. raw:: html
 
-Note that the forumulas are metric (newtons, joules, and Earth's gravitational constant (m/s squared). The formula is: 
-
-=(B4*1000*9.8)/(3.28 * 3600000)
+   <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR3XVDXnPPd4hG5fBTuZgjbLWB6_UMxNMa1zaAgqc4O4Fmy9Dq738SaKtTNLP4r2jhsB8mk5tc3AAA1/pubhtml?widget=true&amp;headers=false" width="500px" height="400px"></iframe>
 
 
-:: 
 
-   kwh=weight X 9.81 (gravity) X feet/3.28 (convert to meters) X 1000 watts X 36000 (sec. per hour) 
 
-So, the energy needed to get Joey to 1000' is ``136*9.81*1000/(3.28 * 3600000) = 0.113 kWh``. 
 
-Adjust for inefficiency
----------------------------
+How much energy?: Method 2
+===================================
 
-While .113 kwh is the theoretical energy, we have to adjusting for reality since no part of the system is 100% efficient. Some reasonable guesstimates:  
+**Prop and thrust**
 
-* Glide ratio (L/D): 12
-* Prop efficiency: 70%
-* Motor efficiency: 90%
-* Battery efficiency: 95%
-* Everything else: 95%
+Determine required thrust
+---------------------------------
 
-So multiply the efficiency of all components to get the correction factor: ``((1-1/12)*.7*.9*.9*.95*.95) = .469``
+TBD
+-------------------
 
-Then divide your theoretical Kwh by that number: ``0.113/.469 = .241 kwh``
+Method comparison
+==============================================
 
-Add the energy rate
---------------------------
-
-.241 is ?????, which tells you ????. You now need to calculate the rate of energy usage. The formula is XXXXX. For the example above, the total kilowatts consumed at various rates of  climb to 1000' is as follows: 
+Calculate the rate of energy usage. The formula is XXXXX. For the example above, the total kilowatts consumed at various rates of  climb to 1000' is as follows: 
 
 .. list-table:: 
    :widths: 30 30 40 
@@ -80,43 +69,56 @@ Add the energy rate
      - tbd
      - x volts and y mAH
 
-This can't be right because the longer it takes to get to 1000' should not take less watts: 
-
-* .241 kwh/ 6 minutes of flight time/60 minutes in an hour. = 2.4 kw  
-* .241 kwh/ 10 minutes of flight time/60 minutes in an hour. = 1.5 kw
-
-
-**notes**
-
-E =f*d
-
-electrical : P*T
-
-kwh: energy
-
-power = watts/ energy rate
-
-Power is F*v, so while the force is m*g/(L/D), the drag losses are m*g/(L/D) * v. The v term is going to always be around 25m/s, almost independent of the glider.
-
-Determine required thrust
----------------------------------
 
 
 
-Required power: Method 2
-===================================
-
-TBD
-
-System design: Copy others
+What other pilots choose
 ==========================
 
-TBD
+TBD: List power trains in use.
 
-System design: DIY
-==========================
 
-TBD
+Calculation walk-through
+=================================
+
+Method 1
+------------------
+
+Theoretical energy
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The first step is to calculate the theoretical energy required with 100% efficiency for all components. If a stone was at 1000', how much energy does it store? 
+
+Note that the forumulas are metric (newtons, joules, and Earth's gravitational constant (m/s squared). The formula is: 
+
+=(B4*1000*9.8)/(3.28 * 3600000)
+
+
+:: 
+
+   kwh=weight X 9.81 (gravity) X feet/3.28 (convert to meters) X 1000 watts X 36000 (sec. per hour) 
+
+So, the energy needed to get Joey to 1000' is ``136*9.81*1000/(3.28 * 3600000) = 0.113 kWh``. 
+
+Adjust for inefficiency
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+While .113 kwh is the theoretical energy, we have to adjusting for reality since no part of the system is 100% efficient. Some reasonable guesstimates:  
+
+* Glide ratio (L/D): 12
+* Prop efficiency: 70%
+* Motor efficiency: 90%
+* Battery efficiency: 95%
+* Everything else: 95%
+
+So multiply the efficiency of all components to get the correction factor: ``((1-1/12)*.7*.9*.9*.95*.95) = .469``
+
+Then divide your theoretical Kwh by that number: ``0.113/.469 = .241 kwh``
+
+
+Method 2
+------------------
+
 
 Notes, todo, not reviewed
 =================================
@@ -144,11 +146,10 @@ https://www.mad-motor.com/products/mad-components-m40c30-pro-ipe.html
 Mad40  24s 60% throttle 50.4 amps for 30kg thrust w/ 47x13 43kv RPM 2455
 4 22.2v 12AH batteries=1kw 1040.00 12.8 lbs and last 14 minutes
 
-.. raw:: html
+Formulas
 
-  <iframe src="https://docs.google.com/spreadsheets/d/1SGGLd6JsmiGmKMnI21ic4D_j7ZkVzq27hZ3CX9GggdU/edit?usp=sharing;headers=false"
-  height=1100
-  width=1000></iframe>
-
-
-  https://blog.crunchprank.net/google-sheets-to-html-table/
+E =f*d
+electrical : P*T
+kwh: energy
+power = watts/ energy rate
+Power is F*v, so while the force is m*g/(L/D), the drag losses are m*g/(L/D) * v. The v term is going to always be around 25m/s, almost independent of the glider.

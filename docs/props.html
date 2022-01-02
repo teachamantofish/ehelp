@@ -115,11 +115,13 @@
               <p class="caption"><span class="caption-text">Getting Started</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="index.html">e-Powered Hang Gliding Harnesses</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="index.html#about-this-document">About this document</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#danger-will-robinson">Danger Will Robinson</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#if-you-see-your-photo-text">If you see your photo/text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#about-this-document">About this document</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="index.html#goals">Goals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#danger-will-robinson">Danger Will Robinson</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#if-you-see-your-photo-text">If you see your photo/text</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#resources">Resources</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#goals">Goals</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">eHelp Examples</a><ul>
@@ -131,16 +133,19 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="spec.html">Specing out a System (Sizing)</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="spec.html#decision-path">Decision path</a></li>
-<li class="toctree-l2"><a class="reference internal" href="spec.html#required-power-method-1">Required power: Method 1</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="spec.html#theoretical-energy">Theoretical energy</a></li>
-<li class="toctree-l3"><a class="reference internal" href="spec.html#adjust-for-inefficiency">Adjust for inefficiency</a></li>
-<li class="toctree-l3"><a class="reference internal" href="spec.html#add-the-energy-rate">Add the energy rate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spec.html#how-much-energy-method-1">How much energy?: Method 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spec.html#how-much-energy-method-2">How much energy?: Method 2</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="spec.html#determine-required-thrust">Determine required thrust</a></li>
+<li class="toctree-l3"><a class="reference internal" href="spec.html#tbd">TBD</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="spec.html#required-power-method-2">Required power: Method 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="spec.html#system-design-copy-others">System design: Copy others</a></li>
-<li class="toctree-l2"><a class="reference internal" href="spec.html#system-design-diy">System design: DIY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spec.html#method-comparison">Method comparison</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spec.html#what-other-pilots-choose">What other pilots choose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spec.html#calculation-walk-through">Calculation walk-through</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="spec.html#method-1">Method 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="spec.html#method-2">Method 2</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="spec.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
 </ul>
 </li>
@@ -386,16 +391,17 @@
 <li><p>Static thrust (not moving) is always far higher than dynamic thrust.</p></li>
 <li><p>Don’t trust manufacturer numbers.</p></li>
 <li><p>A higher pitch performs better during climb and slow speeds. Design for climb or cruise.</p></li>
-<li><p>A 100kv 34x14 setup is somewhat similar to an 80kv 36x16 setup.</p></li>
-<li><p>More blades might yeild a bit more thrust (e.g. 5%), but it’s more drag if they don’t fold.</p></li>
-<li><p>Carbon fiber is stronger, lighter, more responsive, but more expensive.</p></li>
+<li><p>A 150kv 34x14 setup <em>could be somewhat</em> similar to an 80kv 36x16 setup. In other words: Spin smaller and lower pitch props faster and vice versa.</p></li>
+<li><p>More blades might yield a bit more thrust (e.g. 5%), but it’s more drag if they don’t fold.</p></li>
+<li><p>Carbon fiber is stronger, lighter, more responsive as well as more expensive.</p></li>
 <li><p>Wood is cheap and a good choice for learning, experimenting, and conditions where damage is likely.</p></li>
-<li><p>Typical sizes range from 36”-44”.</p></li>
+<li><p>Typical sizes range from 36”-44”. Pitches range from 14-20.</p></li>
 </ul>
+<p>TBD: insert pitch/d diagram</p>
 </div>
 <div class="section" id="choosing-a-propeller">
 <h2>Choosing a propeller<a class="headerlink" href="#choosing-a-propeller" title="Permalink to this headline">¶</a></h2>
-<p>Choose a propeller requires knowing how much thrust you need for a specific flying goal; for example, a 300 fpm climb, cruising at 24 mph. You’ll need to know some basic number about your wing and go through some basic calculations here TBD.</p>
+<p>Choosing a propeller requires knowing how much thrust you need for a specific flying goal; for example, a 300 fpm climb at 24 mph. You’ll need to know some basic numbes about your wing and go through some basic calculations here TBD.</p>
 <div class="section" id="the-3-try-eyeball-method">
 <h3>The 3 try eyeball method<a class="headerlink" href="#the-3-try-eyeball-method" title="Permalink to this headline">¶</a></h3>
 <p>Use what you know. In this case, 30kg of thrust</p>

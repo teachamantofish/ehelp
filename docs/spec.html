@@ -115,11 +115,13 @@
               <p class="caption"><span class="caption-text">Getting Started</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="index.html">e-Powered Hang Gliding Harnesses</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="index.html#about-this-document">About this document</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#danger-will-robinson">Danger Will Robinson</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#if-you-see-your-photo-text">If you see your photo/text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#about-this-document">About this document</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="index.html#goals">Goals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#danger-will-robinson">Danger Will Robinson</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#if-you-see-your-photo-text">If you see your photo/text</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#resources">Resources</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#goals">Goals</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">eHelp Examples</a><ul>
@@ -131,16 +133,19 @@
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Specing out a System (Sizing)</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#decision-path">Decision path</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#required-power-method-1">Required power: Method 1</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#theoretical-energy">Theoretical energy</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#adjust-for-inefficiency">Adjust for inefficiency</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#add-the-energy-rate">Add the energy rate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-much-energy-method-1">How much energy?: Method 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-much-energy-method-2">How much energy?: Method 2</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#determine-required-thrust">Determine required thrust</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tbd">TBD</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#required-power-method-2">Required power: Method 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#system-design-copy-others">System design: Copy others</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#system-design-diy">System design: DIY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#method-comparison">Method comparison</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#what-other-pilots-choose">What other pilots choose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#calculation-walk-through">Calculation walk-through</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#method-1">Method 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#method-2">Method 2</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
 </ul>
 </li>
@@ -381,37 +386,25 @@
 <h2>Decision path<a class="headerlink" href="#decision-path" title="Permalink to this headline">¶</a></h2>
 <p>TBD</p>
 </div>
-<div class="section" id="required-power-method-1">
-<h2>Required power: Method 1<a class="headerlink" href="#required-power-method-1" title="Permalink to this headline">¶</a></h2>
-<p>Margins are thin with electric powered aircraft primarily due to the low battery energy density. Powered flight time is measured in minutes, with 10 or 20 available for many systems. Couple that with a wide range of wing specs and pilot weights, and it should be obvious that some minimal number crunching is required. At a 300 fpm climb, there’s a big difference between 5 minutes and 10 minutes.</p>
-<p>todo: total rewrite. From: <a class="reference external" href="https://endless-sphere.com/forums/viewtopic.php?t=110570#p1626972">https://endless-sphere.com/forums/viewtopic.php?t=110570#p1626972</a></p>
+<div class="section" id="how-much-energy-method-1">
+<h2>How much energy?: Method 1<a class="headerlink" href="#how-much-energy-method-1" title="Permalink to this headline">¶</a></h2>
+<p><strong>Theoretical power x efficiency</strong></p>
+<p>Margins are thin with electric powered aircraft primarily due to the low battery energy density. Powered flight time is measured in minutes, with 10 or 20 available for many systems. Couple that with a wide range of wing specs and pilot weights, and it should be obvious that some minimal number crunching is required. At a 200 fpm climb, there’s a big difference between 5 minutes and 10 minutes.</p>
 <p>Example: HG + Joey Pilot and gear = 300lbs (136Kg). How many kilowatts will it take to climb at 200fpm to 1000’?</p>
-<div class="section" id="theoretical-energy">
-<h3>Theoretical energy<a class="headerlink" href="#theoretical-energy" title="Permalink to this headline">¶</a></h3>
-<p>The first step is to calculate the theoretical energy required with 100% efficiency for all components. If a stone was at 1000’, how much energy does it store?</p>
-<p>Note that the forumulas are metric (newtons, joules, and Earth’s gravitational constant (m/s squared). The formula is:</p>
-<p>=(B4*1000*9.8)/(3.28 * 3600000)</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">kwh</span><span class="o">=</span><span class="n">weight</span> <span class="n">X</span> <span class="mf">9.81</span> <span class="p">(</span><span class="n">gravity</span><span class="p">)</span> <span class="n">X</span> <span class="n">feet</span><span class="o">/</span><span class="mf">3.28</span> <span class="p">(</span><span class="n">convert</span> <span class="n">to</span> <span class="n">meters</span><span class="p">)</span> <span class="n">X</span> <span class="mi">1000</span> <span class="n">watts</span> <span class="n">X</span> <span class="mi">36000</span> <span class="p">(</span><span class="n">sec</span><span class="o">.</span> <span class="n">per</span> <span class="n">hour</span><span class="p">)</span>
-</pre></div>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR3XVDXnPPd4hG5fBTuZgjbLWB6_UMxNMa1zaAgqc4O4Fmy9Dq738SaKtTNLP4r2jhsB8mk5tc3AAA1/pubhtml?widget=true&amp;headers=false" width="500px" height="400px"></iframe></div>
+<div class="section" id="how-much-energy-method-2">
+<h2>How much energy?: Method 2<a class="headerlink" href="#how-much-energy-method-2" title="Permalink to this headline">¶</a></h2>
+<p><strong>Prop and thrust</strong></p>
+<div class="section" id="determine-required-thrust">
+<h3>Determine required thrust<a class="headerlink" href="#determine-required-thrust" title="Permalink to this headline">¶</a></h3>
 </div>
-<p>So, the energy needed to get Joey to 1000’ is <code class="docutils literal notranslate"><span class="pre">136*9.81*1000/(3.28</span> <span class="pre">*</span> <span class="pre">3600000)</span> <span class="pre">=</span> <span class="pre">0.113</span> <span class="pre">kWh</span></code>.</p>
+<div class="section" id="tbd">
+<h3>TBD<a class="headerlink" href="#tbd" title="Permalink to this headline">¶</a></h3>
 </div>
-<div class="section" id="adjust-for-inefficiency">
-<h3>Adjust for inefficiency<a class="headerlink" href="#adjust-for-inefficiency" title="Permalink to this headline">¶</a></h3>
-<p>While .113 kwh is the theoretical energy, we have to adjusting for reality since no part of the system is 100% efficient. Some reasonable guesstimates:</p>
-<ul class="simple">
-<li><p>Glide ratio (L/D): 12</p></li>
-<li><p>Prop efficiency: 70%</p></li>
-<li><p>Motor efficiency: 90%</p></li>
-<li><p>Battery efficiency: 95%</p></li>
-<li><p>Everything else: 95%</p></li>
-</ul>
-<p>So multiply the efficiency of all components to get the correction factor: <code class="docutils literal notranslate"><span class="pre">((1-1/12)*.7*.9*.9*.95*.95)</span> <span class="pre">=</span> <span class="pre">.469</span></code></p>
-<p>Then divide your theoretical Kwh by that number: <code class="docutils literal notranslate"><span class="pre">0.113/.469</span> <span class="pre">=</span> <span class="pre">.241</span> <span class="pre">kwh</span></code></p>
 </div>
-<div class="section" id="add-the-energy-rate">
-<h3>Add the energy rate<a class="headerlink" href="#add-the-energy-rate" title="Permalink to this headline">¶</a></h3>
-<p>.241 is ?????, which tells you ????. You now need to calculate the rate of energy usage. The formula is XXXXX. For the example above, the total kilowatts consumed at various rates of  climb to 1000’ is as follows:</p>
+<div class="section" id="method-comparison">
+<h2>Method comparison<a class="headerlink" href="#method-comparison" title="Permalink to this headline">¶</a></h2>
+<p>Calculate the rate of energy usage. The formula is XXXXX. For the example above, the total kilowatts consumed at various rates of  climb to 1000’ is as follows:</p>
 <table class="colwidths-given docutils align-default">
 <colgroup>
 <col style="width: 30%" />
@@ -439,33 +432,42 @@
 </tr>
 </tbody>
 </table>
-<p>This can’t be right because the longer it takes to get to 1000’ should not take less watts:</p>
+</div>
+<div class="section" id="what-other-pilots-choose">
+<h2>What other pilots choose<a class="headerlink" href="#what-other-pilots-choose" title="Permalink to this headline">¶</a></h2>
+<p>TBD: List power trains in use.</p>
+</div>
+<div class="section" id="calculation-walk-through">
+<h2>Calculation walk-through<a class="headerlink" href="#calculation-walk-through" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="method-1">
+<h3>Method 1<a class="headerlink" href="#method-1" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="theoretical-energy">
+<h4>Theoretical energy<a class="headerlink" href="#theoretical-energy" title="Permalink to this headline">¶</a></h4>
+<p>The first step is to calculate the theoretical energy required with 100% efficiency for all components. If a stone was at 1000’, how much energy does it store?</p>
+<p>Note that the forumulas are metric (newtons, joules, and Earth’s gravitational constant (m/s squared). The formula is:</p>
+<p>=(B4*1000*9.8)/(3.28 * 3600000)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">kwh</span><span class="o">=</span><span class="n">weight</span> <span class="n">X</span> <span class="mf">9.81</span> <span class="p">(</span><span class="n">gravity</span><span class="p">)</span> <span class="n">X</span> <span class="n">feet</span><span class="o">/</span><span class="mf">3.28</span> <span class="p">(</span><span class="n">convert</span> <span class="n">to</span> <span class="n">meters</span><span class="p">)</span> <span class="n">X</span> <span class="mi">1000</span> <span class="n">watts</span> <span class="n">X</span> <span class="mi">36000</span> <span class="p">(</span><span class="n">sec</span><span class="o">.</span> <span class="n">per</span> <span class="n">hour</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>So, the energy needed to get Joey to 1000’ is <code class="docutils literal notranslate"><span class="pre">136*9.81*1000/(3.28</span> <span class="pre">*</span> <span class="pre">3600000)</span> <span class="pre">=</span> <span class="pre">0.113</span> <span class="pre">kWh</span></code>.</p>
+</div>
+<div class="section" id="adjust-for-inefficiency">
+<h4>Adjust for inefficiency<a class="headerlink" href="#adjust-for-inefficiency" title="Permalink to this headline">¶</a></h4>
+<p>While .113 kwh is the theoretical energy, we have to adjusting for reality since no part of the system is 100% efficient. Some reasonable guesstimates:</p>
 <ul class="simple">
-<li><p>.241 kwh/ 6 minutes of flight time/60 minutes in an hour. = 2.4 kw</p></li>
-<li><p>.241 kwh/ 10 minutes of flight time/60 minutes in an hour. = 1.5 kw</p></li>
+<li><p>Glide ratio (L/D): 12</p></li>
+<li><p>Prop efficiency: 70%</p></li>
+<li><p>Motor efficiency: 90%</p></li>
+<li><p>Battery efficiency: 95%</p></li>
+<li><p>Everything else: 95%</p></li>
 </ul>
-<p><strong>notes</strong></p>
-<p>E =f*d</p>
-<p>electrical : P*T</p>
-<p>kwh: energy</p>
-<p>power = watts/ energy rate</p>
-<p>Power is F*v, so while the force is m*g/(L/D), the drag losses are m*g/(L/D) * v. The v term is going to always be around 25m/s, almost independent of the glider.</p>
-</div>
-<div class="section" id="determine-required-thrust">
-<h3>Determine required thrust<a class="headerlink" href="#determine-required-thrust" title="Permalink to this headline">¶</a></h3>
+<p>So multiply the efficiency of all components to get the correction factor: <code class="docutils literal notranslate"><span class="pre">((1-1/12)*.7*.9*.9*.95*.95)</span> <span class="pre">=</span> <span class="pre">.469</span></code></p>
+<p>Then divide your theoretical Kwh by that number: <code class="docutils literal notranslate"><span class="pre">0.113/.469</span> <span class="pre">=</span> <span class="pre">.241</span> <span class="pre">kwh</span></code></p>
 </div>
 </div>
-<div class="section" id="required-power-method-2">
-<h2>Required power: Method 2<a class="headerlink" href="#required-power-method-2" title="Permalink to this headline">¶</a></h2>
-<p>TBD</p>
+<div class="section" id="method-2">
+<h3>Method 2<a class="headerlink" href="#method-2" title="Permalink to this headline">¶</a></h3>
 </div>
-<div class="section" id="system-design-copy-others">
-<h2>System design: Copy others<a class="headerlink" href="#system-design-copy-others" title="Permalink to this headline">¶</a></h2>
-<p>TBD</p>
-</div>
-<div class="section" id="system-design-diy">
-<h2>System design: DIY<a class="headerlink" href="#system-design-diy" title="Permalink to this headline">¶</a></h2>
-<p>TBD</p>
 </div>
 <div class="section" id="notes-todo-not-reviewed">
 <h2>Notes, todo, not reviewed<a class="headerlink" href="#notes-todo-not-reviewed" title="Permalink to this headline">¶</a></h2>
@@ -484,12 +486,13 @@ Mad30: 14s 75% throttle 123 amps for 30kg thrust w/ 40x13 80kv 3440
 <p><a class="reference external" href="https://www.mad-motor.com/products/mad-components-m40c30-pro-ipe.html">https://www.mad-motor.com/products/mad-components-m40c30-pro-ipe.html</a>
 Mad40  24s 60% throttle 50.4 amps for 30kg thrust w/ 47x13 43kv RPM 2455
 4 22.2v 12AH batteries=1kw 1040.00 12.8 lbs and last 14 minutes</p>
-<iframe src="https://docs.google.com/spreadsheets/d/1SGGLd6JsmiGmKMnI21ic4D_j7ZkVzq27hZ3CX9GggdU/edit?usp=sharing;headers=false"
-height=1100
-width=1000></iframe>
-
-
-https://blog.crunchprank.net/google-sheets-to-html-table/</div>
+<p>Formulas</p>
+<p>E =f*d
+electrical : P*T
+kwh: energy
+power = watts/ energy rate
+Power is F*v, so while the force is m*g/(L/D), the drag losses are m*g/(L/D) * v. The v term is going to always be around 25m/s, almost independent of the glider.</p>
+</div>
 </div>
 
 

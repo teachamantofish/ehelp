@@ -23,15 +23,23 @@ This content is an attempt to provide a quick start manual to the DIY community.
 
 .. note:: Send me any info, link, or informational tidbit. I'll incorporate what makes sense.
 
-Danger Will Robinson
-===========================
+Goals
+-----------------------
 
-.. caution:: You assume responsibility for anything you do and should make your own educated decisions based on multiple sources. There is no advice here. The information here derives from 3rd parties and may be erroneous.
+* **Support DIY development**: Concise details on existing projects should engage the community, increase participation, speed new approaches, and improve safety. There's no need to reinvent the wheel, but there is a need to improve the wheel and invent some wheel alternatives.
+* **Advance the technology**: Easily accessible information should speed and foster the development and use of functional designs.
+* **Encourage growth in the sport of hang gliding**: The decline of hang gliding is well-known. Perhaps the ability to flatland launch with a simple DIY system will invigorate the sport. 
+
+
+Danger Will Robinson
+---------------------------
+
+.. caution:: You assume responsibility for any action you take based on this content. All pilots must educated decisions based on multiple sources. There is no advice here. This information derives from 3rd parties and may be erroneous.
 
 If you see your photo/text
-=================================
+------------------------------------
 
-If you see something here that originated with you and want it removed, just ask. I can add credits and links back to your FB or home page if you prefer. 
+If you see text or images here that originated with you and want it removed, just ask. I can add credits and links back to your FB or home page if you prefer. 
 
 Resources
 ==================
@@ -56,12 +64,6 @@ Forums:
 
    * TBD
 
-Goals
-==========================
-
-* **Support DIY development**: Concise details on existing projects should engage the community, increase participation, speed new approaches, and improve safety. There's no need to reinvent the wheel, but there is a need to improve the wheel and invent some wheel alternatives.
-* **Advance the technology**: Easily accessible information should speed and foster the development and use of functional designs.
-* **Encourage growth in the sport of hang gliding**: The decline of hang gliding is well-known. Perhaps the ability to flatland launch with a simple DIY system will invigorate the sport. 
 
 
 
