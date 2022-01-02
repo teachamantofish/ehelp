@@ -22,27 +22,20 @@ You'll often hear that system design starts with the prop. However, it's certain
 
 * *Batteries*: How much weight you're willing to have on board determines your available power. Do you want to stay under 60 volts due to a wider array of available products or for safety reasons? Or are you interested in a 24S (88-100V) system so you push less amps and produce less heat for the same amount of torque?
 * *Motors*: Motors must be rated for the voltage you choose. They'll need to be able to drive your propeller at enough thrust while handling the continuous amperage during climb without overheating. 
-* *Propeller*: The prop 
-
+* *Propeller*: The prop pushes you into the sky with thrust. Larger diameters and slower speeds are more efficient, but the motor must be capable of turning the prop at the required speed and torque. Ground, feet, and keel limit prop size, and even within the standard 36-44 inch range there are hundreds of choices (diameter, pitch, blade number, and material).
 
 TBD: insert diagram
 
-A good first step is figure out how what it will take to get your butt into the sky. . . 
+Before buying anything, however, a logical first step is figuring out how what it will take to get your butt into the sky. . . 
 
 How much energy?: Method 1
 ============================================
 
-**Theoretical power x efficiency**: This approach tries to 
-
-
-
-Example: HG + Joey Pilot and gear = 300lbs (136Kg). How many kilowatts will it take to climb at 200fpm to 1000'?
-
+**Theoretical power x efficiency**: This approach calculates the theoretical energy it would take to transport yourself to an altitude within a given timeframe, and then adjusts for power train efficiency. For example: If Joey Pilot, wing, and gear weigh 300lbs, how many kilowatt hours will it take to climb at 200fpm to 1000'?
 
 .. raw:: html
 
    <iframe src="https://docs.google.com/spreadsheets/d/1QOWFBWTjYjzgTAwhfQpxgTqjzGBhD4zJOt-nyNrNo94/edit?usp=sharing?widget=true&amp;headers=false;rm=minimal&amp;"" width="650px" height="510px" scrolling="no"></iframe>
-
 
 How much energy?: Method 2
 ===================================
