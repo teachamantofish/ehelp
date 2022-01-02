@@ -13,24 +13,35 @@ Navigating to final choices and a working system is difficult and time consuming
 
 Until then, moving forward is a bit of work. 
 
+Margins are thin with electric powered aircraft primarily due to the low battery energy density. While HG trike and paramotor systems can carry several KWH of batteries, HG harness systems are usually limited to 1 or 2 KWHs. Powered flight time is measured in minutes--often 10 to 20. Couple these limitations with a wide range of wing specs and pilot weights, and it becomes apparent that optimizing the power train requires some minimal number crunching. At a 200 fpm climb, there's a big altitude difference between 5 minutes and 10 minutes.
+
 Decision path
 =====================
 
-TBD
+You'll often hear that system design starts with the prop. However, it's certainly true that the performance of system components is so intimately intertwined that the specification of any piece has ramifications for all the others. We're talking about the electronic speed controller, batteries, motors, and the prop here. It's reasonable to start with any of the latter three as long as the entire system produces the desired result. For example: 
+
+* *Batteries*: How much weight you're willing to have on board determines your available power. Do you want to stay under 60 volts due to a wider array of available products or for safety reasons? Or are you interested in a 24S (88-100V) system so you push less amps and produce less heat for the same amount of torque?
+* *Motors*: Motors must be rated for the voltage you choose. They'll need to be able to drive your propeller at enough thrust while handling the continuous amperage during climb without overheating. 
+* *Propeller*: The prop 
+
+
+TBD: insert diagram
+
+A good first step is figure out how what it will take to get your butt into the sky. . . 
 
 How much energy?: Method 1
 ============================================
 
-**Theoretical power x efficiency** 
+**Theoretical power x efficiency**: This approach tries to 
 
-Margins are thin with electric powered aircraft primarily due to the low battery energy density. Powered flight time is measured in minutes, with 10 or 20 available for many systems. Couple that with a wide range of wing specs and pilot weights, and it should be obvious that some minimal number crunching is required. At a 200 fpm climb, there's a big difference between 5 minutes and 10 minutes.
+
 
 Example: HG + Joey Pilot and gear = 300lbs (136Kg). How many kilowatts will it take to climb at 200fpm to 1000'?
 
 
 .. raw:: html
 
-   <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR3XVDXnPPd4hG5fBTuZgjbLWB6_UMxNMa1zaAgqc4O4Fmy9Dq738SaKtTNLP4r2jhsB8mk5tc3AAA1/pubhtml?widget=true&amp;headers=false"" width="650px" height="510px" scrolling="no"></iframe>
+   <iframe src="https://docs.google.com/spreadsheets/d/1QOWFBWTjYjzgTAwhfQpxgTqjzGBhD4zJOt-nyNrNo94/edit?usp=sharing?widget=true&amp;headers=false;rm=minimal&amp;"" width="650px" height="510px" scrolling="no"></iframe>
 
 
 How much energy?: Method 2
