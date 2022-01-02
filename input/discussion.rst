@@ -60,9 +60,14 @@ torque is about 60% thrust? : Q4  Ive never looked it that way but you are close
 
 xxx
 
-table from web appa; https://www.bpwebs.com/pull-data-from-google-sheets-to-html-table/
+Google sheets 
 
-table: https://dev.crunchprank.net/google-sheets-to-html/
+GS to tables: 
+
+* table from web app; https://www.bpwebs.com/pull-data-from-google-sheets-to-html-table
+* https://dev.crunchprank.net/google-sheets-to-html/
+
+Embed GS and keep it editable: https://www.localwebstrategies.com/post/how-to-embed-editable-google-sheets-in-website
 
 
 xxxx
@@ -75,4 +80,12 @@ Web app
 URL
 https://script.google.com/macros/s/AKfycbwjabcCJo5ydSz2YDSQCbU1Ef3RL9fIUfQ1eyEa4-iRxbh51UgvUycVHeOoSHs7GB5Y/exec
 
+
+xxx
+
+3d printing 
+
+xxx
+
+cf compression molding
 

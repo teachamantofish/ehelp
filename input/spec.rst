@@ -30,10 +30,7 @@ Example: HG + Joey Pilot and gear = 300lbs (136Kg). How many kilowatts will it t
 
 .. raw:: html
 
-   <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR3XVDXnPPd4hG5fBTuZgjbLWB6_UMxNMa1zaAgqc4O4Fmy9Dq738SaKtTNLP4r2jhsB8mk5tc3AAA1/pubhtml?widget=true&amp;headers=false" width="500px" height="400px"></iframe>
-
-
-
+   <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR3XVDXnPPd4hG5fBTuZgjbLWB6_UMxNMa1zaAgqc4O4Fmy9Dq738SaKtTNLP4r2jhsB8mk5tc3AAA1/pubhtml?widget=true&amp;headers=false"" width="650px" height="510px" scrolling="no"></iframe>
 
 
 How much energy?: Method 2
