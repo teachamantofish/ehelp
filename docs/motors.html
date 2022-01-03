@@ -133,20 +133,22 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="spec.html">Specing out a System (Sizing)</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="spec.html#decision-path">Decision path</a></li>
-<li class="toctree-l2"><a class="reference internal" href="spec.html#how-much-energy-method-1">How much energy?: Method 1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="spec.html#how-much-energy-method-2">How much energy?: Method 2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="spec.html#method-1-how-much-energy">Method 1: How much energy?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spec.html#method-2-how-much-thrust">Method 2: How much Thrust?:</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="spec.html#determine-required-thrust">Determine required thrust</a></li>
 <li class="toctree-l3"><a class="reference internal" href="spec.html#tbd">TBD</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="spec.html#method-comparison">Method comparison</a></li>
-<li class="toctree-l2"><a class="reference internal" href="spec.html#what-other-pilots-choose">What other pilots choose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spec.html#method-3-copycat">Method 3: Copycat</a></li>
 <li class="toctree-l2"><a class="reference internal" href="spec.html#calculation-walk-through">Calculation walk-through</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="spec.html#method-1">Method 1</a></li>
-<li class="toctree-l3"><a class="reference internal" href="spec.html#method-2">Method 2</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="spec.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spec.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="spec.html#id1">TBD</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -161,14 +163,11 @@
 <li class="toctree-l2"><a class="reference internal" href="#sensored-versus-sensorless">Sensored versus sensorless</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#mating-with-a-prop">Mating with a prop</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#custom-motors">Custom motors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#motor-list">Motor list</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#worthwhile-reading">Worthwhile reading</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#basics">Basics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#advanced-topics">Advanced topics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#vendor-specific">Vendor specific</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#notes-todo-not-reviewed">Notes, todo, not reviewed</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#paul-martin">Paul Martin:</a></li>
 </ul>
 </li>
 </ul>
@@ -425,7 +424,7 @@
 <li><p>Max RPM is a no load number. RPM in data tables reflect a value for the specific test propeller.</p></li>
 <li><p>The table below is a startiong point only. Begin there, but don’t end there.</p></li>
 </ul>
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTZ5drQYvvp4srNMViieF0J0stG8gvPEdH_B7djQA4lOQ53DEMxsOmvscQ4TEEQP2fW-wIQpMl-eO5L/pubhtml?widget=true&amp;headers=false" width="100%" height="850px"></iframe></div>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTZ5drQYvvp4srNMViieF0J0stG8gvPEdH_B7djQA4lOQ53DEMxsOmvscQ4TEEQP2fW-wIQpMl-eO5L/pubhtml?widget=true&amp;headers=false" width="100%" height="870px"></iframe></div>
 <div class="section" id="sensored-versus-sensorless">
 <h2>Sensored versus sensorless<a class="headerlink" href="#sensored-versus-sensorless" title="Permalink to this headline">¶</a></h2>
 <p>You don’t need a sensored motor. While sensorless brushless motors perform poorly at low speed, their performance at flying speeds is excellent. ESC manufactures improve efficiency and performance by using sensorless synchronization at high speed to alter the timing for the sequence of power pulses sent to the motors windings. Sensorless motors are lighter, less complicated, and less prone to failure.</p>
@@ -445,9 +444,13 @@
 <p>Custom rewinds change the KV rating and RPM.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.youtube.com/watch?v=-sIVpOLYoqg&amp;t=144sA">Rewind your own motor</a></p></li>
-<li><p>MAD motor and Alien Power Systems will motors rewind for low cost; T-Motor for zero cost.</p></li>
+<li><p>Low cost custom KV: MAD motor, Alien Power Systems</p></li>
+<li><p>Zero cost custom KV: T-motor, Herlia</p></li>
 <li><p>Charles Allen reports that APS provided a custom motor with a hollow shaft for ~$25 extra so he could use a rod  to articulate a variable pitch prop.</p></li>
 </ul>
+</div>
+<div class="section" id="motor-list">
+<h2>Motor list<a class="headerlink" href="#motor-list" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="worthwhile-reading">
 <h2>Worthwhile reading<a class="headerlink" href="#worthwhile-reading" title="Permalink to this headline">¶</a></h2>
@@ -490,18 +493,6 @@
 </ul>
 </div>
 </div>
-<div class="section" id="notes-todo-not-reviewed">
-<h2>Notes, todo, not reviewed<a class="headerlink" href="#notes-todo-not-reviewed" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="paul-martin">
-<h3>Paul Martin:<a class="headerlink" href="#paul-martin" title="Permalink to this headline">¶</a></h3>
-<p>If you want a quick sizing guide.</p>
-<p>14s set up coupled to a 75/300A controller coupled to</p>
-<ul class="simple">
-<li><p>a 120100 80 to 85kv and a 40D18P propeller will get you between 200 and 250 fpm climb.</p></li>
-<li><p>15470 even with it limited to 55kv ( though I reckon you could get it rewound) of 16s li-Po you’d have more torque and still have 3700 rpm. A bigger prop would be handy but it might be custom even so with the 40D20P you would be around 48kgf thrust on 250A draw which equates to about 38kgf at 12m/s which gives you over 400 fpm climb rate. Hope that helps</p></li>
-</ul>
-</div>
-</div>
 </div>
 
 
@@ -519,7 +510,7 @@
     <p>
     <img src="_images/dq1.jpg"  class="endimage"/>
       <span class="lastupdated">&nbsp;&nbsp;&nbsp;
-        Last updated on Jan 02, 2022.
+        Last updated on Jan 03, 2022.
         
       </span>
     </p>

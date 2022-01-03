@@ -69,6 +69,7 @@ GS to tables:
 
 Embed GS and keep it editable: https://www.localwebstrategies.com/post/how-to-embed-editable-google-sheets-in-website
 
+https://tableizer.journalistopia.com/tableizer.php
 
 xxxx
 

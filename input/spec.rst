@@ -28,19 +28,24 @@ TBD: insert diagram
 
 Before buying anything, however, a logical first step is figuring out how what it will take to get your butt into the sky. . . 
 
-How much energy?: Method 1
+Method 1: How much energy?
 ============================================
 
-**Theoretical power x efficiency**: This approach calculates the theoretical energy it would take to transport yourself to an altitude within a given timeframe, and then adjusts for power train efficiency. For example: If Joey Pilot, wing, and gear weigh 300lbs, how many kilowatt hours will it take to climb at 200fpm to 1000'?
+**Theoretical power x efficiency**: This approach calculates the theoretical energy  to transport you to an altitude within a given timeframe and then adjusts for power train efficiency. For example: If Joey Pilot, wing, and gear weigh 300lbs, how many kilowatt hours will it take to climb at 200 fpm to 1000'?
+
+`Copy this calculator <https://docs.google.com/spreadsheets/d/1QOWFBWTjYjzgTAwhfQpxgTqjzGBhD4zJOt-nyNrNo94/edit?usp=sharing?widget=true&amp;headers=false;rm=minimal&amp;>`_
 
 .. raw:: html
 
-   <iframe src="https://docs.google.com/spreadsheets/d/1QOWFBWTjYjzgTAwhfQpxgTqjzGBhD4zJOt-nyNrNo94/edit?usp=sharing?widget=true&amp;headers=false;rm=minimal&amp;"" width="650px" height="510px" scrolling="no"></iframe>
+   <iframe src="https://docs.google.com/spreadsheets/d/1QOWFBWTjYjzgTAwhfQpxgTqjzGBhD4zJOt-nyNrNo94/edit?usp=sharing?widget=true&amp;headers=false;rm=minimal&amp;" width="650px" height="510px" scrolling="no"></iframe>
 
-How much energy?: Method 2
+Method 2: How much Thrust?:
 ===================================
 
-**Prop and thrust**
+**Prop and thrust**: This approach calculates
+
+.. note:: Calculations courtesy of Paul Martin. For a more detailed document, see `TBD his document <www.google.com>`_.
+
 
 Determine required thrust
 ---------------------------------
@@ -72,11 +77,15 @@ Calculate the rate of energy usage. The formula is XXXXX. For the example above,
 
 
 
-
-What other pilots choose
+Method 3: Copycat
 ==========================
 
-TBD: List power trains in use.
+TBD: List power trains in use. Create sortable table based on community input 
+
+TBD: 
+
+* 14s set up coupled to a 75/300A controller coupled to a 120100 80 to 85kv and a 40D18P propeller will get you between 200 and 250 fpm climb (Paul Martin).
+* 15470 even with it limited to 55kv ( though I reckon you could get it rewound) of 16s li-Po you'd have more torque and still have 3700 rpm. A bigger prop would be handy but it might be custom even so with the 40D20P you would be around 48kgf thrust on 250A draw which equates to about 38kgf at 12m/s which gives you over 400 fpm climb rate (Paul Martin).
 
 
 Calculation walk-through
@@ -117,9 +126,6 @@ So multiply the efficiency of all components to get the correction factor: ``((1
 Then divide your theoretical Kwh by that number: ``0.113/.469 = .241 kwh``
 
 
-Method 2
-------------------
-
 
 Notes, todo, not reviewed
 =================================
@@ -130,6 +136,7 @@ As a rough guideline look for a motor/battery configuration that has a no-load R
 
 what percent of continuous power to use for a 5 minute climb?
 
+TBD
 ------------------
 
  higher V means less amps for the same power, I wanted to look at two motors that can handle diff V's and compare.

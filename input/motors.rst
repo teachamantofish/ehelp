@@ -57,7 +57,7 @@ Unfortunately, comparing motors based on published specs is like comparing apple
 
 .. raw:: html
 
-    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTZ5drQYvvp4srNMViieF0J0stG8gvPEdH_B7djQA4lOQ53DEMxsOmvscQ4TEEQP2fW-wIQpMl-eO5L/pubhtml?widget=true&amp;headers=false" width="100%" height="850px"></iframe>
+    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTZ5drQYvvp4srNMViieF0J0stG8gvPEdH_B7djQA4lOQ53DEMxsOmvscQ4TEEQP2fW-wIQpMl-eO5L/pubhtml?widget=true&amp;headers=false" width="100%" height="870px"></iframe>
 
 Sensored versus sensorless
 =============================
@@ -83,8 +83,14 @@ Custom motors
 Custom rewinds change the KV rating and RPM.
 
 * `Rewind your own motor <https://www.youtube.com/watch?v=-sIVpOLYoqg&t=144sA>`_
-* MAD motor and Alien Power Systems will motors rewind for low cost; T-Motor for zero cost.
+* Low cost custom KV: MAD motor, Alien Power Systems
+* Zero cost custom KV: T-motor, Herlia
 * Charles Allen reports that APS provided a custom motor with a hollow shaft for ~$25 extra so he could use a rod  to articulate a variable pitch prop. 
+
+Motor list
+=======================
+
+
 
 Worthwhile reading
 ========================
@@ -117,22 +123,5 @@ Vendor specific
   * https://community.openppg.com/uploads/short-url/z9MJbg8s0FVoaRLhLJGppvysBao.pdf
   * https://community.openppg.com/uploads/short-url/20r15azC5ZyuEw0qG1rehnrVrVY.pdf
   * https://community.openppg.com/uploads/short-url/AmbK6TvFtUvk00lRsNZhH0MNywT.pdf
-
-
-
-Notes, todo, not reviewed
-=================================
-
-
-Paul Martin: 
--------------
-
-If you want a quick sizing guide. 
-
-14s set up coupled to a 75/300A controller coupled to 
-
-* a 120100 80 to 85kv and a 40D18P propeller will get you between 200 and 250 fpm climb. 
-* 15470 even with it limited to 55kv ( though I reckon you could get it rewound) of 16s li-Po you'd have more torque and still have 3700 rpm. A bigger prop would be handy but it might be custom even so with the 40D20P you would be around 48kgf thrust on 250A draw which equates to about 38kgf at 12m/s which gives you over 400 fpm climb rate. Hope that helps
-
 
 
