@@ -130,8 +130,11 @@
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Specing out a System (Sizing)</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#decision-path">Decision path</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#method-1-how-much-energy">Method 1: How much energy?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#method-2-how-much-thrust">Method 2: How much thrust?:</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#method-1-how-much-energy">Method 1: How much energy?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#calculator-beta">Calculator: Beta</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#method-2-how-much-thrust">Method 2: How much thrust?</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#determine-required-thrust">Determine required thrust</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#tbd">TBD</a></li>
 </ul>
@@ -153,17 +156,16 @@
 <p class="caption"><span class="caption-text">Components</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="motors.html">Motors</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="motors.html#reading-motor-specs">Reading motor specs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motors.html#motor-specification-wrestling">Motor specification wrestling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#motor-spec-reality-check">Motor spec reality check</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="motors.html#duty-cycle-max-continuous-power">Duty cycle-max continuous power</a></li>
 <li class="toctree-l3"><a class="reference internal" href="motors.html#kv-reduction">KV reduction</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#example-motor-list">Example motor list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motors.html#custom-motors">Custom motors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#sensored-versus-sensorless">Sensored versus sensorless</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#mating-with-a-prop">Mating with a prop</a></li>
-<li class="toctree-l2"><a class="reference internal" href="motors.html#custom-motors">Custom motors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="motors.html#motor-list">Motor list</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#worthwhile-reading">Worthwhile reading</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="motors.html#basics">Basics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="motors.html#advanced-topics">Advanced topics</a></li>
@@ -424,10 +426,159 @@
 <h2>Method 1: How much energy?<a class="headerlink" href="#method-1-how-much-energy" title="Permalink to this headline">¶</a></h2>
 <p><strong>Theoretical power x efficiency</strong>: This approach calculates the theoretical energy  to transport you to an altitude within a given timeframe and then adjusts for power train efficiency. For example: If Joey Pilot, wing, and gear weigh 300lbs, how many kilowatt hours will it take to climb at 200 fpm to 1000’?</p>
 <p><a class="reference external" href="https://docs.google.com/spreadsheets/d/1QOWFBWTjYjzgTAwhfQpxgTqjzGBhD4zJOt-nyNrNo94/edit?usp=sharing?widget=true&amp;amp;headers=false;rm=minimal&amp;amp;">Copy this calculator</a></p>
-<iframe src="https://docs.google.com/spreadsheets/d/1QOWFBWTjYjzgTAwhfQpxgTqjzGBhD4zJOt-nyNrNo94/edit?usp=sharing?widget=true&amp;headers=false;rm=minimal&amp;" width="650px" height="510px" scrolling="no"></iframe></div>
+<iframe src="https://docs.google.com/spreadsheets/d/1QOWFBWTjYjzgTAwhfQpxgTqjzGBhD4zJOt-nyNrNo94/edit?usp=sharing?widget=true&amp;headers=false;rm=minimal&amp;" width="650px" height="510px" scrolling="no"></iframe><div class="section" id="calculator-beta">
+<h3>Calculator: Beta<a class="headerlink" href="#calculator-beta" title="Permalink to this headline">¶</a></h3>
+<!--These styles must only apply to content in 'main' -->
+<link rel="stylesheet" href="_static/calculator/mvp.css" />
+<link rel="stylesheet" href="_static/calculator/calculator.css" />
+<script defer type="text/javascript" src="_static/calculator/powercalc.js"/>
+
+ <main>
+    <section class="right">
+      <header>
+        <h2>Step 1</h2>
+        <p>Enter pilot data to determine theoretical energy to goal.</p>
+      </header>
+      <table class="input">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Weight (kg)</th>
+            <th>Glide ratio</th>
+            <th>Climb speed</th>
+            <th>Altitude goal (ft)</th>
+            <th>Time to goal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Pilot and wing data</th>
+            <td><input id="C3" placeholder="0" value="300" /></td>
+            <td><input id="D3" placeholder="0" value="12" /></td>
+            <td><input id="E3" placeholder="0" value="25" /></td>
+            <td><input id="F3" placeholder="0" value="1000" /></td>
+            <td><input id="G3" placeholder="0" value="5" /></td>
+          </tr>
+          <tr>
+            <th>Metric</th>
+            <td id="C4"></td>
+            <td id="D4"></td>
+            <td id="E4"></td>
+            <td id="F4"></td>
+            <td id="G4"></td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="results">
+        <tbody>
+          <tr>
+            <th rowspan="2">Theoretical energy</th>
+            <td id="F6"></td>
+            <td>kwh</td>
+          </tr>
+          <tr>
+            <td id="F7"></td>
+            <td>Newtons</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="right">
+      <header>
+        <h2>Step 2</h2>
+        <p>
+          Adjust required energy based on the efficiency of power train
+          components.
+        </p>
+      </header>
+      <table class="input">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Propeller</th>
+            <th>Motor</th>
+            <th>Batteries</th>
+            <th>All Else</th>
+            <th>1-(1/glide ratio)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Efficiency reduction (%)</th>
+            <td><input id="C11" placeholder="0" value="45" /></td>
+            <td><input id="D11" placeholder="0" value="90" /></td>
+            <td><input id="E11" placeholder="0" value="95" /></td>
+            <td><input id="F11" placeholder="0" value="95" /></td>
+            <td><input id="G11" placeholder="0" value="92" /></td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="results">
+        <tbody>
+          <tr>
+            <th>Efficiency</th>
+            <td id="F13"></td>
+            <td>%</td>
+          </tr>
+          <tr>
+            <th>Adjusted energy</th>
+            <td id="F14"></td>
+            <td>kwh</td>
+          </tr>
+          <tr>
+            <th>Power rate based on fpm climb</th>
+            <td id="F15"></td>
+            <td>kw battery draw</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="right">
+      <header>
+        <h2>Step 3</h2>
+        <p>
+          At the required power draw, determine flight time based on battery
+          choice.
+        </p>
+      </header>
+      <table class="input">
+        <thead>
+          <tr>
+            <th></th>
+            <th>S rating (volts)</th>
+            <th>Capacity (mAh)</th>
+            <th>Number</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Battery</th>
+            <td><input id="C19" placeholder="0" value="6" /></td>
+            <td><input id="D19" placeholder="0" value="22000" /></td>
+            <td><input id="E19" placeholder="0" value="2" /></td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="results">
+        <tbody>
+          <tr>
+            <th>Available watts</th>
+            <td id="F19"></td>
+            <td>W</td>
+          </tr>
+          <tr>
+            <th>Projected flight time</th>
+            <td id="F21"></td>
+            <td>minutes</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main></div>
+</div>
 <div class="section" id="method-2-how-much-thrust">
-<h2>Method 2: How much thrust?:<a class="headerlink" href="#method-2-how-much-thrust" title="Permalink to this headline">¶</a></h2>
-<p><strong>Prop and thrust</strong>: This approach calculates</p>
+<h2>Method 2: How much thrust?<a class="headerlink" href="#method-2-how-much-thrust" title="Permalink to this headline">¶</a></h2>
+<p><strong>Prop and thrust</strong>: This approach calculates TBD</p>
 <p>tbd: Is this correct?: find the prop/RPM combination that will give you both the thrust and efficiency you want, then work backwards from there to determine how much motor power is required and what motor KV/battery voltage you want to use. Then source the motor and controller.</p>
 <p>As a rough guideline look for a motor/battery configuration that has a no-load RPM that is 125% of your target full-throttle RPM.</p>
 <p>what percent of continuous power to use for a 5 minute climb?</p>
@@ -567,7 +718,7 @@ Power is F*v, so while the force is m*g/(L/D), the drag losses are m*g/(L/D) * v
     <p>
     <img src="_images/dq1.jpg"  class="endimage"/>
       <span class="lastupdated">&nbsp;&nbsp;&nbsp;
-        Last updated on Jan 03, 2022.
+        Last updated on Jan 04, 2022.
         
       </span>
     </p>

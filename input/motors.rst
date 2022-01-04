@@ -9,19 +9,65 @@ Motors
 
 TBD: Intro
 
-Reading motor specs
-============================
+Motor specification wrestling 
+===============================
+
+You don't have to do it naked, but you do have to do it. Data sources are sketchy,
 
 
+* Continuous current: How many amps the motor can handle for the number of minutes specified by the manufacturer until it overheats. Varies widely. You may need "continuous" for your climb duration. It's a good idea to design a system that's operates around 50-70% of max current during climb to reduce heat and allow for power headroom. 
+* Max current: How many burst amps you can draw at full throttle. Design  a system that does not exceed the max current for the short time specified by the manufacturer (often 60 seconds).
 * N and P numbers: something like “36N30P”. The number before the letter N is the quantity of electromagnets in the stator, and the number before P is the quantity of permanent magnets in the motor.  Lower KV motors have more permanent magnets to increase torque.
-* Dimensions: 
-* Rated voltage: Provided in either volts or an S rating. (``S rating = number*3.7volts``)
-* KV: Number of revolutions per volt. You'll likely be between 50-150. 
-* Continuous current: How many amps the motor can handle for the number of minutes specified by the manufacturer until it overheats. Varies widely. You may need "continuous" for your climb duration. 
-* Max (burst) current: How many amps you can draw 
+* Dimensions: TBD
 * Internal resistance: Lower is better since resistance = heat. 
-* Max current: You need to spec a system that does not exceed the max current. Moreover, max current is limited to a short period of time (usually minutes). It's a good idea to design a system that's operates around 50-70% of max current most of the time. 
+* Max torque: TBD
+* No load current: TBD
+* Max power: TBD
 
+Other items you might care about are beyond the scope of this document, including thickness of the magnet laminations, magnet type, number of poles, wire pressure test, max temps for wire and magnets, etc. 
+
+
+.. list-table:: 
+   :widths: 10 10 30 50 
+   :header-rows: 1
+
+   * - Parameter
+     - Typical range
+     - Definition
+     - Design considerations
+   * - Price
+     - 400-2000
+     - Personal choice. 
+     - Could be worth starting out with a cheaper motor and working up. 
+   * - Weight
+     - 3.1-12 lbs
+     - Personal choice. 
+     - Weight doesn't impact performance much, but the mass is hanging off the end of your harness (with a support strap).
+   * - Rated voltage
+     - 44-100V
+     - Maximum either as volts or S rating. (``S number x 3.7volts``)
+     - Higher voltages result in lower current and less heat and spin the prop faster (``Kv x volts = RPM``).
+   * - Kv
+     - 50-150
+     - Number of revolutions per volt Kv stands the *constant velocity*.
+     - o
+   * - l
+     - d
+     - j
+     - o
+   * - l
+     - d
+     - j
+     - o
+   * - l
+     - d
+     - j
+     - o
+   * - l
+     - d
+     - j
+     - o
+  
 Motor spec reality check
 ===================================
 
@@ -55,24 +101,6 @@ Unfortunately, comparing motors based on published specs is like comparing apple
 
     <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTZ5drQYvvp4srNMViieF0J0stG8gvPEdH_B7djQA4lOQ53DEMxsOmvscQ4TEEQP2fW-wIQpMl-eO5L/pubhtml?widget=true&amp;headers=false" width="100%" height="870px"></iframe>
 
-Sensored versus sensorless
-=============================
-
-You don't need a sensored motor. While sensorless brushless motors perform poorly at low speed, their performance at flying speeds is excellent. ESC manufactures improve efficiency and performance by using sensorless synchronization at high speed to alter the timing for the sequence of power pulses sent to the motors windings. Sensorless motors are lighter, less complicated, and less prone to failure.
-
-Mating with a prop
-============================
-
-Criteria: 
-
-#. one
-#. two
-#. three
-
-
-The `e-props folks <https://ppg.e-props.fr/index.php?cPath=1>`_ match multiple props to each specific motor. It's worth checking out to get an idea of acceptable combinations.
-
-
 Custom motors
 ======================
 
@@ -83,10 +111,17 @@ Custom rewinds change the KV rating and RPM.
 * Zero cost custom KV: T-motor, Herlia
 * Charles Allen reports that APS provided a custom motor with a hollow shaft for ~$25 extra so he could use a rod  to articulate a variable pitch prop. 
 
-Motor list
-=======================
+Sensored versus sensorless
+=============================
 
+You don't need a sensored motor. While sensorless brushless motors perform poorly at low speed, their performance at flying speeds is excellent. ESC manufactures improve efficiency and performance by using sensorless synchronization at high speed to alter the timing for the sequence of power pulses sent to the motors windings. Sensorless motors are lighter, less complicated, and less prone to failure.
 
+Mating with a prop
+============================
+
+See :ref:`prop`. 
+
+Unfortunately, the the 36"-44" range of HG eHelp props are 10-20% smaller than powered paramotor props--meaning we can't leverage PPG  forums and vendor data as information sources. Still, the `e-props folks <https://ppg.e-props.fr/index.php?cPath=1>`_ match multiple props to each specific IC and electric motor. It's worth checking out to get an idea of acceptable combinations.
 
 Worthwhile reading
 ========================
@@ -107,7 +142,7 @@ Advanced topics
 -----------------------
 
 * `Motor mass, size, and waste heat <https://community.openppg.com/t/paraglider-self-launching-system/2186/41>`_
-* `Stator laminations <https://forum.hanggliding.org/viewtopic.php?t=35303>`_: Without super thin stator lams, efficiency suffers at high rpms. But cheaper motors like APS/Freerchobby motors use 0.35mm lams because thin stator lams are very expensive (with the exception of Rotomax 150 at 0.2mm lams). Eddy losses in the iron stator core induced by the magnetic field switching as the rotor magnets fly past are proportional to the square of the lamination thickness x the square of the rpm. This why motors with thick lams can suddenly slam into an RPM wall and just turn into heaters and not go any faster.
+* `Stator laminations <https://forum.hanggliding.org/viewtopic.php?t=35303>`_: Without super thin stator lams, efficiency suffers at high rpms. But cheaper motors such as Freerchobby motors use 0.35mm lams because thin stator lams are very expensive (with the exception of Rotomax 150 at 0.2mm lams). Eddy losses in the iron stator core induced by the magnetic field switching as the rotor magnets fly past are proportional to the square of the lamination thickness x the square of the rpm. This why motors with thick lams can suddenly slam into an RPM wall and just turn into heaters without going any faster.
 
 Vendor specific
 ----------------------

@@ -130,8 +130,11 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="spec.html">Specing out a System (Sizing)</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="spec.html#decision-path">Decision path</a></li>
-<li class="toctree-l2"><a class="reference internal" href="spec.html#method-1-how-much-energy">Method 1: How much energy?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="spec.html#method-2-how-much-thrust">Method 2: How much thrust?:</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="spec.html#method-1-how-much-energy">Method 1: How much energy?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="spec.html#calculator-beta">Calculator: Beta</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="spec.html#method-2-how-much-thrust">Method 2: How much thrust?</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="spec.html#determine-required-thrust">Determine required thrust</a></li>
 <li class="toctree-l3"><a class="reference internal" href="spec.html#tbd">TBD</a></li>
 </ul>
@@ -153,17 +156,16 @@
 <p class="caption"><span class="caption-text">Components</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Motors</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#reading-motor-specs">Reading motor specs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#motor-specification-wrestling">Motor specification wrestling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#motor-spec-reality-check">Motor spec reality check</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#duty-cycle-max-continuous-power">Duty cycle-max continuous power</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#kv-reduction">KV reduction</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#example-motor-list">Example motor list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#custom-motors">Custom motors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#sensored-versus-sensorless">Sensored versus sensorless</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#mating-with-a-prop">Mating with a prop</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#custom-motors">Custom motors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#motor-list">Motor list</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#worthwhile-reading">Worthwhile reading</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#basics">Basics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#advanced-topics">Advanced topics</a></li>
@@ -381,18 +383,77 @@
 <p class="caption"><span class="caption-text">Under construction</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <p>TBD: Intro</p>
-<div class="section" id="reading-motor-specs">
-<h2>Reading motor specs<a class="headerlink" href="#reading-motor-specs" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="motor-specification-wrestling">
+<h2>Motor specification wrestling<a class="headerlink" href="#motor-specification-wrestling" title="Permalink to this headline">¶</a></h2>
+<p>You don’t have to do it naked, but you do have to do it. Data sources are sketchy,</p>
 <ul class="simple">
+<li><p>Continuous current: How many amps the motor can handle for the number of minutes specified by the manufacturer until it overheats. Varies widely. You may need “continuous” for your climb duration. It’s a good idea to design a system that’s operates around 50-70% of max current during climb to reduce heat and allow for power headroom.</p></li>
+<li><p>Max current: How many burst amps you can draw at full throttle. Design  a system that does not exceed the max current for the short time specified by the manufacturer (often 60 seconds).</p></li>
 <li><p>N and P numbers: something like “36N30P”. The number before the letter N is the quantity of electromagnets in the stator, and the number before P is the quantity of permanent magnets in the motor.  Lower KV motors have more permanent magnets to increase torque.</p></li>
-<li><p>Dimensions:</p></li>
-<li><p>Rated voltage: Provided in either volts or an S rating. (<code class="docutils literal notranslate"><span class="pre">S</span> <span class="pre">rating</span> <span class="pre">=</span> <span class="pre">number*3.7volts</span></code>)</p></li>
-<li><p>KV: Number of revolutions per volt. You’ll likely be between 50-150.</p></li>
-<li><p>Continuous current: How many amps the motor can handle for the number of minutes specified by the manufacturer until it overheats. Varies widely. You may need “continuous” for your climb duration.</p></li>
-<li><p>Max (burst) current: How many amps you can draw</p></li>
+<li><p>Dimensions: TBD</p></li>
 <li><p>Internal resistance: Lower is better since resistance = heat.</p></li>
-<li><p>Max current: You need to spec a system that does not exceed the max current. Moreover, max current is limited to a short period of time (usually minutes). It’s a good idea to design a system that’s operates around 50-70% of max current most of the time.</p></li>
+<li><p>Max torque: TBD</p></li>
+<li><p>No load current: TBD</p></li>
+<li><p>Max power: TBD</p></li>
 </ul>
+<p>Other items you might care about are beyond the scope of this document, including thickness of the magnet laminations, magnet type, number of poles, wire pressure test, max temps for wire and magnets, etc.</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 30%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter</p></th>
+<th class="head"><p>Typical range</p></th>
+<th class="head"><p>Definition</p></th>
+<th class="head"><p>Design considerations</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Price</p></td>
+<td><p>400-2000</p></td>
+<td><p>Personal choice.</p></td>
+<td><p>Could be worth starting out with a cheaper motor and working up.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Weight</p></td>
+<td><p>3.1-12 lbs</p></td>
+<td><p>Personal choice.</p></td>
+<td><p>Weight doesn’t impact performance much, but the mass is hanging off the end of your harness (with a support strap).</p></td>
+</tr>
+<tr class="row-even"><td><p>Rated voltage</p></td>
+<td><p>44-100V</p></td>
+<td><p>Maximum either as volts or S rating. (<code class="docutils literal notranslate"><span class="pre">S</span> <span class="pre">number</span> <span class="pre">x</span> <span class="pre">3.7volts</span></code>)</p></td>
+<td><p>Higher voltages result in lower current and less heat and spin the prop faster (<code class="docutils literal notranslate"><span class="pre">Kv</span> <span class="pre">x</span> <span class="pre">volts</span> <span class="pre">=</span> <span class="pre">RPM</span></code>).</p></td>
+</tr>
+<tr class="row-odd"><td><p>Kv</p></td>
+<td><p>50-150</p></td>
+<td><p>Number of revolutions per volt Kv stands the <em>constant velocity</em>.</p></td>
+<td><p>o</p></td>
+</tr>
+<tr class="row-even"><td><p>l</p></td>
+<td><p>d</p></td>
+<td><p>j</p></td>
+<td><p>o</p></td>
+</tr>
+<tr class="row-odd"><td><p>l</p></td>
+<td><p>d</p></td>
+<td><p>j</p></td>
+<td><p>o</p></td>
+</tr>
+<tr class="row-even"><td><p>l</p></td>
+<td><p>d</p></td>
+<td><p>j</p></td>
+<td><p>o</p></td>
+</tr>
+<tr class="row-odd"><td><p>l</p></td>
+<td><p>d</p></td>
+<td><p>j</p></td>
+<td><p>o</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="section" id="motor-spec-reality-check">
 <h2>Motor spec reality check<a class="headerlink" href="#motor-spec-reality-check" title="Permalink to this headline">¶</a></h2>
@@ -420,20 +481,6 @@
 <li><p>The table below is a startiong point only. Begin there, but don’t end there.</p></li>
 </ul>
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTZ5drQYvvp4srNMViieF0J0stG8gvPEdH_B7djQA4lOQ53DEMxsOmvscQ4TEEQP2fW-wIQpMl-eO5L/pubhtml?widget=true&amp;headers=false" width="100%" height="870px"></iframe></div>
-<div class="section" id="sensored-versus-sensorless">
-<h2>Sensored versus sensorless<a class="headerlink" href="#sensored-versus-sensorless" title="Permalink to this headline">¶</a></h2>
-<p>You don’t need a sensored motor. While sensorless brushless motors perform poorly at low speed, their performance at flying speeds is excellent. ESC manufactures improve efficiency and performance by using sensorless synchronization at high speed to alter the timing for the sequence of power pulses sent to the motors windings. Sensorless motors are lighter, less complicated, and less prone to failure.</p>
-</div>
-<div class="section" id="mating-with-a-prop">
-<h2>Mating with a prop<a class="headerlink" href="#mating-with-a-prop" title="Permalink to this headline">¶</a></h2>
-<p>Criteria:</p>
-<ol class="arabic simple">
-<li><p>one</p></li>
-<li><p>two</p></li>
-<li><p>three</p></li>
-</ol>
-<p>The <a class="reference external" href="https://ppg.e-props.fr/index.php?cPath=1">e-props folks</a> match multiple props to each specific motor. It’s worth checking out to get an idea of acceptable combinations.</p>
-</div>
 <div class="section" id="custom-motors">
 <h2>Custom motors<a class="headerlink" href="#custom-motors" title="Permalink to this headline">¶</a></h2>
 <p>Custom rewinds change the KV rating and RPM.</p>
@@ -444,8 +491,14 @@
 <li><p>Charles Allen reports that APS provided a custom motor with a hollow shaft for ~$25 extra so he could use a rod  to articulate a variable pitch prop.</p></li>
 </ul>
 </div>
-<div class="section" id="motor-list">
-<h2>Motor list<a class="headerlink" href="#motor-list" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="sensored-versus-sensorless">
+<h2>Sensored versus sensorless<a class="headerlink" href="#sensored-versus-sensorless" title="Permalink to this headline">¶</a></h2>
+<p>You don’t need a sensored motor. While sensorless brushless motors perform poorly at low speed, their performance at flying speeds is excellent. ESC manufactures improve efficiency and performance by using sensorless synchronization at high speed to alter the timing for the sequence of power pulses sent to the motors windings. Sensorless motors are lighter, less complicated, and less prone to failure.</p>
+</div>
+<div class="section" id="mating-with-a-prop">
+<h2>Mating with a prop<a class="headerlink" href="#mating-with-a-prop" title="Permalink to this headline">¶</a></h2>
+<p>See <a class="reference internal" href="props.html#prop"><span class="std std-ref">Propellers</span></a>.</p>
+<p>Unfortunately, the the 36”-44” range of HG eHelp props are 10-20% smaller than powered paramotor props–meaning we can’t leverage PPG  forums and vendor data as information sources. Still, the <a class="reference external" href="https://ppg.e-props.fr/index.php?cPath=1">e-props folks</a> match multiple props to each specific IC and electric motor. It’s worth checking out to get an idea of acceptable combinations.</p>
 </div>
 <div class="section" id="worthwhile-reading">
 <h2>Worthwhile reading<a class="headerlink" href="#worthwhile-reading" title="Permalink to this headline">¶</a></h2>
@@ -470,7 +523,7 @@
 <h3>Advanced topics<a class="headerlink" href="#advanced-topics" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://community.openppg.com/t/paraglider-self-launching-system/2186/41">Motor mass, size, and waste heat</a></p></li>
-<li><p><a class="reference external" href="https://forum.hanggliding.org/viewtopic.php?t=35303">Stator laminations</a>: Without super thin stator lams, efficiency suffers at high rpms. But cheaper motors like APS/Freerchobby motors use 0.35mm lams because thin stator lams are very expensive (with the exception of Rotomax 150 at 0.2mm lams). Eddy losses in the iron stator core induced by the magnetic field switching as the rotor magnets fly past are proportional to the square of the lamination thickness x the square of the rpm. This why motors with thick lams can suddenly slam into an RPM wall and just turn into heaters and not go any faster.</p></li>
+<li><p><a class="reference external" href="https://forum.hanggliding.org/viewtopic.php?t=35303">Stator laminations</a>: Without super thin stator lams, efficiency suffers at high rpms. But cheaper motors such as Freerchobby motors use 0.35mm lams because thin stator lams are very expensive (with the exception of Rotomax 150 at 0.2mm lams). Eddy losses in the iron stator core induced by the magnetic field switching as the rotor magnets fly past are proportional to the square of the lamination thickness x the square of the rpm. This why motors with thick lams can suddenly slam into an RPM wall and just turn into heaters without going any faster.</p></li>
 </ul>
 </div>
 <div class="section" id="vendor-specific">
@@ -505,7 +558,7 @@
     <p>
     <img src="_images/dq1.jpg"  class="endimage"/>
       <span class="lastupdated">&nbsp;&nbsp;&nbsp;
-        Last updated on Jan 03, 2022.
+        Last updated on Jan 04, 2022.
         
       </span>
     </p>
