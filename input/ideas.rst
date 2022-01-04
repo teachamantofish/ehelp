@@ -12,8 +12,9 @@ The reason I include these here is because prone launching removes the need to c
 Reidar Bernsten
 
 * `Twin electric tractor <https://www.youtube.com/watch?v=z-OrT9RGfFI>`_
-* `Bowsprit launch dolly <https://www.youtube.com/watch?v=VLn4_wpWyus>`_
+* `E-Help R&D 2017, the bowsprit Dolly and rewound motor <https://www.youtube.com/watch?v=VLn4_wpWyus>`_
 * `Keel-harness hybrid frame <https://www.youtube.com/watch?v=UyrObtpiGWA&t=3s>`_
+
 
 .. figure:: images/bielfeldprone.png
 
@@ -39,13 +40,21 @@ Not electric, but some prone configurations:
 * Flyped: https://www.youtube.com/watch?v=gynjOMZDDJo
 * https://www.youtube.com/watch?v=7BBTrvMpG30
 
+Sustainers
+======================
+
+* Charles Allen's cool on-the-keel twin XTM 5500 `build video <https://www.youtube.com/watch?v=oqqEOvN7l8I>`_ and flight video:
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/2QEa9IL_ZlM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Seated
 =================================
 
 * `PPG-like backpack <https://www.youtube.com/watch?v=Q0gEOvI-T_s>`_
 * `Altigenerator. Interesting keel mount <https://www.youtube.com/watch?v=nPbz7o6wtM0>`_
-* `Very lightweight Russian design <https://www.youtube.com/watch?v=KkwsizoLIQ8>`_
+* `Very lightweight Russian design (seated but could be prone) <https://www.youtube.com/watch?v=KkwsizoLIQ8>`_
 * Interesting ideas: suprone, wheels: https://www.youtube.com/watch?v=npBn50XRphA
 
 Trike-ish
@@ -53,6 +62,7 @@ Trike-ish
 
 * Commercial seated trike-like setup: https://www.altigenerator.com/
 * Footlaunch-able trike: https://www.youtube.com/watch?v=pa61ZeByFuM
+
 
 From Paraglider-land
 ========================

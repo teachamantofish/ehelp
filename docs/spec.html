@@ -27,11 +27,11 @@
   window.onload = function () {
   Array.from(document.querySelectorAll('h2,h3')).forEach(el => {
     const a = document.createElement('a')
-    a.innerText="Feedback"
+    a.innerText="Comment"
     a.href="mailto:ben.rogers@gmail.com"
     a.target="_blank"
     a.style["float"] = "right"
-    a.style["font-size"] = ".6em"
+    a.style["font-size"] = "40%"
     a.style["font-family"] = "verdana, arial, helvetica, san-serif"
     a.style["padding-top"] = "10px"
     el.appendChild(a)
@@ -114,27 +114,24 @@
             
               <p class="caption"><span class="caption-text">Getting Started</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="index.html">e-Powered Hang Gliding Harnesses</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="index.html#about-this-document">About this document</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="index.html#goals">Goals</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#danger-will-robinson">Danger Will Robinson</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#if-you-see-your-photo-text">If you see your photo/text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">eHelp Hang Gliding Harnesses</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#goals">Goals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#danger-will-robinson">Danger Will Robinson</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#if-you-see-your-photo-text">If you see your photo/text</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="index.html#resources">Resources</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#resources">Resources</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">eHelp Examples</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="examples.html#ehelp-harness">eHelp harness</a></li>
-<li class="toctree-l2"><a class="reference internal" href="examples.html#sustainers">Sustainers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="examples.html#not-a-trike-not-a-harness">Not a trike-not a harness</a></li>
 <li class="toctree-l2"><a class="reference internal" href="examples.html#commercial-e-harness-systems">Commercial e-harness systems</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Specing out a System (Sizing)</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#decision-path">Decision path</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#method-1-how-much-energy">Method 1: How much energy?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#method-2-how-much-thrust">Method 2: How much Thrust?:</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#method-2-how-much-thrust">Method 2: How much thrust?:</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#determine-required-thrust">Determine required thrust</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#tbd">TBD</a></li>
 </ul>
@@ -145,6 +142,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#method-1">Method 1</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#somewhere-over-the-rainbow">Somewhere, “Over the Rainbow”</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#notes-todo-not-reviewed">Notes, todo, not reviewed</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id1">TBD</a></li>
 </ul>
@@ -155,10 +153,12 @@
 <p class="caption"><span class="caption-text">Components</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="motors.html">Motors</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="motors.html#top-considerations">Top considerations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#reading-motor-specs">Reading motor specs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="motors.html#duty-cycle-max-continuous-power">Duty cycle-Max continuous power</a></li>
-<li class="toctree-l2"><a class="reference internal" href="motors.html#kv-reduction">KV reduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motors.html#motor-spec-reality-check">Motor spec reality check</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="motors.html#duty-cycle-max-continuous-power">Duty cycle-max continuous power</a></li>
+<li class="toctree-l3"><a class="reference internal" href="motors.html#kv-reduction">KV reduction</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#example-motor-list">Example motor list</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#sensored-versus-sensorless">Sensored versus sensorless</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#mating-with-a-prop">Mating with a prop</a></li>
@@ -170,34 +170,6 @@
 <li class="toctree-l3"><a class="reference internal" href="motors.html#vendor-specific">Vendor specific</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="esc.html">Electronic Speed Controller</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="esc.html#choose-an-esc">Choose an ESC</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="esc.html#sizing">Sizing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="esc.html#features">Features</a></li>
-<li class="toctree-l3"><a class="reference internal" href="esc.html#location">Location</a></li>
-<li class="toctree-l3"><a class="reference internal" href="esc.html#wiring">Wiring</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="esc.html#throttle">Throttle</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="esc.html#throttle-power-disconnect">Throttle-power disconnect</a></li>
-<li class="toctree-l3"><a class="reference internal" href="esc.html#vendors">Vendors</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="esc.html#worthwhile-reads">Worthwhile reads</a></li>
-<li class="toctree-l2"><a class="reference internal" href="esc.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="batteries.html">Batteries</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="batteries.html#battery-considerations">Battery considerations</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="batteries.html#type">Type</a></li>
-<li class="toctree-l3"><a class="reference internal" href="batteries.html#size">Size</a></li>
-<li class="toctree-l3"><a class="reference internal" href="batteries.html#price">Price</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="batteries.html#worthwhile-reading">Worthwhile reading</a></li>
-<li class="toctree-l2"><a class="reference internal" href="batteries.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="props.html">Propellers</a><ul>
@@ -215,6 +187,34 @@
 <li class="toctree-l2"><a class="reference internal" href="props.html#propeller-innovation">Propeller innovation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="props.html#vendors">Vendors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="props.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="batteries.html">Batteries</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="batteries.html#battery-considerations">Battery considerations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="batteries.html#type">Type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="batteries.html#size">Size</a></li>
+<li class="toctree-l3"><a class="reference internal" href="batteries.html#price">Price</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="batteries.html#diy-battery-packs">DIY battery packs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="batteries.html#worthwhile-reading">Worthwhile reading</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="esc.html">Electronic Speed Controller</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="esc.html#choose-an-esc">Choose an ESC</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#sizing">Sizing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#features">Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#location">Location</a></li>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#wiring">Wiring</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="esc.html#throttle">Throttle</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#throttle-power-disconnect">Throttle-power disconnect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#vendors">Vendors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="esc.html#worthwhile-reads">Worthwhile reads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esc.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="structure.html">Structural-Mechanical</a><ul>
@@ -254,7 +254,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Useful Info</span></p>
+<p class="caption"><span class="caption-text">Pot Pourri</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="calculators.html">Calculators</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="calculators.html#motor">Motor</a></li>
@@ -278,6 +278,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="ideas.html">Ideas and Experiments</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="ideas.html#prone-launch-configurations">Prone launch configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ideas.html#sustainers">Sustainers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ideas.html#seated">Seated</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ideas.html#trike-ish">Trike-ish</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ideas.html#from-paraglider-land">From Paraglider-land</a></li>
@@ -379,17 +380,43 @@
 <a class="reference internal image-reference" href="_images/uc2.gif"><img alt="_images/uc2.gif" src="_images/uc2.gif" style="width: 150.0px; height: 112.4px;" /></a>
 <p class="caption"><span class="caption-text">Under construction</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
-<p>Navigating to final choices and a working system is difficult and time consuming. Until the eHelp harness idea is more widespread, design principles will remain relatively inaccessible while advice is scattered across various Facebook pages and forums with pioneers helping where they can. With luck, the ehelp paradigm will gain enough traction that the hang gliding community can emulate aspects of <a class="reference external" href="https://openppg.com/">OpenPPG</a> and create its own easy-to-traverse path.</p>
+<p>Navigating a working system is difficult and time consuming. Until the eHelp harness idea is more widespread, design principles will remain relatively inaccessible while advice is scattered across various Facebook pages and forums with pioneers helping where they can. With luck, the ehelp paradigm will gain enough traction that the hang gliding community can emulate aspects of <a class="reference external" href="https://openppg.com/">OpenPPG</a> and create its own easy-to-traverse path.</p>
 <p>Until then, moving forward is a bit of work.</p>
-<p>Margins are thin with electric powered aircraft primarily due to the low battery energy density. While HG trike and paramotor systems can carry several KWH of batteries, HG harness systems are usually limited to 1 or 2 KWHs. Powered flight time is measured in minutes–often 10 to 20. Couple these limitations with a wide range of wing specs and pilot weights, and it becomes apparent that optimizing the power train requires some minimal number crunching. At a 200 fpm climb, there’s a big altitude difference between 5 minutes and 10 minutes.</p>
+<p>Margins are thin with electric powered aircraft primarily due to the low battery energy density. While HG trike and paramotor systems can carry several KWH of batteries, HG harness systems are usually limited to sub 2 KWHs. Powered flight time is measured in minutes–often 10 to 20. Couple these limitations with a wide range of wing specs and pilot weights, and it becomes apparent that optimizing the power train requires some minimal number crunching. At a 200 fpm climb, there’s a big altitude difference between 5 minutes and 10 minutes.</p>
 <div class="section" id="decision-path">
 <h2>Decision path<a class="headerlink" href="#decision-path" title="Permalink to this headline">¶</a></h2>
 <p>You’ll often hear that system design starts with the prop. However, it’s certainly true that the performance of system components is so intimately intertwined that the specification of any piece has ramifications for all the others. We’re talking about the electronic speed controller, batteries, motors, and the prop here. It’s reasonable to start with any of the latter three as long as the entire system produces the desired result. For example:</p>
 <ul class="simple">
-<li><p><em>Batteries</em>: How much weight you’re willing to have on board determines your available power. Do you want to stay under 60 volts due to a wider array of available products or for safety reasons? Or are you interested in a 24S (88-100V) system so you push less amps and produce less heat for the same amount of torque?</p></li>
+<li><p><em>Batteries</em>: How much weight you’re willing to have on board determines your available power. Do you want to stay under 60 volts due to a wider array of available products or for safety reasons? Or should you choose 24S (88-100V) system so you push less amps and produce less heat with more speed?</p></li>
 <li><p><em>Motors</em>: Motors must be rated for the voltage you choose. They’ll need to be able to drive your propeller at enough thrust while handling the continuous amperage during climb without overheating.</p></li>
-<li><p><em>Propeller</em>: The prop pushes you into the sky with thrust. Larger diameters and slower speeds are more efficient, but the motor must be capable of turning the prop at the required speed and torque. Ground, feet, and keel limit prop size, and even within the standard 36-44 inch range there are hundreds of choices (diameter, pitch, blade number, and material).</p></li>
+<li><p><em>Propeller</em>: The prop pushes you into the sky with thrust. Larger diameters and slower speeds are more efficient, but the motor must be capable of turning the prop at the required speed and torque. Ground, feet, and keel limit prop size, and even within the standard 36-44 inch range there are hundreds of choices (diameter, pitch, blade number, and material). Volts determine speed, but amps determine torque.</p></li>
 </ul>
+<table class="colwidths-given docutils align-default" id="id3">
+<caption><span class="caption-text">Top considerations</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>What?</p></th>
+<th class="head"><p>So What?</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Total power is power minus heat. Heat is bad.</p></td>
+<td><p>Design for less heat: higher volts, less amps, largers wires, lots of headroom in all components, cooling, etc.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Higher voltage and lower current is more efficient as electrical losses (heat) is proportional to the square of the current.</p></td>
+<td><p>Choose the highest voltage your willing to work with and carry. In Europe, 60v is a mandated max. More volts is more dangerous. Higher voltages mean you have fewer battery choices.</p></td>
+</tr>
+<tr class="row-even"><td><p>Torque increases proportionally with the current consumed.</p></td>
+<td><p>Current = amps. But amps create heat. Design requires balancing volts and amps via your choice of motor and prop.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Speed increases proportionally with the operating voltage. Engine power increases approximately proportionally with the speed. The highest power can only be used at maximum speed.</p></td>
+<td><p>However, large, slow propellers are more efficient. You’re limited by a keel and ground. Tip speed should also stay below .8 mach.</p></td>
+</tr>
+</tbody>
+</table>
 <p>TBD: insert diagram</p>
 <p>Before buying anything, however, a logical first step is figuring out how what it will take to get your butt into the sky…</p>
 </div>
@@ -399,8 +426,11 @@
 <p><a class="reference external" href="https://docs.google.com/spreadsheets/d/1QOWFBWTjYjzgTAwhfQpxgTqjzGBhD4zJOt-nyNrNo94/edit?usp=sharing?widget=true&amp;amp;headers=false;rm=minimal&amp;amp;">Copy this calculator</a></p>
 <iframe src="https://docs.google.com/spreadsheets/d/1QOWFBWTjYjzgTAwhfQpxgTqjzGBhD4zJOt-nyNrNo94/edit?usp=sharing?widget=true&amp;headers=false;rm=minimal&amp;" width="650px" height="510px" scrolling="no"></iframe></div>
 <div class="section" id="method-2-how-much-thrust">
-<h2>Method 2: How much Thrust?:<a class="headerlink" href="#method-2-how-much-thrust" title="Permalink to this headline">¶</a></h2>
+<h2>Method 2: How much thrust?:<a class="headerlink" href="#method-2-how-much-thrust" title="Permalink to this headline">¶</a></h2>
 <p><strong>Prop and thrust</strong>: This approach calculates</p>
+<p>tbd: Is this correct?: find the prop/RPM combination that will give you both the thrust and efficiency you want, then work backwards from there to determine how much motor power is required and what motor KV/battery voltage you want to use. Then source the motor and controller.</p>
+<p>As a rough guideline look for a motor/battery configuration that has a no-load RPM that is 125% of your target full-throttle RPM.</p>
+<p>what percent of continuous power to use for a 5 minute climb?</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Calculations courtesy of Paul Martin. For a more detailed document, see <a class="reference external" href="www.google.com">TBD his document</a>.</p>
@@ -481,11 +511,24 @@
 </div>
 </div>
 </div>
+<div class="section" id="somewhere-over-the-rainbow">
+<h2>Somewhere, “Over the Rainbow”<a class="headerlink" href="#somewhere-over-the-rainbow" title="Permalink to this headline">¶</a></h2>
+<p>If we could wish up a star, we’d wish for detailed power train data specific to our component choices, including:</p>
+<ul class="simple">
+<li><p>Electrical power = Voltage x Current</p></li>
+<li><p>Mechanical power = Torque x Rotation speed</p></li>
+<li><p>Motor efficiency * = Mechanical power / Electrical power</p></li>
+<li><p>Propeller efficiency = Thrust / Mechanical power</p></li>
+<li><p>Powertrain efficiency = Thrust / Electrical power</p></li>
+</ul>
+<p>These numbers are unlikely to ever come from manufacturers. 3rd parties such as  <a class="reference external" href="https://database.tytorobotics.com/">Tyto Robotics</a>, pilots like Paul Martin (engineer), and anecdotal reports on forums will probably provide additional insight into system performance.</p>
+<div class="figure align-default" id="id4">
+<a class="reference internal image-reference" href="_images/tyto1.png"><img alt="_images/tyto1.png" src="_images/tyto1.png" style="width: 869.6px; height: 682.4000000000001px;" /></a>
+<p class="caption"><span class="caption-text">Credit Tyto Robotics</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+</div>
 <div class="section" id="notes-todo-not-reviewed">
 <h2>Notes, todo, not reviewed<a class="headerlink" href="#notes-todo-not-reviewed" title="Permalink to this headline">¶</a></h2>
-<p>tbd: Is this correct?: find the prop/RPM combination that will give you both the thrust and efficiency you want, then work backwards from there to determine how much motor power is required and what motor KV/battery voltage you want to use. Then source the motor and controller.</p>
-<p>As a rough guideline look for a motor/battery configuration that has a no-load RPM that is 125% of your target full-throttle RPM.</p>
-<p>what percent of continuous power to use for a 5 minute climb?</p>
 <div class="section" id="id1">
 <h3>TBD<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <blockquote>

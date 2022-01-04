@@ -7,15 +7,7 @@ Motors
 
    Under construction
 
-Top considerations
-==========================
-
-* Total power is power minus heat. Heat is bad. Design for less heat: higher volts, less amps, largers wires, lots of headroom in all components, cooling, etc.
-* Higher voltage and lower current is more efficient as electrical losses (heat) is proportional to the square of the current.
-* Speed increases proportionally with the operating voltage.
-* Torque increases proportionally with the current consumed.
-* Engine power increases approximately proportionally with the speed. This means that the highest power can only be used at maximum speed (From Lehner).
-
+TBD: Intro
 
 Reading motor specs
 ============================
@@ -24,23 +16,27 @@ Reading motor specs
 * N and P numbers: something like “36N30P”. The number before the letter N is the quantity of electromagnets in the stator, and the number before P is the quantity of permanent magnets in the motor.  Lower KV motors have more permanent magnets to increase torque.
 * Dimensions: 
 * Rated voltage: Provided in either volts or an S rating. (``S rating = number*3.7volts``)
-* KV: Number of revolutions per volt. You'll like want 50-150. 
+* KV: Number of revolutions per volt. You'll likely be between 50-150. 
 * Continuous current: How many amps the motor can handle for the number of minutes specified by the manufacturer until it overheats. Varies widely. You may need "continuous" for your climb duration. 
 * Max (burst) current: How many amps you can draw 
 * Internal resistance: Lower is better since resistance = heat. 
 * Max current: You need to spec a system that does not exceed the max current. Moreover, max current is limited to a short period of time (usually minutes). It's a good idea to design a system that's operates around 50-70% of max current most of the time. 
 
+Motor spec reality check
+===================================
 
-Duty cycle-Max continuous power
-===============================
+Duty cycle-max continuous power
+----------------------------------------
 
 
 There is also a suggestion that the lower the no load kv value of the motor the greater the 100% duty cycle reduction factor. Probably useful to know if one of the larger diameter 35kv or 27kv motors marketed for use on paramotors is being considered.
 
 KV reduction
-========================
+---------------------------
 
 .. figure:: images/kvreduction.png
+
+
 
 Example motor list
 ================================
@@ -51,7 +47,7 @@ Unfortunately, comparing motors based on published specs is like comparing apple
 * Some motors are marketed by others at higher prices. For example, APS sells Freerchobby motors. It's worth checking Alibaba, Amazon, eBay
 * You can't trust published data. 
 * Some data points are undefined. For example, "continuous current" doesn't mean much unless you know the timeframe. Some vendors user 1 minute, others 2 to 5 minutes or more.
-* Thrust values are static thrust on a stand. In flight, dynamic thrust is far less. Published data varies by volts, amps, RPM, and propeller. You'll have to use a combination of math, data table reading, and dice rolling to formulate an idea about what's likely true. You should have already calculated what you need; for example: 25Kg of thrust at 50-70% throttle for 5 climb minutes with 12s batteries to climb to 1000'. 
+* Thrust values derive from static thrust on a test stand. In flight, dynamic thrust is far less. Published data varies by volts, amps, RPM, and propeller. You'll have to use a combination of math, data table reading, and dice rolling to formulate an idea about what's likely true. You should have already calculated what you need; for example: 25Kg of thrust at 50-70% throttle for 5 climb minutes with 12s batteries to climb to 1000'. 
 * Max RPM is a no load number. RPM in data tables reflect a value for the specific test propeller. 
 * The table below is a startiong point only. Begin there, but don't end there.
 

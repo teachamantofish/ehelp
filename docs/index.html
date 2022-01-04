@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>e-Powered Hang Gliding Harnesses &mdash; Electric Hang Gliding Harness</title>
+  <title>eHelp Hang Gliding Harnesses &mdash; Electric Hang Gliding Harness</title>
   
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -27,11 +27,11 @@
   window.onload = function () {
   Array.from(document.querySelectorAll('h2,h3')).forEach(el => {
     const a = document.createElement('a')
-    a.innerText="Feedback"
+    a.innerText="Comment"
     a.href="mailto:ben.rogers@gmail.com"
     a.target="_blank"
     a.style["float"] = "right"
-    a.style["font-size"] = ".6em"
+    a.style["font-size"] = "40%"
     a.style["font-family"] = "verdana, arial, helvetica, san-serif"
     a.style["padding-top"] = "10px"
     el.appendChild(a)
@@ -61,7 +61,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="eHelp Examples" href="examples.html" />
-    <link rel="prev" title="e-Powered Hang Gliding Harnesses" href="toc.html" /> 
+    <link rel="prev" title="eHelp Hang Gliding Harnesses" href="toc.html" /> 
   <style>
   .wy-nav-content {max-width:90%}
   td {font-size:130%}
@@ -114,27 +114,24 @@
             
               <p class="caption"><span class="caption-text">Getting Started</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">e-Powered Hang Gliding Harnesses</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#about-this-document">About this document</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#goals">Goals</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#danger-will-robinson">Danger Will Robinson</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#if-you-see-your-photo-text">If you see your photo/text</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">eHelp Hang Gliding Harnesses</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#goals">Goals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#danger-will-robinson">Danger Will Robinson</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#if-you-see-your-photo-text">If you see your photo/text</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#resources">Resources</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#resources">Resources</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">eHelp Examples</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="examples.html#ehelp-harness">eHelp harness</a></li>
-<li class="toctree-l2"><a class="reference internal" href="examples.html#sustainers">Sustainers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="examples.html#not-a-trike-not-a-harness">Not a trike-not a harness</a></li>
 <li class="toctree-l2"><a class="reference internal" href="examples.html#commercial-e-harness-systems">Commercial e-harness systems</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="spec.html">Specing out a System (Sizing)</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="spec.html#decision-path">Decision path</a></li>
 <li class="toctree-l2"><a class="reference internal" href="spec.html#method-1-how-much-energy">Method 1: How much energy?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="spec.html#method-2-how-much-thrust">Method 2: How much Thrust?:</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="spec.html#method-2-how-much-thrust">Method 2: How much thrust?:</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="spec.html#determine-required-thrust">Determine required thrust</a></li>
 <li class="toctree-l3"><a class="reference internal" href="spec.html#tbd">TBD</a></li>
 </ul>
@@ -145,6 +142,7 @@
 <li class="toctree-l3"><a class="reference internal" href="spec.html#method-1">Method 1</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="spec.html#somewhere-over-the-rainbow">Somewhere, “Over the Rainbow”</a></li>
 <li class="toctree-l2"><a class="reference internal" href="spec.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="spec.html#id1">TBD</a></li>
 </ul>
@@ -155,10 +153,12 @@
 <p class="caption"><span class="caption-text">Components</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="motors.html">Motors</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="motors.html#top-considerations">Top considerations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#reading-motor-specs">Reading motor specs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="motors.html#duty-cycle-max-continuous-power">Duty cycle-Max continuous power</a></li>
-<li class="toctree-l2"><a class="reference internal" href="motors.html#kv-reduction">KV reduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motors.html#motor-spec-reality-check">Motor spec reality check</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="motors.html#duty-cycle-max-continuous-power">Duty cycle-max continuous power</a></li>
+<li class="toctree-l3"><a class="reference internal" href="motors.html#kv-reduction">KV reduction</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#example-motor-list">Example motor list</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#sensored-versus-sensorless">Sensored versus sensorless</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#mating-with-a-prop">Mating with a prop</a></li>
@@ -170,34 +170,6 @@
 <li class="toctree-l3"><a class="reference internal" href="motors.html#vendor-specific">Vendor specific</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="esc.html">Electronic Speed Controller</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="esc.html#choose-an-esc">Choose an ESC</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="esc.html#sizing">Sizing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="esc.html#features">Features</a></li>
-<li class="toctree-l3"><a class="reference internal" href="esc.html#location">Location</a></li>
-<li class="toctree-l3"><a class="reference internal" href="esc.html#wiring">Wiring</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="esc.html#throttle">Throttle</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="esc.html#throttle-power-disconnect">Throttle-power disconnect</a></li>
-<li class="toctree-l3"><a class="reference internal" href="esc.html#vendors">Vendors</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="esc.html#worthwhile-reads">Worthwhile reads</a></li>
-<li class="toctree-l2"><a class="reference internal" href="esc.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="batteries.html">Batteries</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="batteries.html#battery-considerations">Battery considerations</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="batteries.html#type">Type</a></li>
-<li class="toctree-l3"><a class="reference internal" href="batteries.html#size">Size</a></li>
-<li class="toctree-l3"><a class="reference internal" href="batteries.html#price">Price</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="batteries.html#worthwhile-reading">Worthwhile reading</a></li>
-<li class="toctree-l2"><a class="reference internal" href="batteries.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="props.html">Propellers</a><ul>
@@ -215,6 +187,34 @@
 <li class="toctree-l2"><a class="reference internal" href="props.html#propeller-innovation">Propeller innovation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="props.html#vendors">Vendors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="props.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="batteries.html">Batteries</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="batteries.html#battery-considerations">Battery considerations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="batteries.html#type">Type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="batteries.html#size">Size</a></li>
+<li class="toctree-l3"><a class="reference internal" href="batteries.html#price">Price</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="batteries.html#diy-battery-packs">DIY battery packs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="batteries.html#worthwhile-reading">Worthwhile reading</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="esc.html">Electronic Speed Controller</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="esc.html#choose-an-esc">Choose an ESC</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#sizing">Sizing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#features">Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#location">Location</a></li>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#wiring">Wiring</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="esc.html#throttle">Throttle</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#throttle-power-disconnect">Throttle-power disconnect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#vendors">Vendors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="esc.html#worthwhile-reads">Worthwhile reads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esc.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="structure.html">Structural-Mechanical</a><ul>
@@ -254,7 +254,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Useful Info</span></p>
+<p class="caption"><span class="caption-text">Pot Pourri</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="calculators.html">Calculators</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="calculators.html#motor">Motor</a></li>
@@ -278,6 +278,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="ideas.html">Ideas and Experiments</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="ideas.html#prone-launch-configurations">Prone launch configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ideas.html#sustainers">Sustainers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ideas.html#seated">Seated</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ideas.html#trike-ish">Trike-ish</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ideas.html#from-paraglider-land">From Paraglider-land</a></li>
@@ -346,7 +347,7 @@
     
       <li><a href="toc.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>e-Powered Hang Gliding Harnesses</li>
+      <li>eHelp Hang Gliding Harnesses</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -363,7 +364,7 @@
         <a href="examples.html" class="btn btn-neutral float-right" title="eHelp Examples" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="toc.html" class="btn btn-neutral float-left" title="e-Powered Hang Gliding Harnesses" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="toc.html" class="btn btn-neutral float-left" title="eHelp Hang Gliding Harnesses" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
   </div>
   
@@ -373,53 +374,46 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="e-powered-hang-gliding-harnesses">
-<h1>e-Powered Hang Gliding Harnesses<a class="headerlink" href="#e-powered-hang-gliding-harnesses" title="Permalink to this headline">¶</a></h1>
-<div class="figure align-default" id="id1">
-<a class="reference internal image-reference" href="_images/uc4.gif"><img alt="_images/uc4.gif" src="_images/uc4.gif" style="width: 144.0px; height: 106.2px;" /></a>
-<p class="caption"><span class="caption-text">Under construction</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</div>
-<p>Why ehelp? Because for 2000-3000 bucks a DIYer can build a 20 pound eHelp harness and flatland foot launch. No mountain. No towing. No modified glider. No tow rig.  The time and $$$ investment quickly pays for itself through reduced driving to launches, hang-waiting, tow costs, alcoholic consumption while jonesing for some airtime. Only the pilot can determine the ultimate payback.</p>
-<p>The systems are relatively simple, and energetic pioneers are paving the way with open source plans and Youtube videos. The multi-billion dollar drone, battery, and EV industries are quickly driving the evolution of cheaper, lighter, and more powerful components.</p>
+  <div class="section" id="ehelp-hang-gliding-harnesses">
+<h1>eHelp Hang Gliding Harnesses<a class="headerlink" href="#ehelp-hang-gliding-harnesses" title="Permalink to this headline">¶</a></h1>
+<p>Why ehelp? Because for 2000-3000 bucks a DIYer can build a 20 pound eHelp harness and flatland foot launch. No mountain. No towing. No modified glider. No tow rig.  The time and $$$ investment quickly pays for itself through reduced driving to launches, hang-waiting, tow costs, and alcoholic consumption while jonesing for airtime. Only the pilot can determine the ultimate payback.</p>
+<p>The systems are relatively simple and free of tune ups, maintenance hassles, and fossil fuels. Like most flight, there are some caveats and hazards, but the ehelp idea has one moving part and many advantages. A community of pioneers are paving the runway with free advice, open source plans, and Youtube videos while the multi-billion dollar drone, battery, and EV industries quickly drive the evolution of cheaper, lighter, and more powerful components.</p>
 <p>In a few years, we’ll like have lighter and more powerful motors (axial), smaller and safer batteries (solid state, and (with luck) commercial ready-to-fly choices, kits, manuals, and parts.</p>
-<div class="section" id="about-this-document">
-<h2>About this document<a class="headerlink" href="#about-this-document" title="Permalink to this headline">¶</a></h2>
-<p>This content is an attempt to provide a quick start manual to the DIY community. It is an experimental and unfinished work. There is no attempt here to make $$$, and so shall it ever be.</p>
-<blockquote>
-<div><p>Ideally, these pages will become a crowd-sourced document. Ccontribute via the <strong>Feedback</strong> links or ask to edit the source here: <a class="reference external" href="https://github.com/teacha.../ehelp/blob/main/input/index.rst">https://github.com/teacha…/ehelp/blob/main/input/index.rst</a>. Without community participation, this document will fade.</p>
-</div></blockquote>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Send me any info, link, or informational tidbit. I’ll incorporate what makes sense.</p>
+<div class="moveimage docutils container">
+<div class="figure align-default" id="id1">
+<a class="reference internal image-reference" href="_images/ca_fusion.png"><img alt="_images/ca_fusion.png" src="_images/ca_fusion.png" style="width: 391.0px; height: 282.0px;" /></a>
+<p class="caption"><span class="caption-text">Design by Charles Allen</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
+</div>
+<p><strong>About this content</strong></p>
+<p>This overview is an attempt to provide a quick start manual to the DIY community. It is an experimental and unfinished work. There is no attempt here to make $$$, and so shall it ever be.</p>
+<p>Ideally, these pages will become a crowd-sourced document. Contribute via the <strong>Feedback</strong> links or ask to edit the source on Github. Without community participation, this document will languish and fade.</p>
 <div class="section" id="goals">
-<h3>Goals<a class="headerlink" href="#goals" title="Permalink to this headline">¶</a></h3>
+<h2>Goals<a class="headerlink" href="#goals" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p><strong>Support DIY development</strong>: Concise details on existing projects should engage the community, increase participation, speed new approaches, and improve safety. There’s no need to reinvent the wheel, but there is a need to improve the wheel and invent some wheel alternatives.</p></li>
-<li><p><strong>Advance the technology</strong>: Easily accessible information should speed and foster the development and use of functional designs.</p></li>
+<li><p><strong>Support DIY development</strong>: An overview and concise details of existing projects will hopefully engage the community, increase participation, speed new approaches, and improve safety. Let’s open some doors and remove the barriers.</p></li>
+<li><p><strong>Advance the technology</strong>: Easily accessible information should speed and foster the development and use of functional designs. There’s no need to reinvent the wheel, but there is a need to improve the wheel and invent some wheel alternatives.</p></li>
 <li><p><strong>Encourage growth in the sport of hang gliding</strong>: The decline of hang gliding is well-known. Perhaps the ability to flatland launch with a simple DIY system will invigorate the sport.</p></li>
 </ul>
 </div>
 <div class="section" id="danger-will-robinson">
-<h3>Danger Will Robinson<a class="headerlink" href="#danger-will-robinson" title="Permalink to this headline">¶</a></h3>
+<h2>Danger Will Robinson<a class="headerlink" href="#danger-will-robinson" title="Permalink to this headline">¶</a></h2>
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
-<p>You assume responsibility for any action you take based on this content. All pilots must educated decisions based on multiple sources. There is no advice here. This information derives from 3rd parties and may be erroneous.</p>
+<p>You assume responsibility for any action you take based on this or any other content. Wise pilots make educated decisions based on multiple sources. There is no advice here. This information derives from 3rd parties and may be erroneous.</p>
 </div>
 </div>
 <div class="section" id="if-you-see-your-photo-text">
-<h3>If you see your photo/text<a class="headerlink" href="#if-you-see-your-photo-text" title="Permalink to this headline">¶</a></h3>
+<h2>If you see your photo/text<a class="headerlink" href="#if-you-see-your-photo-text" title="Permalink to this headline">¶</a></h2>
 <p>If you see text or images here that originated with you and want it removed, just ask. I can add credits and links back to your FB or home page if you prefer.</p>
-</div>
-</div>
 <div class="section" id="resources">
-<h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
+<h3>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h3>
 <ul>
 <li><p>This document includes:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p><a class="reference external" href="https://docs.google.com/spreadsheets/d/10IPnvWfLhx3g2CH97AFdCC4kw11yGukd6TUVxoGJ78g/edit#gid=0">Editable spreadsheets for data and lists</a></p></li>
-<li><p><a class="reference external" href="https://github.com/teachamantofish/ehelp">Editable content in github</a></p></li>
+<li><p>Editable spreadsheets for data, lists, calculators</p></li>
+<li><p><a class="reference external" href="https://github.com/teachamantofish/ehelp">This editable content on Github</a></p></li>
 </ul>
 </div></blockquote>
 </li>
@@ -437,7 +431,7 @@
 <blockquote>
 <div><ul class="simple">
 <li><p><a class="reference external" href="https://openppg.com/?fbclid=IwAR04rX_1St1D1lqTpwBbaOdLskhpFOMahdXRiHXU1gmr4fSlUv0pwsC-RQg">OpenPPG: Similar concepts, great forum, lots of resources</a></p></li>
-<li><p>This community needs a focused forum. Doesn’t exist yet.</p></li>
+<li><p>This community needs a focused forum. Doesn’t exist yet, but I’ve asked hanggliding.org to engage.</p></li>
 </ul>
 </div></blockquote>
 <ul>
@@ -449,6 +443,7 @@
 </div></blockquote>
 </li>
 </ul>
+</div>
 </div>
 </div>
 

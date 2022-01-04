@@ -27,11 +27,11 @@
   window.onload = function () {
   Array.from(document.querySelectorAll('h2,h3')).forEach(el => {
     const a = document.createElement('a')
-    a.innerText="Feedback"
+    a.innerText="Comment"
     a.href="mailto:ben.rogers@gmail.com"
     a.target="_blank"
     a.style["float"] = "right"
-    a.style["font-size"] = ".6em"
+    a.style["font-size"] = "40%"
     a.style["font-family"] = "verdana, arial, helvetica, san-serif"
     a.style["padding-top"] = "10px"
     el.appendChild(a)
@@ -112,27 +112,24 @@
             
               <p class="caption"><span class="caption-text">Getting Started</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="index.html">e-Powered Hang Gliding Harnesses</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="index.html#about-this-document">About this document</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="index.html#goals">Goals</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#danger-will-robinson">Danger Will Robinson</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#if-you-see-your-photo-text">If you see your photo/text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">eHelp Hang Gliding Harnesses</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#goals">Goals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#danger-will-robinson">Danger Will Robinson</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#if-you-see-your-photo-text">If you see your photo/text</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="index.html#resources">Resources</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#resources">Resources</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">eHelp Examples</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="examples.html#ehelp-harness">eHelp harness</a></li>
-<li class="toctree-l2"><a class="reference internal" href="examples.html#sustainers">Sustainers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="examples.html#not-a-trike-not-a-harness">Not a trike-not a harness</a></li>
 <li class="toctree-l2"><a class="reference internal" href="examples.html#commercial-e-harness-systems">Commercial e-harness systems</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="spec.html">Specing out a System (Sizing)</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="spec.html#decision-path">Decision path</a></li>
 <li class="toctree-l2"><a class="reference internal" href="spec.html#method-1-how-much-energy">Method 1: How much energy?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="spec.html#method-2-how-much-thrust">Method 2: How much Thrust?:</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="spec.html#method-2-how-much-thrust">Method 2: How much thrust?:</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="spec.html#determine-required-thrust">Determine required thrust</a></li>
 <li class="toctree-l3"><a class="reference internal" href="spec.html#tbd">TBD</a></li>
 </ul>
@@ -143,6 +140,7 @@
 <li class="toctree-l3"><a class="reference internal" href="spec.html#method-1">Method 1</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="spec.html#somewhere-over-the-rainbow">Somewhere, “Over the Rainbow”</a></li>
 <li class="toctree-l2"><a class="reference internal" href="spec.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="spec.html#id1">TBD</a></li>
 </ul>
@@ -153,10 +151,12 @@
 <p class="caption"><span class="caption-text">Components</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="motors.html">Motors</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="motors.html#top-considerations">Top considerations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#reading-motor-specs">Reading motor specs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="motors.html#duty-cycle-max-continuous-power">Duty cycle-Max continuous power</a></li>
-<li class="toctree-l2"><a class="reference internal" href="motors.html#kv-reduction">KV reduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motors.html#motor-spec-reality-check">Motor spec reality check</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="motors.html#duty-cycle-max-continuous-power">Duty cycle-max continuous power</a></li>
+<li class="toctree-l3"><a class="reference internal" href="motors.html#kv-reduction">KV reduction</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#example-motor-list">Example motor list</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#sensored-versus-sensorless">Sensored versus sensorless</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#mating-with-a-prop">Mating with a prop</a></li>
@@ -168,34 +168,6 @@
 <li class="toctree-l3"><a class="reference internal" href="motors.html#vendor-specific">Vendor specific</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="esc.html">Electronic Speed Controller</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="esc.html#choose-an-esc">Choose an ESC</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="esc.html#sizing">Sizing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="esc.html#features">Features</a></li>
-<li class="toctree-l3"><a class="reference internal" href="esc.html#location">Location</a></li>
-<li class="toctree-l3"><a class="reference internal" href="esc.html#wiring">Wiring</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="esc.html#throttle">Throttle</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="esc.html#throttle-power-disconnect">Throttle-power disconnect</a></li>
-<li class="toctree-l3"><a class="reference internal" href="esc.html#vendors">Vendors</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="esc.html#worthwhile-reads">Worthwhile reads</a></li>
-<li class="toctree-l2"><a class="reference internal" href="esc.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="batteries.html">Batteries</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="batteries.html#battery-considerations">Battery considerations</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="batteries.html#type">Type</a></li>
-<li class="toctree-l3"><a class="reference internal" href="batteries.html#size">Size</a></li>
-<li class="toctree-l3"><a class="reference internal" href="batteries.html#price">Price</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="batteries.html#worthwhile-reading">Worthwhile reading</a></li>
-<li class="toctree-l2"><a class="reference internal" href="batteries.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="props.html">Propellers</a><ul>
@@ -213,6 +185,34 @@
 <li class="toctree-l2"><a class="reference internal" href="props.html#propeller-innovation">Propeller innovation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="props.html#vendors">Vendors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="props.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="batteries.html">Batteries</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="batteries.html#battery-considerations">Battery considerations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="batteries.html#type">Type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="batteries.html#size">Size</a></li>
+<li class="toctree-l3"><a class="reference internal" href="batteries.html#price">Price</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="batteries.html#diy-battery-packs">DIY battery packs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="batteries.html#worthwhile-reading">Worthwhile reading</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="esc.html">Electronic Speed Controller</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="esc.html#choose-an-esc">Choose an ESC</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#sizing">Sizing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#features">Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#location">Location</a></li>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#wiring">Wiring</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="esc.html#throttle">Throttle</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#throttle-power-disconnect">Throttle-power disconnect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#vendors">Vendors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="esc.html#worthwhile-reads">Worthwhile reads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esc.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="structure.html">Structural-Mechanical</a><ul>
@@ -252,7 +252,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Useful Info</span></p>
+<p class="caption"><span class="caption-text">Pot Pourri</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="calculators.html">Calculators</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="calculators.html#motor">Motor</a></li>
@@ -276,6 +276,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="ideas.html">Ideas and Experiments</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="ideas.html#prone-launch-configurations">Prone launch configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ideas.html#sustainers">Sustainers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ideas.html#seated">Seated</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ideas.html#trike-ish">Trike-ish</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ideas.html#from-paraglider-land">From Paraglider-land</a></li>
@@ -408,19 +409,24 @@
 </ul>
 <p>Embed GS and keep it editable: <a class="reference external" href="https://www.localwebstrategies.com/post/how-to-embed-editable-google-sheets-in-website">https://www.localwebstrategies.com/post/how-to-embed-editable-google-sheets-in-website</a></p>
 <p><a class="reference external" href="https://tableizer.journalistopia.com/tableizer.php">https://tableizer.journalistopia.com/tableizer.php</a></p>
-<p>xxxx</p>
-<p>Deployment successfully updated.
-Version 1 on Jan 1, 10:08 PM
-Deployment ID
-AKfycbwjabcCJo5ydSz2YDSQCbU1Ef3RL9fIUfQ1eyEa4-iRxbh51UgvUycVHeOoSHs7GB5Y
-Web app
-URL
-<a class="reference external" href="https://script.google.com/macros/s/AKfycbwjabcCJo5ydSz2YDSQCbU1Ef3RL9fIUfQ1eyEa4-iRxbh51UgvUycVHeOoSHs7GB5Y/exec">https://script.google.com/macros/s/AKfycbwjabcCJo5ydSz2YDSQCbU1Ef3RL9fIUfQ1eyEa4-iRxbh51UgvUycVHeOoSHs7GB5Y/exec</a></p>
+<p>CSS:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cssgradient.io/">https://cssgradient.io/</a></p></li>
+</ul>
 <p>xxx</p>
-<p>3d printing</p>
+<p>3d printing and cf compression molding</p>
 <p>xxx</p>
-<p>cf compression molding</p>
+<div class="leftcolumn docutils container">
+<div class="figure align-default" id="id1">
+<a class="reference internal image-reference" href="_images/ca_fusion.png"><img alt="_images/ca_fusion.png" src="_images/ca_fusion.png" style="width: 391.0px; height: 282.0px;" /></a>
+<p class="caption"><span class="caption-text">Design by Charles Allen</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
+</div>
+<div class="rightcolumn docutils container">
+<p>The systems are relatively simple and free of tune ups, maintenance hassles, and fossil fuels. Like most flight, there are some caveats and hazards, but the ehelp idea has one moving part and many advantages. A community of pioneers are paving the runway with free advice, open source plans, and Youtube videos while the multi-billion dollar drone, battery, and EV industries quickly drive the evolution of cheaper, lighter, and more powerful components.</p>
+<p>In a few years, we’ll like have lighter and more powerful motors (axial), smaller and safer batteries (solid state, and (with luck) commercial ready-to-fly choices, kits, manuals, and parts.</p>
+</div>
+<hr class="bookends"></div>
 
 
            </div>

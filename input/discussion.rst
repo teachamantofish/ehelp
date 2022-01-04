@@ -71,22 +71,34 @@ Embed GS and keep it editable: https://www.localwebstrategies.com/post/how-to-em
 
 https://tableizer.journalistopia.com/tableizer.php
 
-xxxx
+CSS: 
 
-Deployment successfully updated.
-Version 1 on Jan 1, 10:08 PM
-Deployment ID
-AKfycbwjabcCJo5ydSz2YDSQCbU1Ef3RL9fIUfQ1eyEa4-iRxbh51UgvUycVHeOoSHs7GB5Y
-Web app
-URL
-https://script.google.com/macros/s/AKfycbwjabcCJo5ydSz2YDSQCbU1Ef3RL9fIUfQ1eyEa4-iRxbh51UgvUycVHeOoSHs7GB5Y/exec
+* https://cssgradient.io/
 
 
 xxx
 
-3d printing 
+3d printing and cf compression molding
 
 xxx
 
-cf compression molding
+.. container:: twocol
+
+.. container:: leftcolumn
+
+   .. figure:: images/ca_fusion.png
+         :scale: 100%
+
+         Design by Charles Allen
+
+
+.. container:: rightcolumn
+
+      The systems are relatively simple and free of tune ups, maintenance hassles, and fossil fuels. Like most flight, there are some caveats and hazards, but the ehelp idea has one moving part and many advantages. A community of pioneers are paving the runway with free advice, open source plans, and Youtube videos while the multi-billion dollar drone, battery, and EV industries quickly drive the evolution of cheaper, lighter, and more powerful components.  
+
+      In a few years, we'll like have lighter and more powerful motors (axial), smaller and safer batteries (solid state, and (with luck) commercial ready-to-fly choices, kits, manuals, and parts.
+      
+.. raw:: html
+
+    <hr class="bookends">
 

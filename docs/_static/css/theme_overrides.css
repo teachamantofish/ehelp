@@ -22,20 +22,30 @@
 
 }
 
-/**
-.wy-nav-side {
-    position: absolute;
-    left:0px;
-    top: 0px;
-  }
+h2 {
+  background: rgb(242,240,240);
+  background: linear-gradient(168deg, rgba(242,240,240,1) 0%, rgba(250,250,250,1) 99%); 
+  padding: 5px 5px 5px 5px;
+  margin-left: -5px;
+  margin-top: 2em;
+}
 
-  #anchor {
-    scroll-margin-top: 100px;
-  }
+#id3 {width:700px !important; }
 
-  h2::after {
-  content: 'image or text';
+div.twocol { width:800px; background-color:gray}
+
+div.leftcolumn {
+  width: 400px;
+  float: left;
+}
+
+div.rightcolumn {
+  width: 380px;
+  
+}
+
+div.moveimage {
+  margin-left: 200px;
 }
 
 
-**/

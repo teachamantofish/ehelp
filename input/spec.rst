@@ -9,20 +9,35 @@ Specing out a System (Sizing)
 
    Under construction
 
-Navigating to final choices and a working system is difficult and time consuming. Until the eHelp harness idea is more widespread, design principles will remain relatively inaccessible while advice is scattered across various Facebook pages and forums with pioneers helping where they can. With luck, the ehelp paradigm will gain enough traction that the hang gliding community can emulate aspects of `OpenPPG <https://openppg.com/>`_ and create its own easy-to-traverse path.
+Navigating a working system is difficult and time consuming. Until the eHelp harness idea is more widespread, design principles will remain relatively inaccessible while advice is scattered across various Facebook pages and forums with pioneers helping where they can. With luck, the ehelp paradigm will gain enough traction that the hang gliding community can emulate aspects of `OpenPPG <https://openppg.com/>`_ and create its own easy-to-traverse path.
 
 Until then, moving forward is a bit of work. 
 
-Margins are thin with electric powered aircraft primarily due to the low battery energy density. While HG trike and paramotor systems can carry several KWH of batteries, HG harness systems are usually limited to 1 or 2 KWHs. Powered flight time is measured in minutes--often 10 to 20. Couple these limitations with a wide range of wing specs and pilot weights, and it becomes apparent that optimizing the power train requires some minimal number crunching. At a 200 fpm climb, there's a big altitude difference between 5 minutes and 10 minutes.
+Margins are thin with electric powered aircraft primarily due to the low battery energy density. While HG trike and paramotor systems can carry several KWH of batteries, HG harness systems are usually limited to sub 2 KWHs. Powered flight time is measured in minutes--often 10 to 20. Couple these limitations with a wide range of wing specs and pilot weights, and it becomes apparent that optimizing the power train requires some minimal number crunching. At a 200 fpm climb, there's a big altitude difference between 5 minutes and 10 minutes.
 
 Decision path
 =====================
 
 You'll often hear that system design starts with the prop. However, it's certainly true that the performance of system components is so intimately intertwined that the specification of any piece has ramifications for all the others. We're talking about the electronic speed controller, batteries, motors, and the prop here. It's reasonable to start with any of the latter three as long as the entire system produces the desired result. For example: 
 
-* *Batteries*: How much weight you're willing to have on board determines your available power. Do you want to stay under 60 volts due to a wider array of available products or for safety reasons? Or are you interested in a 24S (88-100V) system so you push less amps and produce less heat for the same amount of torque?
+* *Batteries*: How much weight you're willing to have on board determines your available power. Do you want to stay under 60 volts due to a wider array of available products or for safety reasons? Or should you choose 24S (88-100V) system so you push less amps and produce less heat with more speed?
 * *Motors*: Motors must be rated for the voltage you choose. They'll need to be able to drive your propeller at enough thrust while handling the continuous amperage during climb without overheating. 
-* *Propeller*: The prop pushes you into the sky with thrust. Larger diameters and slower speeds are more efficient, but the motor must be capable of turning the prop at the required speed and torque. Ground, feet, and keel limit prop size, and even within the standard 36-44 inch range there are hundreds of choices (diameter, pitch, blade number, and material).
+* *Propeller*: The prop pushes you into the sky with thrust. Larger diameters and slower speeds are more efficient, but the motor must be capable of turning the prop at the required speed and torque. Ground, feet, and keel limit prop size, and even within the standard 36-44 inch range there are hundreds of choices (diameter, pitch, blade number, and material). Volts determine speed, but amps determine torque.
+
+.. list-table:: Top considerations
+   :widths: 30 70 
+   :header-rows: 1
+
+   * - What?
+     - So What?
+   * - Total power is power minus heat. Heat is bad. 
+     - Design for less heat: higher volts, less amps, largers wires, lots of headroom in all components, cooling, etc.
+   * - Higher voltage and lower current is more efficient as electrical losses (heat) is proportional to the square of the current.
+     - Choose the highest voltage your willing to work with and carry. In Europe, 60v is a mandated max. More volts is more dangerous. Higher voltages mean you have fewer battery choices. 
+   * - Torque increases proportionally with the current consumed.  
+     - Current = amps. But amps create heat. Design requires balancing volts and amps via your choice of motor and prop. 
+   * - Speed increases proportionally with the operating voltage. Engine power increases approximately proportionally with the speed. The highest power can only be used at maximum speed.
+     - However, large, slow propellers are more efficient. You're limited by a keel and ground. Tip speed should also stay below .8 mach. 
 
 TBD: insert diagram
 
@@ -39,10 +54,16 @@ Method 1: How much energy?
 
    <iframe src="https://docs.google.com/spreadsheets/d/1QOWFBWTjYjzgTAwhfQpxgTqjzGBhD4zJOt-nyNrNo94/edit?usp=sharing?widget=true&amp;headers=false;rm=minimal&amp;" width="650px" height="510px" scrolling="no"></iframe>
 
-Method 2: How much Thrust?:
+Method 2: How much thrust?:
 ===================================
 
 **Prop and thrust**: This approach calculates
+
+tbd: Is this correct?: find the prop/RPM combination that will give you both the thrust and efficiency you want, then work backwards from there to determine how much motor power is required and what motor KV/battery voltage you want to use. Then source the motor and controller.
+
+As a rough guideline look for a motor/battery configuration that has a no-load RPM that is 125% of your target full-throttle RPM. 
+
+what percent of continuous power to use for a 5 minute climb?
 
 .. note:: Calculations courtesy of Paul Martin. For a more detailed document, see `TBD his document <www.google.com>`_.
 
@@ -52,6 +73,8 @@ Determine required thrust
 
 TBD
 -------------------
+
+
 
 Method comparison
 ==============================================
@@ -126,15 +149,28 @@ So multiply the efficiency of all components to get the correction factor: ``((1
 Then divide your theoretical Kwh by that number: ``0.113/.469 = .241 kwh``
 
 
+Somewhere, "Over the Rainbow"
+====================================
+
+If we could wish up a star, we'd wish for detailed power train data specific to our component choices, including: 
+
+* Electrical power = Voltage x Current
+* Mechanical power = Torque x Rotation speed
+* Motor efficiency * = Mechanical power / Electrical power
+* Propeller efficiency = Thrust / Mechanical power
+* Powertrain efficiency = Thrust / Electrical power
+
+These numbers are unlikely to ever come from manufacturers. 3rd parties such as  `Tyto Robotics <https://database.tytorobotics.com/>`_, pilots like Paul Martin (engineer), and anecdotal reports on forums will probably provide additional insight into system performance. 
+
+.. figure:: images/tyto1.png
+   :scale: 80%
+
+   Credit Tyto Robotics
 
 Notes, todo, not reviewed
 =================================
 
-tbd: Is this correct?: find the prop/RPM combination that will give you both the thrust and efficiency you want, then work backwards from there to determine how much motor power is required and what motor KV/battery voltage you want to use. Then source the motor and controller.
 
-As a rough guideline look for a motor/battery configuration that has a no-load RPM that is 125% of your target full-throttle RPM. 
-
-what percent of continuous power to use for a 5 minute climb?
 
 TBD
 ------------------

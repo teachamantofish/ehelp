@@ -1,5 +1,5 @@
 ************************************************
-e-Powered Hang Gliding Harnesses
+eHelp Hang Gliding Harnesses
 ************************************************
 
 
@@ -17,14 +17,14 @@ e-Powered Hang Gliding Harnesses
    :maxdepth: 3
 
    motors
-   esc
-   batteries
    props
+   batteries
+   esc
    structure
    electrical
 
 .. toctree:: 
-   :caption: Useful Info
+   :caption: Pot Pourri
    :maxdepth: 3
 
    calculators

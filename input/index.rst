@@ -1,40 +1,39 @@
 ************************************************
-e-Powered Hang Gliding Harnesses
+eHelp Hang Gliding Harnesses
 ************************************************
 
-.. figure:: images/uc4.gif
-   :scale: 30%
+Why ehelp? Because for 2000-3000 bucks a DIYer can build a 20 pound eHelp harness and flatland foot launch. No mountain. No towing. No modified glider. No tow rig.  The time and $$$ investment quickly pays for itself through reduced driving to launches, hang-waiting, tow costs, and alcoholic consumption while jonesing for airtime. Only the pilot can determine the ultimate payback.
 
-   Under construction
 
-Why ehelp? Because for 2000-3000 bucks a DIYer can build a 20 pound eHelp harness and flatland foot launch. No mountain. No towing. No modified glider. No tow rig.  The time and $$$ investment quickly pays for itself through reduced driving to launches, hang-waiting, tow costs, alcoholic consumption while jonesing for some airtime. Only the pilot can determine the ultimate payback.
-
-The systems are relatively simple, and energetic pioneers are paving the way with open source plans and Youtube videos. The multi-billion dollar drone, battery, and EV industries are quickly driving the evolution of cheaper, lighter, and more powerful components.  
+The systems are relatively simple and free of tune ups, maintenance hassles, and fossil fuels. Like most flight, there are some caveats and hazards, but the ehelp idea has one moving part and many advantages. A community of pioneers are paving the runway with free advice, open source plans, and Youtube videos while the multi-billion dollar drone, battery, and EV industries quickly drive the evolution of cheaper, lighter, and more powerful components. 
 
 In a few years, we'll like have lighter and more powerful motors (axial), smaller and safer batteries (solid state, and (with luck) commercial ready-to-fly choices, kits, manuals, and parts.
 
+.. container:: moveimage
 
-About this document
-==================================
+   .. figure:: images/ca_fusion.png
+            :scale: 100%
 
-This content is an attempt to provide a quick start manual to the DIY community. It is an experimental and unfinished work. There is no attempt here to make $$$, and so shall it ever be.
+            Design by Charles Allen
 
- Ideally, these pages will become a crowd-sourced document. Ccontribute via the **Feedback** links or ask to edit the source here: https://github.com/teacha.../ehelp/blob/main/input/index.rst. Without community participation, this document will fade.
 
-.. note:: Send me any info, link, or informational tidbit. I'll incorporate what makes sense.
+**About this content**
+
+This overview is an attempt to provide a quick start manual to the DIY community. It is an experimental and unfinished work. There is no attempt here to make $$$, and so shall it ever be.
+
+Ideally, these pages will become a crowd-sourced document. Contribute via the **Feedback** links or ask to edit the source on Github. Without community participation, this document will languish and fade.
 
 Goals
 -----------------------
 
-* **Support DIY development**: Concise details on existing projects should engage the community, increase participation, speed new approaches, and improve safety. There's no need to reinvent the wheel, but there is a need to improve the wheel and invent some wheel alternatives.
-* **Advance the technology**: Easily accessible information should speed and foster the development and use of functional designs.
+* **Support DIY development**: An overview and concise details of existing projects will hopefully engage the community, increase participation, speed new approaches, and improve safety. Let's open some doors and remove the barriers.
+* **Advance the technology**: Easily accessible information should speed and foster the development and use of functional designs. There's no need to reinvent the wheel, but there is a need to improve the wheel and invent some wheel alternatives.
 * **Encourage growth in the sport of hang gliding**: The decline of hang gliding is well-known. Perhaps the ability to flatland launch with a simple DIY system will invigorate the sport. 
-
 
 Danger Will Robinson
 ---------------------------
 
-.. caution:: You assume responsibility for any action you take based on this content. All pilots must educated decisions based on multiple sources. There is no advice here. This information derives from 3rd parties and may be erroneous.
+.. caution:: You assume responsibility for any action you take based on this or any other content. Wise pilots make educated decisions based on multiple sources. There is no advice here. This information derives from 3rd parties and may be erroneous.
 
 If you see your photo/text
 ------------------------------------
@@ -46,8 +45,8 @@ Resources
 
 * This document includes: 
 
-    * `Editable spreadsheets for data and lists  <https://docs.google.com/spreadsheets/d/10IPnvWfLhx3g2CH97AFdCC4kw11yGukd6TUVxoGJ78g/edit#gid=0>`_
-    * `Editable content in github <https://github.com/teachamantofish/ehelp>`_
+    * Editable spreadsheets for data, lists, calculators 
+    * `This editable content on Github <https://github.com/teachamantofish/ehelp>`_
 
 * Facebook pages: 
 
@@ -58,7 +57,7 @@ Resources
 Forums: 
 
    * `OpenPPG: Similar concepts, great forum, lots of resources <https://openppg.com/?fbclid=IwAR04rX_1St1D1lqTpwBbaOdLskhpFOMahdXRiHXU1gmr4fSlUv0pwsC-RQg>`_
-   * This community needs a focused forum. Doesn't exist yet. 
+   * This community needs a focused forum. Doesn't exist yet, but I've asked hanggliding.org to engage.
 
 * Plans and open-sourced projects
 

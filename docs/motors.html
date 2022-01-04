@@ -27,11 +27,11 @@
   window.onload = function () {
   Array.from(document.querySelectorAll('h2,h3')).forEach(el => {
     const a = document.createElement('a')
-    a.innerText="Feedback"
+    a.innerText="Comment"
     a.href="mailto:ben.rogers@gmail.com"
     a.target="_blank"
     a.style["float"] = "right"
-    a.style["font-size"] = ".6em"
+    a.style["font-size"] = "40%"
     a.style["font-family"] = "verdana, arial, helvetica, san-serif"
     a.style["padding-top"] = "10px"
     el.appendChild(a)
@@ -60,7 +60,7 @@
   <link rel="stylesheet" href="_static/css/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Electronic Speed Controller" href="esc.html" />
+    <link rel="next" title="Propellers" href="props.html" />
     <link rel="prev" title="Specing out a System (Sizing)" href="spec.html" /> 
   <style>
   .wy-nav-content {max-width:90%}
@@ -114,27 +114,24 @@
             
               <p class="caption"><span class="caption-text">Getting Started</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="index.html">e-Powered Hang Gliding Harnesses</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="index.html#about-this-document">About this document</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="index.html#goals">Goals</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#danger-will-robinson">Danger Will Robinson</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#if-you-see-your-photo-text">If you see your photo/text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">eHelp Hang Gliding Harnesses</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#goals">Goals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#danger-will-robinson">Danger Will Robinson</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#if-you-see-your-photo-text">If you see your photo/text</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="index.html#resources">Resources</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#resources">Resources</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">eHelp Examples</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="examples.html#ehelp-harness">eHelp harness</a></li>
-<li class="toctree-l2"><a class="reference internal" href="examples.html#sustainers">Sustainers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="examples.html#not-a-trike-not-a-harness">Not a trike-not a harness</a></li>
 <li class="toctree-l2"><a class="reference internal" href="examples.html#commercial-e-harness-systems">Commercial e-harness systems</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="spec.html">Specing out a System (Sizing)</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="spec.html#decision-path">Decision path</a></li>
 <li class="toctree-l2"><a class="reference internal" href="spec.html#method-1-how-much-energy">Method 1: How much energy?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="spec.html#method-2-how-much-thrust">Method 2: How much Thrust?:</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="spec.html#method-2-how-much-thrust">Method 2: How much thrust?:</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="spec.html#determine-required-thrust">Determine required thrust</a></li>
 <li class="toctree-l3"><a class="reference internal" href="spec.html#tbd">TBD</a></li>
 </ul>
@@ -145,6 +142,7 @@
 <li class="toctree-l3"><a class="reference internal" href="spec.html#method-1">Method 1</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="spec.html#somewhere-over-the-rainbow">Somewhere, “Over the Rainbow”</a></li>
 <li class="toctree-l2"><a class="reference internal" href="spec.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="spec.html#id1">TBD</a></li>
 </ul>
@@ -155,10 +153,12 @@
 <p class="caption"><span class="caption-text">Components</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Motors</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#top-considerations">Top considerations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#reading-motor-specs">Reading motor specs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#duty-cycle-max-continuous-power">Duty cycle-Max continuous power</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#kv-reduction">KV reduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#motor-spec-reality-check">Motor spec reality check</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#duty-cycle-max-continuous-power">Duty cycle-max continuous power</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#kv-reduction">KV reduction</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#example-motor-list">Example motor list</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#sensored-versus-sensorless">Sensored versus sensorless</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#mating-with-a-prop">Mating with a prop</a></li>
@@ -170,34 +170,6 @@
 <li class="toctree-l3"><a class="reference internal" href="#vendor-specific">Vendor specific</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="esc.html">Electronic Speed Controller</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="esc.html#choose-an-esc">Choose an ESC</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="esc.html#sizing">Sizing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="esc.html#features">Features</a></li>
-<li class="toctree-l3"><a class="reference internal" href="esc.html#location">Location</a></li>
-<li class="toctree-l3"><a class="reference internal" href="esc.html#wiring">Wiring</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="esc.html#throttle">Throttle</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="esc.html#throttle-power-disconnect">Throttle-power disconnect</a></li>
-<li class="toctree-l3"><a class="reference internal" href="esc.html#vendors">Vendors</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="esc.html#worthwhile-reads">Worthwhile reads</a></li>
-<li class="toctree-l2"><a class="reference internal" href="esc.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="batteries.html">Batteries</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="batteries.html#battery-considerations">Battery considerations</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="batteries.html#type">Type</a></li>
-<li class="toctree-l3"><a class="reference internal" href="batteries.html#size">Size</a></li>
-<li class="toctree-l3"><a class="reference internal" href="batteries.html#price">Price</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="batteries.html#worthwhile-reading">Worthwhile reading</a></li>
-<li class="toctree-l2"><a class="reference internal" href="batteries.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="props.html">Propellers</a><ul>
@@ -215,6 +187,34 @@
 <li class="toctree-l2"><a class="reference internal" href="props.html#propeller-innovation">Propeller innovation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="props.html#vendors">Vendors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="props.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="batteries.html">Batteries</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="batteries.html#battery-considerations">Battery considerations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="batteries.html#type">Type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="batteries.html#size">Size</a></li>
+<li class="toctree-l3"><a class="reference internal" href="batteries.html#price">Price</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="batteries.html#diy-battery-packs">DIY battery packs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="batteries.html#worthwhile-reading">Worthwhile reading</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="esc.html">Electronic Speed Controller</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="esc.html#choose-an-esc">Choose an ESC</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#sizing">Sizing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#features">Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#location">Location</a></li>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#wiring">Wiring</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="esc.html#throttle">Throttle</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#throttle-power-disconnect">Throttle-power disconnect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#vendors">Vendors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="esc.html#worthwhile-reads">Worthwhile reads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esc.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="structure.html">Structural-Mechanical</a><ul>
@@ -254,7 +254,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Useful Info</span></p>
+<p class="caption"><span class="caption-text">Pot Pourri</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="calculators.html">Calculators</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="calculators.html#motor">Motor</a></li>
@@ -278,6 +278,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="ideas.html">Ideas and Experiments</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="ideas.html#prone-launch-configurations">Prone launch configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ideas.html#sustainers">Sustainers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ideas.html#seated">Seated</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ideas.html#trike-ish">Trike-ish</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ideas.html#from-paraglider-land">From Paraglider-land</a></li>
@@ -360,7 +361,7 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="esc.html" class="btn btn-neutral float-right" title="Electronic Speed Controller" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="props.html" class="btn btn-neutral float-right" title="Propellers" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="spec.html" class="btn btn-neutral float-left" title="Specing out a System (Sizing)" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -379,37 +380,31 @@
 <a class="reference internal image-reference" href="_images/uc4.gif"><img alt="_images/uc4.gif" src="_images/uc4.gif" style="width: 144.0px; height: 106.2px;" /></a>
 <p class="caption"><span class="caption-text">Under construction</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
-<div class="section" id="top-considerations">
-<h2>Top considerations<a class="headerlink" href="#top-considerations" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Total power is power minus heat. Heat is bad. Design for less heat: higher volts, less amps, largers wires, lots of headroom in all components, cooling, etc.</p></li>
-<li><p>Higher voltage and lower current is more efficient as electrical losses (heat) is proportional to the square of the current.</p></li>
-<li><p>Speed increases proportionally with the operating voltage.</p></li>
-<li><p>Torque increases proportionally with the current consumed.</p></li>
-<li><p>Engine power increases approximately proportionally with the speed. This means that the highest power can only be used at maximum speed (From Lehner).</p></li>
-</ul>
-</div>
+<p>TBD: Intro</p>
 <div class="section" id="reading-motor-specs">
 <h2>Reading motor specs<a class="headerlink" href="#reading-motor-specs" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>N and P numbers: something like “36N30P”. The number before the letter N is the quantity of electromagnets in the stator, and the number before P is the quantity of permanent magnets in the motor.  Lower KV motors have more permanent magnets to increase torque.</p></li>
 <li><p>Dimensions:</p></li>
 <li><p>Rated voltage: Provided in either volts or an S rating. (<code class="docutils literal notranslate"><span class="pre">S</span> <span class="pre">rating</span> <span class="pre">=</span> <span class="pre">number*3.7volts</span></code>)</p></li>
-<li><p>KV: Number of revolutions per volt. You’ll like want 50-150.</p></li>
+<li><p>KV: Number of revolutions per volt. You’ll likely be between 50-150.</p></li>
 <li><p>Continuous current: How many amps the motor can handle for the number of minutes specified by the manufacturer until it overheats. Varies widely. You may need “continuous” for your climb duration.</p></li>
 <li><p>Max (burst) current: How many amps you can draw</p></li>
 <li><p>Internal resistance: Lower is better since resistance = heat.</p></li>
 <li><p>Max current: You need to spec a system that does not exceed the max current. Moreover, max current is limited to a short period of time (usually minutes). It’s a good idea to design a system that’s operates around 50-70% of max current most of the time.</p></li>
 </ul>
 </div>
+<div class="section" id="motor-spec-reality-check">
+<h2>Motor spec reality check<a class="headerlink" href="#motor-spec-reality-check" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="duty-cycle-max-continuous-power">
-<h2>Duty cycle-Max continuous power<a class="headerlink" href="#duty-cycle-max-continuous-power" title="Permalink to this headline">¶</a></h2>
+<h3>Duty cycle-max continuous power<a class="headerlink" href="#duty-cycle-max-continuous-power" title="Permalink to this headline">¶</a></h3>
 <p>There is also a suggestion that the lower the no load kv value of the motor the greater the 100% duty cycle reduction factor. Probably useful to know if one of the larger diameter 35kv or 27kv motors marketed for use on paramotors is being considered.</p>
 </div>
 <div class="section" id="kv-reduction">
-<h2>KV reduction<a class="headerlink" href="#kv-reduction" title="Permalink to this headline">¶</a></h2>
+<h3>KV reduction<a class="headerlink" href="#kv-reduction" title="Permalink to this headline">¶</a></h3>
 <div class="figure align-default">
 <img alt="_images/kvreduction.png" src="_images/kvreduction.png" />
+</div>
 </div>
 </div>
 <div class="section" id="example-motor-list">
@@ -420,7 +415,7 @@
 <li><p>Some motors are marketed by others at higher prices. For example, APS sells Freerchobby motors. It’s worth checking Alibaba, Amazon, eBay</p></li>
 <li><p>You can’t trust published data.</p></li>
 <li><p>Some data points are undefined. For example, “continuous current” doesn’t mean much unless you know the timeframe. Some vendors user 1 minute, others 2 to 5 minutes or more.</p></li>
-<li><p>Thrust values are static thrust on a stand. In flight, dynamic thrust is far less. Published data varies by volts, amps, RPM, and propeller. You’ll have to use a combination of math, data table reading, and dice rolling to formulate an idea about what’s likely true. You should have already calculated what you need; for example: 25Kg of thrust at 50-70% throttle for 5 climb minutes with 12s batteries to climb to 1000’.</p></li>
+<li><p>Thrust values derive from static thrust on a test stand. In flight, dynamic thrust is far less. Published data varies by volts, amps, RPM, and propeller. You’ll have to use a combination of math, data table reading, and dice rolling to formulate an idea about what’s likely true. You should have already calculated what you need; for example: 25Kg of thrust at 50-70% throttle for 5 climb minutes with 12s batteries to climb to 1000’.</p></li>
 <li><p>Max RPM is a no load number. RPM in data tables reflect a value for the specific test propeller.</p></li>
 <li><p>The table below is a startiong point only. Begin there, but don’t end there.</p></li>
 </ul>
