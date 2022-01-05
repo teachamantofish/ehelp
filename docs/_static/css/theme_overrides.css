@@ -30,6 +30,8 @@ h2 {
   margin-top: 2em;
 }
 
+table {width: 200px;}
+
 #id3 {width:700px !important; }
 
 div.twocol { width:800px; background-color:gray}

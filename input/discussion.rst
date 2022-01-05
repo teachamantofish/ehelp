@@ -98,7 +98,7 @@ xxx
 
       In a few years, we'll like have lighter and more powerful motors (axial), smaller and safer batteries (solid state, and (with luck) commercial ready-to-fly choices, kits, manuals, and parts.
       
-.. raw:: html
 
-    <hr class="bookends">
+xxx
 
+reset css: https://stackoverflow.com/questions/43629317/reset-all-css-for-one-element-and-its-children

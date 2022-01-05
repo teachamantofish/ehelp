@@ -41,171 +41,48 @@ You'll often hear that system design starts with the prop. However, it's certain
 
 TBD: insert diagram
 
-Before buying anything, however, a logical first step is figuring out how what it will take to get your butt into the sky. . . 
+The tradeoff game
+===========================
 
-Method 1: How much energy?
+TBD: 
+
+ higher V means less amps for the same power, I wanted to look at two motors that can handle diff V's and compare. Below you can see the M30 w/ 2 higher AH batteries can't run as long, create way more heat, and have a higher RPM than the M40. Same battery price. Seems safer, quieter, longer flight time (and that's at full climb--cruise would be even better). Tradeoff is the moter is 250 more and the batteries weigh 1lb more.
+
+.. note:: Before buying anything, however, a logical first step is figuring out how what it will take to get your butt into the sky. . . 
+
+Calculator: energy and flight time
 ============================================
 
-**Theoretical power x efficiency**: This approach calculates the theoretical energy  to transport you to an altitude within a given timeframe and then adjusts for power train efficiency. For example: If Joey Pilot, wing, and gear weigh 300lbs, how many kilowatt hours will it take to climb at 200 fpm to 1000'?
 
-`Copy this calculator <https://docs.google.com/spreadsheets/d/1QOWFBWTjYjzgTAwhfQpxgTqjzGBhD4zJOt-nyNrNo94/edit?usp=sharing?widget=true&amp;headers=false;rm=minimal&amp;>`_
-
-.. raw:: html
-
-   <iframe src="https://docs.google.com/spreadsheets/d/1QOWFBWTjYjzgTAwhfQpxgTqjzGBhD4zJOt-nyNrNo94/edit?usp=sharing?widget=true&amp;headers=false;rm=minimal&amp;" width="650px" height="510px" scrolling="no"></iframe>
-
-Calculator: Beta
----------------------------
+**Theoretical power x efficiency**: This approach calculates the theoretical energy  to transport you to an altitude within a given timeframe and then adjusts for power train efficiency. For example: If Joey Pilot with is Sport 3 Race and and gear weighs 300lbs, how many kilowatts of battery power will it take to climb at 200 fpm to 1000'?
 
 .. raw:: html
 
-  <!--These styles must only apply to content in 'main' -->
-  <link rel="stylesheet" href="_static/calculator/mvp.css" />
-  <link rel="stylesheet" href="_static/calculator/calculator.css" />
-  <script defer type="text/javascript" src="_static/calculator/powercalc.js"/>
+  <!--`Copy this calculator <https://docs.google.com/spreadsheets/d/1QOWFBWTjYjzgTAwhfQpxgTqjzGBhD4zJOt-nyNrNo94/edit?usp=sharing?widget=true&amp;headers=false;rm=minimal&amp;>`_-->
 
-   <main>
-      <section class="right">
-        <header>
-          <h2>Step 1</h2>
-          <p>Enter pilot data to determine theoretical energy to goal.</p>
-        </header>
-        <table class="input">
-          <thead>
-            <tr>
-              <th></th>
-              <th>Weight (kg)</th>
-              <th>Glide ratio</th>
-              <th>Climb speed</th>
-              <th>Altitude goal (ft)</th>
-              <th>Time to goal</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>Pilot and wing data</th>
-              <td><input id="C3" placeholder="0" value="300" /></td>
-              <td><input id="D3" placeholder="0" value="12" /></td>
-              <td><input id="E3" placeholder="0" value="25" /></td>
-              <td><input id="F3" placeholder="0" value="1000" /></td>
-              <td><input id="G3" placeholder="0" value="5" /></td>
-            </tr>
-            <tr>
-              <th>Metric</th>
-              <td id="C4"></td>
-              <td id="D4"></td>
-              <td id="E4"></td>
-              <td id="F4"></td>
-              <td id="G4"></td>
-            </tr>
-          </tbody>
-        </table>
-        <table class="results">
-          <tbody>
-            <tr>
-              <th rowspan="2">Theoretical energy</th>
-              <td id="F6"></td>
-              <td>kwh</td>
-            </tr>
-            <tr>
-              <td id="F7"></td>
-              <td>Newtons</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-      <section class="right">
-        <header>
-          <h2>Step 2</h2>
-          <p>
-            Adjust required energy based on the efficiency of power train
-            components.
-          </p>
-        </header>
-        <table class="input">
-          <thead>
-            <tr>
-              <th></th>
-              <th>Propeller</th>
-              <th>Motor</th>
-              <th>Batteries</th>
-              <th>All Else</th>
-              <th>1-(1/glide ratio)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>Efficiency reduction (%)</th>
-              <td><input id="C11" placeholder="0" value="45" /></td>
-              <td><input id="D11" placeholder="0" value="90" /></td>
-              <td><input id="E11" placeholder="0" value="95" /></td>
-              <td><input id="F11" placeholder="0" value="95" /></td>
-              <td><input id="G11" placeholder="0" value="92" /></td>
-            </tr>
-          </tbody>
-        </table>
-        <table class="results">
-          <tbody>
-            <tr>
-              <th>Efficiency</th>
-              <td id="F13"></td>
-              <td>%</td>
-            </tr>
-            <tr>
-              <th>Adjusted energy</th>
-              <td id="F14"></td>
-              <td>kwh</td>
-            </tr>
-            <tr>
-              <th>Power rate based on fpm climb</th>
-              <td id="F15"></td>
-              <td>kw battery draw</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-      <section class="right">
-        <header>
-          <h2>Step 3</h2>
-          <p>
-            At the required power draw, determine flight time based on battery
-            choice.
-          </p>
-        </header>
-        <table class="input">
-          <thead>
-            <tr>
-              <th></th>
-              <th>S rating (volts)</th>
-              <th>Capacity (mAh)</th>
-              <th>Number</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>Battery</th>
-              <td><input id="C19" placeholder="0" value="6" /></td>
-              <td><input id="D19" placeholder="0" value="22000" /></td>
-              <td><input id="E19" placeholder="0" value="2" /></td>
-            </tr>
-          </tbody>
-        </table>
-        <table class="results">
-          <tbody>
-            <tr>
-              <th>Available watts</th>
-              <td id="F19"></td>
-              <td>W</td>
-            </tr>
-            <tr>
-              <th>Projected flight time</th>
-              <td id="F21"></td>
-              <td>minutes</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-    </main>
+.. raw:: html
+
+   <iframe src="./resources/calculator_power.html" width="850px" height="750px" scrolling="no"  frameBorder="0"></iframe>
+
+**Calculation walk-through** 
+
+
+1. The first step calculates the theoretical energy required when the power train is 100% efficient. If a stone was hanging out at 1000 feet, how much energy does it store? Note that the forumulas are metric (newtons, joules, and Earth's gravitational constant (9.8 m/s squared), so we convert 1000 feet to meters by dividing by 3.28. 
+
+The formula is:`` kwh=weight X 9.81 (gravity) X feet/3.28 (convert to meters) X 1000 watts X 36000 (sec. per hour)`` 
+
+1. Next we adjust for reality since no part of the system is 100% efficient. The calculator provides some reasonable guesstimates. Multiply the efficiency of all components to get the correction factor. 
+2. We can now calculate needed energy and power: 
+ 
+  * Energy: Obtain the needed kwh by dividing the previously calculated theoretical Kwh by the efficiency correction factor. 
+  * Power: Determine the rate of the power draw by dividing the total needed kwh by number of climb minutes by 60 minutes in an hour: ``kwh/(climb time/60)``. A 5 minute climb to 1000' is simply a 200 fpm climb rate.
+
+4. Now pick some batteries and calculate how long you can draw power at the specified rate. These fields require knowing whether your system is wired in series, parallel, or both. 
+
+  * System voltage is the voltage sent to the motor. Add the voltage of batteries connected in series. 
+  * milliamp hours is the amp rating you can draw: Add the amps of any batteries in parallel. 
+  * By default, the calculator uses a common set up of 2 6s 22000mah batteries (22v) in series. That's one string of batteries with a 44v and 22000mAH output.
+
 
 Method 2: How much thrust?
 ===================================
@@ -220,6 +97,8 @@ what percent of continuous power to use for a 5 minute climb?
 
 .. note:: Calculations courtesy of Paul Martin. For a more detailed document, see `TBD his document <www.google.com>`_.
 
+
+tbd: Power is F*v, so while the force is m*g/(L/D), the drag losses are m*g/(L/D) * v. The v term is going to always be around 25m/s, almost independent of the glider.
 
 Determine required thrust
 ---------------------------------
@@ -264,48 +143,11 @@ TBD:
 * 15470 even with it limited to 55kv ( though I reckon you could get it rewound) of 16s li-Po you'd have more torque and still have 3700 rpm. A bigger prop would be handy but it might be custom even so with the 40D20P you would be around 48kgf thrust on 250A draw which equates to about 38kgf at 12m/s which gives you over 400 fpm climb rate (Paul Martin).
 
 
-Calculation walk-through
-=================================
-
-Method 1
-------------------
-
-Theoretical energy
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-The first step is to calculate the theoretical energy required with 100% efficiency for all components. If a stone was at 1000', how much energy does it store? 
-
-Note that the forumulas are metric (newtons, joules, and Earth's gravitational constant (m/s squared). The formula is: 
-
-=(B4*1000*9.8)/(3.28 * 3600000)
-
-
-:: 
-
-   kwh=weight X 9.81 (gravity) X feet/3.28 (convert to meters) X 1000 watts X 36000 (sec. per hour) 
-
-So, the energy needed to get Joey to 1000' is ``136*9.81*1000/(3.28 * 3600000) = 0.113 kWh``. 
-
-Adjust for inefficiency
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-While .113 kwh is the theoretical energy, we have to adjusting for reality since no part of the system is 100% efficient. Some reasonable guesstimates:  
-
-* Glide ratio (L/D): 12
-* Prop efficiency: 70%
-* Motor efficiency: 90%
-* Battery efficiency: 95%
-* Everything else: 95%
-
-So multiply the efficiency of all components to get the correction factor: ``((1-1/12)*.7*.9*.9*.95*.95) = .469``
-
-Then divide your theoretical Kwh by that number: ``0.113/.469 = .241 kwh``
-
 
 Somewhere, "Over the Rainbow"
 ====================================
 
-If we could wish up a star, we'd wish for detailed power train data specific to our component choices, including: 
+If we could wish up a star, we'd wish for detailed **and accurate** power train data, including: 
 
 * Electrical power = Voltage x Current
 * Mechanical power = Torque x Rotation speed
@@ -313,40 +155,9 @@ If we could wish up a star, we'd wish for detailed power train data specific to 
 * Propeller efficiency = Thrust / Mechanical power
 * Powertrain efficiency = Thrust / Electrical power
 
-These numbers are unlikely to ever come from manufacturers. 3rd parties such as  `Tyto Robotics <https://database.tytorobotics.com/>`_, pilots like Paul Martin (engineer), and anecdotal reports on forums will probably provide additional insight into system performance. 
+These numbers are unlikely to ever come from manufacturers. 3rd parties such as  `Tyto Robotics <https://database.tytorobotics.com/>`_, pilots like Paul Martin (an engineer), and anecdotal reports on forums will probably provide additional insight into system performance. 
 
 .. figure:: images/tyto1.png
    :scale: 80%
 
    Credit Tyto Robotics
-
-Notes, todo, not reviewed
-=================================
-
-
-
-TBD
-------------------
-
- higher V means less amps for the same power, I wanted to look at two motors that can handle diff V's and compare.
-
-Below you can see the M30 w/ 2 higher AH batteries can't run as long, create way more heat, and have a higher RPM than the M40. Same battery price. Seems safer, quieter, longer flight time (and that's at full climb--cruise would be even better). Tradeoff is the moter is 250 more and the batteries weigh 1lb more.
-
-Is my thinking correct? More batteries in a series is better?
-
-
-https://www.mad-motor.com/products/mad-components-m30-pro.html
-Mad30: 14s 75% throttle 123 amps for 30kg thrust w/ 40x13 80kv 3440
-2 22.2V 22AH batteries=.98 kw 944.00 11.7 lbs and runs for 11 minutes
-
-https://www.mad-motor.com/products/mad-components-m40c30-pro-ipe.html
-Mad40  24s 60% throttle 50.4 amps for 30kg thrust w/ 47x13 43kv RPM 2455
-4 22.2v 12AH batteries=1kw 1040.00 12.8 lbs and last 14 minutes
-
-Formulas
-
-E =f*d
-electrical : P*T
-kwh: energy
-power = watts/ energy rate
-Power is F*v, so while the force is m*g/(L/D), the drag losses are m*g/(L/D) * v. The v term is going to always be around 25m/s, almost independent of the glider.

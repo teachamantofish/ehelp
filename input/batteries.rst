@@ -68,6 +68,11 @@ Size
 
 Your flying consumes kilowatt hours: Kwh = volts X amps. For example, two 6s (22.2 volts) 22000mAH batteries will = about 1 Kw. How much and what kind of flying you can do with 1 Kwh can't be known until you've gone through the steps in :ref:`spec`.
 
+Weight
+---------------
+
+TBD
+
 Price
 ------------------
 
@@ -78,6 +83,11 @@ Given their cost and wide ranging pricing, it is worthwhile to compare brands an
 .. figure:: images/batterycalcspreadsheet.png
 
    Credit OpenPPG forum
+
+Choosing your system
+=========================
+
+https://power-calculation.com/battery-storage-calculator.php
 
 DIY battery packs
 ========================
