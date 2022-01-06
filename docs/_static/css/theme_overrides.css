@@ -2,7 +2,6 @@
 .header-img {
     width: 100%;
     margin-left:  300px;
-
     background: url('https://teachamantofish.github.io/ehelp/');
     background-size: cover;
   }
@@ -10,17 +9,21 @@
 .wy-body-for-nav, .wy-nav-content-wrap, .wy-nav-content {background-color: #fcfcfc;}
 
 
-.alert {
-  padding: 15px;
-  border: 1px solid #d6e9c6;
-  border-radius: 4px;
-  color: #3c763d;
-  background-color: #dff0d8;
+.feedback {
+  font-size: 1em;
+  padding-top: 0 !important;
+  font-family: "verdana, arial, helvetica, san-serif";
+  padding-bottom: 7px;
+  border:none;
+  float: right;
 }
 
-.feedback {font-size: .5em;
+ .feedback::after{
+  content: "\1F4E7";
+  width: 50px;
+  
+  }
 
-}
 
 h2 {
   background: rgb(242,240,240);
@@ -28,11 +31,19 @@ h2 {
   padding: 5px 5px 5px 5px;
   margin-left: -5px;
   margin-top: 2em;
+
 }
 
-table {width: 200px;}
+h2 > .heading-link::after{
+  font-size: 1.2em;
+  padding-bottom: 10px;
+  }
+  
+h3 > .heading-link::after{
+  font-size: 1.5em;
+  }
 
-#id3 {width:700px !important; }
+
 
 div.twocol { width:800px; background-color:gray}
 
@@ -43,7 +54,6 @@ div.leftcolumn {
 
 div.rightcolumn {
   width: 380px;
-  
 }
 
 div.moveimage {

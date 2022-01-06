@@ -1,7 +1,7 @@
 .. _spec:
 
 ************************************************
-Specing out a System (Sizing)
+Specing out a System
 ************************************************
 
 .. figure:: images/uc2.gif
@@ -13,16 +13,18 @@ Navigating a working system is difficult and time consuming. Until the eHelp har
 
 Until then, moving forward is a bit of work. 
 
-Margins are thin with electric powered aircraft primarily due to the low battery energy density. While HG trike and paramotor systems can carry several KWH of batteries, HG harness systems are usually limited to sub 2 KWHs. Powered flight time is measured in minutes--often 10 to 20. Couple these limitations with a wide range of wing specs and pilot weights, and it becomes apparent that optimizing the power train requires some minimal number crunching. At a 200 fpm climb, there's a big altitude difference between 5 minutes and 10 minutes.
+Margins are thin with electric powered aircraft primarily due to battery low energy density. While HG trike and paramotor systems can carry several KWH of batteries, HG harness systems are limited by what a pilot is willing to carry (e.g. sub 2 KWHs). Powered flight time is measured in minutes--often 10 to 20. Couple these limitations with a wide range of wing specs and pilot weights, and it becomes apparent that optimizing the power train requires some minimal number crunching. At a 200 fpm climb, there's a big altitude difference between 5 minutes and 10 minutes.
 
 Decision path
 =====================
 
-You'll often hear that system design starts with the prop. However, it's certainly true that the performance of system components is so intimately intertwined that the specification of any piece has ramifications for all the others. We're talking about the electronic speed controller, batteries, motors, and the prop here. It's reasonable to start with any of the latter three as long as the entire system produces the desired result. For example: 
+You'll often hear that system design starts with the prop. However, the performance of system components is so intimately intertwined that the specification of any piece has ramifications for all the others. Your choice of batteries, motor, electronic speed controller, or prop must inform your choices across the system. Failure to balance and tune the design holistically can easily result in a dangerous or inadequate ehelp system.
 
-* *Batteries*: How much weight you're willing to have on board determines your available power. Do you want to stay under 60 volts due to a wider array of available products or for safety reasons? Or should you choose 24S (88-100V) system so you push less amps and produce less heat with more speed?
-* *Motors*: Motors must be rated for the voltage you choose. They'll need to be able to drive your propeller at enough thrust while handling the continuous amperage during climb without overheating. 
-* *Propeller*: The prop pushes you into the sky with thrust. Larger diameters and slower speeds are more efficient, but the motor must be capable of turning the prop at the required speed and torque. Ground, feet, and keel limit prop size, and even within the standard 36-44 inch range there are hundreds of choices (diameter, pitch, blade number, and material). Volts determine speed, but amps determine torque.
+Realistically, it doesn't matter where you start as long as the entire system produces the desired result. For example: 
+
+* *Batteries*: How much weight you're willing to have on board determines available power. Do you want to stay under 60 volts due to a wider array of available products or for safety reasons? Or should you choose 24S (88-100V) system so you push less amps and produce less heat for the same power?
+* *Motors*: Motors must be rated for the voltage you choose. They'll need to be able to drive your propeller at enough thrust while handling the continuous amperage during climb without overheating. In other words, they must be spec'd to handle the battery input power while delivering enough output power to the prop.
+* *Propeller*: The prop pushes you into the sky with thrust. Larger diameters and slower speeds are more efficient, but the motor must be capable of turning the prop at the required speed and torque. Ground, feet, and keel limit prop size, and within the standard 36-44 inch range there are hundreds of choices (diameter, pitch, blade number, and material). Volts determine speed, but amps determine torque.
 
 .. list-table:: Top considerations
    :widths: 30 70 
@@ -147,7 +149,7 @@ TBD:
 Somewhere, "Over the Rainbow"
 ====================================
 
-If we could wish up a star, we'd wish for detailed **and accurate** power train data, including: 
+If we could wish up a star, we'd wish for detailed **and accurate** power train data so that we could accuratly predict a prop's output power/thrust for any given input power. These numbers will never come from manufacturers. 3rd parties such as  `Tyto Robotics <https://database.tytorobotics.com/>`_ sell engineered test benches and provide free software which makes it possible to quantify motor/prop performance: 
 
 * Electrical power = Voltage x Current
 * Mechanical power = Torque x Rotation speed
@@ -155,7 +157,7 @@ If we could wish up a star, we'd wish for detailed **and accurate** power train 
 * Propeller efficiency = Thrust / Mechanical power
 * Powertrain efficiency = Thrust / Electrical power
 
-These numbers are unlikely to ever come from manufacturers. 3rd parties such as  `Tyto Robotics <https://database.tytorobotics.com/>`_, pilots like Paul Martin (an engineer), and anecdotal reports on forums will probably provide additional insight into system performance. 
+In the abscence of such tools, insight into system performance will derive from a mix of manufacturer data, anecdotal reports on forums, and pilots like Paul Martin (an engineer), Reider Bernsten, Charles Allen, and other.
 
 .. figure:: images/tyto1.png
    :scale: 80%

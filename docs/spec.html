@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Specing out a System (Sizing) &mdash; Electric Hang Gliding Harness</title>
+  <title>Specing out a System &mdash; Electric Hang Gliding Harness</title>
   
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -27,20 +27,15 @@
   window.onload = function () {
   Array.from(document.querySelectorAll('h2,h3')).forEach(el => {
     const a = document.createElement('a')
-    a.innerText="Comment"
+    a.innerText=""
     a.href="mailto:ben.rogers@gmail.com"
     a.target="_blank"
-    a.style["float"] = "right"
-    a.style["font-size"] = "40%"
-    a.style["font-family"] = "verdana, arial, helvetica, san-serif"
-    a.style["padding-top"] = "10px"
+    a.title="Send feedback"
+    a.classList.add("feedback");
     el.appendChild(a)
   });
 }
 </script>
-
-
-
 
   <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
@@ -128,7 +123,7 @@
 <li class="toctree-l2"><a class="reference internal" href="examples.html#commercial-e-harness-systems">Commercial e-harness systems</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Specing out a System (Sizing)</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Specing out a System</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#decision-path">Decision path</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#the-tradeoff-game">The tradeoff game</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#calculator-energy-and-flight-time">Calculator: energy and flight time</a></li>
@@ -233,23 +228,39 @@
 <li class="toctree-l2"><a class="reference internal" href="structure.html#note-tbd-todo">note, tbd, todo</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="electrical.html">Instrumentation, Telemetry</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="electrical.html#telemetry">Telemetry</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="electrical.html#connections">Connections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="electrical.html">Instrumentation and Wiring</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="electrical.html#esc-telemetry">ESC telemetry</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="electrical.html#example-use-case-ng">Example use case: NG</a></li>
+<li class="toctree-l3"><a class="reference internal" href="electrical.html#example-use-case-ca">Example use case: CA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="electrical.html#example-use-case-openppg">Example use case: OpenPPG</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="electrical.html#battery-managent-system">Battery managent system</a></li>
-<li class="toctree-l2"><a class="reference internal" href="electrical.html#instrumentation">Instrumentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="electrical.html#battery-monitoring">Battery monitoring</a></li>
-<li class="toctree-l3"><a class="reference internal" href="electrical.html#motor-monitoring">Motor monitoring</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="electrical.html#tbd-notes-todo">tbd, notes, todo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="electrical.html#bms-telemetry">BMS telemetry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="electrical.html#wiring">Wiring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="electrical.html#notes-todo">Notes, todo</a></li>
 </ul>
 </li>
 </ul>
 <p class="caption"><span class="caption-text">Pot Pourri</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="ideas.html">Ideas and Experiments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ideas.html#prone-launch-configurations">Prone launch configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ideas.html#sustainers">Sustainers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ideas.html#seated">Seated</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ideas.html#trike-ish">Trike-ish</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ideas.html#from-paraglider-land">From Paraglider-land</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="safety.html">Safety Checklist</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="safety.html#battery">Battery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="safety.html#electrical">Electrical</a></li>
+<li class="toctree-l2"><a class="reference internal" href="safety.html#mechanical">Mechanical</a></li>
+<li class="toctree-l2"><a class="reference internal" href="safety.html#glider-handling">Glider handling</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="safety.html#turbulence-sensors">Turbulence sensors</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="calculators.html">Calculators</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="calculators.html#motor">Motor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="calculators.html#propeller">Propeller</a><ul>
@@ -270,29 +281,9 @@
 <li class="toctree-l2"><a class="reference internal" href="calculators.html#tbd-rc-whole-system">TBD: RC whole system?</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="ideas.html">Ideas and Experiments</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="ideas.html#prone-launch-configurations">Prone launch configurations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ideas.html#sustainers">Sustainers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ideas.html#seated">Seated</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ideas.html#trike-ish">Trike-ish</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ideas.html#from-paraglider-land">From Paraglider-land</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="safety.html">Safety</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="safety.html#design-checklist">Design Checklist</a></li>
-<li class="toctree-l2"><a class="reference internal" href="safety.html#battery">Battery</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="safety.html#main-power-switch">Main power switch</a></li>
-<li class="toctree-l3"><a class="reference internal" href="safety.html#quick-disconnect">Quick disconnect</a></li>
-<li class="toctree-l3"><a class="reference internal" href="safety.html#status-monitor">Status monitor</a></li>
-<li class="toctree-l3"><a class="reference internal" href="safety.html#temperature-monitor-and-or-alarm">Temperature monitor and/or alarm</a></li>
-<li class="toctree-l3"><a class="reference internal" href="safety.html#tbd">TBD</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="safety.html#mechanical">Mechanical</a></li>
-<li class="toctree-l2"><a class="reference internal" href="safety.html#glider-handling">Glider handling</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="safety.html#turbulence-sensors">Turbulence sensors</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="technical.html">Technical Deep Dives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library.html">Reference Library</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="library.html#materials">Materials</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
@@ -341,7 +332,7 @@
     
       <li><a href="toc.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Specing out a System (Sizing)</li>
+      <li>Specing out a System</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -368,22 +359,23 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="specing-out-a-system-sizing">
-<span id="spec"></span><h1>Specing out a System (Sizing)<a class="headerlink" href="#specing-out-a-system-sizing" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="specing-out-a-system">
+<span id="spec"></span><h1>Specing out a System<a class="headerlink" href="#specing-out-a-system" title="Permalink to this headline">¶</a></h1>
 <div class="figure align-default" id="id1">
 <a class="reference internal image-reference" href="_images/uc2.gif"><img alt="_images/uc2.gif" src="_images/uc2.gif" style="width: 150.0px; height: 112.4px;" /></a>
 <p class="caption"><span class="caption-text">Under construction</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <p>Navigating a working system is difficult and time consuming. Until the eHelp harness idea is more widespread, design principles will remain relatively inaccessible while advice is scattered across various Facebook pages and forums with pioneers helping where they can. With luck, the ehelp paradigm will gain enough traction that the hang gliding community can emulate aspects of <a class="reference external" href="https://openppg.com/">OpenPPG</a> and create its own easy-to-traverse path.</p>
 <p>Until then, moving forward is a bit of work.</p>
-<p>Margins are thin with electric powered aircraft primarily due to the low battery energy density. While HG trike and paramotor systems can carry several KWH of batteries, HG harness systems are usually limited to sub 2 KWHs. Powered flight time is measured in minutes–often 10 to 20. Couple these limitations with a wide range of wing specs and pilot weights, and it becomes apparent that optimizing the power train requires some minimal number crunching. At a 200 fpm climb, there’s a big altitude difference between 5 minutes and 10 minutes.</p>
+<p>Margins are thin with electric powered aircraft primarily due to battery low energy density. While HG trike and paramotor systems can carry several KWH of batteries, HG harness systems are limited by what a pilot is willing to carry (e.g. sub 2 KWHs). Powered flight time is measured in minutes–often 10 to 20. Couple these limitations with a wide range of wing specs and pilot weights, and it becomes apparent that optimizing the power train requires some minimal number crunching. At a 200 fpm climb, there’s a big altitude difference between 5 minutes and 10 minutes.</p>
 <div class="section" id="decision-path">
 <h2>Decision path<a class="headerlink" href="#decision-path" title="Permalink to this headline">¶</a></h2>
-<p>You’ll often hear that system design starts with the prop. However, it’s certainly true that the performance of system components is so intimately intertwined that the specification of any piece has ramifications for all the others. We’re talking about the electronic speed controller, batteries, motors, and the prop here. It’s reasonable to start with any of the latter three as long as the entire system produces the desired result. For example:</p>
+<p>You’ll often hear that system design starts with the prop. However, the performance of system components is so intimately intertwined that the specification of any piece has ramifications for all the others. Your choice of batteries, motor, electronic speed controller, or prop must inform your choices across the system. Failure to balance and tune the design holistically can easily result in a dangerous or inadequate ehelp system.</p>
+<p>Realistically, it doesn’t matter where you start as long as the entire system produces the desired result. For example:</p>
 <ul class="simple">
-<li><p><em>Batteries</em>: How much weight you’re willing to have on board determines your available power. Do you want to stay under 60 volts due to a wider array of available products or for safety reasons? Or should you choose 24S (88-100V) system so you push less amps and produce less heat with more speed?</p></li>
-<li><p><em>Motors</em>: Motors must be rated for the voltage you choose. They’ll need to be able to drive your propeller at enough thrust while handling the continuous amperage during climb without overheating.</p></li>
-<li><p><em>Propeller</em>: The prop pushes you into the sky with thrust. Larger diameters and slower speeds are more efficient, but the motor must be capable of turning the prop at the required speed and torque. Ground, feet, and keel limit prop size, and even within the standard 36-44 inch range there are hundreds of choices (diameter, pitch, blade number, and material). Volts determine speed, but amps determine torque.</p></li>
+<li><p><em>Batteries</em>: How much weight you’re willing to have on board determines available power. Do you want to stay under 60 volts due to a wider array of available products or for safety reasons? Or should you choose 24S (88-100V) system so you push less amps and produce less heat for the same power?</p></li>
+<li><p><em>Motors</em>: Motors must be rated for the voltage you choose. They’ll need to be able to drive your propeller at enough thrust while handling the continuous amperage during climb without overheating. In other words, they must be spec’d to handle the battery input power while delivering enough output power to the prop.</p></li>
+<li><p><em>Propeller</em>: The prop pushes you into the sky with thrust. Larger diameters and slower speeds are more efficient, but the motor must be capable of turning the prop at the required speed and torque. Ground, feet, and keel limit prop size, and within the standard 36-44 inch range there are hundreds of choices (diameter, pitch, blade number, and material). Volts determine speed, but amps determine torque.</p></li>
 </ul>
 <table class="colwidths-given docutils align-default" id="id2">
 <caption><span class="caption-text">Top considerations</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
@@ -513,7 +505,7 @@
 </div>
 <div class="section" id="somewhere-over-the-rainbow">
 <h2>Somewhere, “Over the Rainbow”<a class="headerlink" href="#somewhere-over-the-rainbow" title="Permalink to this headline">¶</a></h2>
-<p>If we could wish up a star, we’d wish for detailed <strong>and accurate</strong> power train data, including:</p>
+<p>If we could wish up a star, we’d wish for detailed <strong>and accurate</strong> power train data so that we could accuratly predict a prop’s output power/thrust for any given input power. These numbers will never come from manufacturers. 3rd parties such as  <a class="reference external" href="https://database.tytorobotics.com/">Tyto Robotics</a> sell engineered test benches and provide free software which makes it possible to quantify motor/prop performance:</p>
 <ul class="simple">
 <li><p>Electrical power = Voltage x Current</p></li>
 <li><p>Mechanical power = Torque x Rotation speed</p></li>
@@ -521,7 +513,7 @@
 <li><p>Propeller efficiency = Thrust / Mechanical power</p></li>
 <li><p>Powertrain efficiency = Thrust / Electrical power</p></li>
 </ul>
-<p>These numbers are unlikely to ever come from manufacturers. 3rd parties such as  <a class="reference external" href="https://database.tytorobotics.com/">Tyto Robotics</a>, pilots like Paul Martin (an engineer), and anecdotal reports on forums will probably provide additional insight into system performance.</p>
+<p>In the abscence of such tools, insight into system performance will derive from a mix of manufacturer data, anecdotal reports on forums, and pilots like Paul Martin (an engineer), Reider Bernsten, Charles Allen, and other.</p>
 <div class="figure align-default" id="id3">
 <a class="reference internal image-reference" href="_images/tyto1.png"><img alt="_images/tyto1.png" src="_images/tyto1.png" style="width: 869.6px; height: 682.4000000000001px;" /></a>
 <p class="caption"><span class="caption-text">Credit Tyto Robotics</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
@@ -544,7 +536,7 @@
     <p>
     <img src="_images/dq1.jpg"  class="endimage"/>
       <span class="lastupdated">&nbsp;&nbsp;&nbsp;
-        Last updated on Jan 04, 2022.
+        Last updated on Jan 05, 2022.
         
       </span>
     </p>

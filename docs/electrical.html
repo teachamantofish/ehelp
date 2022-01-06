@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Instrumentation, Telemetry &mdash; Electric Hang Gliding Harness</title>
+  <title>Instrumentation and Wiring &mdash; Electric Hang Gliding Harness</title>
   
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -27,20 +27,15 @@
   window.onload = function () {
   Array.from(document.querySelectorAll('h2,h3')).forEach(el => {
     const a = document.createElement('a')
-    a.innerText="Comment"
+    a.innerText=""
     a.href="mailto:ben.rogers@gmail.com"
     a.target="_blank"
-    a.style["float"] = "right"
-    a.style["font-size"] = "40%"
-    a.style["font-family"] = "verdana, arial, helvetica, san-serif"
-    a.style["padding-top"] = "10px"
+    a.title="Send feedback"
+    a.classList.add("feedback");
     el.appendChild(a)
   });
 }
 </script>
-
-
-
 
   <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
@@ -60,7 +55,7 @@
   <link rel="stylesheet" href="_static/css/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Calculators" href="calculators.html" />
+    <link rel="next" title="Ideas and Experiments" href="ideas.html" />
     <link rel="prev" title="Structural-Mechanical" href="structure.html" /> 
   <style>
   .wy-nav-content {max-width:90%}
@@ -128,7 +123,7 @@
 <li class="toctree-l2"><a class="reference internal" href="examples.html#commercial-e-harness-systems">Commercial e-harness systems</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="spec.html">Specing out a System (Sizing)</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="spec.html">Specing out a System</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="spec.html#decision-path">Decision path</a></li>
 <li class="toctree-l2"><a class="reference internal" href="spec.html#the-tradeoff-game">The tradeoff game</a></li>
 <li class="toctree-l2"><a class="reference internal" href="spec.html#calculator-energy-and-flight-time">Calculator: energy and flight time</a></li>
@@ -233,23 +228,39 @@
 <li class="toctree-l2"><a class="reference internal" href="structure.html#note-tbd-todo">note, tbd, todo</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Instrumentation, Telemetry</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#telemetry">Telemetry</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#connections">Connections</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Instrumentation and Wiring</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#esc-telemetry">ESC telemetry</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#example-use-case-ng">Example use case: NG</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-use-case-ca">Example use case: CA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-use-case-openppg">Example use case: OpenPPG</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#battery-managent-system">Battery managent system</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#instrumentation">Instrumentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#battery-monitoring">Battery monitoring</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#motor-monitoring">Motor monitoring</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#tbd-notes-todo">tbd, notes, todo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bms-telemetry">BMS telemetry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#wiring">Wiring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#notes-todo">Notes, todo</a></li>
 </ul>
 </li>
 </ul>
 <p class="caption"><span class="caption-text">Pot Pourri</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="ideas.html">Ideas and Experiments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ideas.html#prone-launch-configurations">Prone launch configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ideas.html#sustainers">Sustainers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ideas.html#seated">Seated</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ideas.html#trike-ish">Trike-ish</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ideas.html#from-paraglider-land">From Paraglider-land</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="safety.html">Safety Checklist</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="safety.html#battery">Battery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="safety.html#electrical">Electrical</a></li>
+<li class="toctree-l2"><a class="reference internal" href="safety.html#mechanical">Mechanical</a></li>
+<li class="toctree-l2"><a class="reference internal" href="safety.html#glider-handling">Glider handling</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="safety.html#turbulence-sensors">Turbulence sensors</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="calculators.html">Calculators</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="calculators.html#motor">Motor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="calculators.html#propeller">Propeller</a><ul>
@@ -270,29 +281,9 @@
 <li class="toctree-l2"><a class="reference internal" href="calculators.html#tbd-rc-whole-system">TBD: RC whole system?</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="ideas.html">Ideas and Experiments</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="ideas.html#prone-launch-configurations">Prone launch configurations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ideas.html#sustainers">Sustainers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ideas.html#seated">Seated</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ideas.html#trike-ish">Trike-ish</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ideas.html#from-paraglider-land">From Paraglider-land</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="safety.html">Safety</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="safety.html#design-checklist">Design Checklist</a></li>
-<li class="toctree-l2"><a class="reference internal" href="safety.html#battery">Battery</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="safety.html#main-power-switch">Main power switch</a></li>
-<li class="toctree-l3"><a class="reference internal" href="safety.html#quick-disconnect">Quick disconnect</a></li>
-<li class="toctree-l3"><a class="reference internal" href="safety.html#status-monitor">Status monitor</a></li>
-<li class="toctree-l3"><a class="reference internal" href="safety.html#temperature-monitor-and-or-alarm">Temperature monitor and/or alarm</a></li>
-<li class="toctree-l3"><a class="reference internal" href="safety.html#tbd">TBD</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="safety.html#mechanical">Mechanical</a></li>
-<li class="toctree-l2"><a class="reference internal" href="safety.html#glider-handling">Glider handling</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="safety.html#turbulence-sensors">Turbulence sensors</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="technical.html">Technical Deep Dives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library.html">Reference Library</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="library.html#materials">Materials</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
@@ -341,7 +332,7 @@
     
       <li><a href="toc.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Instrumentation, Telemetry</li>
+      <li>Instrumentation and Wiring</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -355,7 +346,7 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="calculators.html" class="btn btn-neutral float-right" title="Calculators" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="ideas.html" class="btn btn-neutral float-right" title="Ideas and Experiments" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="structure.html" class="btn btn-neutral float-left" title="Structural-Mechanical" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -368,21 +359,25 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="instrumentation-telemetry">
-<h1>Instrumentation, Telemetry<a class="headerlink" href="#instrumentation-telemetry" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="instrumentation-and-wiring">
+<h1>Instrumentation and Wiring<a class="headerlink" href="#instrumentation-and-wiring" title="Permalink to this headline">¶</a></h1>
 <div class="figure align-default" id="id1">
 <a class="reference internal image-reference" href="_images/uc1.gif"><img alt="_images/uc1.gif" src="_images/uc1.gif" style="width: 165.0px; height: 93.5px;" /></a>
 <p class="caption"><span class="caption-text">Under construction</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <p>TBD: overview</p>
+<div class="section" id="esc-telemetry">
+<h2>ESC telemetry<a class="headerlink" href="#esc-telemetry" title="Permalink to this headline">¶</a></h2>
+<p>TBD: what data you want and where it comes from.</p>
+<div class="figure align-default">
+<img alt="_images/telemetry1.png" src="_images/telemetry1.png" />
+</div>
+<div class="section" id="example-use-case-ng">
+<h3>Example use case: NG<a class="headerlink" href="#example-use-case-ng" title="Permalink to this headline">¶</a></h3>
 <div class="figure align-default" id="id2">
-<img alt="_images/wiring_ng.png" src="_images/wiring_ng.png" />
+<a class="reference internal image-reference" href="_images/wiring_ng.png"><img alt="_images/wiring_ng.png" src="_images/wiring_ng.png" style="width: 391.0px; height: 378.5px;" /></a>
 <p class="caption"><span class="caption-text">Credit Nikita Gazarov</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
-<div class="section" id="telemetry">
-<h2>Telemetry<a class="headerlink" href="#telemetry" title="Permalink to this headline">¶</a></h2>
-<p>TBD: what data you want and where it comes from.</p>
-<p>table: bms vs es</p>
 <p>Nikita notes:</p>
 <p>data from ESC
 sends data 22bytes of data coni: rpm battery level, current, :
@@ -408,37 +403,46 @@ phase current
 power
 throttle input
 motor duty cycle</p>
-<div class="section" id="connections">
-<h3>Connections<a class="headerlink" href="#connections" title="Permalink to this headline">¶</a></h3>
-<p>bluetooth, hardwired</p>
 </div>
-</div>
-<div class="section" id="battery-managent-system">
-<h2>Battery managent system<a class="headerlink" href="#battery-managent-system" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://www.energusps.com/shop/product/tiny-bms-s516-150a-750a-36">https://www.energusps.com/shop/product/tiny-bms-s516-150a-750a-36</a></p>
-<div class="figure align-default">
-<img alt="_images/bms1.png" src="_images/bms1.png" />
-</div>
-</div>
-<div class="section" id="instrumentation">
-<h2>Instrumentation<a class="headerlink" href="#instrumentation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="example-use-case-ca">
+<h3>Example use case: CA<a class="headerlink" href="#example-use-case-ca" title="Permalink to this headline">¶</a></h3>
 <p>TBD. CA has a slick contraption in one of his vids.</p>
 <div class="figure align-default">
 <img alt="_images/cainstrument.png" src="_images/cainstrument.png" />
 </div>
-<ul class="simple">
-<li><p>OpenPPG board: <a class="reference external" href="https://openppg.com/shop/paramotors/replacement-parts/frame-pcb/">https://openppg.com/shop/paramotors/replacement-parts/frame-pcb/</a></p></li>
-<li></li>
-</ul>
-<div class="section" id="battery-monitoring">
-<h3>Battery monitoring<a class="headerlink" href="#battery-monitoring" title="Permalink to this headline">¶</a></h3>
 </div>
-<div class="section" id="motor-monitoring">
-<h3>Motor monitoring<a class="headerlink" href="#motor-monitoring" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="example-use-case-openppg">
+<h3>Example use case: OpenPPG<a class="headerlink" href="#example-use-case-openppg" title="Permalink to this headline">¶</a></h3>
+<p>OpenPPG board: <a class="reference external" href="https://openppg.com/shop/paramotors/replacement-parts/frame-pcb/">https://openppg.com/shop/paramotors/replacement-parts/frame-pcb/</a></p>
+<p><a class="reference external" href="https://community.openppg.com/t/some-newbie-questions-about-instrumentation-monitoring-pcb/4131/7">https://community.openppg.com/t/some-newbie-questions-about-instrumentation-monitoring-pcb/4131/7</a></p>
 </div>
 </div>
-<div class="section" id="tbd-notes-todo">
-<h2>tbd, notes, todo<a class="headerlink" href="#tbd-notes-todo" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="bms-telemetry">
+<h2>BMS telemetry<a class="headerlink" href="#bms-telemetry" title="Permalink to this headline">¶</a></h2>
+<p>TBD</p>
+<p><a class="reference external" href="https://www.energusps.com/shop/product/tiny-bms-s516-150a-750a-36">https://www.energusps.com/shop/product/tiny-bms-s516-150a-750a-36</a></p>
+<div class="figure align-default">
+<img alt="_images/bms1.png" src="_images/bms1.png" />
+</div>
+<p>bms features:
+temp probe
+temp
+voltage
+current
+charge remaining, capacity
+indiv cell monitoring
+current control
+charge/discharge balancing and protections
+bluetooth
+parallel battery connections (check!)
+weight</p>
+</div>
+<div class="section" id="wiring">
+<h2>Wiring<a class="headerlink" href="#wiring" title="Permalink to this headline">¶</a></h2>
+<p>TBD</p>
+</div>
+<div class="section" id="notes-todo">
+<h2>Notes, todo<a class="headerlink" href="#notes-todo" title="Permalink to this headline">¶</a></h2>
 <p>bratwurst (from openPPG)</p>
 <p>Hi Peter,</p>
 <p>The fact is that all displays that I have sold to pilots have worked flawlessly to this day. everyone used it for what it was intended for. if you want a system that is completely individual for you, you will find many companies that specialize in it. I and all my colleagues will continue to fly with the 18063, 25063, 50063 for the next few years. never change a perfectly functioning system is my opinion.</p>
@@ -458,18 +462,6 @@ motor duty cycle</p>
 <p><a class="reference external" href="https://usa.banggood.com/DALY-Smart-BMS-Accessory-bluetooth-Module-USB-to-UART-or-RS485-Cable-CANbus-Module-Power-Display-Panel-Touch-LCD-Screen-p-1872195.html?utm_source=googleshopping&amp;utm_medium=cpc_organic&amp;gmcCountry=US&amp;utm_content=minha&amp;utm_campaign=minha-usg-pc&amp;currency=USD&amp;cur_warehouse=CN&amp;createTmp=1&amp;ID=6310487&amp;utm_source=googleshopping&amp;utm_medium=cpc_bgs&amp;utm_content=sandra&amp;utm_campaign=sandra-pla-usg-all-0506&amp;ad_id=519518637596&amp;gclid=Cj0KCQiAwqCOBhCdARIsAEPyW9kt19-gqlxlKW-USW0PbmHttu5lexbUaQ_X9HCoDZh_qG4-9i9D6wsaApAiEALw_wcB">https://usa.banggood.com/DALY-Smart-BMS-Accessory-bluetooth-Module-USB-to-UART-or-RS485-Cable-CANbus-Module-Power-Display-Panel-Touch-LCD-Screen-p-1872195.html?utm_source=googleshopping&amp;utm_medium=cpc_organic&amp;gmcCountry=US&amp;utm_content=minha&amp;utm_campaign=minha-usg-pc&amp;currency=USD&amp;cur_warehouse=CN&amp;createTmp=1&amp;ID=6310487&amp;utm_source=googleshopping&amp;utm_medium=cpc_bgs&amp;utm_content=sandra&amp;utm_campaign=sandra-pla-usg-all-0506&amp;ad_id=519518637596&amp;gclid=Cj0KCQiAwqCOBhCdARIsAEPyW9kt19-gqlxlKW-USW0PbmHttu5lexbUaQ_X9HCoDZh_qG4-9i9D6wsaApAiEALw_wcB</a></p>
 <p><a class="reference external" href="https://www.lithiumbatterypcb.com/product/13s-to-20s-li-ion-or-lifepo4-smart-bms-relay-solution/">https://www.lithiumbatterypcb.com/product/13s-to-20s-li-ion-or-lifepo4-smart-bms-relay-solution/</a></p>
 <p><a class="reference external" href="https://www.aliexpress.com/item/4001202028077.html?spm=a2g0o.productlist.0.0.6efb3d73dFSwNi&amp;algo_pvid=44317b5a-bac3-4c98-a688-1253b79ffbe5&amp;algo_exp_id=44317b5a-bac3-4c98-a688-1253b79ffbe5-13&amp;pdp_ext_f=%7B%22sku_id%22%3A%2212000022994987764%22%7D&amp;pdp_pi=-1%3B48.72%3B-1%3B-1%400%3BUSD%3Bsearch-mainSearch">https://www.aliexpress.com/item/4001202028077.html?spm=a2g0o.productlist.0.0.6efb3d73dFSwNi&amp;algo_pvid=44317b5a-bac3-4c98-a688-1253b79ffbe5&amp;algo_exp_id=44317b5a-bac3-4c98-a688-1253b79ffbe5-13&amp;pdp_ext_f=%7B%22sku_id%22%3A%2212000022994987764%22%7D&amp;pdp_pi=-1%3B48.72%3B-1%3B-1%400%3BUSD%3Bsearch-mainSearch</a></p>
-<p>bms features:
-temp probe
-temp
-voltage
-current
-charge remaining, capacity
-indiv cell monitoring
-current control
-charge/discharge balancing and protections
-bluetooth
-parallel battery connections (check!)
-weight</p>
 </div>
 </div>
 
@@ -488,7 +480,7 @@ weight</p>
     <p>
     <img src="_images/dq1.jpg"  class="endimage"/>
       <span class="lastupdated">&nbsp;&nbsp;&nbsp;
-        Last updated on Jan 04, 2022.
+        Last updated on Jan 05, 2022.
         
       </span>
     </p>

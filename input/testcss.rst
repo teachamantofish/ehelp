@@ -7,7 +7,7 @@ css experiment
 
 .. raw:: html
 
-  <!--These styles must only apply to content in 'main' -->
+  <!--These styles must only apply to content in 'main'
   <link rel="stylesheet" href="_static/calculator/mvp.css" />
   <link rel="stylesheet" href="_static/calculator/calculator.css" />
   <script defer type="text/javascript" src="_static/calculator/powercalc.js"/>
@@ -154,3 +154,4 @@ css experiment
         </table>
       </section>
     </main>
+     -->

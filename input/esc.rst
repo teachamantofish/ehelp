@@ -8,6 +8,14 @@ Electronic Speed Controller
    Under construction
 
 
+An electronic speed controller (ESC) is one of four primary components in your power train. The ESC receives throttle signals from the flight controller, receives the current from the batteries and drives the brushless motor at the desired speed.  It converts the signal from the throttle, and drives the brushless motor by providing the appropriate level of electrical power. You don't need to know `how it works <https://howtomechatronics.com/how-it-works/how-brushless-motor-and-esc-work/>`_, but you should know: 
+
+* 100% of the motor power routes throught the ESC. 
+* ESCs must be rated for the system current (amps). They get hot. They can flame out and melt down.
+* ESCs can have a number of built-in features you may need. 
+* $$$ usually = quality. Quality = safety and performance.
+* Your telemetry data comes from the ESC (RPM, current, remaining battery capacity, etc.)
+
 Choose an ESC
 =============================
 

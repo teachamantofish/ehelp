@@ -56,7 +56,7 @@ From: https://endless-sphere.com/forums/viewtopic.php?t=110570#p1626972
 
 xxx
 
-torque is about 60% thrust? : Q4  Ive never looked it that way but you are close. Thrust is power out x propeller efficiency. At the zero sink tootling about the efficiecncy will be about 55% and full power climb its 42%. again my Part 2 notes have some graphs in fact my Part 1 I loaded up today or yesterday has a graph at the end. I plotted efficiency against what is known as advance ratio. It was buigging me so much that prop data was scarce I created my oen. Thats one of the reasons why I am buy a range of props. I am testing them as I go so the calculations and assumptions get more and more accurate.
+torque is about 60% thrust? : Q4  Ive never looked it that way but you are close. Thrust is power out x propeller efficiency. At the zero sink tootling about the efficiency will be about 55% and full power climb its 42%. again my Part 2 notes have some graphs in fact my Part 1 I loaded up today or yesterday has a graph at the end. I plotted efficiency against what is known as advance ratio. It was bugging me so much that prop data was scarce I created my oen. Thats one of the reasons why I am buy a range of props. I am testing them as I go so the calculations and assumptions get more and more accurate.
 
 xxx
 
@@ -102,3 +102,5 @@ xxx
 xxx
 
 reset css: https://stackoverflow.com/questions/43629317/reset-all-css-for-one-element-and-its-children
+
+https://www.iconsdb.com/gray-icons/gray-cloud-icons.html

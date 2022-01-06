@@ -1,5 +1,5 @@
 ************************************************
-Instrumentation, Telemetry
+Instrumentation and Wiring
 ************************************************
 
 .. figure:: images/uc1.gif
@@ -9,17 +9,22 @@ Instrumentation, Telemetry
 
 TBD: overview
 
-.. figure:: images/wiring_ng.png
-
-   Credit Nikita Gazarov
-
-
-Telemetry
+ESC telemetry
 ======================
 
 TBD: what data you want and where it comes from. 
 
-table: bms vs es
+.. figure:: images/telemetry1.png
+
+
+
+Example use case: NG
+-------------------------------
+
+.. figure:: images/wiring_ng.png
+   :scale: 50%
+
+   Credit Nikita Gazarov
 
 Nikita notes: 
 
@@ -49,41 +54,51 @@ power
 throttle input
 motor duty cycle
 
-Connections
------------------------
 
-bluetooth, hardwired
-
-
-
-Battery managent system
-=================================
-
-https://www.energusps.com/shop/product/tiny-bms-s516-150a-750a-36
-
-.. figure:: images/bms1.png
-
-
-Instrumentation
-======================
+Example use case: CA
+--------------------------------
 
 
 TBD. CA has a slick contraption in one of his vids. 
 
 .. figure:: images/cainstrument.png
 
-* OpenPPG board: https://openppg.com/shop/paramotors/replacement-parts/frame-pcb/
-* 
+Example use case: OpenPPG
+--------------------------------
+
+OpenPPG board: https://openppg.com/shop/paramotors/replacement-parts/frame-pcb/
+
+https://community.openppg.com/t/some-newbie-questions-about-instrumentation-monitoring-pcb/4131/7
 
 
-Battery monitoring
-----------------------------------
+BMS telemetry
+=================================
 
-Motor monitoring
------------------------------
+TBD
 
+https://www.energusps.com/shop/product/tiny-bms-s516-150a-750a-36
 
-tbd, notes, todo
+.. figure:: images/bms1.png
+
+bms features: 
+temp probe
+temp
+voltage
+current
+charge remaining, capacity
+indiv cell monitoring
+current control
+charge/discharge balancing and protections
+bluetooth
+parallel battery connections (check!)
+weight
+
+Wiring
+================================
+
+TBD
+
+Notes, todo
 ===========================
 
 bratwurst (from openPPG)
@@ -127,18 +142,7 @@ https://www.lithiumbatterypcb.com/product/13s-to-20s-li-ion-or-lifepo4-smart-bms
 https://www.aliexpress.com/item/4001202028077.html?spm=a2g0o.productlist.0.0.6efb3d73dFSwNi&algo_pvid=44317b5a-bac3-4c98-a688-1253b79ffbe5&algo_exp_id=44317b5a-bac3-4c98-a688-1253b79ffbe5-13&pdp_ext_f=%7B%22sku_id%22%3A%2212000022994987764%22%7D&pdp_pi=-1%3B48.72%3B-1%3B-1%400%3BUSD%3Bsearch-mainSearch
 
 
-bms features: 
-temp probe
-temp
-voltage
-current
-charge remaining, capacity
-indiv cell monitoring
-current control
-charge/discharge balancing and protections
-bluetooth
-parallel battery connections (check!)
-weight
+
 
 
 

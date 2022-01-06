@@ -10,8 +10,8 @@ Glossary
 
 Todo: fix width, add sorting. 
 
-`Edit me <https://docs.google.com/spreadsheets/d/10IPnvWfLhx3g2CH97AFdCC4kw11yGukd6TUVxoGJ78g/edit#gid=0>`_
+`Edit me <https://docs.google.com/spreadsheets/d/13LQr8VhjsZWSyQSQXvRDrnZd2PbBUzViLKCc06au3FY/edit?usp=sharing>`_
 
 .. raw:: html
 
-    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTCOwbWEk6Bhpzv_mlxZXnjvh7HWVAHk9um_kBgtkFg21Or62Pwah23bdjnPxvpOrh8ur_NFDiaWJcN/pubhtml?widget=true&amp;headers=false" width="100%" height="1000px"></iframe>
+    <iframe src="<https://script.google.com/macros/s/AKfycbx7TffZgCTmnLTNwrsggzLlkBD2A7KQGUwLZwI18FHU6vjP_wHeGngFeXvToJMYa5JYtw/exec>" width="980px" height="1000px" frameBorder="no"></iframe>

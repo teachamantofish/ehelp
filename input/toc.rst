@@ -27,7 +27,10 @@ eHelp Hang Gliding Harnesses
    :caption: Pot Pourri
    :maxdepth: 3
 
-   calculators
    ideas
    safety
+   calculators
+   technical
+   library
    glossary
+

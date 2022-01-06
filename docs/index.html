@@ -27,20 +27,15 @@
   window.onload = function () {
   Array.from(document.querySelectorAll('h2,h3')).forEach(el => {
     const a = document.createElement('a')
-    a.innerText="Comment"
+    a.innerText=""
     a.href="mailto:ben.rogers@gmail.com"
     a.target="_blank"
-    a.style["float"] = "right"
-    a.style["font-size"] = "40%"
-    a.style["font-family"] = "verdana, arial, helvetica, san-serif"
-    a.style["padding-top"] = "10px"
+    a.title="Send feedback"
+    a.classList.add("feedback");
     el.appendChild(a)
   });
 }
 </script>
-
-
-
 
   <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
   
@@ -128,7 +123,7 @@
 <li class="toctree-l2"><a class="reference internal" href="examples.html#commercial-e-harness-systems">Commercial e-harness systems</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="spec.html">Specing out a System (Sizing)</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="spec.html">Specing out a System</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="spec.html#decision-path">Decision path</a></li>
 <li class="toctree-l2"><a class="reference internal" href="spec.html#the-tradeoff-game">The tradeoff game</a></li>
 <li class="toctree-l2"><a class="reference internal" href="spec.html#calculator-energy-and-flight-time">Calculator: energy and flight time</a></li>
@@ -233,23 +228,39 @@
 <li class="toctree-l2"><a class="reference internal" href="structure.html#note-tbd-todo">note, tbd, todo</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="electrical.html">Instrumentation, Telemetry</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="electrical.html#telemetry">Telemetry</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="electrical.html#connections">Connections</a></li>
+<li class="toctree-l1"><a class="reference internal" href="electrical.html">Instrumentation and Wiring</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="electrical.html#esc-telemetry">ESC telemetry</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="electrical.html#example-use-case-ng">Example use case: NG</a></li>
+<li class="toctree-l3"><a class="reference internal" href="electrical.html#example-use-case-ca">Example use case: CA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="electrical.html#example-use-case-openppg">Example use case: OpenPPG</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="electrical.html#battery-managent-system">Battery managent system</a></li>
-<li class="toctree-l2"><a class="reference internal" href="electrical.html#instrumentation">Instrumentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="electrical.html#battery-monitoring">Battery monitoring</a></li>
-<li class="toctree-l3"><a class="reference internal" href="electrical.html#motor-monitoring">Motor monitoring</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="electrical.html#tbd-notes-todo">tbd, notes, todo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="electrical.html#bms-telemetry">BMS telemetry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="electrical.html#wiring">Wiring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="electrical.html#notes-todo">Notes, todo</a></li>
 </ul>
 </li>
 </ul>
 <p class="caption"><span class="caption-text">Pot Pourri</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="ideas.html">Ideas and Experiments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ideas.html#prone-launch-configurations">Prone launch configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ideas.html#sustainers">Sustainers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ideas.html#seated">Seated</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ideas.html#trike-ish">Trike-ish</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ideas.html#from-paraglider-land">From Paraglider-land</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="safety.html">Safety Checklist</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="safety.html#battery">Battery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="safety.html#electrical">Electrical</a></li>
+<li class="toctree-l2"><a class="reference internal" href="safety.html#mechanical">Mechanical</a></li>
+<li class="toctree-l2"><a class="reference internal" href="safety.html#glider-handling">Glider handling</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="safety.html#turbulence-sensors">Turbulence sensors</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="calculators.html">Calculators</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="calculators.html#motor">Motor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="calculators.html#propeller">Propeller</a><ul>
@@ -270,29 +281,9 @@
 <li class="toctree-l2"><a class="reference internal" href="calculators.html#tbd-rc-whole-system">TBD: RC whole system?</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="ideas.html">Ideas and Experiments</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="ideas.html#prone-launch-configurations">Prone launch configurations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ideas.html#sustainers">Sustainers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ideas.html#seated">Seated</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ideas.html#trike-ish">Trike-ish</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ideas.html#from-paraglider-land">From Paraglider-land</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="safety.html">Safety</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="safety.html#design-checklist">Design Checklist</a></li>
-<li class="toctree-l2"><a class="reference internal" href="safety.html#battery">Battery</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="safety.html#main-power-switch">Main power switch</a></li>
-<li class="toctree-l3"><a class="reference internal" href="safety.html#quick-disconnect">Quick disconnect</a></li>
-<li class="toctree-l3"><a class="reference internal" href="safety.html#status-monitor">Status monitor</a></li>
-<li class="toctree-l3"><a class="reference internal" href="safety.html#temperature-monitor-and-or-alarm">Temperature monitor and/or alarm</a></li>
-<li class="toctree-l3"><a class="reference internal" href="safety.html#tbd">TBD</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="safety.html#mechanical">Mechanical</a></li>
-<li class="toctree-l2"><a class="reference internal" href="safety.html#glider-handling">Glider handling</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="safety.html#turbulence-sensors">Turbulence sensors</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="technical.html">Technical Deep Dives</a></li>
+<li class="toctree-l1"><a class="reference internal" href="library.html">Reference Library</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="library.html#materials">Materials</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
@@ -456,7 +447,7 @@
     <p>
     <img src="_images/dq1.jpg"  class="endimage"/>
       <span class="lastupdated">&nbsp;&nbsp;&nbsp;
-        Last updated on Jan 04, 2022.
+        Last updated on Jan 05, 2022.
         
       </span>
     </p>
