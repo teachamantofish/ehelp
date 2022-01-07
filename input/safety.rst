@@ -27,7 +27,7 @@ Fire mitigation
 Electrical
 ==============================
 
-tbd: Do you use a spark suppresion circuit on your master switches?
+tbd: Do you use a spark suppression circuit on your master switches?
 
 tbd: esc safety features
 

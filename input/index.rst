@@ -2,10 +2,10 @@
 Why, What, and Who?
 ************************************************
 
-Why ehelp? Because for 2000-3000 bucks a DIYer can build a 20 pound eHelp harness and flatland foot launch. No mountain. No towing. No modified glider. No tow rig.  The time and $$$ investment quickly pays for itself through reduced driving to launches, hang-waiting, tow costs, and alcoholic consumption while jonesing for airtime. Only the pilot can determine the ultimate payback.
+Why eHelp? Because for 2000-3000 bucks a DIYer can build a 20 pound eHelp harness and flatland foot launch. No mountain. No towing. No modified glider. No tow rig.  The time and $$$ investment quickly pays for itself through reduced driving to launches, hang-waiting, tow costs, and alcoholic consumption while Jonesing for airtime. Only the pilot can determine the ultimate payback.
 
 
-The systems are relatively simple and free of tune ups, maintenance hassles, and fossil fuels. Like most flight, there are some caveats and hazards, but the ehelp idea has one moving part and many advantages. A community of pioneers are paving the runway with free advice, open source plans, and Youtube videos while the multi-billion dollar drone, battery, and EV industries quickly drive the evolution of cheaper, lighter, and more powerful components. 
+The systems are relatively simple and free of tune ups, maintenance hassles, and fossil fuels. Like most flight, there are some caveats and hazards, but the eHelp idea has one moving part and many advantages. A community of pioneers are paving the runway with free advice, open source plans, and Youtube videos while the multi-billion dollar drone, battery, and EV industries quickly drive the evolution of cheaper, lighter, and more powerful components. 
 
 In a few years, we'll like have lighter and more powerful motors (axial), smaller and safer batteries (solid state, and (with luck) commercial ready-to-fly choices, kits, manuals, and parts.
 
@@ -59,7 +59,7 @@ Forums:
    * `OpenPPG: Similar concepts, great forum, lots of resources <https://openppg.com/?fbclid=IwAR04rX_1St1D1lqTpwBbaOdLskhpFOMahdXRiHXU1gmr4fSlUv0pwsC-RQg>`_
    * This community needs a focused forum. Doesn't exist yet, but I've asked hanggliding.org to engage.
 
-* Plans and open-sourced projects
+* Plans and open-sourced projects:
 
    * TBD
 

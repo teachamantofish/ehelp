@@ -368,12 +368,12 @@
 <a class="reference internal image-reference" href="_images/uc2.gif"><img alt="_images/uc2.gif" src="_images/uc2.gif" style="width: 150.0px; height: 112.4px;" /></a>
 <p class="caption"><span class="caption-text">Under construction</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
-<p>Navigating a working system is difficult and time consuming. Until the eHelp harness idea is more widespread, design principles will remain relatively inaccessible while advice is scattered across various Facebook pages and forums with pioneers helping where they can. With luck, the ehelp paradigm will gain enough traction that the hang gliding community can emulate aspects of <a class="reference external" href="https://openppg.com/">OpenPPG</a> and create its own easy-to-traverse path.</p>
+<p>Navigating a working system is difficult and time consuming. Until the eHelp harness idea is more widespread, design principles will remain relatively inaccessible while advice is scattered across various Facebook pages and forums with pioneers helping where they can. With luck, the eHelp paradigm will gain enough traction that the hang gliding community can emulate aspects of <a class="reference external" href="https://openppg.com/">OpenPPG</a> and create its own easy-to-traverse path.</p>
 <p>Until then, moving forward is a bit of work.</p>
 <p>Margins are thin with electric powered aircraft primarily due to battery low energy density. While HG trike and paramotor systems can carry several KWH of batteries, HG harness systems are limited by what a pilot is willing to carry (e.g. sub 2 KWHs). Powered flight time is measured in minutes–often 10 to 20. Couple these limitations with a wide range of wing specs and pilot weights, and it becomes apparent that optimizing the power train requires some minimal number crunching. At a 200 fpm climb, there’s a big altitude difference between 5 minutes and 10 minutes.</p>
 <div class="section" id="decision-path">
 <h2>Decision path<a class="headerlink" href="#decision-path" title="Permalink to this headline">¶</a></h2>
-<p>You’ll often hear that system design starts with the prop. However, the performance of system components is so intimately intertwined that the specification of any piece has ramifications for all the others. Your choice of batteries, motor, electronic speed controller, or prop must inform your choices across the system. Failure to balance and tune the design holistically can easily result in a dangerous or inadequate ehelp system.</p>
+<p>You’ll often hear that system design starts with the prop. However, the performance of system components is so intimately intertwined that the specification of any piece has ramifications for all the others. Your choice of batteries, motor, electronic speed controller, or prop must inform your choices across the system. Failure to balance and tune the design holistically can easily result in a dangerous or inadequate eHelp system.</p>
 <p>Realistically, it doesn’t matter where you start as long as the entire system produces the desired result. For example:</p>
 <ul class="simple">
 <li><p><em>Batteries</em>: How much weight you’re willing to have on board determines available power. Do you want to stay under 60 volts due to a wider array of available products or for safety reasons? Or should you choose 24S (88-100V) system so you push less amps and produce less heat for the same power?</p></li>
@@ -393,9 +393,9 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>Total power is power minus heat. Heat is bad.</p></td>
-<td><p>Design for less heat: higher volts, less amps, largers wires, lots of headroom in all components, cooling, etc.</p></td>
+<td><p>Design for less heat: higher volts, less amps, larger wires, lots of headroom in all components, cooling, etc.</p></td>
 </tr>
-<tr class="row-odd"><td><p>Higher voltage and lower current is more efficient as electrical losses (heat) is proportional to the square of the current.</p></td>
+<tr class="row-odd"><td><p>Higher volrent is more efficient as electrical losses (heat) is proportional to the square of the current.</p></td>
 <td><p>Choose the highest voltage your willing to work with and carry. In Europe, 60v is a mandated max. More volts is more dangerous. Higher voltages mean you have fewer battery choices.</p></td>
 </tr>
 <tr class="row-even"><td><p>Torque increases proportionally with the current consumed.</p></td>
@@ -412,7 +412,7 @@
 <h2>The tradeoff game<a class="headerlink" href="#the-tradeoff-game" title="Permalink to this headline">¶</a></h2>
 <p>TBD:</p>
 <blockquote>
-<div><p>higher V means less amps for the same power, I wanted to look at two motors that can handle diff V’s and compare. Below you can see the M30 w/ 2 higher AH batteries can’t run as long, create way more heat, and have a higher RPM than the M40. Same battery price. Seems safer, quieter, longer flight time (and that’s at full climb–cruise would be even better). Tradeoff is the moter is 250 more and the batteries weigh 1lb more.</p>
+<div><p>higher V means less amps for the same power, I wanted to look at two motors that can handle diff V’s and compare. Below you can see the M30 w/ 2 higher AH batteries can’t run as long, create way more heat, and have a higher RPM than the M40. Same battery price. Seems safer, quieter, longer flight time (and that’s at full climb–cruise would be even better). Tradeoff is the motor is 250 more and the batteries weigh 1lb more.</p>
 </div></blockquote>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -421,10 +421,10 @@
 </div>
 <div class="section" id="calculator-energy-and-flight-time">
 <h2>Calculator: energy and flight time<a class="headerlink" href="#calculator-energy-and-flight-time" title="Permalink to this headline">¶</a></h2>
-<p><strong>Theoretical power x efficiency</strong>: This approach calculates the theoretical energy  to transport you to an altitude within a given timeframe and then adjusts for power train efficiency. For example: If Joey Pilot with is Sport 3 Race and and gear weighs 300lbs, how many kilowatts of battery power will it take to climb at 200 fpm to 1000’?</p>
+<p><strong>Theoretical power x efficiency</strong>: This approach calculates the theoretical energy  to transport you to an altitude within a given time frame and then adjusts for power train efficiency. For example: If Joey Pilot with is Sport 3 Race and and gear weighs 300lbs, how many kilowatts of battery power will it take to climb at 200 fpm to 1000’?</p>
 <!--`Copy this calculator <https://docs.google.com/spreadsheets/d/1QOWFBWTjYjzgTAwhfQpxgTqjzGBhD4zJOt-nyNrNo94/edit?usp=sharing?widget=true&amp;headers=false;rm=minimal&amp;>`_--><iframe src="./resources/calculator_power.html" width="850px" height="750px" scrolling="no"  frameBorder="0"></iframe><p><strong>Calculation walk-through</strong></p>
 <ol class="arabic simple">
-<li><p>The first step calculates the theoretical energy required when the power train is 100% efficient. If a stone was hanging out at 1000 feet, how much energy does it store? Note that the forumulas are metric (newtons, joules, and Earth’s gravitational constant (9.8 m/s squared), so we convert 1000 feet to meters by dividing by 3.28.</p></li>
+<li><p>The first step calculates the theoretical energy required when the power train is 100% efficient. If a stone was hanging out at 1000 feet, how much energy does it store? Note that the formulas are metric (newtons, joules, and Earth’s gravitational constant (9.8 m/s squared), so we convert 1000 feet to meters by dividing by 3.28.</p></li>
 </ol>
 <p>The formula is:`` kwh=weight X 9.81 (gravity) X feet/3.28 (convert to meters) X 1000 watts X 36000 (sec. per hour)``</p>
 <ol class="arabic simple">
@@ -508,7 +508,7 @@
 </div>
 <div class="section" id="somewhere-over-the-rainbow">
 <h2>Somewhere, “Over the Rainbow”<a class="headerlink" href="#somewhere-over-the-rainbow" title="Permalink to this headline">¶</a></h2>
-<p>If we could wish up a star, we’d wish for detailed <strong>and accurate</strong> power train data so that we could accuratly predict a prop’s output power/thrust for any given input power. These numbers will never come from manufacturers. 3rd parties such as  <a class="reference external" href="https://database.tytorobotics.com/">Tyto Robotics</a> sell engineered test benches and provide free software which makes it possible to quantify motor/prop performance:</p>
+<p>If we could wish up a star, we’d wish for detailed <strong>and accurate</strong> power train data so that we could accurately predict a prop’s output power/thrust for any given input power. These numbers will never come from manufacturers. 3rd parties such as  <a class="reference external" href="https://database.tytorobotics.com/">Tyto Robotics</a> sell engineered test benches and provide free software which makes it possible to quantify motor/prop performance:</p>
 <ul class="simple">
 <li><p>Electrical power = Voltage x Current</p></li>
 <li><p>Mechanical power = Torque x Rotation speed</p></li>
@@ -516,7 +516,7 @@
 <li><p>Propeller efficiency = Thrust / Mechanical power</p></li>
 <li><p>Powertrain efficiency = Thrust / Electrical power</p></li>
 </ul>
-<p>In the abscence of such tools, insight into system performance will derive from a mix of manufacturer data, anecdotal reports on forums, and pilots like Paul Martin (an engineer), Reider Bernsten, Charles Allen, and other.</p>
+<p>In the absence of such tools, insight into system performance will derive from a mix of manufacturer data, anecdotal reports on forums, and pilots like Paul Martin (an engineer), Reider Bernsten, Charles Allen, and other.</p>
 <div class="figure align-default" id="id3">
 <a class="reference internal image-reference" href="_images/tyto1.png"><img alt="_images/tyto1.png" src="_images/tyto1.png" style="width: 869.6px; height: 682.4000000000001px;" /></a>
 <p class="caption"><span class="caption-text">Credit Tyto Robotics</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
