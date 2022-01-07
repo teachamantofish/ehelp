@@ -1,5 +1,5 @@
 ************************************************
-eHelp Hang Gliding Harnesses
+Why, What, and Who?
 ************************************************
 
 Why ehelp? Because for 2000-3000 bucks a DIYer can build a 20 pound eHelp harness and flatland foot launch. No mountain. No towing. No modified glider. No tow rig.  The time and $$$ investment quickly pays for itself through reduced driving to launches, hang-waiting, tow costs, and alcoholic consumption while jonesing for airtime. Only the pilot can determine the ultimate payback.

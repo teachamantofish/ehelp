@@ -47,7 +47,9 @@ Wiring
 
 
 Throttle
-==============
+=====================
+
+prebuilt throttle with telemetry: https://ppgsmoke.com/products/smart-throttle
 
 Throttle-power disconnect
 ------------------------------------

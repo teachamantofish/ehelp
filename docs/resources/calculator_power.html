@@ -70,7 +70,7 @@
           </thead>
           <tbody>
             <tr>
-              <th>Pilot and wing data</th>
+              <th>Pilot and wing</th>
               <td><input id="C3" placeholder="0" value="300" /></td>
               <td><input id="D3" placeholder="0" value="12" /></td>
               <td><input id="E3" placeholder="0" value="25" /></td>
@@ -104,8 +104,7 @@
       <section>
 
           <p>
-            <strong>Step 2</strong>: Recalculate the required energy based on the efficiency of power train
-            components.
+            <strong>Step 2</strong>: Adjust required energy based on component efficiency.
           </p>
  
         <table class="input">
@@ -204,7 +203,7 @@
           return data
         }, {})
         const C4 = data.C3 / 2.205,
-          E4 = data.E3 / 2.237,
+          E4 = data.E3 * 1.609,
           F4 = data.F3 / 3.28,
           F6 = (C4 * 9.8 * F4) / 3600000,
           F7 = C4 * 9.8,

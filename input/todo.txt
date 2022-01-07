@@ -104,3 +104,6 @@ xxx
 reset css: https://stackoverflow.com/questions/43629317/reset-all-css-for-one-element-and-its-children
 
 https://www.iconsdb.com/gray-icons/gray-cloud-icons.html
+
+Mario Holmström
+I’ve tried many different propellers on a 12s system with 105kv motor, the 36/14 lifts you off the ground really fast but climbs really bad sins the airspeed is to slow. 34/18 menz was ok but the best I found was biela 32/22. I’ve ordered a 34/18 carbon that I will try
