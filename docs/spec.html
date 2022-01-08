@@ -447,12 +447,7 @@
 </div>
 <div class="section" id="calculator-how-much-thrust">
 <h2>Calculator: How much thrust?<a class="headerlink" href="#calculator-how-much-thrust" title="Permalink to this headline">¶</a></h2>
-<p><strong>Prop and thrust</strong>: This approach calculates TBD</p>
-<p>tbd: Is this correct?: find the prop/RPM combination that will give you both the thrust and efficiency you want, then work backwards from there to determine how much motor power is required and what motor KV/battery voltage you want to use. Then source the motor and controller.</p>
-<p>As a rough guideline look for a motor/battery configuration that has a no-load RPM that is 125% of your target full-throttle RPM.</p>
-<p>what percent of continuous power to use for a 5 minute climb?</p>
-<p>These calculations leverages Paul Martin’s more detailed docs on TBD.</p>
-<p>tbd: Power is F*v, so while the force is m*g/(L/D), the drag losses are m*g/(L/D) * v. The v term is going to always be around 25m/s, almost independent of the glider.</p>
+<p><strong>Prop and thrust</strong>: This approach arrives at required Kwh to an altitude based on a desired climb rate and the amount of power it takes given calculated drag and coefficient of lift. These calculations follow Paul Martin’s approach outline in his detailed docs on TBD.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Live version coming soon!</p>
@@ -467,7 +462,18 @@
 <div class="section" id="calculator-motor-adjustments">
 <h2>Calculator: Motor adjustments<a class="headerlink" href="#calculator-motor-adjustments" title="Permalink to this headline">¶</a></h2>
 <p>TBD</p>
-<p><strong>Calculation walk-through</strong></p>
+<p>Main points:</p>
+<ul class="simple">
+<li><p>As a rough guideline look for a motor/battery configuration that has a no-load RPM that is 125% of your target full-throttle RPM.</p></li>
+<li><p>Use a low heat percent of continuous power for the desired climb time.</p></li>
+<li><p>Kv reduction calculations</p></li>
+<li><p>Kt</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Live version coming soon! <a class="reference external" href="https://docs.google.com/spreadsheets/d/14JkkG8W6YqgOgw4RBCtJ8gWNFApiGTVdzc8_fM5dktQ/edit#gid=1953445286">Source</a></p>
+</div>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ5kZukKClZuK3vd4xq2fWymW4ljcXMrFy3haxn-PWlDgJMyB_0KBTAJcFyggVRj-QapMsSguDg47e-/pubhtml?widget=true&amp;headers=false" width="550px" height="570px" scrolling="no"  frameBorder="0"></iframe><p><strong>Calculation walk-through</strong></p>
 <ol class="arabic simple">
 <li><p>one</p></li>
 <li><p>two</p></li>
@@ -477,6 +483,7 @@
 <div class="section" id="calculator-prop-diameter-and-pitch">
 <h2>Calculator: Prop diameter and pitch<a class="headerlink" href="#calculator-prop-diameter-and-pitch" title="Permalink to this headline">¶</a></h2>
 <p>TBD</p>
+<p>tbd: Find the prop/RPM combination that will give you both the thrust and efficiency you want, then work backwards from there to determine how much motor power is required and what motor KV/battery voltage you want to use. Then source the motor and controller.</p>
 <p><strong>Calculation walk-through</strong></p>
 <ol class="arabic simple">
 <li><p>one</p></li>
@@ -509,10 +516,11 @@
 <li><p>Motor efficiency * = Mechanical power / Electrical power</p></li>
 <li><p>Propeller efficiency = Thrust / Mechanical power</p></li>
 <li><p>Powertrain efficiency = Thrust / Electrical power</p></li>
+<li><p>Etc. Check out their website.</p></li>
 </ul>
 <p>In the absence of such tools, insight into system performance will derive from a mix of manufacturer data, anecdotal reports on forums, and pilots like Paul Martin (an engineer), Reider Bernsten, Charles Allen, and other.</p>
 <div class="figure align-default" id="id3">
-<a class="reference internal image-reference" href="_images/tyto1.png"><img alt="_images/tyto1.png" src="_images/tyto1.png" style="width: 869.6px; height: 682.4000000000001px;" /></a>
+<a class="reference internal image-reference" href="_images/tyto1.png"><img alt="_images/tyto1.png" src="_images/tyto1.png" style="width: 869.6px; height: 462.40000000000003px;" /></a>
 <p class="caption"><span class="caption-text">Credit Tyto Robotics</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
 </div>

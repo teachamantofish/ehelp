@@ -84,28 +84,16 @@ The formula is:`` kwh=weight X 9.81 (gravity) X feet/3.28 (convert to meters) X 
   * milliamp hours is the amp rating you can draw: Add the amps of any batteries in parallel. 
   * By default, the calculator uses a common set up of 2 6s 22000mah batteries (22v) in series. That's one string of batteries with a 44v and 22000mAH output.
 
-
 Calculator: How much thrust?
 ===================================
 
-**Prop and thrust**: This approach calculates TBD
-
-tbd: Is this correct?: find the prop/RPM combination that will give you both the thrust and efficiency you want, then work backwards from there to determine how much motor power is required and what motor KV/battery voltage you want to use. Then source the motor and controller.
-
-As a rough guideline look for a motor/battery configuration that has a no-load RPM that is 125% of your target full-throttle RPM. 
-
-what percent of continuous power to use for a 5 minute climb?
-
-These calculations leverages Paul Martin's more detailed docs on TBD.
-
-tbd: Power is F*v, so while the force is m*g/(L/D), the drag losses are m*g/(L/D) * v. The v term is going to always be around 25m/s, almost independent of the glider.
+**Prop and thrust**: This approach arrives at required Kwh to an altitude based on a desired climb rate and the amount of power it takes given calculated drag and coefficient of lift. These calculations follow Paul Martin's approach outline in his detailed docs on TBD.
 
 .. tip:: Live version coming soon!
 
 .. raw:: html
 
    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTNk3d16kUlG7Y17k-Ii-QV9PyIXVCnGImD2lEwtXD6sR2HUV1zLu5W5cmfS6Fer3r2_RfJyQ8oOVRR/pubhtml?widget=true&amp;headers=false" width="525px" height="600px" scrolling="no"  frameBorder="0"></iframe>
-
 
 **Calculation walk-through** 
 
@@ -118,6 +106,19 @@ Calculator: Motor adjustments
 
 TBD
 
+Main points:
+
+* As a rough guideline look for a motor/battery configuration that has a no-load RPM that is 125% of your target full-throttle RPM. 
+* Use a low heat percent of continuous power for the desired climb time. 
+* Kv reduction calculations
+* Kt
+
+.. tip:: Live version coming soon! `Source <https://docs.google.com/spreadsheets/d/14JkkG8W6YqgOgw4RBCtJ8gWNFApiGTVdzc8_fM5dktQ/edit#gid=1953445286>`_
+
+.. raw:: html
+
+   <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ5kZukKClZuK3vd4xq2fWymW4ljcXMrFy3haxn-PWlDgJMyB_0KBTAJcFyggVRj-QapMsSguDg47e-/pubhtml?widget=true&amp;headers=false" width="550px" height="570px" scrolling="no"  frameBorder="0"></iframe>
+
 **Calculation walk-through** 
 
 #. one
@@ -128,6 +129,8 @@ Calculator: Prop diameter and pitch
 =========================================
 
 TBD
+
+tbd: Find the prop/RPM combination that will give you both the thrust and efficiency you want, then work backwards from there to determine how much motor power is required and what motor KV/battery voltage you want to use. Then source the motor and controller.
 
 **Calculation walk-through** 
 
@@ -161,6 +164,7 @@ If we could wish up a star, we'd wish for detailed **and accurate** power train 
 * Motor efficiency * = Mechanical power / Electrical power
 * Propeller efficiency = Thrust / Mechanical power
 * Powertrain efficiency = Thrust / Electrical power
+* Etc. Check out their website.
 
 In the absence of such tools, insight into system performance will derive from a mix of manufacturer data, anecdotal reports on forums, and pilots like Paul Martin (an engineer), Reider Bernsten, Charles Allen, and other.
 

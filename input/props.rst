@@ -40,6 +40,14 @@ Choosing a propeller requires knowing how much thrust you need for a specific fl
 Diameter
 ----------------------------
 
+TBD: 
+
+Calculations: 
+
+* 4th root equation
+* Dr. Raynor's equation
+* eCalcs
+
 Pitch
 ------------------
 
@@ -50,11 +58,15 @@ A quick aside on the prop pitch thing: I was running a fixed wing UAV developmen
 Number of blades
 ------------------------
 
-According to vendor data, a 3 blade prop delivers 3-6% more thrust at the same diameter. There's not a big difference, but there is an ongoing debate. 
+More blades may provide  more “bite” to the air which improves climbing performance. But increases in power also produce more drag. Drag is bad for speed, so two blades are better for cruising speed. Three is a nice blend of the two, sacrificing a little speed for better climb. That why you see two blades mostly on small planes with low power (by low I mean under 800 HP) engines.
+
+e-Props claims their  3 blade props deliver 3-6% more thrust at the same diameter. 
+
+Resources: 
 
   * https://community.openppg.com/t/tri-vs-bi-prop-efficiency/3944
   * Also see PPG Youtube videos comparing configurations.
-  * `e-props has data <https://aircraft.e-props.fr/efficient_prop/#tit02>`_.
+  * `e-Props data <https://aircraft.e-props.fr/efficient_prop/#tit02>`_.
 
 Propeller calculators
 ===================================
