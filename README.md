@@ -10,7 +10,6 @@ TBD
 * Limit table width to 95% of the page. These started blowing off the right side of the page recently. 
 * Create way to use wrapped images. Tried a parent div with two child divs but there are issues with float. Try not to use float: 
 
-:: 
 
     div.twocol { width:800px; background-color:gray}
 
