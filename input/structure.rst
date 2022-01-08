@@ -7,10 +7,15 @@ Structural-Mechanical
 
    Under construction
 
+.. raw:: html
+
+      <iframe width="840" height="472" src="https://www.youtube.com/embed/cE88z20-Oko" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 Boom 
 ========================
 
-While weights vary by diameter and wall thickness, carbon fiber is generally 200-300% lighter than aluminum. On the other hand, we don't need much material and aluminum is easier to work with. My approach is to use aluminum for the initial version and testing and CF for a final version. 
+While weights vary by diameter and wall thickness, carbon fiber is generally 200-300% lighter than aluminum with potentially twice the strenght. On the other hand, we don't need much material and aluminum is easier to work with. My approach is to use aluminum for the initial version and testing and CF for a final version. 
 
 Paul Martin reports  that if you just want to bolt a tube on to get up and running anything, from 1.75” x 17 swg is fine (commonly used in old hang gliders).
 
@@ -77,6 +82,12 @@ Kickstand
 .. figure:: images/pmkickstand.png
 
    Credit: Paul Martin
+
+
+.. figure:: images/ca_fusion.png
+            :scale: 100%
+
+   Design by Charles Allen
 
 Safety features
 ===========================

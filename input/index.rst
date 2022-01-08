@@ -4,24 +4,32 @@ Why, What, and Who?
 
 Why eHelp? Because for 2000-3000 bucks a DIYer can build a 20 pound eHelp harness and flatland foot launch. No mountain. No towing. No modified glider. No tow rig.  The time and $$$ investment quickly pays for itself through reduced driving to launches, hang-waiting, tow costs, and alcoholic consumption while Jonesing for airtime. Only the pilot can determine the ultimate payback.
 
-
 The systems are relatively simple and free of tune ups, maintenance hassles, and fossil fuels. Like most flight, there are some caveats and hazards, but the eHelp idea has one moving part and many advantages. A community of pioneers are paving the runway with free advice, open source plans, and Youtube videos while the multi-billion dollar drone, battery, and EV industries quickly drive the evolution of cheaper, lighter, and more powerful components. 
 
-In a few years, we'll like have lighter and more powerful motors (axial), smaller and safer batteries (solid state, and (with luck) commercial ready-to-fly choices, kits, manuals, and parts.
+.. container:: twocol
 
-.. container:: moveimage
+.. container:: leftcolumn
 
-   .. figure:: images/ca_fusion.png
-            :scale: 100%
+   In a few years, we'll like have lighter and more powerful motors (axial), smaller and safer batteries (solid state, and (with luck) commercial ready-to-fly choices, kits, manuals, and parts.
 
-            Design by Charles Allen
+.. container:: rightcolumn
+
+   .. raw:: html
+
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/3sEZKbwZzG8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      <div><p class="credit">Credit Reidar Bernsten</p></div>
+
+.. container:: clear
+
+   **About this content**
+
+   This overview is an attempt to provide a quick start manual to the DIY community. It is an experimental and unfinished work. There is no attempt here to make $$$, and so shall it ever be.
 
 
-**About this content**
+   Ideally, these pages will become a crowd-sourced document. Contribute via the **Email** links or ask to edit the source on Github. Without community participation, this document will likely fade.
 
-This overview is an attempt to provide a quick start manual to the DIY community. It is an experimental and unfinished work. There is no attempt here to make $$$, and so shall it ever be.
 
-Ideally, these pages will become a crowd-sourced document. Contribute via the **Feedback** links or ask to edit the source on Github. Without community participation, this document will languish and fade.
 
 Goals
 -----------------------

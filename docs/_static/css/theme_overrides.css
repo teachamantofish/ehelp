@@ -48,16 +48,18 @@ h3 > .heading-link::after{
 div.twocol { width:800px; background-color:gray}
 
 div.leftcolumn {
-  width: 400px;
-  float: left;
+  width: 100%;
+  float:left;
 }
 
 div.rightcolumn {
-  width: 380px;
+  float:left;
+  padding: 20px 20px 20px 100px;
 }
 
-div.moveimage {
-  margin-left: 200px;
-}
+div.clear {clear:both;}
+
+p.credit {font-style: italic;}
+
 
 
