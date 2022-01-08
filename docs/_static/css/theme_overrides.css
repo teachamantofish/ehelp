@@ -8,40 +8,26 @@
 
 .wy-body-for-nav, .wy-nav-content-wrap, .wy-nav-content {background-color: #fcfcfc;}
 
-
-.feedback {
-  font-size: 1em;
-  padding-top: 0 !important;
-  font-family: "verdana, arial, helvetica, san-serif";
-  padding-bottom: 7px;
-  border:none;
-  float: right;
-}
-
- .feedback::after{
-  content: "\1F4E7";
-  width: 50px;
-  
-  }
-
-
 h2 {
   background: rgb(242,240,240);
   background: linear-gradient(168deg, rgba(242,240,240,1) 0%, rgba(250,250,250,1) 99%); 
   padding: 5px 5px 5px 5px;
   margin-left: -5px;
-  margin-top: 2em;
-
+  margin-top: 2em; 
 }
 
-h2 > .heading-link::after{
-  font-size: 1.2em;
-  padding-bottom: 10px;
+  .feedback {
+    font-size: 1em;
+    padding-top: 0 !important;
+    font-family: "verdana, arial, helvetica, san-serif";
+    padding-bottom: 7px;
+    border:none;
+    float: right;
   }
   
-h3 > .heading-link::after{
-  font-size: 1.5em;
-  }
+   .feedback::after{
+    content: "\1F4E7"; /*want ../_images/email.png; here*/
+    }
 
 
 

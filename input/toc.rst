@@ -13,7 +13,7 @@ eHelp Hang Gliding Harnesses
    spec
 
 .. toctree:: 
-   :caption: Components
+   :caption: Ingredients
    :maxdepth: 3
 
    motors

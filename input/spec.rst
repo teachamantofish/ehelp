@@ -68,7 +68,6 @@ Calculator: energy and flight time
 
 **Calculation walk-through** 
 
-
 1. The first step calculates the theoretical energy required when the power train is 100% efficient. If a stone was hanging out at 1000 feet, how much energy does it store? Note that the formulas are metric (newtons, joules, and Earth's gravitational constant (9.8 m/s squared), so we convert 1000 feet to meters by dividing by 3.28. 
 
 The formula is:`` kwh=weight X 9.81 (gravity) X feet/3.28 (convert to meters) X 1000 watts X 36000 (sec. per hour)`` 
@@ -86,7 +85,7 @@ The formula is:`` kwh=weight X 9.81 (gravity) X feet/3.28 (convert to meters) X 
   * By default, the calculator uses a common set up of 2 6s 22000mah batteries (22v) in series. That's one string of batteries with a 44v and 22000mAH output.
 
 
-Method 2: How much thrust?
+Calculator: How much thrust?
 ===================================
 
 **Prop and thrust**: This approach calculates TBD
@@ -97,54 +96,60 @@ As a rough guideline look for a motor/battery configuration that has a no-load R
 
 what percent of continuous power to use for a 5 minute climb?
 
-.. note:: Calculations courtesy of Paul Martin. For a more detailed document, see `TBD his document <www.google.com>`_.
-
+These calculations leverages Paul Martin's more detailed docs on TBD.
 
 tbd: Power is F*v, so while the force is m*g/(L/D), the drag losses are m*g/(L/D) * v. The v term is going to always be around 25m/s, almost independent of the glider.
 
-Determine required thrust
----------------------------------
+.. tip:: Live version coming soon!
+
+.. raw:: html
+
+   <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTNk3d16kUlG7Y17k-Ii-QV9PyIXVCnGImD2lEwtXD6sR2HUV1zLu5W5cmfS6Fer3r2_RfJyQ8oOVRR/pubhtml?widget=true&amp;headers=false" width="525px" height="600px" scrolling="no"  frameBorder="0"></iframe>
+
+
+**Calculation walk-through** 
+
+#. one
+#. two
+#. tbd
+
+Calculator: Motor adjustments
+===================================
 
 TBD
--------------------
 
+**Calculation walk-through** 
 
+#. one
+#. two
+#. tbd
 
-Method comparison
-==============================================
+Calculator: Prop diameter and pitch
+=========================================
 
-Calculate the rate of energy usage. The formula is XXXXX. For the example above, the total kilowatts consumed at various rates of  climb to 1000' is as follows: 
+TBD
 
-.. list-table:: 
-   :widths: 30 30 40 
-   :header-rows: 1
+**Calculation walk-through** 
 
-   * - Rate of climb
-     - kilowatts needed
-     - Example battery
-   * - 200fpm
-     - tbd
-     - x volts and y mAH
-   * - 250fpm
-     - tbd
-     - x volts and y mAH
-   * - 300fpm
-     - tbd
-     - x volts and y mAH
+#. one
+#. two
+#. tbd
 
+Calculator: Prop power
+===============================
 
+* input power
+* output power
+* tip speed
+* continuous thrust
 
-Method 3: Copycat
-==========================
+TBD
 
-TBD: List power trains in use. Create sortable table based on community input 
+**Calculation walk-through** 
 
-TBD: 
-
-* 14s set up coupled to a 75/300A controller coupled to a 120100 80 to 85kv and a 40D18P propeller will get you between 200 and 250 fpm climb (Paul Martin).
-* 15470 even with it limited to 55kv ( though I reckon you could get it rewound) of 16s li-Po you'd have more torque and still have 3700 rpm. A bigger prop would be handy but it might be custom even so with the 40D20P you would be around 48kgf thrust on 250A draw which equates to about 38kgf at 12m/s which gives you over 400 fpm climb rate (Paul Martin).
-
-
+#. one
+#. two
+#. tbd
 
 Somewhere, "Over the Rainbow"
 ====================================

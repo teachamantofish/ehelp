@@ -9,7 +9,7 @@ eHelp Examples
 
 This page provides links to examples of working systems. 
 
-List of actual builds
+Database of working builds
 ============================
 
 TBD: Add community-driven list of functional systems.
@@ -31,6 +31,7 @@ eHelp harness videos
       Credit: Reidar Bernsten
 
 * Charles Allen ehelp harness build: 
+* 
       * `Build video with specs <https://www.youtube.com/watch?v=kMv0oyVrDfs>`_
       * `Fly video <https://www.myqnapcloud.com/share/6d31j23k4l6p70551946x13z_696R5Pm#/home>`_
       * `Design files + BOM <https://www.myqnapcloud.com/share/6d31j23k4l6p70551946x13z_696R5Pm#/home>`_
