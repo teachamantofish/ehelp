@@ -63,8 +63,7 @@ Calculator: energy and flight time
   <!--`Copy this calculator <https://docs.google.com/spreadsheets/d/1QOWFBWTjYjzgTAwhfQpxgTqjzGBhD4zJOt-nyNrNo94/edit?usp=sharing?widget=true&amp;headers=false;rm=minimal&amp;>`_-->
 
 .. raw:: html
-
-   <iframe src="./resources/calculator_power.html" width="850px" height="750px" scrolling="no"  frameBorder="0"></iframe>
+  :file: html/calculator_power.html
 
 **Calculation walk-through** 
 
