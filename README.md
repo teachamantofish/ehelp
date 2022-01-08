@@ -2,7 +2,9 @@
 
 TBD
 
-# Site todos: 
+# Site todos
+
+## CSS
 
 * Change email icon to email.png on same line as H2 and H3. Float right. 
 * Limit table width to 95% of the page. These started blowing off the right side of the page recently. 
@@ -22,6 +24,10 @@ TBD
       padding: 20px 20px 20px 100px;
     }
     
+* TBD
+
+## Other
+
 * TBD
 
 # Website setup
