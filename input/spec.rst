@@ -60,7 +60,7 @@ Calculator: energy and flight time
 
 .. raw:: html
 
-   <iframe src="./resources/calculator_power.html" width="850px" height="750px" scrolling="no"  frameBorder="0"></iframe>
+   :file: html/calculator_power.html
 
 **Calculation walk-through** 
 
