@@ -47,5 +47,11 @@ div.clear {clear:both;}
 
 p.credit {font-style: italic;}
 
+/*iframes*/
+
+#calctheory{
+  width:700px;
+  height:750px;
+}
 
 

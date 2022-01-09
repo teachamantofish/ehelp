@@ -67,9 +67,28 @@ Forums:
    * `OpenPPG: Similar concepts, great forum, lots of resources <https://openppg.com/?fbclid=IwAR04rX_1St1D1lqTpwBbaOdLskhpFOMahdXRiHXU1gmr4fSlUv0pwsC-RQg>`_
    * This community needs a focused forum. Doesn't exist yet, but I've asked hanggliding.org to engage.
 
-* Plans and open-sourced projects:
+* Open-sourced projects:
 
    * TBD
+
+Somewhere, "Over the Rainbow"
+====================================
+
+In Kansas there are no kits and plans. Neither is there detailed **and accurate** power train data that allows us to accurately predict a prop's output power/thrust for any given input power. These numbers will never come from manufacturers. 3rd parties such as  `Tyto Robotics <https://database.tytorobotics.com/>`_ sell engineered test benches and provide free software which makes it possible to quantify motor/prop performance: 
+
+* Electrical power = Voltage x Current
+* Mechanical power = Torque x Rotation speed
+* Motor efficiency * = Mechanical power / Electrical power
+* Propeller efficiency = Thrust / Mechanical power
+* Powertrain efficiency = Thrust / Electrical power
+* Etc.--see their website.
+
+In the absence of such tools, insight into system performance will derive from a mix of manufacturer data, anecdotal reports on forums, and pilots like Paul Martin (an engineer), Reider Bernsten, Charles Allen, and others.
+
+.. figure:: images/tyto1.png
+   :scale: 80%
+
+   Credit Tyto Robotics
 
 
 

@@ -114,6 +114,7 @@
 <li class="toctree-l2"><a class="reference internal" href="index.html#danger-will-robinson">Danger Will Robinson</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#if-you-see-your-photo-text">If you see your photo/text</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="index.html#resources">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#somewhere-over-the-rainbow">Somewhere, “Over the Rainbow”</a></li>
 </ul>
 </li>
 </ul>
@@ -131,8 +132,9 @@
 <li class="toctree-l2"><a class="reference internal" href="#calculator-how-much-thrust">Calculator: How much thrust?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#calculator-motor-adjustments">Calculator: Motor adjustments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#calculator-prop-diameter-and-pitch">Calculator: Prop diameter and pitch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#calculator-prop-tip-speed">Calculator: Prop tip speed</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#calculator-prop-power">Calculator: Prop power</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#somewhere-over-the-rainbow">Somewhere, “Over the Rainbow”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#putting-it-all-together">Putting it all together</a></li>
 </ul>
 </li>
 </ul>
@@ -257,30 +259,18 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="calculators.html">Calculators</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="calculators.html#motor">Motor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="calculators.html#propeller">Propeller</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="calculators.html#prop-pitch">Prop pitch</a></li>
-<li class="toctree-l3"><a class="reference internal" href="calculators.html#theoretical-speed">Theoretical speed</a></li>
-<li class="toctree-l3"><a class="reference internal" href="calculators.html#static-thrust-required-engine-power">Static thrust: required engine power</a></li>
-<li class="toctree-l3"><a class="reference internal" href="calculators.html#static-thrust-and-horsepower">Static thrust and horsepower</a></li>
-<li class="toctree-l3"><a class="reference internal" href="calculators.html#tip-speed">Tip speed</a></li>
-<li class="toctree-l3"><a class="reference internal" href="calculators.html#id1">Tip speed</a></li>
-<li class="toctree-l3"><a class="reference internal" href="calculators.html#id2">Theoretical speed</a></li>
-<li class="toctree-l3"><a class="reference internal" href="calculators.html#other">Other</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="calculators.html#materials">Materials</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="calculators.html#metal-components">Metal components</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="calculators.html#tbd-rc-whole-system">TBD: RC whole system?</a></li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="library.html">Reference Library</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="library.html#ehelp-engineering-and-design">Ehelp engineering and design</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="library.html#technical-deep-dives">Technical deep dives</a></li>
 <li class="toctree-l3"><a class="reference internal" href="library.html#paul-martin-on-props-motors-etc">Paul Martin on props, motors, etc.</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="library.html#calculators">Calculators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="library.html#motor">Motor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library.html#propeller">Propeller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library.html#aviation">Aviation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library.html#entire-power-train">Entire power train</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library.html#metals">Metals</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="library.html#materials">Materials</a></li>
@@ -419,13 +409,13 @@
 <div class="section" id="calculator-energy-and-flight-time">
 <h2>Calculator: energy and flight time<a class="headerlink" href="#calculator-energy-and-flight-time" title="Permalink to this headline">¶</a></h2>
 <p><strong>Theoretical power x efficiency</strong>: This approach calculates the theoretical energy  to transport you to an altitude within a given time frame and then adjusts for power train efficiency. For example: If Joey Pilot with is Sport 3 Race and and gear weighs 300lbs, how many kilowatts of battery power will it take to climb at 200 fpm to 1000’?</p>
-<!--`Copy this calculator <https://docs.google.com/spreadsheets/d/1QOWFBWTjYjzgTAwhfQpxgTqjzGBhD4zJOt-nyNrNo94/edit?usp=sharing?widget=true&amp;headers=false;rm=minimal&amp;>`_--><iframe src="./resources/calculator_power.html" width="850px" height="750px" scrolling="no"  frameBorder="0"></iframe><p><strong>Calculation walk-through</strong></p>
+<iframe src="resources/calculator_power.html" id="calctheory" scrolling="no"  frameBorder="0"></iframe><p><strong>Calculation walk-through</strong></p>
 <ol class="arabic simple">
 <li><p>The first step calculates the theoretical energy required when the power train is 100% efficient. If a stone was hanging out at 1000 feet, how much energy does it store? Note that the formulas are metric (newtons, joules, and Earth’s gravitational constant (9.8 m/s squared), so we convert 1000 feet to meters by dividing by 3.28.</p></li>
 </ol>
-<p>The formula is:`` kwh=weight X 9.81 (gravity) X feet/3.28 (convert to meters) X 1000 watts X 36000 (sec. per hour)``</p>
+<p>The formula is: <code class="docutils literal notranslate"><span class="pre">kwh=weight</span> <span class="pre">X</span> <span class="pre">9.81</span> <span class="pre">(gravity)</span> <span class="pre">X</span> <span class="pre">feet/3.28</span> <span class="pre">(convert</span> <span class="pre">to</span> <span class="pre">meters)</span> <span class="pre">X</span> <span class="pre">1000</span> <span class="pre">watts</span> <span class="pre">X</span> <span class="pre">36000</span> <span class="pre">(sec.</span> <span class="pre">per</span> <span class="pre">hour)</span></code></p>
 <ol class="arabic simple">
-<li><p>Next we adjust for reality since no part of the system is 100% efficient. The calculator provides some reasonable guesstimates. Multiply the efficiency of all components to get the correction factor.</p></li>
+<li><p>Next, we adjust for reality since no part of the system is 100% efficient. The calculator provides some reasonable guesstimates. Multiply the efficiency of all components to get the correction factor.</p></li>
 <li><p>We can now calculate needed energy and power:</p></li>
 </ol>
 <blockquote>
@@ -491,6 +481,13 @@
 <li><p>tbd</p></li>
 </ol>
 </div>
+<div class="section" id="calculator-prop-tip-speed">
+<h2>Calculator: Prop tip speed<a class="headerlink" href="#calculator-prop-tip-speed" title="Permalink to this headline">¶</a></h2>
+<p>Propeller efficiency reduces as the tip speed approaches the speed of sound.  Beyond 80% of the speed of sound, increasing RPM has
+little affect on thrust. Ideally, keep tip speeds below 75%-80% of Mach.</p>
+<p>Optimum efficiency and less noise stems from tip speeds less than 700 feet per second or 475 mph. Over that, and air compression in front of the prop leading edge begins occurring which rapidly degrades propeller performance.</p>
+<p>tbd: To determine how fast your propeller can theoretically push or pull you through the air at a given rpm and pitch, multiply your propeller’s pitch in inches (usually measured at 75 percent of the prop disk radius) times the RPM. Then multiply that figure times .000947 which gives you your speed in miles per hour. Then multiply this figure by .85 if your aircraft is reasonably aerodynamically clean or by .80 or .75 if your aircraft is somewhat “draggy”. This last operation compensates for propeller slippage and some aircraft drag. The end result should be a reasonably accurate estimate of your aircraft’s airspeed potential. Use this process to help determine the amount of propeller pitch you need for your particular aircraft. Use the <a class="reference external" href="https://www.warpdriveprops.com/propspd2.html">Prop tip speed calculator</a></p>
+</div>
 <div class="section" id="calculator-prop-power">
 <h2>Calculator: Prop power<a class="headerlink" href="#calculator-prop-power" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -507,22 +504,9 @@
 <li><p>tbd</p></li>
 </ol>
 </div>
-<div class="section" id="somewhere-over-the-rainbow">
-<h2>Somewhere, “Over the Rainbow”<a class="headerlink" href="#somewhere-over-the-rainbow" title="Permalink to this headline">¶</a></h2>
-<p>If we could wish up a star, we’d wish for detailed <strong>and accurate</strong> power train data so that we could accurately predict a prop’s output power/thrust for any given input power. These numbers will never come from manufacturers. 3rd parties such as  <a class="reference external" href="https://database.tytorobotics.com/">Tyto Robotics</a> sell engineered test benches and provide free software which makes it possible to quantify motor/prop performance:</p>
-<ul class="simple">
-<li><p>Electrical power = Voltage x Current</p></li>
-<li><p>Mechanical power = Torque x Rotation speed</p></li>
-<li><p>Motor efficiency * = Mechanical power / Electrical power</p></li>
-<li><p>Propeller efficiency = Thrust / Mechanical power</p></li>
-<li><p>Powertrain efficiency = Thrust / Electrical power</p></li>
-<li><p>Etc. Check out their website.</p></li>
-</ul>
-<p>In the absence of such tools, insight into system performance will derive from a mix of manufacturer data, anecdotal reports on forums, and pilots like Paul Martin (an engineer), Reider Bernsten, Charles Allen, and other.</p>
-<div class="figure align-default" id="id3">
-<a class="reference internal image-reference" href="_images/tyto1.png"><img alt="_images/tyto1.png" src="_images/tyto1.png" style="width: 869.6px; height: 462.40000000000003px;" /></a>
-<p class="caption"><span class="caption-text">Credit Tyto Robotics</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
-</div>
+<div class="section" id="putting-it-all-together">
+<h2>Putting it all together<a class="headerlink" href="#putting-it-all-together" title="Permalink to this headline">¶</a></h2>
+<p>TBD</p>
 </div>
 </div>
 
@@ -541,7 +525,7 @@
     <p>
     <img src="_images/dq1.jpg"  class="endimage"/>
       <span class="lastupdated">&nbsp;&nbsp;&nbsp;
-        Last updated on Jan 07, 2022.
+        Last updated on Jan 09, 2022.
         
       </span>
     </p>

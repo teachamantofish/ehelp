@@ -1,3 +1,13 @@
+To avoid iframes: 
+
+1: open the container file and add: 
+
+.. raw:: html
+
+  :file: html/calculator_power.html
+
+2: Add the file contents: 
+
 <style>
   #calc-power-needed {
     /* Layout */

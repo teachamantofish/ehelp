@@ -29,7 +29,6 @@ eHelp Hang Gliding Harnesses
 
    ideas
    safety
-   calculators
    library
    Glossary <https://script.google.com/macros/s/AKfycbx7TffZgCTmnLTNwrsggzLlkBD2A7KQGUwLZwI18FHU6vjP_wHeGngFeXvToJMYa5JYtw/exec#://>
 

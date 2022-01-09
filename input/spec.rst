@@ -60,13 +60,14 @@ Calculator: energy and flight time
 
 .. raw:: html
 
-   :file: html/calculator_power.html
+   <iframe src="resources/calculator_power.html" id="calctheory" scrolling="no"  frameBorder="0"></iframe>
+
 
 **Calculation walk-through** 
 
 1. The first step calculates the theoretical energy required when the power train is 100% efficient. If a stone was hanging out at 1000 feet, how much energy does it store? Note that the formulas are metric (newtons, joules, and Earth's gravitational constant (9.8 m/s squared), so we convert 1000 feet to meters by dividing by 3.28. 
 
-The formula is:`` kwh=weight X 9.81 (gravity) X feet/3.28 (convert to meters) X 1000 watts X 36000 (sec. per hour)`` 
+The formula is: ``kwh=weight X 9.81 (gravity) X feet/3.28 (convert to meters) X 1000 watts X 36000 (sec. per hour)`` 
 
 1. Next, we adjust for reality since no part of the system is 100% efficient. The calculator provides some reasonable guesstimates. Multiply the efficiency of all components to get the correction factor. 
 2. We can now calculate needed energy and power: 
@@ -128,11 +129,24 @@ TBD
 
 tbd: Find the prop/RPM combination that will give you both the thrust and efficiency you want, then work backwards from there to determine how much motor power is required and what motor KV/battery voltage you want to use. Then source the motor and controller.
 
+
+
 **Calculation walk-through** 
 
 #. one
 #. two
 #. tbd
+
+Calculator: Prop tip speed
+===========================
+
+Propeller efficiency reduces as the tip speed approaches the speed of sound.  Beyond 80% of the speed of sound, increasing RPM has 
+little affect on thrust. Ideally, keep tip speeds below 75%-80% of Mach. 
+
+Optimum efficiency and less noise stems from tip speeds less than 700 feet per second or 475 mph. Over that, and air compression in front of the prop leading edge begins occurring which rapidly degrades propeller performance.
+
+tbd: To determine how fast your propeller can theoretically push or pull you through the air at a given rpm and pitch, multiply your propeller's pitch in inches (usually measured at 75 percent of the prop disk radius) times the RPM. Then multiply that figure times .000947 which gives you your speed in miles per hour. Then multiply this figure by .85 if your aircraft is reasonably aerodynamically clean or by .80 or .75 if your aircraft is somewhat "draggy". This last operation compensates for propeller slippage and some aircraft drag. The end result should be a reasonably accurate estimate of your aircraft's airspeed potential. Use this process to help determine the amount of propeller pitch you need for your particular aircraft. Use the `Prop tip speed calculator <https://www.warpdriveprops.com/propspd2.html>`_
+
 
 Calculator: Prop power
 ===============================
@@ -150,21 +164,7 @@ TBD
 #. two
 #. tbd
 
-Somewhere, "Over the Rainbow"
-====================================
+Putting it all together
+============================
 
-If we could wish up a star, we'd wish for detailed **and accurate** power train data so that we could accurately predict a prop's output power/thrust for any given input power. These numbers will never come from manufacturers. 3rd parties such as  `Tyto Robotics <https://database.tytorobotics.com/>`_ sell engineered test benches and provide free software which makes it possible to quantify motor/prop performance: 
-
-* Electrical power = Voltage x Current
-* Mechanical power = Torque x Rotation speed
-* Motor efficiency * = Mechanical power / Electrical power
-* Propeller efficiency = Thrust / Mechanical power
-* Powertrain efficiency = Thrust / Electrical power
-* Etc. Check out their website.
-
-In the absence of such tools, insight into system performance will derive from a mix of manufacturer data, anecdotal reports on forums, and pilots like Paul Martin (an engineer), Reider Bernsten, Charles Allen, and other.
-
-.. figure:: images/tyto1.png
-   :scale: 80%
-
-   Credit Tyto Robotics
+TBD

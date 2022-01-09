@@ -24,7 +24,7 @@ html_context = { 'css_files': ['_static/css/theme_overrides.css', ],}
 # Add relative template path.
 templates_path = ['../templates']
 
-html_extra_path = ['./resources']
+# html_extra_path = ['./resources']
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the documentation.

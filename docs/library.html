@@ -55,7 +55,7 @@
   <link rel="stylesheet" href="_static/css/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Calculators" href="calculators.html" /> 
+    <link rel="prev" title="Safety Checklist" href="safety.html" /> 
   <style>
   .wy-nav-content {max-width:90%}
   td {font-size:130%}
@@ -113,6 +113,7 @@
 <li class="toctree-l2"><a class="reference internal" href="index.html#danger-will-robinson">Danger Will Robinson</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#if-you-see-your-photo-text">If you see your photo/text</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="index.html#resources">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#somewhere-over-the-rainbow">Somewhere, “Over the Rainbow”</a></li>
 </ul>
 </li>
 </ul>
@@ -130,8 +131,9 @@
 <li class="toctree-l2"><a class="reference internal" href="spec.html#calculator-how-much-thrust">Calculator: How much thrust?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="spec.html#calculator-motor-adjustments">Calculator: Motor adjustments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="spec.html#calculator-prop-diameter-and-pitch">Calculator: Prop diameter and pitch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spec.html#calculator-prop-tip-speed">Calculator: Prop tip speed</a></li>
 <li class="toctree-l2"><a class="reference internal" href="spec.html#calculator-prop-power">Calculator: Prop power</a></li>
-<li class="toctree-l2"><a class="reference internal" href="spec.html#somewhere-over-the-rainbow">Somewhere, “Over the Rainbow”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spec.html#putting-it-all-together">Putting it all together</a></li>
 </ul>
 </li>
 </ul>
@@ -256,30 +258,18 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="calculators.html">Calculators</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="calculators.html#motor">Motor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="calculators.html#propeller">Propeller</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="calculators.html#prop-pitch">Prop pitch</a></li>
-<li class="toctree-l3"><a class="reference internal" href="calculators.html#theoretical-speed">Theoretical speed</a></li>
-<li class="toctree-l3"><a class="reference internal" href="calculators.html#static-thrust-required-engine-power">Static thrust: required engine power</a></li>
-<li class="toctree-l3"><a class="reference internal" href="calculators.html#static-thrust-and-horsepower">Static thrust and horsepower</a></li>
-<li class="toctree-l3"><a class="reference internal" href="calculators.html#tip-speed">Tip speed</a></li>
-<li class="toctree-l3"><a class="reference internal" href="calculators.html#id1">Tip speed</a></li>
-<li class="toctree-l3"><a class="reference internal" href="calculators.html#id2">Theoretical speed</a></li>
-<li class="toctree-l3"><a class="reference internal" href="calculators.html#other">Other</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="calculators.html#materials">Materials</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="calculators.html#metal-components">Metal components</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="calculators.html#tbd-rc-whole-system">TBD: RC whole system?</a></li>
-</ul>
-</li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Reference Library</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#ehelp-engineering-and-design">Ehelp engineering and design</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#technical-deep-dives">Technical deep dives</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#paul-martin-on-props-motors-etc">Paul Martin on props, motors, etc.</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#calculators">Calculators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#motor">Motor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#propeller">Propeller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#aviation">Aviation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#entire-power-train">Entire power train</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#metals">Metals</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#materials">Materials</a></li>
@@ -346,7 +336,7 @@
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
       
-        <a href="calculators.html" class="btn btn-neutral float-left" title="Calculators" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="safety.html" class="btn btn-neutral float-left" title="Safety Checklist" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
   </div>
   
@@ -380,6 +370,57 @@
 </div></blockquote>
 </div>
 </div>
+<div class="section" id="calculators">
+<h2>Calculators<a class="headerlink" href="#calculators" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="motor">
+<h3>Motor<a class="headerlink" href="#motor" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Static thrust and horsepower</p>
+<ul>
+<li><p><a class="reference external" href="https://www.poweredparagliders.com.au/Calculators/Static_Thrust_Calculator.htm">https://www.poweredparagliders.com.au/Calculators/Static_Thrust_Calculator.htm</a></p></li>
+<li><p><a class="reference external" href="http://www.csgnetwork.com/directhpthrustcalc.html">http://www.csgnetwork.com/directhpthrustcalc.html</a></p></li>
+<li><p><a class="reference external" href="https://rcplanes.online/calc_thrust.htm">https://rcplanes.online/calc_thrust.htm</a></p></li>
+</ul>
+</li>
+</ul>
+<div class="section" id="formulas">
+<h4>Formulas<a class="headerlink" href="#formulas" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Kv(v) = RPM</p></li>
+<li><p>max kw - (.30) = max continuous power</p></li>
+<li><p>Motor efficiency: Used power - heat. Heat is P=i squared * amps (resistance squared times amps)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="propeller">
+<h3>Propeller<a class="headerlink" href="#propeller" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.culverprops.com/pitchselection.htm">Prop pitch recommendation (for cruise?)</a> based on RPM, airspeed, and prop length. You can also view the <a class="reference external" href="http://www.culverprops.com/viewpitchtable.htm">tables</a></p></li>
+<li><p><a class="reference external" href="https://www.warpdriveprops.com/propspd2.html">Theoretical speed</a></p></li>
+<li><p><a class="reference external" href="https://www.warpdriveprops.com/propspd2.html">Propeller Tip Speed Calculator</a></p></li>
+<li><p><a class="reference external" href="https://www.mejzlik.eu/technical-data/propeller_calculator">Mejzlik calculators for disk loading, dynamic thrust, static thrust</a></p></li>
+</ul>
+</div>
+<div class="section" id="aviation">
+<h3>Aviation<a class="headerlink" href="#aviation" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://wingsofaero.in/calculator/climb-angle-calculator-by-mohit-kudal/">Climb angle</a></p></li>
+<li><p><a class="reference external" href="http://www.luizmonteiro.com/Misc.aspx">Glide distance, ratio, angles, trajectory</a></p></li>
+<li><p><a class="reference external" href="http://www.csgnetwork.com/aviationconverters.html">Over 50 Aviation Converters and Calculators</a></p></li>
+</ul>
+</div>
+<div class="section" id="entire-power-train">
+<h3>Entire power train<a class="headerlink" href="#entire-power-train" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.ecalc.ch/motorcalc.php">https://www.ecalc.ch/motorcalc.php</a></p></li>
+<li><p><a class="reference external" href="https://www.ecalc.ch/motorcalc_mobile.php?hacker&amp;lang=en">https://www.ecalc.ch/motorcalc_mobile.php?hacker&amp;lang=en</a></p></li>
+</ul>
+</div>
+<div class="section" id="metals">
+<h3>Metals<a class="headerlink" href="#metals" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://www.onlinemetals.com/en/weight-calculator">https://www.onlinemetals.com/en/weight-calculator</a></p>
+</div>
+</div>
 <div class="section" id="materials">
 <h2>Materials<a class="headerlink" href="#materials" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="http://www.dexcraft.com/articles/carbon-fiber-composites/aluminium-vs-carbon-fiber-comparison-of-materials/#rigidity_and_strength_relation_to_weight">Carbon fiber vs Aluminum</a></p>
@@ -401,7 +442,7 @@
     <p>
     <img src="_images/dq1.jpg"  class="endimage"/>
       <span class="lastupdated">&nbsp;&nbsp;&nbsp;
-        Last updated on Jan 07, 2022.
+        Last updated on Jan 09, 2022.
         
       </span>
     </p>

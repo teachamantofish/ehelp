@@ -114,6 +114,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#danger-will-robinson">Danger Will Robinson</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#if-you-see-your-photo-text">If you see your photo/text</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#resources">Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#somewhere-over-the-rainbow">Somewhere, “Over the Rainbow”</a></li>
 </ul>
 </li>
 </ul>
@@ -131,8 +132,9 @@
 <li class="toctree-l2"><a class="reference internal" href="spec.html#calculator-how-much-thrust">Calculator: How much thrust?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="spec.html#calculator-motor-adjustments">Calculator: Motor adjustments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="spec.html#calculator-prop-diameter-and-pitch">Calculator: Prop diameter and pitch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spec.html#calculator-prop-tip-speed">Calculator: Prop tip speed</a></li>
 <li class="toctree-l2"><a class="reference internal" href="spec.html#calculator-prop-power">Calculator: Prop power</a></li>
-<li class="toctree-l2"><a class="reference internal" href="spec.html#somewhere-over-the-rainbow">Somewhere, “Over the Rainbow”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spec.html#putting-it-all-together">Putting it all together</a></li>
 </ul>
 </li>
 </ul>
@@ -257,30 +259,18 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="calculators.html">Calculators</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="calculators.html#motor">Motor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="calculators.html#propeller">Propeller</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="calculators.html#prop-pitch">Prop pitch</a></li>
-<li class="toctree-l3"><a class="reference internal" href="calculators.html#theoretical-speed">Theoretical speed</a></li>
-<li class="toctree-l3"><a class="reference internal" href="calculators.html#static-thrust-required-engine-power">Static thrust: required engine power</a></li>
-<li class="toctree-l3"><a class="reference internal" href="calculators.html#static-thrust-and-horsepower">Static thrust and horsepower</a></li>
-<li class="toctree-l3"><a class="reference internal" href="calculators.html#tip-speed">Tip speed</a></li>
-<li class="toctree-l3"><a class="reference internal" href="calculators.html#id1">Tip speed</a></li>
-<li class="toctree-l3"><a class="reference internal" href="calculators.html#id2">Theoretical speed</a></li>
-<li class="toctree-l3"><a class="reference internal" href="calculators.html#other">Other</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="calculators.html#materials">Materials</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="calculators.html#metal-components">Metal components</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="calculators.html#tbd-rc-whole-system">TBD: RC whole system?</a></li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="library.html">Reference Library</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="library.html#ehelp-engineering-and-design">Ehelp engineering and design</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="library.html#technical-deep-dives">Technical deep dives</a></li>
 <li class="toctree-l3"><a class="reference internal" href="library.html#paul-martin-on-props-motors-etc">Paul Martin on props, motors, etc.</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="library.html#calculators">Calculators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="library.html#motor">Motor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library.html#propeller">Propeller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library.html#aviation">Aviation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library.html#entire-power-train">Entire power train</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library.html#metals">Metals</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="library.html#materials">Materials</a></li>
@@ -422,7 +412,7 @@
 </ul>
 </div></blockquote>
 <ul>
-<li><p>Plans and open-sourced projects:</p>
+<li><p>Open-sourced projects:</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>TBD</p></li>
@@ -430,6 +420,23 @@
 </div></blockquote>
 </li>
 </ul>
+</div>
+<div class="section" id="somewhere-over-the-rainbow">
+<h3>Somewhere, “Over the Rainbow”<a class="headerlink" href="#somewhere-over-the-rainbow" title="Permalink to this headline">¶</a></h3>
+<p>In Kansas there are no kits and plans. Neither is there detailed <strong>and accurate</strong> power train data that allows us to accurately predict a prop’s output power/thrust for any given input power. These numbers will never come from manufacturers. 3rd parties such as  <a class="reference external" href="https://database.tytorobotics.com/">Tyto Robotics</a> sell engineered test benches and provide free software which makes it possible to quantify motor/prop performance:</p>
+<ul class="simple">
+<li><p>Electrical power = Voltage x Current</p></li>
+<li><p>Mechanical power = Torque x Rotation speed</p></li>
+<li><p>Motor efficiency * = Mechanical power / Electrical power</p></li>
+<li><p>Propeller efficiency = Thrust / Mechanical power</p></li>
+<li><p>Powertrain efficiency = Thrust / Electrical power</p></li>
+<li><p>Etc.–see their website.</p></li>
+</ul>
+<p>In the absence of such tools, insight into system performance will derive from a mix of manufacturer data, anecdotal reports on forums, and pilots like Paul Martin (an engineer), Reider Bernsten, Charles Allen, and others.</p>
+<div class="figure align-default" id="id1">
+<a class="reference internal image-reference" href="_images/tyto1.png"><img alt="_images/tyto1.png" src="_images/tyto1.png" style="width: 869.6px; height: 462.40000000000003px;" /></a>
+<p class="caption"><span class="caption-text">Credit Tyto Robotics</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
 </div>
 </div>
 </div>
@@ -449,7 +456,7 @@
     <p>
     <img src="_images/dq1.jpg"  class="endimage"/>
       <span class="lastupdated">&nbsp;&nbsp;&nbsp;
-        Last updated on Jan 07, 2022.
+        Last updated on Jan 09, 2022.
         
       </span>
     </p>
