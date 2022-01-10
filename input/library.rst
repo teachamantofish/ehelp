@@ -9,7 +9,7 @@ Reference Library
 
    Under construction
 
-Ehelp engineering and design
+Eharness engineering and design
 =================================
 
 Technical deep dives
@@ -75,6 +75,13 @@ Metals
 
 https://www.onlinemetals.com/en/weight-calculator
 
+Flying strategies
+============================
+
+* Best climb angle and speed
+
+  * `Flying, energy, power <https://www.av8n.com/how/htm/power.html#sec-vy-power>`_
+  * `Related forum discussion <https://www.av8n.com/how/htm/power.html#sec-vy-power>`_
 
 Materials
 ==================

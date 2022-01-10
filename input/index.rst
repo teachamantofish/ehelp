@@ -2,9 +2,9 @@
 Why, What, and Who?
 ************************************************
 
-Why eHelp? Because for 2000-3000 bucks a DIYer can build a 20 pound eHelp harness and flatland foot launch. No mountain. No towing. No modified glider. No tow rig.  The time and $$$ investment quickly pays for itself through reduced driving to launches, hang-waiting, tow costs, and alcoholic consumption while Jonesing for airtime. Only the pilot can determine the ultimate payback.
+Why eharness? Because for 2000-3000 bucks a DIYer can build a 20 pound eharness harness and flatland foot launch. No mountain. No towing. No modified glider. No tow rig.  The time and $$$ investment quickly pays for itself through reduced driving to launches, hang-waiting, tow costs, and alcoholic consumption while Jonesing for airtime. Only the pilot can determine the ultimate payback.
 
-The systems are relatively simple and free of tune ups, maintenance hassles, and fossil fuels. Like most flight, there are some caveats and hazards, but the eHelp idea has one moving part and many advantages. A community of pioneers are paving the runway with free advice, open source plans, and Youtube videos while the multi-billion dollar drone, battery, and EV industries quickly drive the evolution of cheaper, lighter, and more powerful components. 
+The systems are relatively simple and free of tune ups, maintenance hassles, and fossil fuels. Like most flight, there are some caveats and hazards, but the eharness idea has one moving part and many advantages. A community of pioneers are paving the runway with free advice, open source plans, and Youtube videos while the multi-billion dollar drone, battery, and EV industries quickly drive the evolution of cheaper, lighter, and more powerful components. 
 
 .. container:: twocol
 
@@ -54,13 +54,13 @@ Resources
 * This document includes: 
 
     * Editable spreadsheets for data, lists, calculators 
-    * `This editable content on Github <https://github.com/teachamantofish/ehelp>`_
+    * `This editable content on Github <https://github.com/teachamantofish/eharness>`_
 
 * Facebook pages: 
 
    * `ePowered Hang Glider <https://www.facebook.com/groups/904566026835865>`_
    * `FLPGH <https://www.facebook.com/groups/FLPHG>`_
-   * `FLPHG eHelp <https://www.facebook.com/groups/668143127181552>`_
+   * `FLPHG eharness <https://www.facebook.com/groups/668143127181552>`_
 
 Forums: 
 

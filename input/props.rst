@@ -89,16 +89,32 @@ Use what you know. In this case, 30kg of thrust
 Folding props DIY and resources
 ============================================
 
-* `Icarus folding props <https://icare-icarus.3dcartstores.com/RASA-CFK-3-Blades-Propeller-Folding-342225-MAG-CAD-BIG_p_852.html>`_ See also Reidar's `video and commments <https://www.youtube.com/watch?v=-sIVpOLYoqg&t=144s>`_
+Commercial
+-----------------
+
+* `Icarus folding props <https://icare-icarus.3dcartstores.com/RASA-CFK-3-Blades-Propeller-Folding-342225-MAG-CAD-BIG_p_852.html>`_. See also Reidar's `video and commments <https://www.youtube.com/watch?v=-sIVpOLYoqg&t=144s>`_
+* `MAGCAD 2 and 3 bladed folding props <https://magcad.de/?tag=propeller>`_
 * `Geiger folding props (expensive) <https://www.geigerengineering.de/en/avionics/products>`_
-* `Open source folding prop hub design <http://graal-aero.fr/hub_e.html>`_
-* Interesting forward folding prop:  https://www.youtube.com/watch?app=desktop&v=wuhSRdffuDw&t=295&fbclid=IwAR1d04qJ8gJxdnokDxZHgMgBG0L7G1J2QcmDmnfWWiDHTK9bdoyb82HxvZg
+
+DIY
+---------------
+
+* `Folding prop hub design <http://graal-aero.fr/hub_e.html>`_
+* `Forward folding prop  <https://www.youtube.com/watch?app=desktop&v=wuhSRdffuDw&t=295&fbclid=IwAR1d04qJ8gJxdnokDxZHgMgBG0L7G1J2QcmDmnfWWiDHTK9bdoyb82HxvZg>`_
 * `Charles Allen's DIY project video <https://www.youtube.com/watch?v=cyBJLpHkc7A>`_
 
 .. figure:: images/diyfoldingca.png
-    :target: https://www.youtube.com/watch?v=cyBJLpHkc7A
+   :target: https://www.youtube.com/watch?v=cyBJLpHkc7A
 
    Credit: Charles Allen
+
+* `DIY folding prop hub <https://www.youtube.com/watch?v=d3AuHhnzxZA>`_
+
+.. figure:: images/br_foldprop.png
+   :scale: 50%
+
+   Credit: Brendan
+
 
 Propeller innovation
 ================================

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://unpkg.com/mvp.css" />
+    <link rel="stylesheet" href="../_static/css/mvp.css" />
     <style>
       input {
         margin-bottom: 0;
@@ -26,7 +26,10 @@
         text-align: center;
       }
       section {
-        justify-content: end;
+        justify-content: flex-start;
+      }
+      table.results {
+        justify-content: flex-end;
       }
       table.results th,
       table.results th + td {
@@ -47,8 +50,8 @@
       header {
         padding: 0;
       }
-      table tr:nth-child(2n) {
-        background-color: transparent;
+      table tr: {
+        background-color: green;
       }
     </style>
     <title>eHelp Power Needed</title>
@@ -56,9 +59,9 @@
   <body>
     <main>
       <section>
-          <p><strong>Step 1</strong>: Enter pilot data to determine theoretical energy to goal.</p>
+          
         <table class="input">
-          <thead>
+          <thead><p><strong>Step 1</strong>: Enter pilot data to determine theoretical energy to goal.</p>
             <tr>
               <th></th>
               <th>Weight</th>

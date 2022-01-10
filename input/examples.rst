@@ -1,5 +1,5 @@
 ************************************************
-eHelp Examples
+Eharness Examples
 ************************************************
 
 .. figure:: images/uc3.gif
@@ -14,14 +14,14 @@ Database of working builds
 
 TBD: Add community-driven list of functional systems.
 
-eHelp harness videos
+Eharness videos
 ================================
 
-* Reidar Bernsten eHelp builds: 
+* Reidar Bernsten eharness builds: 
   
    * `Reverse engineered look (part 1) <https://www.youtube.com/watch?v=KIY1k8jz4v0>`_
    * `How it is made (part 2) <https://www.youtube.com/watch?v=kuN8h2oR7L4>`_
-   * Two ehelp flight tests: https://www.youtube.com/watch?v=aSM9u3zkhDI
+   * Two eharness flight tests: https://www.youtube.com/watch?v=aSM9u3zkhDI
    * E-Help Prep for flatland footstart flight: https://www.youtube.com/watch?v=mm0PRii-jXs>
    * Flying tutorial: https://www.youtube.com/watch?v=hk-2uNuh5YU
 
@@ -30,8 +30,8 @@ eHelp harness videos
 
       Credit: Reidar Bernsten
 
-* Charles Allen ehelp harness build: 
-* 
+* Charles Allen eharness build: 
+  
       * `Build video with specs <https://www.youtube.com/watch?v=kMv0oyVrDfs>`_
       * `Fly video <https://www.myqnapcloud.com/share/6d31j23k4l6p70551946x13z_696R5Pm#/home>`_
       * `Design files + BOM <https://www.myqnapcloud.com/share/6d31j23k4l6p70551946x13z_696R5Pm#/home>`_
@@ -40,7 +40,22 @@ eHelp harness videos
 
    Credit: Charles Allen
 
-* `Paul Martin build video <https://www.facebook.com/groups/668143127181552/posts/853592028636660/?comment_id=871739653488564&reply_comment_id=871853686810494&notif_id=1639125691695281&notif_t=group_comment&ref=notif>`_
+
+* `Brenden (last name tbd) build video with BOM and details <https://www.youtube.com/watch?v=d3AuHhnzxZA>`_
+
+.. figure:: images/brexample.png
+   :scale: 100%
+   :target: https://www.youtube.com/watch?v=d3AuHhnzxZA
+
+   Credit: Brendan
+
+* `Paul Martin build video (requires permission for access) <https://www.facebook.com/groups/668143127181552/posts/853592028636660/?comment_id=871739653488564&reply_comment_id=871853686810494&notif_id=1639125691695281&notif_t=group_comment&ref=notif>`_
+
+.. figure:: images/pmexample.png
+   :scale: 100%
+   :target: https://www.facebook.com/groups/668143127181552/posts/853592028636660/?comment_id=871739653488564&reply_comment_id=871853686810494&notif_id=1639125691695281&notif_t=group_comment&ref=notif
+
+   Credit: Paul Martin
 
 
 Commercial e-harness systems

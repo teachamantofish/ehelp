@@ -29,6 +29,14 @@ TBD: Add link to Paul's engineering doc.
 
    Credit: Reidar Bernsten
 
+* `DIY folding prop hub <https://www.youtube.com/watch?v=d3AuHhnzxZA>`_
+
+.. figure:: images/brboom.png
+   :scale: 50%
+   :target: https://www.youtube.com/watch?v=d3AuHhnzxZA
+
+   Credit: Brendan
+
 Boom to boom hinge connection
 ============================================
 
@@ -85,9 +93,14 @@ Kickstand
 
 
 .. figure:: images/ca_fusion.png
-            :scale: 100%
+   :scale: 100%
 
    Design by Charles Allen
+
+.. figure:: images/brkickstand.png
+   :scale: 100%
+   :target: https://www.youtube.com/watch?v=d3AuHhnzxZA
+
 
 Safety features
 ===========================

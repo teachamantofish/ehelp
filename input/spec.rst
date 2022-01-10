@@ -9,7 +9,7 @@ Specing out a System
 
    Under construction
 
-Navigating a working system is difficult and time consuming. Until the eHelp harness idea is more widespread, design principles will remain relatively inaccessible while advice is scattered across various Facebook pages and forums with pioneers helping where they can. With luck, the eHelp paradigm will gain enough traction that the hang gliding community can emulate aspects of `OpenPPG <https://openppg.com/>`_ and create its own easy-to-traverse path.
+Navigating a working system is difficult and time consuming. Until the eharness harness idea is more widespread, design principles will remain relatively inaccessible while advice is scattered across various Facebook pages and forums with pioneers helping where they can. With luck, the eharness paradigm will gain enough traction that the hang gliding community can emulate aspects of `OpenPPG <https://openppg.com/>`_ and create its own easy-to-traverse path.
 
 Until then, moving forward is a bit of work. 
 
@@ -18,7 +18,7 @@ Margins are thin with electric powered aircraft primarily due to battery low ene
 Decision path
 =====================
 
-You'll often hear that system design starts with the prop. However, the performance of system components is so intimately intertwined that the specification of any piece has ramifications for all the others. Your choice of batteries, motor, electronic speed controller, or prop must inform your choices across the system. Failure to balance and tune the design holistically can easily result in a dangerous or inadequate eHelp system.
+You'll often hear that system design starts with the prop. However, the performance of system components is so intimately intertwined that the specification of any piece has ramifications for all the others. Your choice of batteries, motor, electronic speed controller, or prop must inform your choices across the system. Failure to balance and tune the design holistically can easily result in a dangerous or inadequate eharness system.
 
 Realistically, it doesn't matter where you start as long as the entire system produces the desired result. For example: 
 

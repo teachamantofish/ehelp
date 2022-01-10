@@ -126,7 +126,7 @@ Mating with a prop
 
 See :ref:`prop`. 
 
-Unfortunately, the the 36"-44" range of HG eHelp props are 10-20% smaller than powered paramotor props--meaning we can't leverage PPG  forums and vendor data as information sources. Still, the `e-props folks <https://ppg.e-props.fr/index.php?cPath=1>`_ match multiple props to each specific IC and electric motor. It's worth checking out to get an idea of acceptable combinations.
+Unfortunately, the the 36"-44" range of HG eharness props are 10-20% smaller than powered paramotor props--meaning we can't leverage PPG  forums and vendor data as information sources. Still, the `e-props folks <https://ppg.e-props.fr/index.php?cPath=1>`_ match multiple props to each specific IC and electric motor. It's worth checking out to get an idea of acceptable combinations.
 
 Worthwhile reading
 ========================
