@@ -5,55 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../_static/css/mvp.css" />
-    <style>
-      input {
-        margin-bottom: 0;
-        max-width: 50px;
-      }
-      table.input {
-        width: 900px;
-      }
-      table {
-        margin-bottom: 1rem;
-      }
-      table.input td,
-      table.input th,
-      table.input tr {
-        width: 100%;
-        text-align: left;
-      }
-      thead > tr:first-of-type > th {
-        text-align: center;
-      }
-      section {
-        justify-content: flex-start;
-      }
-      table.results {
-        justify-content: flex-end;
-      }
-      table.results th,
-      table.results th + td {
-        vertical-align: baseline;
-        text-align: right;
-      }
-      table.results th + td + td {
-        width: 100%;
-      }
-      table.results td {
-        text-align: left;
-      }
-      h2,
-      p {
-        margin: 0;
-      }
-      main,
-      header {
-        padding: 0;
-      }
-      table tr: {
-        background-color: green;
-      }
-    </style>
+    <link rel="stylesheet" href="../_static/css/mvp_custom.css" />
     <title>eHelp Power Needed</title>
   </head>
   <body>
@@ -180,11 +132,11 @@
             <tr>
               <th>Available watts</th>
               <td id="F19"></td>
-              <td>W</td>
+              <td>watts</td>
             </tr>
             <tr>
               <th>Projected flight time</th>
-              <td id="F21"></td>
+              <td id="F21" class="resultcell"></td>
               <td>minutes</td>
             </tr>
           </tbody>

@@ -9,18 +9,8 @@ Reference Library
 
    Under construction
 
-Eharness engineering and design
-=================================
-
 Technical deep dives
----------------------
-
-Todo: Edit and order
-
-https://www.facebook.com/photo/?fbid=4847037825319536&set=g.668143127181552
-
-https://community.openppg.com/t/building-a-14sx15p-18650-battery-pack/2251/9?fbclid=IwAR0NP_cjWqAIch7zJGpC-iMzlpdwao6NWiOaD3R6lFVBnxXEZzazXJwgvZY
-
+=================================
 
 Paul Martin on props, motors, etc.
 -------------------------------------------
@@ -28,6 +18,26 @@ Paul Martin on props, motors, etc.
   * tbd
   * tbd
 
+Batteries
+--------------------------
+
+TBD: https://www.facebook.com/photo/?fbid=4847037825319536&set=g.668143127181552
+
+Motors
+---------------------------------
+
+* `Motor mass, size, and waste heat <https://community.openppg.com/t/paraglider-self-launching-system/2186/41>`_
+* `Stator laminations <https://forum.hanggliding.org/viewtopic.php?t=35303>`_: Without super thin stator lams, efficiency suffers at high RPMs. But cheaper motors such as Freerchobby motors use 0.35mm lams because thin stator lams are very expensive (with the exception of Rotomax 150 at 0.2mm lams). Eddy losses in the iron stator core induced by the magnetic field switching as the rotor magnets fly past are proportional to the square of the lamination thickness x the square of the rpm. This why motors with thick lams can suddenly slam into an RPM wall and just turn into heaters without going any faster.
+
+Props
+-----------------------
+
+* Paul Martin's documentation
+* 4th root equation
+* Dr. Raynor's equation
+* eCalcs
+  
+  
 Calculators
 ==========================
 
@@ -81,7 +91,7 @@ Flying strategies
 * Best climb angle and speed
 
   * `Flying, energy, power <https://www.av8n.com/how/htm/power.html#sec-vy-power>`_
-  * `Related forum discussion <https://www.av8n.com/how/htm/power.html#sec-vy-power>`_
+  * `Related forum discussion <https://aviation.stackexchange.com/questions/73997/how-can-best-glide-speed-be-lower-than-best-rate-of-climb-speed>`_
 
 Materials
 ==================

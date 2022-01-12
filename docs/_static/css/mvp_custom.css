@@ -1,0 +1,52 @@
+/* mvp mods */
+
+input {
+    margin-bottom: 0;
+    max-width: 50px;
+  }
+  table.input {
+    width: 790px;
+  }
+  table {
+    margin-bottom: 1rem;
+  }
+  table.input td,
+  table.input th,
+  table.input tr {
+    width: 100%;
+    text-align: left;
+  }
+  thead > tr:first-of-type > th {
+    text-align: center;
+  }
+  section {
+    justify-content: flex-end;
+    width: 790px;
+  }
+  table.results {
+  
+  }
+  table.results th,
+  table.results th + td {
+    vertical-align: baseline;
+    text-align: right;
+  }
+  table.results th + td + td {
+    width: 100%;
+  }
+  table.results td {
+    text-align: left;
+  }
+  h2,
+  p {
+    margin: 0;
+  }
+  main,
+  header {
+    padding: 0;
+  }
+  table tr:nth-child(even) {
+  background-color:#ffffff;
+  }
+  
+  

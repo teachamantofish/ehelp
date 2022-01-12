@@ -50,7 +50,7 @@ TBD:
 
  higher V means less amps for the same power, I wanted to look at two motors that can handle diff V's and compare. Below you can see the M30 w/ 2 higher AH batteries can't run as long, create way more heat, and have a higher RPM than the M40. Same battery price. Seems safer, quieter, longer flight time (and that's at full climb--cruise would be even better). Tradeoff is the motor is 250 more and the batteries weigh 1lb more.
 
-.. note:: Before buying anything, however, a logical first step is figuring out how what it will take to get your butt into the sky. . . 
+.. note:: Before investing time and money, however, a logical first step could include figuring out what it will take to get your butt into the sky. . . 
 
 Calculator: energy and flight time
 ============================================
@@ -60,7 +60,7 @@ Calculator: energy and flight time
 
 .. raw:: html
 
-   <iframe src="resources/calculator_power.html" id="calctheory" scrolling="no"  frameBorder="0"></iframe>
+   <iframe src="resources/calculator_power.html" id="calctheory" scrolling="no"  frameBorder="0" width="900"></iframe>
 
 
 **Calculation walk-through** 

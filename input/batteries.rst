@@ -92,14 +92,13 @@ https://power-calculation.com/battery-storage-calculator.php
 DIY battery packs
 ========================
 
-DIY battery packs may be extra work, but they can be 1/2 the cost, custom sizes, and created a form factor compatible with the installation method. `See OpenPPG <https://community.openppg.com/t/building-a-14sx15p-18650-battery-pack/2251/22>`_. 
+DIY battery packs may be extra work, but they can be 1/2 the cost, custom sizes, and created in a form factor compatible with the installation method. `See OpenPPG <https://community.openppg.com/t/building-a-14sx15p-18650-battery-pack/2251/22>`_. 
 
 Joe Stapelton created a wonderful example for an HG harness: 
 
 .. raw:: html
 
   <iframe width="560" height="315" src="https://www.youtube.com/embed/utYveWc6Wrg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 
 
 Worthwhile reading

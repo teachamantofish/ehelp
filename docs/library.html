@@ -152,8 +152,7 @@
 <li class="toctree-l2"><a class="reference internal" href="motors.html#mating-with-a-prop">Mating with a prop</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#worthwhile-reading">Worthwhile reading</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="motors.html#basics">Basics</a></li>
-<li class="toctree-l3"><a class="reference internal" href="motors.html#advanced-topics">Advanced topics</a></li>
-<li class="toctree-l3"><a class="reference internal" href="motors.html#vendor-specific">Vendor specific</a></li>
+<li class="toctree-l3"><a class="reference internal" href="motors.html#vendor-specific-info">Vendor specific info</a></li>
 </ul>
 </li>
 </ul>
@@ -263,9 +262,11 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Reference Library</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#eharness-engineering-and-design">Eharness engineering and design</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#technical-deep-dives">Technical deep dives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#technical-deep-dives">Technical deep dives</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#paul-martin-on-props-motors-etc">Paul Martin on props, motors, etc.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#batteries">Batteries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#motors">Motors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#props">Props</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#calculators">Calculators</a><ul>
@@ -357,14 +358,8 @@
 <a class="reference internal image-reference" href="_images/uc3.gif"><img alt="_images/uc3.gif" src="_images/uc3.gif" style="width: 144.0px; height: 81.0px;" /></a>
 <p class="caption"><span class="caption-text">Under construction</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
-<div class="section" id="eharness-engineering-and-design">
-<h2>Eharness engineering and design<a class="headerlink" href="#eharness-engineering-and-design" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="technical-deep-dives">
-<h3>Technical deep dives<a class="headerlink" href="#technical-deep-dives" title="Permalink to this headline">¶</a></h3>
-<p>Todo: Edit and order</p>
-<p><a class="reference external" href="https://www.facebook.com/photo/?fbid=4847037825319536&amp;set=g.668143127181552">https://www.facebook.com/photo/?fbid=4847037825319536&amp;set=g.668143127181552</a></p>
-<p><a class="reference external" href="https://community.openppg.com/t/building-a-14sx15p-18650-battery-pack/2251/9?fbclid=IwAR0NP_cjWqAIch7zJGpC-iMzlpdwao6NWiOaD3R6lFVBnxXEZzazXJwgvZY">https://community.openppg.com/t/building-a-14sx15p-18650-battery-pack/2251/9?fbclid=IwAR0NP_cjWqAIch7zJGpC-iMzlpdwao6NWiOaD3R6lFVBnxXEZzazXJwgvZY</a></p>
-</div>
+<h2>Technical deep dives<a class="headerlink" href="#technical-deep-dives" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="paul-martin-on-props-motors-etc">
 <h3>Paul Martin on props, motors, etc.<a class="headerlink" href="#paul-martin-on-props-motors-etc" title="Permalink to this headline">¶</a></h3>
 <blockquote>
@@ -373,6 +368,26 @@
 <li><p>tbd</p></li>
 </ul>
 </div></blockquote>
+</div>
+<div class="section" id="batteries">
+<h3>Batteries<a class="headerlink" href="#batteries" title="Permalink to this headline">¶</a></h3>
+<p>TBD: <a class="reference external" href="https://www.facebook.com/photo/?fbid=4847037825319536&amp;set=g.668143127181552">https://www.facebook.com/photo/?fbid=4847037825319536&amp;set=g.668143127181552</a></p>
+</div>
+<div class="section" id="motors">
+<h3>Motors<a class="headerlink" href="#motors" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://community.openppg.com/t/paraglider-self-launching-system/2186/41">Motor mass, size, and waste heat</a></p></li>
+<li><p><a class="reference external" href="https://forum.hanggliding.org/viewtopic.php?t=35303">Stator laminations</a>: Without super thin stator lams, efficiency suffers at high RPMs. But cheaper motors such as Freerchobby motors use 0.35mm lams because thin stator lams are very expensive (with the exception of Rotomax 150 at 0.2mm lams). Eddy losses in the iron stator core induced by the magnetic field switching as the rotor magnets fly past are proportional to the square of the lamination thickness x the square of the rpm. This why motors with thick lams can suddenly slam into an RPM wall and just turn into heaters without going any faster.</p></li>
+</ul>
+</div>
+<div class="section" id="props">
+<h3>Props<a class="headerlink" href="#props" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Paul Martin’s documentation</p></li>
+<li><p>4th root equation</p></li>
+<li><p>Dr. Raynor’s equation</p></li>
+<li><p>eCalcs</p></li>
+</ul>
 </div>
 </div>
 <div class="section" id="calculators">
@@ -432,7 +447,7 @@
 <li><p>Best climb angle and speed</p>
 <ul>
 <li><p><a class="reference external" href="https://www.av8n.com/how/htm/power.html#sec-vy-power">Flying, energy, power</a></p></li>
-<li><p><a class="reference external" href="https://www.av8n.com/how/htm/power.html#sec-vy-power">Related forum discussion</a></p></li>
+<li><p><a class="reference external" href="https://aviation.stackexchange.com/questions/73997/how-can-best-glide-speed-be-lower-than-best-rate-of-climb-speed">Related forum discussion</a></p></li>
 </ul>
 </li>
 </ul>
@@ -458,7 +473,7 @@
     <p>
     <img src="_images/dq1.jpg"  class="endimage"/>
       <span class="lastupdated">&nbsp;&nbsp;&nbsp;
-        Last updated on Jan 10, 2022.
+        Last updated on Jan 12, 2022.
         
       </span>
     </p>

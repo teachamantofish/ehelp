@@ -153,8 +153,7 @@
 <li class="toctree-l2"><a class="reference internal" href="motors.html#mating-with-a-prop">Mating with a prop</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#worthwhile-reading">Worthwhile reading</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="motors.html#basics">Basics</a></li>
-<li class="toctree-l3"><a class="reference internal" href="motors.html#advanced-topics">Advanced topics</a></li>
-<li class="toctree-l3"><a class="reference internal" href="motors.html#vendor-specific">Vendor specific</a></li>
+<li class="toctree-l3"><a class="reference internal" href="motors.html#vendor-specific-info">Vendor specific info</a></li>
 </ul>
 </li>
 </ul>
@@ -264,9 +263,11 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="library.html">Reference Library</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="library.html#eharness-engineering-and-design">Eharness engineering and design</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="library.html#technical-deep-dives">Technical deep dives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library.html#technical-deep-dives">Technical deep dives</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="library.html#paul-martin-on-props-motors-etc">Paul Martin on props, motors, etc.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library.html#batteries">Batteries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library.html#motors">Motors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library.html#props">Props</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="library.html#calculators">Calculators</a><ul>
@@ -361,7 +362,7 @@
 <p class="caption"><span class="caption-text">Under construction</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <p>I’m going to punt here for a while. The topic is complex. This section includes some rules of thumb and links to folks who know more (and don’t often agree). It’s worth reading a <a class="reference external" href="https://aerotoolbox.com/thrust-cruise-speed/">prop overview</a> as well as what <a class="reference external" href="https://ppg.e-props.fr/efficient_prop/#tit03">e-props has to say</a>.</p>
-<p>Driveline design often starts with the prop. To fly, you need to move air in the opposite direction. Bigger is better but you have to worry about toes, keel, and ground. Faster is <em>sometimes</em> better but there are limits. Prop pitch (the angle that determines the bite into the air) should be selected for your airspeed and either climb or cruise. The prop is going to slow your motor down, and it’s design must be compatible with the motor’s power and speed.</p>
+<p>Driveline design often starts with the prop. To fly, you need to move a mass of air in the opposite direction. Bigger is better but you have to worry about toes, keel, and ground. Faster is <em>sometimes</em> better but there are limits. Prop pitch (the angle that determines the bite into the air) should be selected for your airspeed and either climb or cruise. The prop is going to slow your motor down, and it’s design must be compatible with the motor’s power and speed.</p>
 <p>Your driveline decisions about motor, power source, and propeller are intertwined. You’ll need to verify they work together to achieve your goals.</p>
 <div class="section" id="getting-started">
 <h2>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
@@ -376,20 +377,30 @@
 <li><p>Carbon fiber is stronger, lighter, more responsive as well as more expensive.</p></li>
 <li><p>Wood is cheap and a good choice for learning, experimenting, and conditions where damage is likely.</p></li>
 <li><p>Typical sizes range from 36”-44”. Pitches range from 14-20.</p></li>
+<li><p>eCalc recommends props with their configurations.</p></li>
 </ul>
 <p>TBD: insert pitch/d diagram</p>
 </div>
 <div class="section" id="choosing-a-propeller">
 <h2>Choosing a propeller<a class="headerlink" href="#choosing-a-propeller" title="Permalink to this headline">¶</a></h2>
-<p>Choosing a propeller requires knowing how much thrust you need for a specific flying goal; for example, a 300 fpm climb at 24 mph. You’ll need to know some basic numbes about your wing and go through some basic calculations here TBD.</p>
+<p>Choosing a propeller requires knowing how much thrust you need for a specific flying goal; for example, a 300 fpm climb at 24 mph. You’ll need to know some basic numbers about your wing and go through the basic calculations here TBD.</p>
 <div class="section" id="diameter">
 <h3>Diameter<a class="headerlink" href="#diameter" title="Permalink to this headline">¶</a></h3>
-<p>TBD:</p>
-<p>Calculations:</p>
+<p>Prop design is a rabbit hole this document avoids, and bigger is better for a variety of reasons too complex to go into here. Choose a prop that’s as large as you can make it safely. Most eHarness props are around 40”, with sizes ranging from 36” to 52”. Required steps:</p>
+<ol class="arabic simple">
+<li><p>Determine your size. Avoid creating hazards out of the ground, body, and keel.</p></li>
+<li><p>Match the prop to the motor. The prop is the load. It will slow down your motor and could overload it these components are not matched. Refer to the TBD sizing calculator.</p></li>
+<li><p>Verify the tip speed does not exceed .7 mach (the speed of sound). Opinions will vary on max speed, but the point is efficiency suffers dramatically as the tip speed nears mach. See the TBD calculator.</p></li>
+</ol>
+<p>These short videos are a must watch:</p>
 <ul class="simple">
-<li><p>4th root equation</p></li>
-<li><p>Dr. Raynor’s equation</p></li>
-<li><p>eCalcs</p></li>
+<li><p>Reidar Bernsten’s <a class="reference external" href="https://www.youtube.com/watch?v=WgNMc35zqYo">video comparison</a> of two systems using identical motor and batteries:</p>
+<ul>
+<li><p>System 1: 26kg thrust, 168 amps, 36” prop: climb: 1 meters/second</p></li>
+<li><p>System 2: 40kg thrust, 138 amps, 52” prop (geared): climb: 2 meters/second</p></li>
+</ul>
+</li>
+<li><p>Must watch 2:00 to 4:40: <a class="reference external" href="https://www.youtube.com/watch?v=6e4x2vj9H9U">Why choose a larger propeller</a></p></li>
 </ul>
 </div>
 <div class="section" id="pitch">
@@ -418,14 +429,11 @@
 <li><p><a class="reference external" href="https://www.ecalc.ch/setupfinder.php">ecalc</a>: 38x17 to 40x22 2 blade; 39x19 or 20 3 blade</p></li>
 <li><p><a class="reference external" href="https://www.poweredparagliders.com.au/Calculators/Static_Thrust_Calculator.htm">static thrust calculator</a>: 40x22</p></li>
 <li><p><a class="reference external" href="https://web.archive.org/web/20200707141236/http://www.godolloairport.hu/calc/opc_eng/index.html">https://web.archive.org/web/20200707141236/http://www.godolloairport.hu/calc/opc_eng/index.html</a></p></li>
-<li></li>
-<li><dl class="simple">
-<dt>Plug in your prop choice and motor data to verify thrust</dt><dd><ul class="simple">
+<li><p>Plug in your prop choice and motor data to verify thrust</p></li>
+<li><ul class="simple">
 <li><p><a class="reference external" href="https://ppg.e-props.fr/calculator_PROPS.php?language=en">e-props:</a></p></li>
 <li><p><a class="reference external" href="https://rcplanes.online/calc_thrust.htm">https://rcplanes.online/calc_thrust.htm</a></p></li>
 </ul>
-</dd>
-</dl>
 </li>
 <li><p><a class="reference external" href="https://www.mejzlik.eu/technical-data/propeller_calculatorf">Mejzlik prop calculators</a></p>
 <blockquote>
@@ -486,11 +494,9 @@
 <div class="section" id="vendors">
 <h2>Vendors<a class="headerlink" href="#vendors" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Extensive line of PPG props with 2-6 blades. Super light: <a class="reference external" href="https://ppg.e-props.fr/index.php?cPath=1">https://ppg.e-props.fr/index.php?cPath=1</a></p></li>
+<li><p>eProps: Extensive line of PPG props with 2-6 blades. Super light but smallest is 115cm: <a class="reference external" href="https://ppg.e-props.fr/index.php?cPath=1">https://ppg.e-props.fr/index.php?cPath=1</a></p></li>
 <li><p>Extensive line with 2-4 blades: <a class="reference external" href="https://ultraprops.com/">https://ultraprops.com/</a></p></li>
-<li><p>Most motor vendors pair props with motors.</p></li>
-<li><p>eCalc recommends props with their configurations.</p></li>
-<li><p><a class="reference external" href="https://www.mejzlik.eu/product">https://www.mejzlik.eu/product</a>: 2 and 3 blade.</p></li>
+<li><p><a class="reference external" href="https://www.mejzlik.eu/product">https://www.mejzlik.eu/product</a>: 2 and 3 blade. Offers one 40x13.</p></li>
 <li><p><a class="reference external" href="https://www.aircraftinternational.com/Products/Propellers.aspx">Aircraft International (all types)</a></p></li>
 </ul>
 </div>
@@ -511,7 +517,7 @@
     <p>
     <img src="_images/dq1.jpg"  class="endimage"/>
       <span class="lastupdated">&nbsp;&nbsp;&nbsp;
-        Last updated on Jan 10, 2022.
+        Last updated on Jan 12, 2022.
         
       </span>
     </p>

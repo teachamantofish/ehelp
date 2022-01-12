@@ -1,0 +1,54 @@
+/** @OnlyCurrentDoc */
+function sortcol(num){
+  var spreadsheet = SpreadsheetApp.getActive();
+ result = spreadsheet.getRange('L2').getValues()[0][0]
+ value=parseInt(result[num*2-1])
+  newvalue=result.slice(0,num*2-1)+String(value+1)+result.slice(num*2,result.length)
+if(value%2==0){spreadsheet.getRange('A8:L').sort({column: num, ascending: true})}
+  else{spreadsheet.getRange('A8:L').sort({column: num, ascending: false})}
+SpreadsheetApp.getActiveSpreadsheet().getRange('L2').setValues([[newvalue]])}
+
+function sortDate() {sortcol(1)
+};
+
+function sortName() {sortcol(2)
+ 
+};
+
+
+function sortVolts() {sortcol(3)
+};
+
+function sortSrating() {sortcol(4)
+};
+function sortKV() {sortcol(5)
+};
+function sortRPM() {sortcol(6)
+};
+function sortKW() {sortcol(7)
+};
+function sortThrust() {sortcol(8)
+};
+function sortWeight() {sortcol(9)
+};
+function sortPrice() {sortcol(10)
+};
+function sortNotes() {sortcol(11)
+};
+
+function sortRank() {
+  var spreadsheet = SpreadsheetApp.getActive();
+spreadsheet.getRange('A8:L').sort({column: 12, ascending: true})
+};
+function removeEmptyRows() {
+var ss = SpreadsheetApp.getActive();
+var allsheets = ss.getSheets();
+for (var s in allsheets){
+var sheet=allsheets[s]
+var maxRows = sheet.getMaxRows(); 
+var lastRow = sheet.getLastRow();
+if (maxRows-lastRow != 0){
+      sheet.deleteRows(lastRow+1, maxRows-lastRow);
+      }
+  }
+}
