@@ -55,7 +55,11 @@ These short videos are a must watch:
   * System 1: 26kg thrust, 168 amps, 36" prop: climb: 1 meters/second
   * System 2: 40kg thrust, 138 amps, 52" prop (geared): climb: 2 meters/second
 
-* Must watch 2:00 to 4:40: `Why choose a larger propeller <https://www.youtube.com/watch?v=6e4x2vj9H9U>`_
+* Must watch 2:00 to 4:40: `Why choose a larger propeller <https://www.youtube.com/watch?v=6e4x2vj9H9U>`_:
+
+.. raw:: html
+
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/6e4x2vj9H9U?start=120" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 Pitch
@@ -105,7 +109,12 @@ Commercial
 
 * `Icarus folding props <https://icare-icarus.3dcartstores.com/RASA-CFK-3-Blades-Propeller-Folding-342225-MAG-CAD-BIG_p_852.html>`_. See also Reidar's `video and commments <https://www.youtube.com/watch?v=-sIVpOLYoqg&t=144s>`_
 * `MAGCAD 2 and 3 bladed folding props <https://magcad.de/?tag=propeller>`_
-* `Geiger folding props (expensive) <https://www.geigerengineering.de/en/avionics/products>`_
+* `Geiger folding props (expensive) <https://www.geigerengineering.de/_Resources/Persistent/625177aac067c72b7020a8390f7c7de9d3d340e7/EDrive%20Flyer%20technische%20Merkmale%20V1_1.pdf>`_
+
+.. figure:: images/geigerfolding.png
+   :target: https://www.geigerengineering.de/en/avionics/downloads
+
+   Credit: Geiger
 
 DIY
 ---------------

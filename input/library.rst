@@ -26,8 +26,9 @@ TBD: https://www.facebook.com/photo/?fbid=4847037825319536&set=g.668143127181552
 Motors
 ---------------------------------
 
+* `Brushless Motor Fundamentals <./resources/bldcfundamentals.pdf>`_
 * `Motor mass, size, and waste heat <https://community.openppg.com/t/paraglider-self-launching-system/2186/41>`_
-* `Stator laminations <https://forum.hanggliding.org/viewtopic.php?t=35303>`_: Without super thin stator lams, efficiency suffers at high RPMs. But cheaper motors such as Freerchobby motors use 0.35mm lams because thin stator lams are very expensive (with the exception of Rotomax 150 at 0.2mm lams). Eddy losses in the iron stator core induced by the magnetic field switching as the rotor magnets fly past are proportional to the square of the lamination thickness x the square of the rpm. This why motors with thick lams can suddenly slam into an RPM wall and just turn into heaters without going any faster.
+* `Stator laminations <https://forum.hanggliding.org/viewtopic.php?t=35303>`_: Without super thin stator lams, efficiency suffers at high RPMs. Since thin stator lams are expensive, cheap motors (e.g. Freerchobby) use 0.35mm lams. Eddy losses in the iron stator core induced by the magnetic field switching as the rotor magnets fly past are proportional to the square of the lamination thickness x the square of the rpm. This explains why motors with thick stator lams generate excessive heat without going any faster. One notable exception is the inexpensive Turnigy Rotomax 150 which uses 0.2mm lams. 
 
 Props
 -----------------------

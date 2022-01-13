@@ -14,9 +14,12 @@ var dataRange = "eHelp Glossary!A2:C"; //CHANGE
 columns: [{ title: "Term" }, { title: "Category" }, { title: "Definition" }];
 ```
 
-4. V. Imp. -> Press Save
-5. Deploy your script
-6. Create a new deployment
+4. V. Imp. -> Press Save or Ctrl S. 
+5. Deploy your script: Choose New Deployment
+6: Configure fields. 
+7. Click Deploy. 
+8. Choose Authorize Access.
+9. Log in if asked to. 
 7. A google script will be generated, open that script.
 
    - If it gives an error to open the file, then simply copy the URl and update it

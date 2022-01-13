@@ -1,18 +1,6 @@
 ************************************************
-Why, What, and Who?
+In the Beginning. . . 
 ************************************************
-
-Why eharness? Because for 2000-3000 bucks a DIYer can build a 20 pound eharness harness and flatland foot launch. No mountain. No towing. No modified glider. No tow rig.  The time and $$$ investment quickly pays for itself through reduced driving to launches, hang-waiting, tow costs, and alcoholic consumption while Jonesing for airtime. Only the pilot can determine the ultimate payback.
-
-The systems are relatively simple and free of tune ups, maintenance hassles, and fossil fuels. Like most flight, there are some caveats and hazards, but the eharness idea has one moving part and many advantages. A community of pioneers are paving the runway with free advice, open source plans, and Youtube videos while the multi-billion dollar drone, battery, and EV industries quickly drive the evolution of cheaper, lighter, and more powerful components. 
-
-.. container:: twocol
-
-.. container:: leftcolumn
-
-   In a few years, we'll like have lighter and more powerful motors (axial), smaller and safer batteries (solid state, and (with luck) commercial ready-to-fly choices, kits, manuals, and parts.
-
-.. container:: rightcolumn
 
    .. raw:: html
 
@@ -20,15 +8,49 @@ The systems are relatively simple and free of tune ups, maintenance hassles, and
 
       <div><p class="credit">Credit Reidar Bernsten</p></div>
 
-.. container:: clear
+What? 
+======================
 
-   **About this content**
+   .. raw:: html
 
-   This overview is an attempt to provide a quick start manual to the DIY community. It is an experimental and unfinished work. There is no attempt here to make $$$, and so shall it ever be.
+      <div style="display: flex; align-items:stretch; max-width:800px;min-width:800px;margin-left:-20px;">
 
 
-   Ideally, these pages will become a crowd-sourced document. Contribute via the **Email** links or ask to edit the source on Github. Without community participation, this document will likely fade.
+      <div style="padding-right:2em;">
+      This document is an overview for the curious as well as an attempt to provide a quick start guide to  DIY wanna-be e-pilots. It is an experimental and unfinished work. It draws on the experience and expertise of e-pioneers such as Reidar Bernsten and Charles Allen. Engineering details derive from many sources, including pilot-engineers (Paul Martin) and others. 
+     
+      There is no attempt here to make $$$, and so shall it ever be. 
+      </div>
+      <div>
+      <iframe src="https://www.youtube.com/embed/cE88z20-Oko" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <br/>
+      <p class="credit">Credit Charles Allen</p>
+      </div>
+      </div>
 
+Resources
+---------------------------------
+
+This document links to: 
+
+* Editable data sources: spreadsheets lists, calculators, glossary
+* `This open source content on Github <https://github.com/teachamantofish/eharness>`_
+* `ePowered Hang Glider <https://www.facebook.com/groups/904566026835865>`_
+* `FLPGH <https://www.facebook.com/groups/FLPHG>`_
+* `FLPHG eharness <https://www.facebook.com/groups/668143127181552>`_
+* `OpenPPG forum: Similar concepts, great forum, lots of resources <https://openppg.com/?fbclid=IwAR04rX_1St1D1lqTpwBbaOdLskhpFOMahdXRiHXU1gmr4fSlUv0pwsC-RQg>`_
+* This community needs a focused forum. Doesn't exist yet, but I've asked hanggliding.org to engage.
+* Open-sourced projects:
+
+   * TBD
+
+
+Why? 
+=====================
+
+Why eharness? Because for 2000 or 3000 bucks a you can build a 20 pound eharness and flatland foot launch. No mountain. No towing. No modified glider. No tow rig.  The time and $$$ investment quickly pays for itself through reduced driving to launches, hang-waiting, tow costs, and alcoholic consumption while Jonesing for airtime. Only the pilot can determine the ultimate payback.
+
+The systems are relatively simple and free of tune ups, maintenance hassles, and fossil fuels. Like most flight, there are some caveats and hazards, but the eharness idea has one moving part and many advantages. A community of pioneers are paving the runway with free advice, open source plans, and Youtube videos. Meanwhile, the multi-billion dollar drone, battery, and EV industries are driving the evolution of cheaper, lighter, and more powerful components. xx
 
 
 Goals
@@ -43,33 +65,16 @@ Danger Will Robinson
 
 .. caution:: You assume responsibility for any action you take based on this or any other content. Wise pilots make educated decisions based on multiple sources. There is no advice here. This information derives from 3rd parties and may be erroneous.
 
+Who?
+=============
+
+This author started out knowing nothing, and still knows little. I'm documenting my learning experience and pulling together resources I believe will benefit those starting at ground zero. Ideally, these pages will become a crowd-sourced document. You can contribute via the **Email** links or ask to edit the source on Github. Without community participation, this document will likely fade.
+
 If you see your photo/text
 ------------------------------------
 
 If you see text or images here that originated with you and want it removed, just ask. I can add credits and links back to your FB or home page if you prefer. 
 
-Resources
-==================
-
-* This document includes: 
-
-    * Editable spreadsheets for data, lists, calculators 
-    * `This editable content on Github <https://github.com/teachamantofish/eharness>`_
-
-* Facebook pages: 
-
-   * `ePowered Hang Glider <https://www.facebook.com/groups/904566026835865>`_
-   * `FLPGH <https://www.facebook.com/groups/FLPHG>`_
-   * `FLPHG eharness <https://www.facebook.com/groups/668143127181552>`_
-
-Forums: 
-
-   * `OpenPPG: Similar concepts, great forum, lots of resources <https://openppg.com/?fbclid=IwAR04rX_1St1D1lqTpwBbaOdLskhpFOMahdXRiHXU1gmr4fSlUv0pwsC-RQg>`_
-   * This community needs a focused forum. Doesn't exist yet, but I've asked hanggliding.org to engage.
-
-* Open-sourced projects:
-
-   * TBD
 
 Somewhere, "Over the Rainbow"
 ====================================
