@@ -191,24 +191,31 @@
 <li class="toctree-l3"><a class="reference internal" href="#price">Price</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#choosing-your-system">Choosing your system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#battery-calculators">Battery calculators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#system-design">System design</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#price-vs-energy-density">Price vs energy density</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#diy-battery-packs">DIY battery packs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#worthwhile-reading">Worthwhile reading</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="esc.html">Electronic Speed Controller</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="esc.html#choose-an-esc">Choose an ESC</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="esc.html#choosing-an-esc">Choosing an ESC</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="esc.html#sizing">Sizing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="esc.html#features">Features</a></li>
 <li class="toctree-l3"><a class="reference internal" href="esc.html#location">Location</a></li>
 <li class="toctree-l3"><a class="reference internal" href="esc.html#wiring">Wiring</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="esc.html#list-of-escs">List of ESCs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="esc.html#throttle">Throttle</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="esc.html#throttle-power-disconnect">Throttle-power disconnect</a></li>
 <li class="toctree-l3"><a class="reference internal" href="esc.html#vendors">Vendors</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="esc.html#list-of-throttles">List of Throttles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esc.html#reading-telemetry-data">Reading telemetry data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="esc.html#worthwhile-reads">Worthwhile reads</a></li>
 <li class="toctree-l2"><a class="reference internal" href="esc.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
 </ul>
@@ -406,11 +413,7 @@
 </div>
 <div class="section" id="lipo-graphene">
 <h4>LiPO graphene<a class="headerlink" href="#lipo-graphene" title="Permalink to this headline">¶</a></h4>
-<ul class="simple">
-<li><p>Some advantages, but not weight</p></li>
-<li><p>link</p></li>
-<li><p>todo</p></li>
-</ul>
+<p>Existing graphene batteries are more hybrid LiPOs than anything else. As of 1/15/22, it does not appear they provide higher energy densities. They do offer increased durability, charge cylcles, and better performance in a number of areas. Do you own reseach.</p>
 </div>
 <div class="section" id="semi-solid-state-lipo">
 <h4>Semi solid state LiPO:<a class="headerlink" href="#semi-solid-state-lipo" title="Permalink to this headline">¶</a></h4>
@@ -420,10 +423,6 @@
 <li><p>See also Welion, YANGDA Thunder Stone</p></li>
 </ul>
 </div>
-<div class="section" id="lico">
-<h4>LiCo<a class="headerlink" href="#lico" title="Permalink to this headline">¶</a></h4>
-<p>TBD: <a class="reference external" href="https://hobbyking.com/en_us/turnigy-nano-tech-5000mah-8s-65-130c-lipo-pack-xt90.html?queryID=d0c1dc6dde899982bc604d4f4b1f2511&amp;objectID=71442&amp;indexName=hbk_live_products_analytics">https://hobbyking.com/en_us/turnigy-nano-tech-5000mah-8s-65-130c-lipo-pack-xt90.html?queryID=d0c1dc6dde899982bc604d4f4b1f2511&amp;objectID=71442&amp;indexName=hbk_live_products_analytics</a></p>
-</div>
 </div>
 <div class="section" id="size">
 <h3>Size<a class="headerlink" href="#size" title="Permalink to this headline">¶</a></h3>
@@ -431,11 +430,21 @@
 </div>
 <div class="section" id="weight">
 <h3>Weight<a class="headerlink" href="#weight" title="Permalink to this headline">¶</a></h3>
-<p>TBD</p>
+<p>There’s not usually a big weight difference per kilowatt across commercial offerings. However, weight matters, so check. The Tattu Plus has extra feature and is therefore heavier. The new semi solid state batteries are lighter but lower C ratings. And so on.</p>
 </div>
 <div class="section" id="price">
 <h3>Price<a class="headerlink" href="#price" title="Permalink to this headline">¶</a></h3>
-<p>Cheap batteries are a fire hazard, have short lifespans, or perform poorly. Choose wisely.</p>
+<p>Cheap batteries are a fire hazard, have short lifespans, and/or perform poorly. Choose wisely.</p>
+</div>
+</div>
+<div class="section" id="battery-calculators">
+<h2>Battery calculators<a class="headerlink" href="#battery-calculators" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="system-design">
+<h3>System design<a class="headerlink" href="#system-design" title="Permalink to this headline">¶</a></h3>
+<p>Designing a power system is easier than choosing a brand. Simply use the calculator below or any <a class="reference external" href="ttps://power-calculation.com/battery-storage-calculator.php">online calculator</a>. The goal is to connect the 1 or more properly sized batteries in series and/or parallel to output the requisite voltage and current.</p>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTfsWeI0qIlAbYbaXaNGYnleZmtXnAgD0Pvbtdmn-Gi2WE_WTBSEzz8cQO_yhCsmRrs5oKbHpNX5LJ6/pubhtml?widget=true&amp;headers=false" width="600px" height="440px" frameBorder="no" scrolling="no" style="overflow:hidden;"></iframe></div>
+<div class="section" id="price-vs-energy-density">
+<h3>Price vs energy density<a class="headerlink" href="#price-vs-energy-density" title="Permalink to this headline">¶</a></h3>
 <p>Given their cost and wide ranging pricing, it is worthwhile to compare brands and vendors. You can DIY or start by copying this <a class="reference external" href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSYhSRpC7a6drAYn5A5jjUZpGrIXOZs654n1BL1cOBiTSKUYMA2WfKppsEGFYbFlsEsGbAhAPfXNEyp/pubhtml">calculator spreadsheet</a>.</p>
 <div class="figure align-default" id="id2">
 <img alt="_images/batterycalcspreadsheet.png" src="_images/batterycalcspreadsheet.png" />
@@ -443,15 +452,12 @@
 </div>
 </div>
 </div>
-<div class="section" id="choosing-your-system">
-<h2>Choosing your system<a class="headerlink" href="#choosing-your-system" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://power-calculation.com/battery-storage-calculator.php">https://power-calculation.com/battery-storage-calculator.php</a></p>
-</div>
 <div class="section" id="diy-battery-packs">
 <h2>DIY battery packs<a class="headerlink" href="#diy-battery-packs" title="Permalink to this headline">¶</a></h2>
-<p>DIY battery packs may be extra work, but they can be 1/2 the cost, custom sizes, and created in a form factor compatible with the installation method. <a class="reference external" href="https://community.openppg.com/t/building-a-14sx15p-18650-battery-pack/2251/22">See OpenPPG</a>.</p>
-<p>Joe Stapelton created a wonderful example for an HG harness:</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/utYveWc6Wrg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<p>DIY battery packs may be extra work, but they can be 1/2 the cost, custom sizes, and created in a form factor compatible with the installation method. It’s worth checkout out this <a class="reference external" href="https://community.openppg.com/t/building-a-14sx15p-18650-battery-pack/2251/22">OpenPPG post</a> and Joe’s DIY hang glider harness pack below.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/utYveWc6Wrg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<div><em>Credit: Joe Stapelton</em></div></div>
 <div class="section" id="worthwhile-reading">
 <h2>Worthwhile reading<a class="headerlink" href="#worthwhile-reading" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -479,7 +485,7 @@
     <p>
     <img src="_images/dq1.jpg"  class="endimage"/>
       <span class="lastupdated">&nbsp;&nbsp;&nbsp;
-        Last updated on Jan 13, 2022.
+        Last updated on Jan 16, 2022.
         
       </span>
     </p>

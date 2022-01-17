@@ -71,6 +71,7 @@ Propeller
 Aviation 
 -------------------
 
+* `NASA's calculator for Cl, Cd, Drag, L/D (applet) <https://www.grc.nasa.gov/www/k-12/airplane/foil3.html>`_
 * `Climb angle <https://wingsofaero.in/calculator/climb-angle-calculator-by-mohit-kudal/>`_
 * `Glide distance, ratio, angles, trajectory <http://www.luizmonteiro.com/Misc.aspx>`_
 * `Over 50 Aviation Converters and Calculators <http://www.csgnetwork.com/aviationconverters.html>`_ 
@@ -78,8 +79,7 @@ Aviation
 Entire power train
 --------------------------------------
 
-* https://www.ecalc.ch/motorcalc.php
-* https://www.ecalc.ch/motorcalc_mobile.php?hacker&lang=en
+* `e-calc calculator <https://www.ecalc.ch/motorcalc.php>`_
 
 Metals
 -----------------------

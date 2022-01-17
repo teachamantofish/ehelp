@@ -191,24 +191,31 @@
 <li class="toctree-l3"><a class="reference internal" href="batteries.html#price">Price</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="batteries.html#choosing-your-system">Choosing your system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="batteries.html#battery-calculators">Battery calculators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="batteries.html#system-design">System design</a></li>
+<li class="toctree-l3"><a class="reference internal" href="batteries.html#price-vs-energy-density">Price vs energy density</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="batteries.html#diy-battery-packs">DIY battery packs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="batteries.html#worthwhile-reading">Worthwhile reading</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Electronic Speed Controller</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#choose-an-esc">Choose an ESC</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#choosing-an-esc">Choosing an ESC</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#sizing">Sizing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#features">Features</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#location">Location</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#wiring">Wiring</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#list-of-escs">List of ESCs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#throttle">Throttle</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#throttle-power-disconnect">Throttle-power disconnect</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#vendors">Vendors</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#list-of-throttles">List of Throttles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reading-telemetry-data">Reading telemetry data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#worthwhile-reads">Worthwhile reads</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
 </ul>
@@ -368,16 +375,21 @@
 <a class="reference internal image-reference" href="_images/uc2.gif"><img alt="_images/uc2.gif" src="_images/uc2.gif" style="width: 187.5px; height: 140.5px;" /></a>
 <p class="caption"><span class="caption-text">Under construction</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
-<p>An electronic speed controller (ESC) is one of four primary components in your power train. The ESC receives throttle signals from the flight controller, receives the current from the batteries and drives the brushless motor at the desired speed.  It converts the signal from the throttle, and drives the brushless motor by providing the appropriate level of electrical power. You don’t need to know <a class="reference external" href="https://howtomechatronics.com/how-it-works/how-brushless-motor-and-esc-work/">how it works</a>, but you should know:</p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>This section is still baking.</p>
+</div>
+<p>An electronic speed controller (ESC) is one of four primary components in your power train. The ESC receives the batter current and signala from the throttle and drives the motor at the desired speed. It should have built in safety features and output telemetry to whatever readout you’re using to monitor your system. You don’t need to know <a class="reference external" href="https://howtomechatronics.com/how-it-works/how-brushless-motor-and-esc-work/">how it works</a>, but you should know:</p>
 <ul class="simple">
-<li><p>100% of the motor power routes throught the ESC.</p></li>
-<li><p>ESCs must be rated for the system current (amps). They get hot. They can flame out and melt down.</p></li>
-<li><p>ESCs can have a number of built-in features you may need.</p></li>
+<li><p>All battery current passes through the ESC on the way to the motor.</p></li>
+<li><p>ESCs must be rated for your designed current (amps)–what the motor will draw. They get hot. They can flame out and melt down.</p></li>
+<li><p>You should design in some amperage headroom. If the you expect to draw 150 amps continuous, it would be wise to choose an ESC that’s rated for 200 continuous and 240 burst.</p></li>
+<li><p>Choose an ESC can with built-in safety features; for example, automatic shutdown if battery voltage gets to low or temperature get to hot.</p></li>
 <li><p>$$$ usually = quality. Quality = safety and performance.</p></li>
-<li><p>Your telemetry data comes from the ESC (RPM, current, remaining battery capacity, etc.)</p></li>
+<li><p>Choose an ESC that provides adequate telemetry data: (RPM, current, remaining battery capacity, etc.)</p></li>
 </ul>
-<div class="section" id="choose-an-esc">
-<h2>Choose an ESC<a class="headerlink" href="#choose-an-esc" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="choosing-an-esc">
+<h2>Choosing an ESC<a class="headerlink" href="#choosing-an-esc" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="sizing">
 <h3>Sizing<a class="headerlink" href="#sizing" title="Permalink to this headline">¶</a></h3>
 <p>Current Rating : There are 2 current ratings to an ESC: continuous and burst.</p>
@@ -388,8 +400,8 @@
 <div class="section" id="location">
 <h3>Location<a class="headerlink" href="#location" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p>Placing the ESC in a cooling airstream is a good idea.</p></li>
-<li><p>Wire inductance will kill ESC mosfets and may even blow the capacitors. Try to  keep battery wires as short as practical and less than 12”. To mitigate this problem for longer wire scenarios, install an <a class="reference external" href="https://shop.powerdrives.net/?product=capacitor-bank&amp;fbclid=IwAR345aKaj9M2BJzZwV_NAd3vLRXp9YmLa2eXJmiUIgXKAgl6n67gCPUVgts">inline capacitor</a>.</p></li>
+<li><p>If possible, place the ESC in a cooling airstream.</p></li>
+<li><p>Wire inductance will kill ESC mosfets and may even blow the capacitors. Try to keep battery wires as short as practical and less than 12”. To mitigate this problem for longer wire scenarios, install an <a class="reference external" href="https://shop.powerdrives.net/?product=capacitor-bank&amp;fbclid=IwAR345aKaj9M2BJzZwV_NAd3vLRXp9YmLa2eXJmiUIgXKAgl6n67gCPUVgts">inline capacitor</a>.</p></li>
 </ul>
 </div>
 <div class="section" id="wiring">
@@ -402,6 +414,9 @@
 <li><p>Connectors: TBD</p></li>
 </ul>
 </div>
+</div>
+<div class="section" id="list-of-escs">
+<h2>List of ESCs<a class="headerlink" href="#list-of-escs" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="throttle">
 <h2>Throttle<a class="headerlink" href="#throttle" title="Permalink to this headline">¶</a></h2>
@@ -421,6 +436,14 @@
 <div><p>VESC 75/300 controller which includes RPM limit, battery amps limit,</p>
 </div></blockquote>
 </div>
+</div>
+<div class="section" id="list-of-throttles">
+<h2>List of Throttles<a class="headerlink" href="#list-of-throttles" title="Permalink to this headline">¶</a></h2>
+<p>TBD</p>
+</div>
+<div class="section" id="reading-telemetry-data">
+<h2>Reading telemetry data<a class="headerlink" href="#reading-telemetry-data" title="Permalink to this headline">¶</a></h2>
+<p>TBD</p>
 </div>
 <div class="section" id="worthwhile-reads">
 <h2>Worthwhile reads<a class="headerlink" href="#worthwhile-reads" title="Permalink to this headline">¶</a></h2>
@@ -467,7 +490,7 @@ The specs (max voltage and continuous current) are usually constructed from the 
     <p>
     <img src="_images/dq1.jpg"  class="endimage"/>
       <span class="lastupdated">&nbsp;&nbsp;&nbsp;
-        Last updated on Jan 13, 2022.
+        Last updated on Jan 16, 2022.
         
       </span>
     </p>

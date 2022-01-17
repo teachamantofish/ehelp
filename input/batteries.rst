@@ -45,9 +45,7 @@ LiPO
 LiPO graphene
 ^^^^^^^^^^^^^^^^^^^
 
-* Some advantages, but not weight
-* link
-* todo
+Existing graphene batteries are more hybrid LiPOs than anything else. As of 1/15/22, it does not appear they provide higher energy densities. They do offer increased durability, charge cylcles, and better performance in a number of areas. Do you own reseach. 
 
 Semi solid state LiPO:
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -57,12 +55,6 @@ The technology is rapidly evolving. Manufacturer's claim a higher energy density
 * `Foxtech spec charts <https://www.foxtechfpv.com/foxtech-diamond-6s-22000mah-semi-solid-state-li-ion-battery.html>`_
 * See also Welion, YANGDA Thunder Stone
 
-LiCo
-^^^^^^^^^^^^^^^^^^^^^^^^
-
-TBD: https://hobbyking.com/en_us/turnigy-nano-tech-5000mah-8s-65-130c-lipo-pack-xt90.html?queryID=d0c1dc6dde899982bc604d4f4b1f2511&objectID=71442&indexName=hbk_live_products_analytics
-
-
 Size
 --------------
 
@@ -71,12 +63,27 @@ Your flying consumes kilowatt hours: Kwh = volts X amps. For example, two 6s (22
 Weight
 ---------------
 
-TBD
+There's not usually a big weight difference per kilowatt across commercial offerings. However, weight matters, so check. The Tattu Plus has extra feature and is therefore heavier. The new semi solid state batteries are lighter but lower C ratings. And so on.
 
 Price
 ------------------
 
-Cheap batteries are a fire hazard, have short lifespans, or perform poorly. Choose wisely.
+Cheap batteries are a fire hazard, have short lifespans, and/or perform poorly. Choose wisely.
+
+Battery calculators
+=========================
+
+System design
+-----------------------------
+
+Designing a power system is easier than choosing a brand. Simply use the calculator below or any `online calculator <ttps://power-calculation.com/battery-storage-calculator.php>`_. The goal is to connect the 1 or more properly sized batteries in series and/or parallel to output the requisite voltage and current.
+
+.. raw:: html
+
+   <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTfsWeI0qIlAbYbaXaNGYnleZmtXnAgD0Pvbtdmn-Gi2WE_WTBSEzz8cQO_yhCsmRrs5oKbHpNX5LJ6/pubhtml?widget=true&amp;headers=false" width="600px" height="440px" frameBorder="no" scrolling="no" style="overflow:hidden;"></iframe>
+
+Price vs energy density
+----------------------------
 
 Given their cost and wide ranging pricing, it is worthwhile to compare brands and vendors. You can DIY or start by copying this `calculator spreadsheet <https://docs.google.com/spreadsheets/d/e/2PACX-1vSYhSRpC7a6drAYn5A5jjUZpGrIXOZs654n1BL1cOBiTSKUYMA2WfKppsEGFYbFlsEsGbAhAPfXNEyp/pubhtml>`_.
 
@@ -84,22 +91,16 @@ Given their cost and wide ranging pricing, it is worthwhile to compare brands an
 
    Credit OpenPPG forum
 
-Choosing your system
-=========================
-
-https://power-calculation.com/battery-storage-calculator.php
-
 DIY battery packs
 ========================
 
-DIY battery packs may be extra work, but they can be 1/2 the cost, custom sizes, and created in a form factor compatible with the installation method. `See OpenPPG <https://community.openppg.com/t/building-a-14sx15p-18650-battery-pack/2251/22>`_. 
-
-Joe Stapelton created a wonderful example for an HG harness: 
+DIY battery packs may be extra work, but they can be 1/2 the cost, custom sizes, and created in a form factor compatible with the installation method. It's worth checkout out this `OpenPPG post <https://community.openppg.com/t/building-a-14sx15p-18650-battery-pack/2251/22>`_ and Joe's DIY hang glider harness pack below. 
 
 .. raw:: html
 
   <iframe width="560" height="315" src="https://www.youtube.com/embed/utYveWc6Wrg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+  <div><em>Credit: Joe Stapelton</em></div>
 
 Worthwhile reading
 ============================

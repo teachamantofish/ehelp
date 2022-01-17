@@ -7,17 +7,21 @@ Electronic Speed Controller
 
    Under construction
 
+.. caution:: This section is still baking. 
 
-An electronic speed controller (ESC) is one of four primary components in your power train. The ESC receives throttle signals from the flight controller, receives the current from the batteries and drives the brushless motor at the desired speed.  It converts the signal from the throttle, and drives the brushless motor by providing the appropriate level of electrical power. You don't need to know `how it works <https://howtomechatronics.com/how-it-works/how-brushless-motor-and-esc-work/>`_, but you should know: 
+An electronic speed controller (ESC) is one of four primary components in your power train. The ESC receives the batter current and signala from the throttle and drives the motor at the desired speed. It should have built in safety features and output telemetry to whatever readout you're using to monitor your system. You don't need to know `how it works <https://howtomechatronics.com/how-it-works/how-brushless-motor-and-esc-work/>`_, but you should know: 
 
-* 100% of the motor power routes throught the ESC. 
-* ESCs must be rated for the system current (amps). They get hot. They can flame out and melt down.
-* ESCs can have a number of built-in features you may need. 
+* All battery current passes through the ESC on the way to the motor.  
+* ESCs must be rated for your designed current (amps)--what the motor will draw. They get hot. They can flame out and melt down.
+* You should design in some amperage headroom. If the you expect to draw 150 amps continuous, it would be wise to choose an ESC that's rated for 200 continuous and 240 burst.
+* Choose an ESC can with built-in safety features; for example, automatic shutdown if battery voltage gets to low or temperature get to hot.
 * $$$ usually = quality. Quality = safety and performance.
-* Your telemetry data comes from the ESC (RPM, current, remaining battery capacity, etc.)
+* Choose an ESC that provides adequate telemetry data: (RPM, current, remaining battery capacity, etc.)
 
-Choose an ESC
+Choosing an ESC
 =============================
+
+
 
 
 Sizing
@@ -32,8 +36,8 @@ Features
 Location
 ---------------------
 
-* Placing the ESC in a cooling airstream is a good idea. 
-* Wire inductance will kill ESC mosfets and may even blow the capacitors. Try to  keep battery wires as short as practical and less than 12". To mitigate this problem for longer wire scenarios, install an `inline capacitor <https://shop.powerdrives.net/?product=capacitor-bank&fbclid=IwAR345aKaj9M2BJzZwV_NAd3vLRXp9YmLa2eXJmiUIgXKAgl6n67gCPUVgts>`_.
+* If possible, place the ESC in a cooling airstream. 
+* Wire inductance will kill ESC mosfets and may even blow the capacitors. Try to keep battery wires as short as practical and less than 12". To mitigate this problem for longer wire scenarios, install an `inline capacitor <https://shop.powerdrives.net/?product=capacitor-bank&fbclid=IwAR345aKaj9M2BJzZwV_NAd3vLRXp9YmLa2eXJmiUIgXKAgl6n67gCPUVgts>`_.
 
 Wiring
 ------------------------
@@ -44,6 +48,8 @@ Wiring
 * Twist the wires in a spiral fashion from the ESC to the motor. 
 * Connectors: TBD
 
+List of ESCs
+============================
 
 
 Throttle
@@ -64,6 +70,15 @@ Vendors
 
  VESC 75/300 controller which includes RPM limit, battery amps limit,
 
+List of Throttles
+============================
+
+TBD
+
+Reading telemetry data
+=================================
+
+TBD
 
 Worthwhile reads
 ================================
