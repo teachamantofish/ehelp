@@ -108,7 +108,7 @@ Commercial
 -----------------
 
 * `Icarus folding props <https://icare-icarus.3dcartstores.com/RASA-CFK-3-Blades-Propeller-Folding-342225-MAG-CAD-BIG_p_852.html>`_. See also Reidar's `video and commments <https://www.youtube.com/watch?v=-sIVpOLYoqg&t=144s>`_
-* `MAGCAD 2 and 3 bladed folding props <https://magcad.de/?tag=propeller>`_
+* MAGCAD 2 and 3 bladed folding props up to 36". About 100 Euros per blade. New design in 2020. `See magcad.de <https://magcad.de/?tag=propeller>`_
 * `Geiger folding props (expensive) <https://www.geigerengineering.de/_Resources/Persistent/625177aac067c72b7020a8390f7c7de9d3d340e7/EDrive%20Flyer%20technische%20Merkmale%20V1_1.pdf>`_
 
 .. figure:: images/geigerfolding.png
@@ -116,10 +116,23 @@ Commercial
 
    Credit: Geiger
 
+Folding prop hubs
+-------------------------
+
+
+* `Open source design <http://graal-aero.fr/hub_e.html>`_
+* Magcad hub can be purchase separately. `See the drawings <./resources/magcad3bladehub.pdf>`_
+* `Magcad in action <https://www.youtube.com/watch?v=d3AuHhnzxZA>`_
+
+.. figure:: images/br_foldprop.png
+   :scale: 50%
+
+   Credit: Brendan
+
 DIY
 ---------------
 
-* `Folding prop hub design <http://graal-aero.fr/hub_e.html>`_
+
 * `Forward folding prop  <https://www.youtube.com/watch?app=desktop&v=wuhSRdffuDw&t=295&fbclid=IwAR1d04qJ8gJxdnokDxZHgMgBG0L7G1J2QcmDmnfWWiDHTK9bdoyb82HxvZg>`_
 * `Charles Allen's DIY project video <https://www.youtube.com/watch?v=cyBJLpHkc7A>`_
 
@@ -128,24 +141,20 @@ DIY
 
    Credit: Charles Allen
 
-* `DIY folding prop hub <https://www.youtube.com/watch?v=d3AuHhnzxZA>`_
-
-.. figure:: images/br_foldprop.png
-   :scale: 50%
-
-   Credit: Brendan
-
-
 Propeller innovation
 ================================
 
+Variable pitch
+--------------------------
+
 * `Passive variable pitch prop: <https://www.facebook.com/groups/904566026835865/permalink/944285446197256>`_
 
-* Contra-rotating prop: 
-    * `Commercial offering <https://www.crflight.com/?utm_source=unmannedsystemstechnology.com&utm_medium=referral>`_
-    * `PPG discussion: <https://community.openppg.com/t/co-axial-motors-with-counter-rotating-props/114>`_
+Contra-rotating prop: 
+------------------------------
+
+* `Commercial offering <https://www.crflight.com/?utm_source=unmannedsystemstechnology.com&utm_medium=referral>`_
+* `PPG discussion: <https://community.openppg.com/t/co-axial-motors-with-counter-rotating-props/114>`_
   
-* `Propeller hub <https://www.f3aunlimited.com/airplane-accessories/falcon-82mm-carbon-fiber-spinner-with-cnc-cooling>`_. Functional but for tractor setups only. 
 
 Vendors
 ==================
@@ -154,3 +163,4 @@ Vendors
 * Extensive line with 2-4 blades: https://ultraprops.com/
 * https://www.mejzlik.eu/product: 2 and 3 blade. Offers one 40x13. 
 * `Aircraft International (all types) <https://www.aircraftinternational.com/Products/Propellers.aspx>`_
+* `Propeller hub <https://www.f3aunlimited.com/airplane-accessories/falcon-82mm-carbon-fiber-spinner-with-cnc-cooling>`_. Functional but for tractor setups only. 
