@@ -127,7 +127,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">Eharness Examples</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="examples.html#database-of-working-builds">Database of working builds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#working-build-database">Working build database</a></li>
 <li class="toctree-l2"><a class="reference internal" href="examples.html#eharness-videos">Eharness videos</a></li>
 <li class="toctree-l2"><a class="reference internal" href="examples.html#commercial-e-harness-systems">Commercial e-harness systems</a></li>
 </ul>
@@ -149,12 +149,12 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="motors.html">Motors</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#motor-specification-wrestling">Motor specification wrestling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motors.html#motor-database">Motor database</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#motor-spec-reality-check">Motor spec reality check</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="motors.html#duty-cycle-max-continuous-power">Duty cycle-max continuous power</a></li>
 <li class="toctree-l3"><a class="reference internal" href="motors.html#kv-reduction">KV reduction</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="motors.html#example-motor-list">Example motor list</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#custom-motors">Custom motors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#sensored-versus-sensorless">Sensored versus sensorless</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#mating-with-a-prop">Mating with a prop</a></li>
@@ -166,6 +166,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="props.html">Propellers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="props.html#prop-database">Prop database</a></li>
 <li class="toctree-l2"><a class="reference internal" href="props.html#getting-started">Getting started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="props.html#choosing-a-propeller">Choosing a propeller</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="props.html#diameter">Diameter</a></li>
@@ -216,10 +217,9 @@
 <li class="toctree-l2"><a class="reference internal" href="#list-of-escs">List of ESCs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#throttle">Throttle</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#throttle-power-disconnect">Throttle-power disconnect</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#vendors">Vendors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vendor-examples">Vendor examples</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#list-of-throttles">List of Throttles</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#reading-telemetry-data">Reading telemetry data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#worthwhile-reads">Worthwhile reads</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
@@ -423,29 +423,25 @@
 </div>
 <div class="section" id="list-of-escs">
 <h2>List of ESCs<a class="headerlink" href="#list-of-escs" title="Permalink to this headline">¶</a></h2>
+<p>For now, refer to the list the <a class="reference internal" href="examples.html#workingbuild"><span class="std std-ref">Working build database</span></a>.</p>
 </div>
 <div class="section" id="throttle">
 <h2>Throttle<a class="headerlink" href="#throttle" title="Permalink to this headline">¶</a></h2>
-<p>prebuilt throttle with telemetry: <a class="reference external" href="https://ppgsmoke.com/products/smart-throttle">https://ppgsmoke.com/products/smart-throttle</a></p>
+<p>TBD</p>
+<p>These throttle and ESC work in tandem: the throttle controls ESC which in turn controls the motor, and the ESC sends telemetry back to digital display (often built in to the throttle). ESCs also often have throttle limits so that amperage can’t exceed the specified amount regardless of your throttle inputs during flight.</p>
 <div class="section" id="throttle-power-disconnect">
 <h3>Throttle-power disconnect<a class="headerlink" href="#throttle-power-disconnect" title="Permalink to this headline">¶</a></h3>
 </div>
-<div class="section" id="vendors">
-<h3>Vendors<a class="headerlink" href="#vendors" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="vendor-examples">
+<h3>Vendor examples<a class="headerlink" href="#vendor-examples" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>PPG 49.00 palm throttle: <a class="reference external" href="https://minne.us/shop/throttle/">https://minne.us/shop/throttle/</a></p></li>
 <li><p><a class="reference external" href="https://alienpowersystem.com/product-category/electric-throttle/">https://alienpowersystem.com/product-category/electric-throttle/</a></p></li>
-<li><p><a class="reference external" href="https://ppgsmoke.com/products/smart-throttle">https://ppgsmoke.com/products/smart-throttle</a></p></li>
+<li><p>PPG throttle with telemetry:  <a class="reference external" href="https://ppgsmoke.com/products/smart-throttle">https://ppgsmoke.com/products/smart-throttle</a></p></li>
 <li><p>PPG 250.00 with LCD: <a class="reference external" href="https://epowerhobby.com/product/electric-paramotor-throttle/">https://epowerhobby.com/product/electric-paramotor-throttle/</a></p></li>
+<li><p>OpenPPG model: VESC 75/300 controller which includes RPM limit, battery amps limit,</p></li>
 </ul>
-<blockquote>
-<div><p>VESC 75/300 controller which includes RPM limit, battery amps limit,</p>
-</div></blockquote>
 </div>
-</div>
-<div class="section" id="list-of-throttles">
-<h2>List of Throttles<a class="headerlink" href="#list-of-throttles" title="Permalink to this headline">¶</a></h2>
-<p>TBD</p>
 </div>
 <div class="section" id="reading-telemetry-data">
 <h2>Reading telemetry data<a class="headerlink" href="#reading-telemetry-data" title="Permalink to this headline">¶</a></h2>
@@ -460,7 +456,6 @@
 <li><p><a class="reference external" href="https://oscarliang.com/choose-esc-racing-drones/">https://oscarliang.com/choose-esc-racing-drones/</a></p></li>
 </ul>
 </li>
-<li></li>
 <li><p><cite>Forum discussion regarding sizing, bms, dangers &lt;https://community.openppg.com/t/high-power-esc-challenges/3452/4&gt;`_</cite></p></li>
 <li><p><a class="reference external" href="https://www.rcgroups.com/forums/showthread.php?952523-too-long-battery-wires-will-kill-ESC-over-time-precautions-solutions-workarounds">Wire length to and from ESC</a></p></li>
 </ul>
@@ -470,14 +465,14 @@
 <p>INFO: <a class="reference external" href="https://forum.hanggliding.org/viewtopic.php?t=35303">https://forum.hanggliding.org/viewtopic.php?t=35303</a></p>
 <p>Lipo batteries may ignite if mistreated. Mistreated means; overcharged, overdischarged, badly damaged. These batteries must never be allowed to drop below 2.9v per cell. If this happens, there is the fire risk if high current is still being pulled through it, and a battery overdischarged in this way will never take a full charge again, and may visibly ‘swell’. Therefore it’s critical when using lipo batteries to use a speed control that has an automatic lipo cutoff, ideally one which you can set. When I have the option, I always set my lipo cutoff to 3.1v per cell. (so when a 2s (2 cell) 7.4v battery reaches 6.2v, the ESC stops the power to prevent battery damage).</p>
 <p><a class="reference external" href="https://www.facebook.com/groups/904566026835865/posts/953632555262545/?comment_id=953778331914634&amp;notif_id=1639477775250202&amp;ref=notif&amp;notif_t=group_comment_mention">https://www.facebook.com/groups/904566026835865/posts/953632555262545/?comment_id=953778331914634&amp;notif_id=1639477775250202&amp;ref=notif&amp;notif_t=group_comment_mention</a></p>
+<p>tbd</p>
 <p>Joe Stapleton
-Ben Rogers Geiger MC300 will be excellent but a bit overkill for an e-help. Everything cheap and anything designed for rc models will burn at some point as they have no hardware protection. I build my own VESC FOC controllers now but that is a bit involved. If you use a trapezoidal controller rather than FOC/4Quadrant then the much simplified lower frequency switching reduces the chances of burning. I think some people have even used the super cheapo Flier controllers that are made by Freerchobby (rebadged FRC) and also rebadged by Alien in the UK.
-I used to recommend the yongitech VESC hardware available from apiexpress/makerx/flipsky/freerchobby but I literally had one turn to plasma two weeks ago, albeit this is the first failure I’ve had like this.
+Ben Rogers Geiger MC300 will be excellent but a bit overkill for an e-help. Everything cheap and anything designed for rc models will burn at some point as they have no hardware protection. I build my own VESC FOC controllers now but that is a bit involved. If you use a trapezoidal controller rather than FOC/4Quadrant then the much simplified lower frequency switching reduces the chances of burning. I think some people have even used the super cheapo Flier controllers that are made by Freerchobby (rebadged FRC) and also rebadged by Alien in the UK.</p>
+<p>tbd</p>
+<p>I used to recommend the yongitech VESC hardware available from apiexpress/makerx/flipsky/freerchobby but I literally had one turn to plasma two weeks ago, albeit this is the first failure I’ve had like this.
 The specs (max voltage and continuous current) are usually constructed from the capacitor and mosfet datasheets the manufacturer used. This may lead to accurate max voltage (you must still allow a margin as inductive spikes from the motor will be greater than the battery voltage) but the current specs will be totally wrong and massively overstated. Personally I would de-rate any of the cheaper ESC to a max of 50% of their continuous current rating. Pay zero attention to any peak current rating it is meaningless.</p>
-<p>xxx</p>
-<p>hello, all you need is a standard throttle or cameleon 2/3 and connect it to a linear potentiometer. a tension spring and a return spring depending on how the handling should be.</p>
-<p>xxx</p>
-<p>things you could care about: specify things like magnet type, bearing type, or make, type of core lamination (thinner stator plates equal increased efficiency though reduced eddycurrents) whether they are single wound, bifiliar or trifiliar, even expected service life.</p>
+<p>tbd</p>
+<p>All you need is a standard throttle or cameleon 2/3 and connect it to a linear potentiometer. a tension spring and a return spring depending on how the handling should be.</p>
 </div>
 </div>
 
@@ -496,7 +491,7 @@ The specs (max voltage and continuous current) are usually constructed from the 
     <p>
     <img src="_images/dq1.jpg"  class="endimage"/>
       <span class="lastupdated">&nbsp;&nbsp;&nbsp;
-        Last updated on Jan 18, 2022.
+        Last updated on Jan 19, 2022.
         
       </span>
     </p>

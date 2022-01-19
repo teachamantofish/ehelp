@@ -50,24 +50,51 @@ Other items you might care about are beyond the scope of this document, includin
    * - Kv
      - 50-150
      - Number of revolutions per volt Kv stands the *constant velocity*.
-     - o
-   * - l
-     - d
-     - j
-     - o
-   * - l
-     - d
-     - j
-     - o
-   * - l
-     - d
-     - j
-     - o
-   * - l
-     - d
-     - j
-     - o
-  
+     - tbd
+   * - tbd
+     - tbd
+     - tbd
+     - tbd
+   * - tbd
+     - tbd
+     - tbd
+     - tbd
+   * - tbd
+     - tbd
+     - tbd
+     - tbd
+   * - tbd
+     - tbd
+     - tbd
+     - tbd
+   * - tbd
+     - tbd
+     - tbd
+     - tbd
+   * - tbd
+     - tbd
+     - tbd
+     - tbd
+
+Motor database
+================================
+
+Unfortunately, comparing motors based on published specs is as difficult as walking up an `Escher staircase <https://en.wikipedia.org/wiki/Relativity_%28M._C._Escher%29>`_. Note the following: 
+
+* For reference: Mosquito 10.4 kw, Wasp 10.4kw, Mossi 11.2kw: but an IC engine has a 100% duty cycle and can continuously run at full throttle. DC power trains are limited to max continuous power limitations (heat).
+* Some motors are marketed by others at higher prices. For example, APS sells Freerchobby motors. It's worth checking Alibaba, Amazon, eBay
+* Don't blindly trust published data or what's in the table below.
+* Some data points are undefined. For example, "continuous current" doesn't mean much unless you know the time frame. Some vendors user 1 minute, others 2 to 5 minutes or more.
+* Thrust values derive from static thrust on a test stand with a specific prop. Dynamic thrust (when moving through the air) is far less. You'll have to use a combination of math, data table reading, and dice rolling to formulate an idea about what's likely true. You should have already calculated what you need; for example: 25Kg of thrust at 50-70% throttle for 5 climb minutes with 12s batteries to climb to 1000'. 
+* RPM varies by Kv, voltage, and load. You need to determine this yourself or accept the numbers a manufacturer provides for a specific propeller. 
+* Contribute. 
+
+`Edit or copy the database <https://docs.google.com/spreadsheets/d/1O1r8choAQuhgh6FGf203ebjBLAv3VeXi2KZuJlWuQi4/edit?usp=sharing>`_
+
+.. raw:: html
+
+    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQhR018PYGnwq3c4SutTPxaxsnW6ntWMzfDsuU8Agrequ80ewUuX2cIUdyqLT0PZ_8bVPueNUx7XuHA/pubhtml?widget=true&amp;headers=false" width="100%" height="800px" frameBorder="no" style="font-size:9px;"></iframe>
+
 Motor spec reality check
 ===================================
 
@@ -83,28 +110,6 @@ KV reduction
 ---------------------------
 
 .. figure:: images/kvreduction.png
-
-
-
-Example motor list
-================================
-
-Unfortunately, comparing motors based on published specs is as difficult as walking up an `Escher staircase <https://en.wikipedia.org/wiki/Relativity_%28M._C._Escher%29>`_. Note the following: 
-
-* For reference: Mosquito 10.4 kw, Wasp 10.4kw, Mossi 11.2kw: but an IC engine has a 100% duty cycle and can continuously run at full throttle. DC power trains are limited to max continuous power limitations (heat).
-* Some motors are marketed by others at higher prices. For example, APS sells Freerchobby motors. It's worth checking Alibaba, Amazon, eBay
-* Don't blindly trust published data. 
-* Some data points are undefined. For example, "continuous current" doesn't mean much unless you know the time frame. Some vendors user 1 minute, others 2 to 5 minutes or more.
-* Thrust values derive from static thrust on a test stand with a specific prop. Dynamic thrust (when moving through the air) is far less. You'll have to use a combination of math, data table reading, and dice rolling to formulate an idea about what's likely true. You should have already calculated what you need; for example: 25Kg of thrust at 50-70% throttle for 5 climb minutes with 12s batteries to climb to 1000'. 
-* RPM varies by Kv, voltage, and load. You need to determine this yourself or accept the numbers a manufacturer provides for a specific propeller. 
-* The table below is a starting point only. Begin there, but don't end there.
-
-`View, edit, and copy the spreadsheet <https://docs.google.com/spreadsheets/d/1O1r8choAQuhgh6FGf203ebjBLAv3VeXi2KZuJlWuQi4/edit?usp=sharing>`_
-
-.. raw:: html
-
-    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQhR018PYGnwq3c4SutTPxaxsnW6ntWMzfDsuU8Agrequ80ewUuX2cIUdyqLT0PZ_8bVPueNUx7XuHA/pubhtml?widget=true&amp;headers=false" width="100%" height="800px" frameBorder="no"></iframe>
-
 
 Custom motors
 ======================

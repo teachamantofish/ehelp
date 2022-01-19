@@ -9,11 +9,20 @@ Propellers
 
    Under construction
 
-I'm going to punt here for a while. The topic is complex. This section includes some rules of thumb and links to folks who know more (and don't often agree). It's worth reading a `prop overview <https://aerotoolbox.com/thrust-cruise-speed/>`_ as well as what `e-props has to say <https://ppg.e-props.fr/efficient_prop/#tit03>`_.
+I'm going to punt here for a while. The topic is complex. This doc is very nascent. 
 
-Driveline design often starts with the prop. To fly, you need to move a mass of air in the opposite direction. Bigger is better but you have to worry about toes, keel, and ground. Faster is *sometimes* better but there are limits. Prop pitch (the angle that determines the bite into the air) should be selected for your airspeed and either climb or cruise. The prop is going to slow your motor down, and it's design must be compatible with the motor's power and speed. 
+The content below includes some rules of thumb as well as links to docs authored by those who know more (and don't often agree). It's worth reading a `prop overview <https://aerotoolbox.com/thrust-cruise-speed/>`_ as well as what `e-props has to say <https://ppg.e-props.fr/efficient_prop/#tit03>`_.
+
+Driveline design often starts with the prop. Your system needs to move a mass of air in the opposite direction. Bigger is better but you have to worry about toes, keel, and ground. Faster is *sometimes* better but there are limits. Prop pitch (the angle that determines the bite into the air) should be selected for your airspeed and either climb or cruise. The prop is going to slow your motor down, and it's design must be compatible with the motor's power and speed. 
 
 Your driveline decisions about motor, power source, and propeller are intertwined. You'll need to verify they work together to achieve your goals. 
+
+Prop database
+========================
+
+In progress. 
+
+There are hundreds of choices. It may not be worth doing this. Perhaps some good calculators and examples of working systems is enough. 
 
 Getting started
 ==========================
@@ -33,6 +42,7 @@ In general, you can do what other folks are doing or use your motor's manufactur
 
 
 TBD: insert pitch/d diagram
+
 
 Choosing a propeller
 ==========================

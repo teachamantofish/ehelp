@@ -33,17 +33,17 @@ Resources
 
 This document links to: 
 
-* Editable data sources: spreadsheets lists, calculators, glossary
-* `This open source content on Github <https://github.com/teachamantofish/eharness>`_
-* `ePowered Hang Glider <https://www.facebook.com/groups/904566026835865>`_
-* `FLPGH <https://www.facebook.com/groups/FLPHG>`_
-* `FLPHG eharness <https://www.facebook.com/groups/668143127181552>`_
+* `This open source content on Github <https://github.com/teachamantofish/eharness>`_: Editable data sources: spreadsheets lists, calculators, glossary
 * `OpenPPG forum: Similar concepts, great forum, lots of resources <https://openppg.com/?fbclid=IwAR04rX_1St1D1lqTpwBbaOdLskhpFOMahdXRiHXU1gmr4fSlUv0pwsC-RQg>`_
-* This community needs a focused forum. Doesn't exist yet, but I've asked hanggliding.org to engage.
-* Open-sourced projects:
+* `Community forum at hanggliding.org <https://forum.hanggliding.org/viewforum.php?f=31>`_
+* Open-sourced projects: See :ref:`workingbuild`.
+* FaceBook pages: 
 
-   * TBD
+  * `ePowered Hang Glider <https://www.facebook.com/groups/904566026835865>`_
+  * `FLPGH <https://www.facebook.com/groups/FLPHG>`_
+  * `FLPHG eharness <https://www.facebook.com/groups/668143127181552>`_
 
+* Future work: several websites by others are in progress. 
 
 Why? 
 =====================
@@ -79,16 +79,9 @@ If you see text or images here that originated with you and want it removed, jus
 Somewhere, "Over the Rainbow"
 ====================================
 
-In Kansas there are no kits and plans. Neither is there detailed **and accurate** power train data that allows us to accurately predict a prop's output power/thrust for any given input power. These numbers will never come from manufacturers. 3rd parties such as  `Tyto Robotics <https://database.tytorobotics.com/>`_ sell engineered test benches and provide free software which makes it possible to quantify motor/prop performance: 
+In Kansas there are no kits and plans. Neither is there detailed **and accurate** power train data that allows us to accurately predict a prop's output power/thrust for any given input power. These numbers will never come from manufacturers. 
 
-* Electrical power = Voltage x Current
-* Mechanical power = Torque x Rotation speed
-* Motor efficiency * = Mechanical power / Electrical power
-* Propeller efficiency = Thrust / Mechanical power
-* Powertrain efficiency = Thrust / Electrical power
-* Etc.--see their website.
-
-In the absence of such tools, insight into system performance will derive from a mix of manufacturer data, anecdotal reports on forums, and pilots like Paul Martin (an engineer), Reider Bernsten, Charles Allen, and others.
+3rd parties such as  `Tyto Robotics <https://database.tytorobotics.com/>`_ sell engineered test benches and provide free software which makes it possible to quantify motor/prop performance. But, it's still DIY. For the foreseeable future, insight into system performance and design will continue to derive from a mix of manufacturer data, anecdotal reports on forums, and pilots like Paul Martin (an engineer), Reider Bernsten, Charles Allen, and others.
 
 .. figure:: images/tyto1.png
    :scale: 80%

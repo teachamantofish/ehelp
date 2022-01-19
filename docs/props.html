@@ -127,7 +127,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">Eharness Examples</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="examples.html#database-of-working-builds">Database of working builds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#working-build-database">Working build database</a></li>
 <li class="toctree-l2"><a class="reference internal" href="examples.html#eharness-videos">Eharness videos</a></li>
 <li class="toctree-l2"><a class="reference internal" href="examples.html#commercial-e-harness-systems">Commercial e-harness systems</a></li>
 </ul>
@@ -149,12 +149,12 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="motors.html">Motors</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#motor-specification-wrestling">Motor specification wrestling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motors.html#motor-database">Motor database</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#motor-spec-reality-check">Motor spec reality check</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="motors.html#duty-cycle-max-continuous-power">Duty cycle-max continuous power</a></li>
 <li class="toctree-l3"><a class="reference internal" href="motors.html#kv-reduction">KV reduction</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="motors.html#example-motor-list">Example motor list</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#custom-motors">Custom motors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#sensored-versus-sensorless">Sensored versus sensorless</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#mating-with-a-prop">Mating with a prop</a></li>
@@ -166,6 +166,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Propellers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#prop-database">Prop database</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#choosing-a-propeller">Choosing a propeller</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#diameter">Diameter</a></li>
@@ -216,10 +217,9 @@
 <li class="toctree-l2"><a class="reference internal" href="esc.html#list-of-escs">List of ESCs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="esc.html#throttle">Throttle</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="esc.html#throttle-power-disconnect">Throttle-power disconnect</a></li>
-<li class="toctree-l3"><a class="reference internal" href="esc.html#vendors">Vendors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#vendor-examples">Vendor examples</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="esc.html#list-of-throttles">List of Throttles</a></li>
 <li class="toctree-l2"><a class="reference internal" href="esc.html#reading-telemetry-data">Reading telemetry data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="esc.html#worthwhile-reads">Worthwhile reads</a></li>
 <li class="toctree-l2"><a class="reference internal" href="esc.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
@@ -381,9 +381,15 @@
 <a class="reference internal image-reference" href="_images/uc3.gif"><img alt="_images/uc3.gif" src="_images/uc3.gif" style="width: 144.0px; height: 81.0px;" /></a>
 <p class="caption"><span class="caption-text">Under construction</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
-<p>I’m going to punt here for a while. The topic is complex. This section includes some rules of thumb and links to folks who know more (and don’t often agree). It’s worth reading a <a class="reference external" href="https://aerotoolbox.com/thrust-cruise-speed/">prop overview</a> as well as what <a class="reference external" href="https://ppg.e-props.fr/efficient_prop/#tit03">e-props has to say</a>.</p>
-<p>Driveline design often starts with the prop. To fly, you need to move a mass of air in the opposite direction. Bigger is better but you have to worry about toes, keel, and ground. Faster is <em>sometimes</em> better but there are limits. Prop pitch (the angle that determines the bite into the air) should be selected for your airspeed and either climb or cruise. The prop is going to slow your motor down, and it’s design must be compatible with the motor’s power and speed.</p>
+<p>I’m going to punt here for a while. The topic is complex. This doc is very nascent.</p>
+<p>The content below includes some rules of thumb as well as links to docs authored by those who know more (and don’t often agree). It’s worth reading a <a class="reference external" href="https://aerotoolbox.com/thrust-cruise-speed/">prop overview</a> as well as what <a class="reference external" href="https://ppg.e-props.fr/efficient_prop/#tit03">e-props has to say</a>.</p>
+<p>Driveline design often starts with the prop. Your system needs to move a mass of air in the opposite direction. Bigger is better but you have to worry about toes, keel, and ground. Faster is <em>sometimes</em> better but there are limits. Prop pitch (the angle that determines the bite into the air) should be selected for your airspeed and either climb or cruise. The prop is going to slow your motor down, and it’s design must be compatible with the motor’s power and speed.</p>
 <p>Your driveline decisions about motor, power source, and propeller are intertwined. You’ll need to verify they work together to achieve your goals.</p>
+<div class="section" id="prop-database">
+<h2>Prop database<a class="headerlink" href="#prop-database" title="Permalink to this headline">¶</a></h2>
+<p>In progress.</p>
+<p>There are hundreds of choices. It may not be worth doing this. Perhaps some good calculators and examples of working systems is enough.</p>
+</div>
 <div class="section" id="getting-started">
 <h2>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
 <p>In general, you can do what other folks are doing or use your motor’s manufacturer recommendations.</p>
@@ -547,7 +553,7 @@
     <p>
     <img src="_images/dq1.jpg"  class="endimage"/>
       <span class="lastupdated">&nbsp;&nbsp;&nbsp;
-        Last updated on Jan 18, 2022.
+        Last updated on Jan 19, 2022.
         
       </span>
     </p>

@@ -126,7 +126,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">Eharness Examples</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="examples.html#database-of-working-builds">Database of working builds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#working-build-database">Working build database</a></li>
 <li class="toctree-l2"><a class="reference internal" href="examples.html#eharness-videos">Eharness videos</a></li>
 <li class="toctree-l2"><a class="reference internal" href="examples.html#commercial-e-harness-systems">Commercial e-harness systems</a></li>
 </ul>
@@ -148,12 +148,12 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="motors.html">Motors</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#motor-specification-wrestling">Motor specification wrestling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="motors.html#motor-database">Motor database</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#motor-spec-reality-check">Motor spec reality check</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="motors.html#duty-cycle-max-continuous-power">Duty cycle-max continuous power</a></li>
 <li class="toctree-l3"><a class="reference internal" href="motors.html#kv-reduction">KV reduction</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="motors.html#example-motor-list">Example motor list</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#custom-motors">Custom motors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#sensored-versus-sensorless">Sensored versus sensorless</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#mating-with-a-prop">Mating with a prop</a></li>
@@ -165,6 +165,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="props.html">Propellers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="props.html#prop-database">Prop database</a></li>
 <li class="toctree-l2"><a class="reference internal" href="props.html#getting-started">Getting started</a></li>
 <li class="toctree-l2"><a class="reference internal" href="props.html#choosing-a-propeller">Choosing a propeller</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="props.html#diameter">Diameter</a></li>
@@ -215,10 +216,9 @@
 <li class="toctree-l2"><a class="reference internal" href="esc.html#list-of-escs">List of ESCs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="esc.html#throttle">Throttle</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="esc.html#throttle-power-disconnect">Throttle-power disconnect</a></li>
-<li class="toctree-l3"><a class="reference internal" href="esc.html#vendors">Vendors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#vendor-examples">Vendor examples</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="esc.html#list-of-throttles">List of Throttles</a></li>
 <li class="toctree-l2"><a class="reference internal" href="esc.html#reading-telemetry-data">Reading telemetry data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="esc.html#worthwhile-reads">Worthwhile reads</a></li>
 <li class="toctree-l2"><a class="reference internal" href="esc.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
@@ -374,47 +374,45 @@
             
   <div class="section" id="table-test">
 <h1>Table Test<a class="headerlink" href="#table-test" title="Permalink to this headline">¶</a></h1>
-      <!-- Pick a theme, load the plugin & initialize plugin -->
-      <link href="tablesorter/theme.default.css" rel="stylesheet">
-      <script src="tablesorter/jquery.tablesorter.min.js"></script>
-      <script src="tablesorter/jquery.tablesorter.widgets.min.js"></script>
-      <script>
-      $(function(){
-              $('table').tablesorter({
-                      widgets        : ['zebra', 'columns'],
-                      usNumberFormat : false,
-                      sortReset      : true,
-                      sortRestart    : true
-              });
-      });
-      </script>
+<!-- Pick a theme, load the plugin & initialize plugin -->
+<link href="tablesorter/theme.default.css" rel="stylesheet">
+<script src="tablesorter/jquery.tablesorter.min.js"></script>
+<script src="tablesorter/jquery.tablesorter.widgets.min.js"></script>
+<script>
+$(function(){
+        $('table').tablesorter({
+                widgets        : ['zebra', 'columns'],
+                usNumberFormat : false,
+                sortReset      : true,
+                sortRestart    : true
+        });
+});
+</script>
 
-<p>Sort multiple columns simultaneously by holding down the Shift key and clicking a second, third or even fourth column header. Docs: https://mottie.github.io/tablesorter/docs/ </p>
+doc link: https://plugins.jquery.com/tablesorter/
 
-      doc link: https://plugins.jquery.com/tablesorter/
-
-      <table class="tablesorter">
-              <thead>
-                      <tr>
-                              <th>AlphaNumeric Sort</th>
-                              <th>Currency</th>
-                              <th>Alphabetical</th>
-                              <th>Sites</th>
-                      </tr>
-              </thead>
-              <tbody>
-                      <tr><td>abc 123</td><td>&#163;10,40</td><td>Koala</td><td>http://www.google.com</td></tr>
-                      <tr><td>abc 1</td><td>&#163;234,10</td><td>Ox</td><td>http://www.yahoo.com</td></tr>
-                      <tr><td>abc 9</td><td>&#163;10,33</td><td>Girafee</td><td>http://www.facebook.com</td></tr>
-                      <tr><td>zyx 24</td><td>&#163;10</td><td>Bison</td><td>http://www.whitehouse.gov/</td></tr>
-                      <tr><td>abc 11</td><td>&#163;3,20</td><td>Chimp</td><td>http://www.ucla.edu/</td></tr>
-                      <tr><td>abc 2</td><td>&#163;56,10</td><td>Elephant</td><td>http://www.wikipedia.org/</td></tr>
-                      <tr><td>abc 9</td><td>&#163;3,20</td><td>Lion</td><td>http://www.nytimes.com/</td></tr>
-                      <tr><td>ABC 10</td><td>&#163;87,00</td><td>Zebra</td><td>http://www.google.com</td></tr>
-                      <tr><td>zyx 1</td><td>&#163;99,90</td><td>Koala</td><td>http://www.mit.edu/</td></tr>
-                      <tr><td>zyx 12</td><td>&#163;234,10</td><td>Llama</td><td>http://www.nasa.gov/</td></tr>
-              </tbody>
-      </table></div>
+<table class="tablesorter">
+        <thead>
+                <tr>
+                        <th>AlphaNumeric Sort</th>
+                        <th>Currency</th>
+                        <th>Alphabetical</th>
+                        <th>Sites</th>
+                </tr>
+        </thead>
+        <tbody>
+                <tr><td>abc 123</td><td>&#163;10,40</td><td>Koala</td><td>http://www.google.com</td></tr>
+                <tr><td>abc 1</td><td>&#163;234,10</td><td>Ox</td><td>http://www.yahoo.com</td></tr>
+                <tr><td>abc 9</td><td>&#163;10,33</td><td>Girafee</td><td>http://www.facebook.com</td></tr>
+                <tr><td>zyx 24</td><td>&#163;10</td><td>Bison</td><td>http://www.whitehouse.gov/</td></tr>
+                <tr><td>abc 11</td><td>&#163;3,20</td><td>Chimp</td><td>http://www.ucla.edu/</td></tr>
+                <tr><td>abc 2</td><td>&#163;56,10</td><td>Elephant</td><td>http://www.wikipedia.org/</td></tr>
+                <tr><td>abc 9</td><td>&#163;3,20</td><td>Lion</td><td>http://www.nytimes.com/</td></tr>
+                <tr><td>ABC 10</td><td>&#163;87,00</td><td>Zebra</td><td>http://www.google.com</td></tr>
+                <tr><td>zyx 1</td><td>&#163;99,90</td><td>Koala</td><td>http://www.mit.edu/</td></tr>
+                <tr><td>zyx 12</td><td>&#163;234,10</td><td>Llama</td><td>http://www.nasa.gov/</td></tr>
+        </tbody>
+</table></div>
 
 
            </div>
@@ -431,7 +429,7 @@
     <p>
     <img src="_images/dq1.jpg"  class="endimage"/>
       <span class="lastupdated">&nbsp;&nbsp;&nbsp;
-        Last updated on Jan 18, 2022.
+        Last updated on Jan 19, 2022.
         
       </span>
     </p>
