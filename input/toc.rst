@@ -16,10 +16,10 @@ eHelp Hang Gliding Harnesses
    :caption: Ingredients
    :maxdepth: 3
 
-   motors
-   props
    batteries
    esc
+   motors
+   props
    structure
    electrical
 

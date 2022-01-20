@@ -56,7 +56,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Electronic Speed Controller" href="esc.html" />
-    <link rel="prev" title="Propellers" href="props.html" /> 
+    <link rel="prev" title="Specing out a System" href="spec.html" /> 
   <style>
   .wy-nav-content {max-width:90%}
   td {font-size:130%}
@@ -147,6 +147,42 @@
 </ul>
 <p class="caption"><span class="caption-text">Ingredients</span></p>
 <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Batteries</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#battery-considerations">Battery considerations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#type">Type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#size">Size</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#weight">Weight</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#price">Price</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#battery-calculators">Battery calculators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#system-design">System design</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#price-vs-energy-density">Price vs energy density</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#diy-battery-packs">DIY battery packs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#worthwhile-reading">Worthwhile reading</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="esc.html">Electronic Speed Controller</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="esc.html#choosing-an-esc">Choosing an ESC</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#sizing">Sizing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#features">Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#location">Location</a></li>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#wiring">Wiring</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="esc.html#list-of-escs">List of ESCs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esc.html#throttle">Throttle</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#throttle-power-disconnect">Throttle-power disconnect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="esc.html#vendor-examples">Vendor examples</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="esc.html#reading-telemetry-data">Reading telemetry data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esc.html#worthwhile-reads">Worthwhile reads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="esc.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="motors.html">Motors</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#motor-specification-wrestling">Motor specification wrestling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="motors.html#motor-database">Motor database</a></li>
@@ -187,42 +223,6 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="props.html#vendors">Vendors</a></li>
-</ul>
-</li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Batteries</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#battery-considerations">Battery considerations</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#type">Type</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#size">Size</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#weight">Weight</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#price">Price</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#battery-calculators">Battery calculators</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#system-design">System design</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#price-vs-energy-density">Price vs energy density</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#diy-battery-packs">DIY battery packs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#worthwhile-reading">Worthwhile reading</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="esc.html">Electronic Speed Controller</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="esc.html#choosing-an-esc">Choosing an ESC</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="esc.html#sizing">Sizing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="esc.html#features">Features</a></li>
-<li class="toctree-l3"><a class="reference internal" href="esc.html#location">Location</a></li>
-<li class="toctree-l3"><a class="reference internal" href="esc.html#wiring">Wiring</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="esc.html#list-of-escs">List of ESCs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="esc.html#throttle">Throttle</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="esc.html#throttle-power-disconnect">Throttle-power disconnect</a></li>
-<li class="toctree-l3"><a class="reference internal" href="esc.html#vendor-examples">Vendor examples</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="esc.html#reading-telemetry-data">Reading telemetry data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="esc.html#worthwhile-reads">Worthwhile reads</a></li>
-<li class="toctree-l2"><a class="reference internal" href="esc.html#notes-todo-not-reviewed">Notes, todo, not reviewed</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="structure.html">Structural-Mechanical</a><ul>
@@ -365,7 +365,7 @@
         <a href="esc.html" class="btn btn-neutral float-right" title="Electronic Speed Controller" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="props.html" class="btn btn-neutral float-left" title="Propellers" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="spec.html" class="btn btn-neutral float-left" title="Specing out a System" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
   </div>
   

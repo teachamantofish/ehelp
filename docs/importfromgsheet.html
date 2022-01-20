@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<head>
+
+    <script>{
+        {
+          // Your API KEY
+          const API_KEY = "AIzaSyDhOS3VJZ66Utl0lnHbSK8gH0BXz-wxRoU";
+    
+          function displayResult2(response) {
+            let tableHead = "";
+            let tableBody = "";
+    
+            response.result.values.forEach((row, index) => {
+              if (index === 0) {
+                tableHead += "<tr>";
+                row.forEach((val) => (tableHead += "<th>" + val + "</th>"));
+                tableHead += "</tr>";
+              } else {
+                tableBody += "<tr>";
+                row.forEach((val) => (tableBody += "<td>" + val + "</td>"));
+                tableBody += "</tr>";
+              }
+            });
+    
+            document.getElementById("table-head").innerHTML = tableHead;
+            document.getElementById("table-body").innerHTML = tableBody;
+          }
+    
+          function loadData() {
+            // Spreadsheet ID
+            const spreadsheetId = "13LQr8VhjsZWSyQSQXvRDrnZd2PbBUzViLKCc06au3FY-dnsFfmLJX24OWiSFUYvk";
+            const range = "!A2:C";
+            getPublicValues({ spreadsheetId, range }, displayResult2);
+          }
+    
+          window.addEventListener("load", (e) => {
+            initOAuthClient({ apiKey: API_KEY });
+          });
+    
+          document.addEventListener("gapi-loaded", (e) => {
+            loadData();
+          });
+        }
+      }</script>
+
+</head>
+
+<body>
+
+            Another one: https://mdbootstrap.com/snippets/jquery/ascensus/453950#html-tab-view
+            <table class="table table-striped mb-0">
+              <thead id="table-head"></thead>
+              <tbody id="table-body"></tbody>
+            </table>
+
+
+
+            https://docs.google.com/spreadsheets/d/13LQr8VhjsZWSyQSQXvRDrnZd2PbBUzViLKCc06au3FY/
+            gviz/tq?tqx=out:html&tq&gid=0
+
+            test
+<br/>
+
+
+  <iframe
+            https://docs.google.com/spreadsheets/d/13LQr8VhjsZWSyQSQXvRDrnZd2PbBUzViLKCc06au3FY/gviz/tq?tqx=out:html&tq&gid=0
+
+
+</body>
+
+</html>
