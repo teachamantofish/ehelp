@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Table Test &mdash; Electric Hang Gliding Harness</title>
+  <title>Glossary &mdash; Electric Hang Gliding Harness</title>
   
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -20,12 +20,13 @@
   
   
   
-    <link rel="canonical" href="https://teachamantofish.github.io/ehelp/index.htmltabletest.html"/>
+    <link rel="canonical" href="https://teachamantofish.github.io/ehelp/index.htmlglossary.html"/>
   
 
 <script type="text/javascript">
   window.onload = function () {
-  Array.from(document.querySelectorAll('h2,h3')).forEach(el => {
+  Array.from(document.querySelectorAll('h2')).forEach(el => {
+  //Array.from(document.querySelectorAll('h2,h3')).forEach(el => {
     const a = document.createElement('a')
     a.innerText=""
     a.href="mailto:ben.rogers@gmail.com"
@@ -106,7 +107,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <p class="caption"><span class="caption-text">Preflight</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="index.html">In the Beginning…</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="index.html#what">What?</a><ul>
@@ -144,7 +145,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Ingredients</span></p>
+<p class="caption"><span class="caption-text">Climbing Out</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="batteries.html">Batteries</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="batteries.html#battery-considerations">Battery considerations</a><ul>
@@ -260,7 +261,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Pot Pourri</span></p>
+<p class="caption"><span class="caption-text">Scattered Cumies</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="ideas.html">Ideas and Experiments</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="ideas.html#prone-launch-configurations">Prone launch configurations</a></li>
@@ -300,8 +301,7 @@
 <li class="toctree-l2"><a class="reference internal" href="library.html#materials">Materials</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference external" href="https://script.google.com/macros/s/AKfycbx7TffZgCTmnLTNwrsggzLlkBD2A7KQGUwLZwI18FHU6vjP_wHeGngFeXvToJMYa5JYtw/exec#://">Glossary</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Table Test</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Glossary</a></li>
 </ul>
 
             
@@ -347,7 +347,7 @@
     
       <li><a href="toc.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Table Test</li>
+      <li>Glossary</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -372,47 +372,84 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="table-test">
-<h1>Table Test<a class="headerlink" href="#table-test" title="Permalink to this headline">¶</a></h1>
-<!-- Pick a theme, load the plugin & initialize plugin -->
+  <div class="section" id="glossary">
+<h1>Glossary<a class="headerlink" href="#glossary" title="Permalink to this headline">¶</a></h1>
+<p>Three options:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.google.com/spreadsheets/d/13LQr8VhjsZWSyQSQXvRDrnZd2PbBUzViLKCc06au3FY/edit?usp=sharing">Edit the source</a></p></li>
+<li><p><a class="reference external" href="https://script.google.com/macros/s/AKfycbx7TffZgCTmnLTNwrsggzLlkBD2A7KQGUwLZwI18FHU6vjP_wHeGngFeXvToJMYa5JYtw/exec#://">View the Standalone page with search</a></p></li>
+<li><p><a href="https://script.google.com/macros/s/AKfycbx7TffZgCTmnLTNwrsggzLlkBD2A7KQGUwLZwI18FHU6vjP_wHeGngFeXvToJMYa5JYtw/exec" target="_blank">View the Standalone page with search</a></p></li>
+<li><p>Sort and view the table below:</p></li>
+</ul>
+<!-- Table sorter -->
 <link href="tablesorter/theme.default.css" rel="stylesheet">
 <script src="tablesorter/jquery.tablesorter.min.js"></script>
 <script src="tablesorter/jquery.tablesorter.widgets.min.js"></script>
+   <table class="table tablesorter">
+      <thead id="table-head"></thead>
+      <tbody id="table-body"></tbody>
+   </table>
+<!-- Table -->
+
+<!-- MDB ESSENTIAL -->
+<script type="text/javascript" src="js/mdb.min.js"></script>
+<!-- Google API -->
+<script src="https://apis.google.com/js/api.js"></script>
+<!-- easyData -->
+<script type="text/javascript" src="js/easyData-google-sheets.js"></script>
+
+<!-- easyData - Creating table -->
 <script>
-$(function(){
-        $('table').tablesorter({
-                widgets        : ['zebra', 'columns'],
-                usNumberFormat : false,
-                sortReset      : true,
-                sortRestart    : true
-        });
-});
-</script>
+{
+   {
+      const API_KEY = "AIzaSyDhOS3VJZ66Utl0lnHbSK8gH0BXz-wxRoU";
 
-doc link: https://plugins.jquery.com/tablesorter/
 
-<table class="tablesorter">
-        <thead>
-                <tr>
-                        <th>AlphaNumeric Sort</th>
-                        <th>Currency</th>
-                        <th>Alphabetical</th>
-                        <th>Sites</th>
-                </tr>
-        </thead>
-        <tbody>
-                <tr><td>abc 123</td><td>&#163;10,40</td><td>Koala</td><td>http://www.google.com</td></tr>
-                <tr><td>abc 1</td><td>&#163;234,10</td><td>Ox</td><td>http://www.yahoo.com</td></tr>
-                <tr><td>abc 9</td><td>&#163;10,33</td><td>Girafee</td><td>http://www.facebook.com</td></tr>
-                <tr><td>zyx 24</td><td>&#163;10</td><td>Bison</td><td>http://www.whitehouse.gov/</td></tr>
-                <tr><td>abc 11</td><td>&#163;3,20</td><td>Chimp</td><td>http://www.ucla.edu/</td></tr>
-                <tr><td>abc 2</td><td>&#163;56,10</td><td>Elephant</td><td>http://www.wikipedia.org/</td></tr>
-                <tr><td>abc 9</td><td>&#163;3,20</td><td>Lion</td><td>http://www.nytimes.com/</td></tr>
-                <tr><td>ABC 10</td><td>&#163;87,00</td><td>Zebra</td><td>http://www.google.com</td></tr>
-                <tr><td>zyx 1</td><td>&#163;99,90</td><td>Koala</td><td>http://www.mit.edu/</td></tr>
-                <tr><td>zyx 12</td><td>&#163;234,10</td><td>Llama</td><td>http://www.nasa.gov/</td></tr>
-        </tbody>
-</table></div>
+      function displayResult2(response) {
+      let tableHead = "";
+      let tableBody = "";
+
+      response.result.values.forEach((row, index) => {
+         if (index === 0) {
+            tableHead += "<tr>";
+            row.forEach((val) => (tableHead += "<th>" + val + "</th>"));
+            tableHead += "</tr>";
+         } else {
+            tableBody += "<tr>";
+            row.forEach((val) => (tableBody += "<td>" + val + "</td>"));
+            tableBody += "</tr>";
+         }
+      });
+
+      document.getElementById("table-head").innerHTML = tableHead;
+      document.getElementById("table-body").innerHTML = tableBody;
+
+      $('table').tablesorter({
+               widgets        : ['zebra', 'columns'],
+               usNumberFormat : false,
+               sortReset      : true,
+               sortRestart    : true
+      });
+      }
+
+      function loadData() {
+      // Spreadsheet ID
+      // from https://docs.google.com/spreadsheets/d/13LQr8VhjsZWSyQSQXvRDrnZd2PbBUzViLKCc06au3FY/edit#gid=0
+      const spreadsheetId = "13LQr8VhjsZWSyQSQXvRDrnZd2PbBUzViLKCc06au3FY";
+      const range = "!A:C";
+      getPublicValues({ spreadsheetId, range }, displayResult2);
+      }
+
+      window.addEventListener("load", (e) => {
+      initOAuthClient({ apiKey: API_KEY });
+      });
+
+      document.addEventListener("gapi-loaded", (e) => {
+      loadData();
+      });
+   }
+}
+</script></div>
 
 
            </div>
@@ -429,7 +466,7 @@ doc link: https://plugins.jquery.com/tablesorter/
     <p>
     <img src="_images/dq1.jpg"  class="endimage"/>
       <span class="lastupdated">&nbsp;&nbsp;&nbsp;
-        Last updated on Jan 19, 2022.
+        Last updated on Jan 27, 2022.
         
       </span>
     </p>

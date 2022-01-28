@@ -61,6 +61,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
     <!-- MDB UI KIT -->
     <link rel="stylesheet" href="css/mdb.min.css" />
+    
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/theme_overrides.css" type="text/css" />
@@ -394,17 +395,6 @@
 <link href="tablesorter/theme.default.css" rel="stylesheet">
 <script src="tablesorter/jquery.tablesorter.min.js"></script>
 <script src="tablesorter/jquery.tablesorter.widgets.min.js"></script>
-<script>
-$(function(){
-  // doc link: https://plugins.jquery.com/tablesorter/
-        $('table').tablesorter({
-                widgets        : ['zebra', 'columns'],
-                usNumberFormat : false,
-                sortReset      : true,
-                sortRestart    : true
-        });
-});
-</script>
 
 
     <!-- Table -->
@@ -489,6 +479,13 @@ $(function(){
 
         document.getElementById("table-head").innerHTML = tableHead;
         document.getElementById("table-body").innerHTML = tableBody;
+
+        $('table').tablesorter({
+                widgets        : ['zebra', 'columns'],
+                usNumberFormat : false,
+                sortReset      : true,
+                sortRestart    : true
+        });
       }
 
       function loadData() {

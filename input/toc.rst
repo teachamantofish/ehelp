@@ -5,7 +5,7 @@ eHelp Hang Gliding Harnesses
 
 
 .. toctree:: 
-   :caption: Getting Started
+   :caption: Preflight
    :maxdepth: 3
 
    index
@@ -13,7 +13,7 @@ eHelp Hang Gliding Harnesses
    spec
 
 .. toctree:: 
-   :caption: Ingredients
+   :caption: Climbing Out
    :maxdepth: 3
 
    batteries
@@ -24,13 +24,11 @@ eHelp Hang Gliding Harnesses
    electrical
 
 .. toctree:: 
-   :caption: Pot Pourri
+   :caption: Scattered Cumies
    :maxdepth: 3
 
    ideas
    safety
    library
-   Glossary <https://script.google.com/macros/s/AKfycbx7TffZgCTmnLTNwrsggzLlkBD2A7KQGUwLZwI18FHU6vjP_wHeGngFeXvToJMYa5JYtw/exec#://>
-   tabletest
-   
+   glossary
 

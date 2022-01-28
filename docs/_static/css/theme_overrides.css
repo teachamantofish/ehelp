@@ -25,9 +25,16 @@ h2 {
     float: right;
   }
   
-   .feedback::after{
-    content: "\1F4E7"; /*want ../_images/email.png; here*/
-    }
+
+.feedback::after{
+      content: "";
+      background-image: url('../../_images/email.png');
+      width: 24px;
+      height: 24px;
+      display: block;
+      background-size: cover;
+      padding-top: 5px
+      }
 
 
 
