@@ -41,9 +41,8 @@ This document links to:
 
   * `ePowered Hang Glider <https://www.facebook.com/groups/904566026835865>`_
   * `FLPGH <https://www.facebook.com/groups/FLPHG>`_
-  * `FLPHG eharness <https://www.facebook.com/groups/668143127181552>`_
 
-* Future work: several websites by others are in progress. 
+* Future work: Several websites by others are in progress. I've ping USHPA about future articles, etc.  
 
 Why? 
 =====================
@@ -63,7 +62,7 @@ Goals
 Danger Will Robinson
 ---------------------------
 
-.. caution:: You assume responsibility for any action you take based on this or any other content. Wise pilots make educated decisions based on multiple sources. There is no advice here. This information derives from 3rd parties and may be erroneous.
+.. caution:: You assume responsibility for any action you take. This content may be in error. Adding an electric harness to an already hazardous sport only compounds the risks. Wise pilots make educated decisions based on multiple sources. There is no advice here. Much of the information here derives from 3rd parties.
 
 Who?
 =============

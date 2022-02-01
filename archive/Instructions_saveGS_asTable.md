@@ -37,7 +37,7 @@ columns: [{ title: "Term" }, { title: "Category" }, { title: "Definition" }];
 
 =====================
 
-this just displays the sheet as an html table. It does not give youi html in the web page. 
+this just displays the sheet as an html table. It does not give you html in the web page. 
 https://medium.com/@stvhwrd/embedding-a-google-sheet-as-an-html-table-365306d2ec2c
 
 

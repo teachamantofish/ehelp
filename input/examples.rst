@@ -16,11 +16,84 @@ Working build database
 
 In progress: Community-driven list of functional systems.
 
-`Edit or copy the database <https://docs.google.com/spreadsheets/d/e/2PACX-1vRiq3b143iVZJ5R4BQPlWvgrp6geK03bwI3J1VsEzb5u3pEZPwqh73bsiOWdCPSmQlIc7oGpz_7cyzF/pubhtml>`_
+`Edit or copy the database <https://docs.google.com/spreadsheets/d/17SzHl_S5aJjG43wHJqSCtoEecXG1U_SxYxlZpuQb4QI/edit?usp=sharing>`_
 
 .. raw:: html 
 
    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRiq3b143iVZJ5R4BQPlWvgrp6geK03bwI3J1VsEzb5u3pEZPwqh73bsiOWdCPSmQlIc7oGpz_7cyzF/pubhtml?widget=true&amp;headers=false" width="100%" height="800px" frameBorder="no" style="font-size:9px;"></iframe>
+
+
+.. raw:: html
+
+   <!-- Table sorter -->
+   <link href="tablesorter/theme.default.css" rel="stylesheet">
+   <script src="tablesorter/jquery.tablesorter.min.js"></script>
+   <script src="tablesorter/jquery.tablesorter.widgets.min.js"></script>
+      <table class="table tablesorter">
+         <thead id="table-head"></thead>
+         <tbody id="table-body"></tbody>
+      </table>
+   <!-- Table -->
+
+   <!-- MDB ESSENTIAL -->
+   <script type="text/javascript" src="js/mdb.min.js"></script>
+   <!-- Google API -->
+   <script src="https://apis.google.com/js/api.js"></script>
+   <!-- easyData -->
+   <script type="text/javascript" src="js/easyData-google-sheets.js"></script>
+
+   <!-- easyData - Creating table -->
+   <script>
+   {
+      {
+         const API_KEY = "AIzaSyDhOS3VJZ66Utl0lnHbSK8gH0BXz-wxRoU";
+   
+
+         function displayResult2(response) {
+         let tableHead = "";
+         let tableBody = "";
+
+         response.result.values.forEach((row, index) => {
+            if (index === 0) {
+               tableHead += "<tr>";
+               row.forEach((val) => (tableHead += "<th>" + val + "</th>"));
+               tableHead += "</tr>";
+            } else {
+               tableBody += "<tr>";
+               row.forEach((val) => (tableBody += "<td>" + val + "</td>"));
+               tableBody += "</tr>";
+            }
+         });
+
+         document.getElementById("table-head").innerHTML = tableHead;
+         document.getElementById("table-body").innerHTML = tableBody;
+
+         $('table').tablesorter({
+                  widgets        : ['zebra', 'columns'],
+                  usNumberFormat : false,
+                  sortReset      : true,
+                  sortRestart    : true
+         });
+         }
+
+         function loadData() {
+         // Spreadsheet ID
+         // from https://docs.google.com/spreadsheets/d/17SzHl_S5aJjG43wHJqSCtoEecXG1U_SxYxlZpuQb4QI/edit#gid=0
+         const spreadsheetId = "17SzHl_S5aJjG43wHJqSCtoEecXG1U_SxYxlZpuQb4QI";
+         const range = "!A:I";
+         getPublicValues({ spreadsheetId, range }, displayResult2);
+         }
+
+         window.addEventListener("load", (e) => {
+         initOAuthClient({ apiKey: API_KEY });
+         });
+
+         document.addEventListener("gapi-loaded", (e) => {
+         loadData();
+         });
+      }
+   }
+   </script>
 
 
 Eharness videos

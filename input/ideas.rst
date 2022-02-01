@@ -67,7 +67,18 @@ Trike-ish
 From Paraglider-land
 ========================
 
-* Justin's paraglider Blimp drive. Interesting twin off-the-shelf parts setup. http://www.justine-haupt.com/blimpdrive/
+Justin's paraglider Blimp drive. `Interesting twin off-the-shelf parts setup. <http://www.justine-haupt.com/blimpdrive/>`_
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/BeayJZzaXjM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+Contra rotating twin setup
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/NkJ9LF_8hIQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 
