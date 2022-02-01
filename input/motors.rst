@@ -36,7 +36,7 @@ Other items you might care about are beyond the scope of this document, includin
      - Definition
      - Design considerations
    * - Price
-     - 400-2000
+     - 400-2500
      - Personal choice. 
      - Could be worth starting out with a cheaper motor and working up. 
    * - Weight
@@ -45,7 +45,7 @@ Other items you might care about are beyond the scope of this document, includin
      - Weight doesn't impact performance much, but the mass is hanging off the end of your harness (with a support strap).
    * - Rated voltage
      - 44-100V
-     - Maximum either as volts or S rating. (``S number x 3.7volts``)
+     - Maximum value either as volts or S rating. (``S number x 3.7volts`` for LiPOs)
      - Higher voltages result in lower current and less heat and spin the prop faster (``Kv x volts = RPM``).
    * - Kv
      - 50-150
@@ -93,7 +93,7 @@ Unfortunately, comparing motors based on published specs is as difficult as walk
 
 .. raw:: html
 
-    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQhR018PYGnwq3c4SutTPxaxsnW6ntWMzfDsuU8Agrequ80ewUuX2cIUdyqLT0PZ_8bVPueNUx7XuHA/pubhtml?widget=true&amp;headers=false" width="100%" height="800px" frameBorder="no" style="font-size:9px;"></iframe>
+    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQhR018PYGnwq3c4SutTPxaxsnW6ntWMzfDsuU8Agrequ80ewUuX2cIUdyqLT0PZ_8bVPueNUx7XuHA/pubhtml?widget=true&amp;headers=false" width="100%" height="800px" frameBorder="no"></iframe>
 
 Motor spec reality check
 ===================================

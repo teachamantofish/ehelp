@@ -18,11 +18,6 @@ In progress: Community-driven list of functional systems.
 
 `Edit or copy the database <https://docs.google.com/spreadsheets/d/17SzHl_S5aJjG43wHJqSCtoEecXG1U_SxYxlZpuQb4QI/edit?usp=sharing>`_
 
-.. raw:: html 
-
-   <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRiq3b143iVZJ5R4BQPlWvgrp6geK03bwI3J1VsEzb5u3pEZPwqh73bsiOWdCPSmQlIc7oGpz_7cyzF/pubhtml?widget=true&amp;headers=false" width="100%" height="800px" frameBorder="no" style="font-size:9px;"></iframe>
-
-
 .. raw:: html
 
    <!-- Table sorter -->

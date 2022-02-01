@@ -134,10 +134,13 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="spec.html">Specing out a System</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="spec.html#decision-path">Decision path</a></li>
-<li class="toctree-l2"><a class="reference internal" href="spec.html#the-tradeoff-game">The tradeoff game</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spec.html#decision-path">Decision path</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="spec.html#top-considerations">Top considerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="spec.html#the-tradeoff-game">The tradeoff game</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="spec.html#calculator-energy-and-flight-time">Calculator: energy and flight time</a></li>
-<li class="toctree-l2"><a class="reference internal" href="spec.html#calculator-how-much-thrust">Calculator: How much thrust?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spec.html#calculator-energy-and-flight-time-2">Calculator: energy and flight time 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="spec.html#calculator-motor-adjustments">Calculator: Motor adjustments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="spec.html#calculator-prop-diameter-and-pitch">Calculator: Prop diameter and pitch</a></li>
 <li class="toctree-l2"><a class="reference internal" href="spec.html#calculator-prop-tip-speed">Calculator: Prop tip speed</a></li>
@@ -386,7 +389,7 @@
 <span id="workingbuild"></span><h2>Working build database<a class="headerlink" href="#working-build-database" title="Permalink to this headline">¶</a></h2>
 <p>In progress: Community-driven list of functional systems.</p>
 <p><a class="reference external" href="https://docs.google.com/spreadsheets/d/17SzHl_S5aJjG43wHJqSCtoEecXG1U_SxYxlZpuQb4QI/edit?usp=sharing">Edit or copy the database</a></p>
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRiq3b143iVZJ5R4BQPlWvgrp6geK03bwI3J1VsEzb5u3pEZPwqh73bsiOWdCPSmQlIc7oGpz_7cyzF/pubhtml?widget=true&amp;headers=false" width="100%" height="800px" frameBorder="no" style="font-size:9px;"></iframe><!-- Table sorter -->
+<!-- Table sorter -->
 <link href="tablesorter/theme.default.css" rel="stylesheet">
 <script src="tablesorter/jquery.tablesorter.min.js"></script>
 <script src="tablesorter/jquery.tablesorter.widgets.min.js"></script>
@@ -439,9 +442,9 @@
 
       function loadData() {
       // Spreadsheet ID
-      // from https://docs.google.com/spreadsheets/d/13LQr8VhjsZWSyQSQXvRDrnZd2PbBUzViLKCc06au3FY/edit#gid=0
+      // from https://docs.google.com/spreadsheets/d/17SzHl_S5aJjG43wHJqSCtoEecXG1U_SxYxlZpuQb4QI/edit#gid=0
       const spreadsheetId = "17SzHl_S5aJjG43wHJqSCtoEecXG1U_SxYxlZpuQb4QI";
-      const range = "!A:C";
+      const range = "!A:I";
       getPublicValues({ spreadsheetId, range }, displayResult2);
       }
 

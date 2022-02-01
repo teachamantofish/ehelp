@@ -61,4 +61,11 @@ p.credit {font-style: italic;}
   height:750px;
 }
 
+iframe {
+  border:none;
+  overflow: hidden;
+
+}
+
+table {width: 500px;} /* why is my table blowing out? */
 

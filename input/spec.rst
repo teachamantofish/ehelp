@@ -26,7 +26,10 @@ Realistically, it doesn't matter where you start as long as the entire system pr
 * *Motors*: Motors must be rated for the voltage you choose. They'll need to be able to drive your propeller at enough thrust while handling the continuous amperage during climb without overheating. In other words, they must be spec'd to handle the battery input power while delivering enough output power to the prop.
 * *Propeller*: The prop pushes you into the sky with thrust. Larger diameters and slower speeds are more efficient, but the motor must be capable of turning the prop at the required speed and torque. Ground, feet, and keel limit prop size, and within the standard 36-44 inch range there are hundreds of choices (diameter, pitch, blade number, and material). Volts determine speed, but amps determine torque.
 
-.. list-table:: Top considerations
+Top considerations
+-------------------------------
+
+.. list-table:: 
    :widths: 30 70 
    :header-rows: 1
 
@@ -34,21 +37,21 @@ Realistically, it doesn't matter where you start as long as the entire system pr
      - So What?
    * - Total power is power minus heat. Heat is bad. 
      - Design for less heat: higher volts, less amps, larger wires, lots of headroom in all components, cooling, etc.
-   * - Higher volrent is more efficient as electrical losses (heat) is proportional to the square of the current.
-     - Choose the highest voltage your willing to work with and carry. In Europe, 60v is a mandated max. More volts is more dangerous. Higher voltages mean you have fewer battery choices. 
+   * - Higher voltage is more efficient as electrical losses (heat) is proportional to the square of the current.
+     - Choose the highest voltage your willing to work with and carry. In Europe, 60v is a mandated max. Higher voltage increases the ability of current to go through your body. Higher voltages mean you have fewer battery choices. 
    * - Torque increases proportionally with the current consumed.  
-     - Current = amps. But amps create heat. Design requires balancing volts and amps via your choice of motor and prop. 
+     - Current is equivalent to amps. Amps create heat. Design requires balancing volts and amps via your choice of motor and prop. 
    * - Speed increases proportionally with the operating voltage. Engine power increases approximately proportionally with the speed. The highest power can only be used at maximum speed.
      - However, large, slow propellers are more efficient. You're limited by a keel and ground. Tip speed should also stay below .8 mach. 
 
-TBD: insert diagram
+.. todo: insert tradeoff diagram
 
 The tradeoff game
-===========================
+---------------------------------
 
-TBD: 
+TBD: Todo: insert table showing how a change in one variable impacts the system. For example, more volts results in less amps for the same power. More amps results in more heat. Etc. 
 
- higher V means less amps for the same power, I wanted to look at two motors that can handle diff V's and compare. Below you can see the M30 w/ 2 higher AH batteries can't run as long, create way more heat, and have a higher RPM than the M40. Same battery price. Seems safer, quieter, longer flight time (and that's at full climb--cruise would be even better). Tradeoff is the motor is 250 more and the batteries weigh 1lb more.
+
 
 .. note:: Before investing time and money, however, a logical first step could include figuring out what it will take to get your butt into the sky. . . 
 
@@ -81,22 +84,24 @@ The formula is: ``kwh=weight X 9.81 (gravity) X feet/3.28 (convert to meters) X 
   * milliamp hours is the amp rating you can draw: Add the amps of any batteries in parallel. 
   * By default, the calculator uses a common set up of 2 6s 22000mah batteries (22v) in series. That's one string of batteries with a 44v and 22000mAH output.
 
-Calculator: How much thrust?
-===================================
+Calculator: energy and flight time 2
+=========================================
 
-**Prop and thrust**: This approach arrives at required Kwh to an altitude based on a desired climb rate and the amount of power it takes given calculated drag and coefficient of lift. These calculations follow Paul Martin's approach outline in his detailed docs on TBD.
+**Prop and thrust**: This approach arrives at required Kwh to an altitude based on a desired climb rate and the amount of power it takes given the calculated drag and coefficient of lift.
 
 .. tip:: Live version coming soon!
 
+todo: remove scrolling, border. 
+
 .. raw:: html
 
-   <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTNk3d16kUlG7Y17k-Ii-QV9PyIXVCnGImD2lEwtXD6sR2HUV1zLu5W5cmfS6Fer3r2_RfJyQ8oOVRR/pubhtml?widget=true&amp;headers=false" width="525px" height="600px" scrolling="no"  frameBorder="0"></iframe>
+   <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTNk3d16kUlG7Y17k-Ii-QV9PyIXVCnGImD2lEwtXD6sR2HUV1zLu5W5cmfS6Fer3r2_RfJyQ8oOVRR/pubhtml?widget=true&amp;headers=false"  scrolling="no"  frameBorder="0" width="700px" height="970px"></iframe>
+
+.. note:: Paul Martin inspired much of this calculator.
 
 **Calculation walk-through** 
 
-#. one
-#. two
-#. tbd
+#. TBD
 
 Calculator: Motor adjustments
 ===================================
@@ -110,7 +115,7 @@ Main points:
 * Kv reduction calculations
 * Kt
 
-.. tip:: Live version coming soon! `Source <https://docs.google.com/spreadsheets/d/14JkkG8W6YqgOgw4RBCtJ8gWNFApiGTVdzc8_fM5dktQ/edit#gid=1953445286>`_
+.. tip:: Live version coming soon Work in progress.
 
 .. raw:: html
 
@@ -129,24 +134,24 @@ TBD
 
 tbd: Find the prop/RPM combination that will give you both the thrust and efficiency you want, then work backwards from there to determine how much motor power is required and what motor KV/battery voltage you want to use. Then source the motor and controller.
 
-
-
 **Calculation walk-through** 
 
 #. one
 #. two
 #. tbd
 
+TBD: To determine how fast your propeller can theoretically push or pull you through the air at a given rpm and pitch, multiply your propeller's pitch in inches (usually measured at 75 percent of the prop disk radius) times the RPM. Then multiply that figure times .000947 which gives you your speed in miles per hour. Then multiply this figure by .75 since a hang glider is relatively "draggy". This last operation compensates for propeller slippage and some aircraft drag. The end result should be a reasonably accurate estimate of your aircraft's airspeed potential. Use this process to help determine the amount of propeller pitch you need for your particular aircraft. 
+
+
 Calculator: Prop tip speed
 ===========================
 
 Propeller efficiency reduces as the tip speed approaches the speed of sound.  Beyond 80% of the speed of sound, increasing RPM has 
-little affect on thrust. Ideally, keep tip speeds below 75%-80% of Mach. 
+little affect on thrust. Ideally, keep tip speeds below 70% of Mach. Optimum efficiency and less noise stems from tip speeds less than 700 feet per second or 475 mph. Over that, and air compression in front of the prop leading edge begins occurring which rapidly degrades propeller performance.
 
-Optimum efficiency and less noise stems from tip speeds less than 700 feet per second or 475 mph. Over that, and air compression in front of the prop leading edge begins occurring which rapidly degrades propeller performance.
+.. raw:: html
 
-tbd: To determine how fast your propeller can theoretically push or pull you through the air at a given rpm and pitch, multiply your propeller's pitch in inches (usually measured at 75 percent of the prop disk radius) times the RPM. Then multiply that figure times .000947 which gives you your speed in miles per hour. Then multiply this figure by .85 if your aircraft is reasonably aerodynamically clean or by .80 or .75 if your aircraft is somewhat "draggy". This last operation compensates for propeller slippage and some aircraft drag. The end result should be a reasonably accurate estimate of your aircraft's airspeed potential. Use this process to help determine the amount of propeller pitch you need for your particular aircraft. Use the `Prop tip speed calculator <https://www.warpdriveprops.com/propspd2.html>`_
-
+  <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSdRRNQ5p8I63P3KzY7_yGY3y2QXIBEb62x6NzK7YvKKBwAsrspDv7rdQSWbgb_y_NCxmxuhaAMcpYu/pubhtml?widget=true&amp;headers=false"></iframe>
 
 Calculator: Prop power
 ===============================
