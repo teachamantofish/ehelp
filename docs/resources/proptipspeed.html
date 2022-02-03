@@ -13,135 +13,40 @@
       <section>
           
         <table class="input">
-          <thead><p><strong>Step 1</strong>: Enter pilot data to determine theoretical energy to goal.</p>
+          <thead><p><strong>Step 1</strong>: Enter propeller parameters</p>
             <tr>
-              <th></th>
-              <th>Weight</th>
-              <th>Glide (LD)</th>
-              <th>Speed</th>
-              <th>Altitude</th>
-              <th>Time</th>
+              <th>Diameter (inches)</th>
+              <th>RPM</th>
+              <th>% Mach Threshold</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th>Pilot and wing</th>
-              <td><input id="C3" placeholder="0" value="300" /></td>
-              <td><input id="D3" placeholder="0" value="12" /></td>
-              <td><input id="E3" placeholder="0" value="25" /></td>
-              <td><input id="F3" placeholder="0" value="1000" /></td>
-              <td><input id="G3" placeholder="0" value="5" /></td>
-            </tr>
-            <tr>
-              <th>Metric</th>
-              <td id="C4"></td>
-              <td id="D4"></td>
-              <td id="E4"></td>
-              <td id="F4"></td>
-              <td id="G4"></td>
+              <td><input id="C3" placeholder="0" value="48" /></td>
+              <td><input id="D3" placeholder="0" value="3000" /></td>
+              <td><input id="E3" placeholder="0" value="75" /></td>
             </tr>
           </tbody>
         </table>
         <table class="results">
           <tbody>
             <tr>
-              <th rowspan="2">Theoretical energy</th>
-              <td id="F6"></td>
-              <td>kwh</td>
-            </tr>
-            <tr>
-              <td id="F7"></td>
-              <td>Newtons</td>
-            </tr>
+              <th>FPM</th>
+              <th>MPH</th>
+              <th>% of mach</th>
+              </tr>
+              <tr>
+              <td x-text="A5.toFixed(2)"></td>
+              <td x-text="B5.toFixed(2)"></td>
+              <td
+              :style="roundC5 > +C2 && { 'background-color': 'pink' }"
+              x-text="roundC5"
+              ></td>
+              </tr>
           </tbody>
         </table>
       </section>
-      <section>
-
-          <p>
-            <strong>Step 2</strong>: Adjust required energy based on component efficiency.
-          </p>
- 
-        <table class="input">
-          <thead>
-            <tr>
-              <th></th>
-              <th>Prop</th>
-              <th>Motor</th>
-              <th>Batteries</th>
-              <th>All else</th>
-              <th>1-(1/glide)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>Efficiency reduction (%)</th>
-              <td><input id="C11" placeholder="0" value="45" /></td>
-              <td><input id="D11" placeholder="0" value="90" /></td>
-              <td><input id="E11" placeholder="0" value="95" /></td>
-              <td><input id="F11" placeholder="0" value="95" /></td>
-              <td id="G11"></td>
-            </tr>
-          </tbody>
-        </table>
-        <table class="results">
-          <tbody>
-            <tr>
-              <th>System efficiency</th>
-              <td id="F13"></td>
-              <td>%</td>
-            </tr>
-            <tr>
-              <th>Adjusted energy</th>
-              <td id="F14"></td>
-              <td>kwh</td>
-            </tr>
-            <tr>
-              <th>Power rate based on fpm climb</th>
-              <td id="F15"></td>
-              <td>kw battery draw</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-      <section>
-  
-          <p>
-            <strong>Step 3</strong>: At the calculated power draw, determine flight time based on battery choice.
-          </p>
-        <table class="input">
-          <thead>
-            <tr>
-              <th></th>
-              <th>System volts</th>
-              <th>mAh Capacity</th>
-              <th>Number</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>Battery</th>
-              <td><input id="C19" placeholder="0" value="44" /></td>
-              <td><input id="D19" placeholder="0" value="22000" /></td>
-              <td><input id="E19" placeholder="0" value="1" /></td>
-            </tr>
-          </tbody>
-        </table>
-        <table class="results">
-          <tbody>
-            <tr>
-              <th>Available watts</th>
-              <td id="F19"></td>
-              <td>watts</td>
-            </tr>
-            <tr>
-              <th>Projected flight time</th>
-              <td id="F21" class="resultcell"></td>
-              <td>minutes</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
+    
     </main>
     <script>
       'use strict'
@@ -182,5 +87,47 @@
       inputs.forEach((input) => (input.oninput = () => calc()))
       calc()
     </script>
+
+
+<h1>Jaedson test calc</h1>
+
+<script src="//unpkg.com/alpinejs" defer></script>
+<table
+x-data='{
+A2: "46",
+B2: "3000",
+C2: "65",
+get A5() { return +this.A2 * 3.14 * +this.B2 / 12 },
+get B5() { return this.A5 * 60 / 5286 },
+get C5() { return this.B5 / 600 },
+get roundC5() { return Math.round(this.C5 * 100) }
+}'
+>
+<tr>
+<th>Diameter (inches)</th>
+<th>RPM</th>
+<th>% Mach threshold</th>
+</tr>
+<tr>
+<td><input x-model="A2" /></td>
+<td><input x-model="B2" /></td>
+<td><input x-model="C2" /></td>
+</tr>
+<tr>
+<th>FPM</th>
+<th>MPH</th>
+<th>% of mach</th>
+</tr>
+<tr>
+<td x-text="A5.toFixed(2)"></td>
+<td x-text="B5.toFixed(2)"></td>
+<td
+:style="roundC5 > +C2 && { 'background-color': 'pink' }"
+x-text="roundC5"
+></td>
+</tr>
+</table>
+
+
   </body>
 </html>
