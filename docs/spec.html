@@ -139,12 +139,14 @@
 <li class="toctree-l3"><a class="reference internal" href="#the-tradeoff-game">The tradeoff game</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#calculator-energy-and-flight-time">Calculator: energy and flight time</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#calculator-energy-and-flight-time-2">Calculator: energy and flight time 2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#calculator-motor-adjustments">Calculator: Motor adjustments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#calculator-kilowatts-to-goal">Calculator: Kilowatts to goal</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#method-1-focus-on-efficiency">Method 1: Focus on efficiency</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#method-2-focus-on-lift-and-drag">Method 2: Focus on lift and drag</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#calculator-battery-volts-amps">Calculator: Battery volts &amp; amps</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#calculator-prop-diameter-and-pitch">Calculator: Prop diameter and pitch</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#calculator-prop-tip-speed">Calculator: Prop tip speed</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#calculator-prop-power">Calculator: Prop power</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#putting-it-all-together">Putting it all together</a></li>
 </ul>
 </li>
@@ -380,16 +382,16 @@
             
   <div class="section" id="specing-out-a-system">
 <span id="spec"></span><h1>Specing out a System<a class="headerlink" href="#specing-out-a-system" title="Permalink to this headline">¶</a></h1>
-<div class="figure align-default" id="id1">
+<div class="figure align-default" id="id2">
 <a class="reference internal image-reference" href="_images/uc2.gif"><img alt="_images/uc2.gif" src="_images/uc2.gif" style="width: 150.0px; height: 112.4px;" /></a>
-<p class="caption"><span class="caption-text">Under construction</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Under construction</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 <p>Navigating a working system is difficult and time consuming. Until the eharness harness idea is more widespread, design principles will remain relatively inaccessible while advice is scattered across various Facebook pages and forums with pioneers helping where they can. With luck, the eharness paradigm will gain enough traction that the hang gliding community can emulate aspects of <a class="reference external" href="https://openppg.com/">OpenPPG</a> and create its own easy-to-traverse path.</p>
 <p>Until then, moving forward is a bit of work.</p>
 <p>Margins are thin with electric powered aircraft primarily due to battery low energy density. While HG trike and paramotor systems can carry several KWH of batteries, HG harness systems are limited by what a pilot is willing to carry (e.g. sub 2 KWHs). Powered flight time is measured in minutes–often 10 to 20. Couple these limitations with a wide range of wing specs and pilot weights, and it becomes apparent that optimizing the power train requires some minimal number crunching. At a 200 fpm climb, there’s a big altitude difference between 5 minutes and 10 minutes.</p>
 <div class="section" id="decision-path">
 <h2>Decision path<a class="headerlink" href="#decision-path" title="Permalink to this headline">¶</a></h2>
-<p>You’ll often hear that system design starts with the prop. However, the performance of system components is so intimately intertwined that the specification of any piece has ramifications for all the others. Your choice of batteries, motor, electronic speed controller, or prop must inform your choices across the system. Failure to balance and tune the design holistically can easily result in a dangerous or inadequate eharness system.</p>
+<p>You’ll often hear that system design starts with the prop. However, system component performance is delicately intertwined and a change in any component specification is likely to have ramifications for the rest of the power train. Your choice of batteries, motor, electronic speed controller, or prop must inform your choices across the system. Failure to balance and tune the design holistically can easily result in a dangerous or inadequate eharness system.</p>
 <p>Realistically, it doesn’t matter where you start as long as the entire system produces the desired result. For example:</p>
 <ul class="simple">
 <li><p><em>Batteries</em>: How much weight you’re willing to have on board determines available power. Do you want to stay under 60 volts due to a wider array of available products or for safety reasons? Or should you choose 24S (88-100V) system so you push less amps and produce less heat for the same power?</p></li>
@@ -433,8 +435,10 @@
 </div>
 </div>
 </div>
-<div class="section" id="calculator-energy-and-flight-time">
-<h2>Calculator: energy and flight time<a class="headerlink" href="#calculator-energy-and-flight-time" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="calculator-kilowatts-to-goal">
+<h2>Calculator: Kilowatts to goal<a class="headerlink" href="#calculator-kilowatts-to-goal" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="method-1-focus-on-efficiency">
+<h3>Method 1: Focus on efficiency<a class="headerlink" href="#method-1-focus-on-efficiency" title="Permalink to this headline">¶</a></h3>
 <p><strong>Theoretical power x efficiency</strong>: This approach calculates the theoretical energy  to transport you to an altitude within a given time frame and then adjusts for power train efficiency. For example: If Joey Pilot with is Sport 3 Race and and gear weighs 300lbs, how many kilowatts of battery power will it take to climb at 200 fpm to 1000’?</p>
 <iframe src="resources/calculator_power.html" id="calctheory" scrolling="no"  frameBorder="0" width="900"></iframe><p><strong>Calculation walk-through</strong></p>
 <ol class="arabic simple">
@@ -462,77 +466,43 @@
 </ul>
 </div></blockquote>
 </div>
-<div class="section" id="calculator-energy-and-flight-time-2">
-<h2>Calculator: energy and flight time 2<a class="headerlink" href="#calculator-energy-and-flight-time-2" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="method-2-focus-on-lift-and-drag">
+<h3>Method 2: Focus on lift and drag<a class="headerlink" href="#method-2-focus-on-lift-and-drag" title="Permalink to this headline">¶</a></h3>
 <p><strong>Prop and thrust</strong>: This approach arrives at required Kwh to an altitude based on a desired climb rate and the amount of power it takes given the calculated drag and coefficient of lift.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Live version coming soon!</p>
+<p>Live version coming soon! Until then, copy and use <a class="reference external" href="https://docs.google.com/spreadsheets/d/1ij-Vy3835dhY8Kqg17O_BWjjIVHlTOPBIy46ROsu4YE/edit?usp=sharing">the original</a>.</p>
 </div>
-<p>todo: remove scrolling, border.</p>
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTNk3d16kUlG7Y17k-Ii-QV9PyIXVCnGImD2lEwtXD6sR2HUV1zLu5W5cmfS6Fer3r2_RfJyQ8oOVRR/pubhtml?widget=true&amp;headers=false"  scrolling="no"  frameBorder="0" width="700px" height="970px"></iframe><div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Paul Martin inspired much of this calculator.</p>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTNk3d16kUlG7Y17k-Ii-QV9PyIXVCnGImD2lEwtXD6sR2HUV1zLu5W5cmfS6Fer3r2_RfJyQ8oOVRR/pubhtml?widget=true&amp;headers=false"  scrolling="no"  frameBorder="0" width="700px" height="970px"></iframe></div>
 </div>
-<p><strong>Calculation walk-through</strong></p>
-<ol class="arabic simple">
-<li><p>TBD</p></li>
-</ol>
-</div>
-<div class="section" id="calculator-motor-adjustments">
-<h2>Calculator: Motor adjustments<a class="headerlink" href="#calculator-motor-adjustments" title="Permalink to this headline">¶</a></h2>
-<p>TBD</p>
-<p>Main points:</p>
-<ul class="simple">
-<li><p>As a rough guideline look for a motor/battery configuration that has a no-load RPM that is 125% of your target full-throttle RPM.</p></li>
-<li><p>Use a low heat percent of continuous power for the desired climb time.</p></li>
-<li><p>Kv reduction calculations</p></li>
-<li><p>Kt</p></li>
-</ul>
+<div class="section" id="calculator-battery-volts-amps">
+<h2>Calculator: Battery volts &amp; amps<a class="headerlink" href="#calculator-battery-volts-amps" title="Permalink to this headline">¶</a></h2>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Live version coming soon Work in progress.</p>
+<p>Live version coming soon! Until then, copy and use <a class="reference external" href="https://docs.google.com/spreadsheets/d/1ij-Vy3835dhY8Kqg17O_BWjjIVHlTOPBIy46ROsu4YE/edit?usp=sharing">the original here</a>.</p>
 </div>
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ5kZukKClZuK3vd4xq2fWymW4ljcXMrFy3haxn-PWlDgJMyB_0KBTAJcFyggVRj-QapMsSguDg47e-/pubhtml?widget=true&amp;headers=false" width="550px" height="570px" scrolling="no"  frameBorder="0"></iframe><p><strong>Calculation walk-through</strong></p>
-<ol class="arabic simple">
-<li><p>one</p></li>
-<li><p>two</p></li>
-<li><p>tbd</p></li>
-</ol>
-</div>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTfsWeI0qIlAbYbaXaNGYnleZmtXnAgD0Pvbtdmn-Gi2WE_WTBSEzz8cQO_yhCsmRrs5oKbHpNX5LJ6/pubhtml?widget=true&amp;headers=false" scrolling="no"  frameBorder="0" width="800px" height="440px"></iframe></div>
 <div class="section" id="calculator-prop-diameter-and-pitch">
 <h2>Calculator: Prop diameter and pitch<a class="headerlink" href="#calculator-prop-diameter-and-pitch" title="Permalink to this headline">¶</a></h2>
-<p>TBD</p>
-<p>tbd: Find the prop/RPM combination that will give you both the thrust and efficiency you want, then work backwards from there to determine how much motor power is required and what motor KV/battery voltage you want to use. Then source the motor and controller.</p>
-<p><strong>Calculation walk-through</strong></p>
-<ol class="arabic simple">
-<li><p>one</p></li>
-<li><p>two</p></li>
-<li><p>tbd</p></li>
-</ol>
-<p>TBD: To determine how fast your propeller can theoretically push or pull you through the air at a given rpm and pitch, multiply your propeller’s pitch in inches (usually measured at 75 percent of the prop disk radius) times the RPM. Then multiply that figure times .000947 which gives you your speed in miles per hour. Then multiply this figure by .75 since a hang glider is relatively “draggy”. This last operation compensates for propeller slippage and some aircraft drag. The end result should be a reasonably accurate estimate of your aircraft’s airspeed potential. Use this process to help determine the amount of propeller pitch you need for your particular aircraft.</p>
+<p>Prop selection is TBD and may remain beyond the scope of this document. One rule of thumb is you need at least 30kg of static thrust to achieve an adequate climb.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Paul Martin is apparently working on a prop calculator for hang gliders, but it’s not currently available.</p>
+</div>
+<p>Most online calculators are marginally helpful and either target commercial or RC aircraft. Gabriel Staples perhaps the provides the best open source calculator. <a class="reference external" href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSsKtTxmMjx0vw2CVbIRzPMQq3d2xT3ZjYDwhM5pYH2NwoicSHgTynGQmZIe6s5Sg/pubhtml">Copy my version</a> or get <a class="reference external" href="https://www.electricrcaircraftguy.com/2013/09/">the original</a>.</p>
+<div class="figure align-default" id="id3">
+<img alt="_images/gabriel.png" src="_images/gabriel.png" />
+<p class="caption"><span class="caption-text">Credit Gabriel Staples</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
 </div>
 <div class="section" id="calculator-prop-tip-speed">
 <h2>Calculator: Prop tip speed<a class="headerlink" href="#calculator-prop-tip-speed" title="Permalink to this headline">¶</a></h2>
-<p>Propeller efficiency reduces as the tip speed approaches the speed of sound.  Beyond 80% of the speed of sound, increasing RPM has
-little affect on thrust. Ideally, keep tip speeds below 70% of Mach. Optimum efficiency and less noise stems from tip speeds less than 700 feet per second or 475 mph. Over that, and air compression in front of the prop leading edge begins occurring which rapidly degrades propeller performance.</p>
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSdRRNQ5p8I63P3KzY7_yGY3y2QXIBEb62x6NzK7YvKKBwAsrspDv7rdQSWbgb_y_NCxmxuhaAMcpYu/pubhtml?widget=true&amp;headers=false"></iframe></div>
-<div class="section" id="calculator-prop-power">
-<h2>Calculator: Prop power<a class="headerlink" href="#calculator-prop-power" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>input power</p></li>
-<li><p>output power</p></li>
-<li><p>tip speed</p></li>
-<li><p>continuous thrust</p></li>
-</ul>
-<p>TBD</p>
-<p><strong>Calculation walk-through</strong></p>
-<ol class="arabic simple">
-<li><p>one</p></li>
-<li><p>two</p></li>
-<li><p>tbd</p></li>
-</ol>
+<p>Propeller efficiency reduces as the tip speed approaches the speed of sound.  Beyond 80% of the speed of sound, increasing RPM has little affect on thrust. Ideally, keep tip speeds below 70% of Mach. Optimum efficiency and less noise stems from tip speeds less than 700 feet per second or 475 mph. Excess tip speed results in air compression in front of the prop leading edge which rapidly degrades propeller performance.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Live version coming soon! Until then, copy and use <a class="reference external" href="https://docs.google.com/spreadsheets/d/1lHkmLChR1pkwir4u_RVsa-Cblb-_YRA0Q8wluVCTvjg/edit?usp=sharing">the original file</a>.</p>
 </div>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSdRRNQ5p8I63P3KzY7_yGY3y2QXIBEb62x6NzK7YvKKBwAsrspDv7rdQSWbgb_y_NCxmxuhaAMcpYu/pubhtml?widget=true&amp;headers=false" scrolling="no"  frameBorder="0" width="450px" height="180px"></iframe></div>
 <div class="section" id="putting-it-all-together">
 <h2>Putting it all together<a class="headerlink" href="#putting-it-all-together" title="Permalink to this headline">¶</a></h2>
 <p>TBD</p>
@@ -554,7 +524,7 @@ little affect on thrust. Ideally, keep tip speeds below 70% of Mach. Optimum eff
     <p>
     <img src="_images/dq1.jpg"  class="endimage"/>
       <span class="lastupdated">&nbsp;&nbsp;&nbsp;
-        Last updated on Jan 31, 2022.
+        Last updated on Feb 07, 2022.
         
       </span>
     </p>

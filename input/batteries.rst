@@ -78,9 +78,12 @@ System design
 
 Designing a power system is easier than choosing a brand. Simply use the calculator below or any `online calculator <ttps://power-calculation.com/battery-storage-calculator.php>`_. The goal is to connect the 1 or more properly sized batteries in series and/or parallel to output the requisite voltage and current.
 
+.. tip:: Live version coming soon! Until then, copy and use `the original here <https://docs.google.com/spreadsheets/d/1ij-Vy3835dhY8Kqg17O_BWjjIVHlTOPBIy46ROsu4YE/edit?usp=sharing>`_.
+
 .. raw:: html
 
-   <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTfsWeI0qIlAbYbaXaNGYnleZmtXnAgD0Pvbtdmn-Gi2WE_WTBSEzz8cQO_yhCsmRrs5oKbHpNX5LJ6/pubhtml?widget=true&amp;headers=false" width="600px" height="440px" frameBorder="no" scrolling="no" style="overflow:hidden;"></iframe>
+    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTfsWeI0qIlAbYbaXaNGYnleZmtXnAgD0Pvbtdmn-Gi2WE_WTBSEzz8cQO_yhCsmRrs5oKbHpNX5LJ6/pubhtml?widget=true&amp;headers=false" scrolling="no"  frameBorder="0" width="800px" height="440px"></iframe>
+
 
 Price vs energy density
 ----------------------------

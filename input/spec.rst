@@ -18,7 +18,7 @@ Margins are thin with electric powered aircraft primarily due to battery low ene
 Decision path
 =====================
 
-You'll often hear that system design starts with the prop. However, the performance of system components is so intimately intertwined that the specification of any piece has ramifications for all the others. Your choice of batteries, motor, electronic speed controller, or prop must inform your choices across the system. Failure to balance and tune the design holistically can easily result in a dangerous or inadequate eharness system.
+You'll often hear that system design starts with the prop. However, system component performance is delicately intertwined and a change in any component specification is likely to have ramifications for the rest of the power train. Your choice of batteries, motor, electronic speed controller, or prop must inform your choices across the system. Failure to balance and tune the design holistically can easily result in a dangerous or inadequate eharness system.
 
 Realistically, it doesn't matter where you start as long as the entire system produces the desired result. For example: 
 
@@ -55,9 +55,11 @@ TBD: Todo: insert table showing how a change in one variable impacts the system.
 
 .. note:: Before investing time and money, however, a logical first step could include figuring out what it will take to get your butt into the sky. . . 
 
-Calculator: energy and flight time
+Calculator: Kilowatts to goal
 ============================================
 
+Method 1: Focus on efficiency
+--------------------------------------------
 
 **Theoretical power x efficiency**: This approach calculates the theoretical energy  to transport you to an altitude within a given time frame and then adjusts for power train efficiency. For example: If Joey Pilot with is Sport 3 Race and and gear weighs 300lbs, how many kilowatts of battery power will it take to climb at 200 fpm to 1000'?
 
@@ -84,90 +86,50 @@ The formula is: ``kwh=weight X 9.81 (gravity) X feet/3.28 (convert to meters) X 
   * milliamp hours is the amp rating you can draw: Add the amps of any batteries in parallel. 
   * By default, the calculator uses a common set up of 2 6s 22000mah batteries (22v) in series. That's one string of batteries with a 44v and 22000mAH output.
 
-Calculator: energy and flight time 2
-=========================================
+Method 2: Focus on lift and drag
+-------------------------------------------
 
 **Prop and thrust**: This approach arrives at required Kwh to an altitude based on a desired climb rate and the amount of power it takes given the calculated drag and coefficient of lift.
 
-.. tip:: Live version coming soon!
-
-todo: remove scrolling, border. 
+.. tip:: Live version coming soon! Until then, copy and use `the original <https://docs.google.com/spreadsheets/d/1ij-Vy3835dhY8Kqg17O_BWjjIVHlTOPBIy46ROsu4YE/edit?usp=sharing>`_.
 
 .. raw:: html
 
    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTNk3d16kUlG7Y17k-Ii-QV9PyIXVCnGImD2lEwtXD6sR2HUV1zLu5W5cmfS6Fer3r2_RfJyQ8oOVRR/pubhtml?widget=true&amp;headers=false"  scrolling="no"  frameBorder="0" width="700px" height="970px"></iframe>
 
-.. note:: Paul Martin inspired much of this calculator.
 
-**Calculation walk-through** 
-
-#. TBD
-
-Calculator: Motor adjustments
-===================================
-
-TBD
-
-Main points:
-
-* As a rough guideline look for a motor/battery configuration that has a no-load RPM that is 125% of your target full-throttle RPM. 
-* Use a low heat percent of continuous power for the desired climb time. 
-* Kv reduction calculations
-* Kt
-
-.. tip:: Live version coming soon Work in progress.
+Calculator: Battery volts & amps
+===================================================
+ 
+.. tip:: Live version coming soon! Until then, copy and use `the original here <https://docs.google.com/spreadsheets/d/1ij-Vy3835dhY8Kqg17O_BWjjIVHlTOPBIy46ROsu4YE/edit?usp=sharing>`_.
 
 .. raw:: html
 
-   <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ5kZukKClZuK3vd4xq2fWymW4ljcXMrFy3haxn-PWlDgJMyB_0KBTAJcFyggVRj-QapMsSguDg47e-/pubhtml?widget=true&amp;headers=false" width="550px" height="570px" scrolling="no"  frameBorder="0"></iframe>
-
-**Calculation walk-through** 
-
-#. one
-#. two
-#. tbd
+    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTfsWeI0qIlAbYbaXaNGYnleZmtXnAgD0Pvbtdmn-Gi2WE_WTBSEzz8cQO_yhCsmRrs5oKbHpNX5LJ6/pubhtml?widget=true&amp;headers=false" scrolling="no"  frameBorder="0" width="800px" height="440px"></iframe>
 
 Calculator: Prop diameter and pitch
 =========================================
 
-TBD
+Prop selection is TBD and may remain beyond the scope of this document. One rule of thumb is you need at least 30kg of static thrust to achieve an adequate climb. 
 
-tbd: Find the prop/RPM combination that will give you both the thrust and efficiency you want, then work backwards from there to determine how much motor power is required and what motor KV/battery voltage you want to use. Then source the motor and controller.
+.. note:: Paul Martin is apparently working on a prop calculator for hang gliders, but it's not currently available.
 
-**Calculation walk-through** 
+Most online calculators are marginally helpful and either target commercial or RC aircraft. Gabriel Staples perhaps the provides the best open source calculator. `Copy my version <https://docs.google.com/spreadsheets/d/e/2PACX-1vSsKtTxmMjx0vw2CVbIRzPMQq3d2xT3ZjYDwhM5pYH2NwoicSHgTynGQmZIe6s5Sg/pubhtml>`_ or get `the original <https://www.electricrcaircraftguy.com/2013/09/>`_. 
 
-#. one
-#. two
-#. tbd
+.. figure:: images/gabriel.png
 
-TBD: To determine how fast your propeller can theoretically push or pull you through the air at a given rpm and pitch, multiply your propeller's pitch in inches (usually measured at 75 percent of the prop disk radius) times the RPM. Then multiply that figure times .000947 which gives you your speed in miles per hour. Then multiply this figure by .75 since a hang glider is relatively "draggy". This last operation compensates for propeller slippage and some aircraft drag. The end result should be a reasonably accurate estimate of your aircraft's airspeed potential. Use this process to help determine the amount of propeller pitch you need for your particular aircraft. 
-
+   Credit Gabriel Staples
 
 Calculator: Prop tip speed
 ===========================
 
-Propeller efficiency reduces as the tip speed approaches the speed of sound.  Beyond 80% of the speed of sound, increasing RPM has 
-little affect on thrust. Ideally, keep tip speeds below 70% of Mach. Optimum efficiency and less noise stems from tip speeds less than 700 feet per second or 475 mph. Over that, and air compression in front of the prop leading edge begins occurring which rapidly degrades propeller performance.
+Propeller efficiency reduces as the tip speed approaches the speed of sound.  Beyond 80% of the speed of sound, increasing RPM has little affect on thrust. Ideally, keep tip speeds below 70% of Mach. Optimum efficiency and less noise stems from tip speeds less than 700 feet per second or 475 mph. Excess tip speed results in air compression in front of the prop leading edge which rapidly degrades propeller performance.
+
+.. tip:: Live version coming soon! Until then, copy and use `the original file <https://docs.google.com/spreadsheets/d/1lHkmLChR1pkwir4u_RVsa-Cblb-_YRA0Q8wluVCTvjg/edit?usp=sharing>`_.
 
 .. raw:: html
 
-  <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSdRRNQ5p8I63P3KzY7_yGY3y2QXIBEb62x6NzK7YvKKBwAsrspDv7rdQSWbgb_y_NCxmxuhaAMcpYu/pubhtml?widget=true&amp;headers=false"></iframe>
-
-Calculator: Prop power
-===============================
-
-* input power
-* output power
-* tip speed
-* continuous thrust
-
-TBD
-
-**Calculation walk-through** 
-
-#. one
-#. two
-#. tbd
+  <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSdRRNQ5p8I63P3KzY7_yGY3y2QXIBEb62x6NzK7YvKKBwAsrspDv7rdQSWbgb_y_NCxmxuhaAMcpYu/pubhtml?widget=true&amp;headers=false" scrolling="no"  frameBorder="0" width="450px" height="180px"></iframe>
 
 Putting it all together
 ============================

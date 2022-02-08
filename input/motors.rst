@@ -111,6 +111,8 @@ KV reduction
 
 .. figure:: images/kvreduction.png
 
+   Credit: Paul Martin
+
 Custom motors
 ======================
 
