@@ -382,9 +382,9 @@
             
   <div class="section" id="specing-out-a-system">
 <span id="spec"></span><h1>Specing out a System<a class="headerlink" href="#specing-out-a-system" title="Permalink to this headline">¶</a></h1>
-<div class="figure align-default" id="id2">
+<div class="figure align-default" id="id3">
 <a class="reference internal image-reference" href="_images/uc2.gif"><img alt="_images/uc2.gif" src="_images/uc2.gif" style="width: 150.0px; height: 112.4px;" /></a>
-<p class="caption"><span class="caption-text">Under construction</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Under construction</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
 <p>Navigating a working system is difficult and time consuming. Until the eharness harness idea is more widespread, design principles will remain relatively inaccessible while advice is scattered across various Facebook pages and forums with pioneers helping where they can. With luck, the eharness paradigm will gain enough traction that the hang gliding community can emulate aspects of <a class="reference external" href="https://openppg.com/">OpenPPG</a> and create its own easy-to-traverse path.</p>
 <p>Until then, moving forward is a bit of work.</p>
@@ -400,7 +400,7 @@
 </ul>
 <div class="section" id="top-considerations">
 <h3>Top considerations<a class="headerlink" href="#top-considerations" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference external" href="https://docs.google.com/spreadsheets/d/1YstO3VJ9B9zDzrYRbpEi_BPGdjQJ1OCQykE5NOksd8k/edit?usp=sharing">Edit or copy the database</a></p>
+<p><a class="reference external" href="https://docs.google.com/spreadsheets/d/1YstO3VJ9B9zDzrYRbpEi_BPGdjQJ1OCQykE5NOksd8k/edit?usp=sharing">Edit or copy the source</a></p>
 <!-- Table sorter -->
 <link href="tablesorter/theme.default.css" rel="stylesheet">
 <script src="tablesorter/jquery.tablesorter.min.js"></script>
@@ -473,14 +473,80 @@
 <div class="section" id="the-tradeoff-game">
 <h3>The tradeoff game<a class="headerlink" href="#the-tradeoff-game" title="Permalink to this headline">¶</a></h3>
 <p>TBD: Todo: insert table showing how a change in one variable impacts the system. For example, more volts results in less amps for the same power. More amps results in more heat. Etc.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Before investing time and money, however, a logical first step could include figuring out what it will take to get your butt into the sky…</p>
-</div>
-</div>
+<p><a class="reference external" href="https://docs.google.com/spreadsheets/d/1YstO3VJ9B9zDzrYRbpEi_BPGdjQJ1OCQykE5NOksd8k/edit?usp=sharing">Edit or copy the source</a></p>
+<!-- Table sorter -->
+<link href="tablesorter/theme.default.css" rel="stylesheet">
+<script src="tablesorter/jquery.tablesorter.min.js"></script>
+<script src="tablesorter/jquery.tablesorter.widgets.min.js"></script>
+   <table class="table tablesorter">
+      <thead id="table-head"></thead>
+      <tbody id="table-body"></tbody>
+   </table>
+<!-- Table -->
+
+<!-- MDB ESSENTIAL -->
+<script type="text/javascript" src="js/mdb.min.js"></script>
+<!-- Google API -->
+<script src="https://apis.google.com/js/api.js"></script>
+<!-- easyData -->
+<script type="text/javascript" src="js/easyData-google-sheets.js"></script>
+
+<!-- easyData - Creating table -->
+<script>
+{
+   {
+      const API_KEY = "AIzaSyDhOS3VJZ66Utl0lnHbSK8gH0BXz-wxRoU";
+
+
+      function displayResult2(response) {
+      let tableHead = "";
+      let tableBody = "";
+
+      response.result.values.forEach((row, index) => {
+         if (index === 0) {
+            tableHead += "<tr>";
+            row.forEach((val) => (tableHead += "<th>" + val + "</th>"));
+            tableHead += "</tr>";
+         } else {
+            tableBody += "<tr>";
+            row.forEach((val) => (tableBody += "<td>" + val + "</td>"));
+            tableBody += "</tr>";
+         }
+      });
+
+      document.getElementById("table-head").innerHTML = tableHead;
+      document.getElementById("table-body").innerHTML = tableBody;
+
+      $('table').tablesorter({
+               widgets        : ['zebra', 'columns'],
+               usNumberFormat : false,
+               sortReset      : true,
+               sortRestart    : true
+      });
+      }
+
+      function loadData() {
+      // Spreadsheet ID
+      // from https://docs.google.com/spreadsheets/d/1YstO3VJ9B9zDzrYRbpEi_BPGdjQJ1OCQykE5NOksd8k/edit?usp=sharing
+      const spreadsheetId = "1YstO3VJ9B9zDzrYRbpEi_BPGdjQJ1OCQykE5NOksd8k";
+      const range = "!A:B";
+      getPublicValues({ spreadsheetId, range }, displayResult2);
+      }
+
+      window.addEventListener("load", (e) => {
+      initOAuthClient({ apiKey: API_KEY });
+      });
+
+      document.addEventListener("gapi-loaded", (e) => {
+      loadData();
+      });
+   }
+}
+</script></div>
 </div>
 <div class="section" id="calculator-kilowatts-to-goal">
 <h2>Calculator: Kilowatts to goal<a class="headerlink" href="#calculator-kilowatts-to-goal" title="Permalink to this headline">¶</a></h2>
+<p>Before investing time and money, a logical first step should include figuring out what it will take to get your butt into the sky…</p>
 <div class="section" id="method-1-focus-on-efficiency">
 <h3>Method 1: Focus on efficiency<a class="headerlink" href="#method-1-focus-on-efficiency" title="Permalink to this headline">¶</a></h3>
 <p><strong>Theoretical power x efficiency</strong>: This approach calculates the theoretical energy  to transport you to an altitude within a given time frame and then adjusts for power train efficiency. For example: If Joey Pilot with is Sport 3 Race and and gear weighs 300lbs, how many kilowatts of battery power will it take to climb at 200 fpm to 1000’?</p>
@@ -534,9 +600,9 @@
 <p>Paul Martin is apparently working on a prop calculator for hang gliders, but it’s not currently available.</p>
 </div>
 <p>Most online calculators are marginally helpful and either target commercial or RC aircraft. Gabriel Staples perhaps the provides the best open source calculator. <a class="reference external" href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSsKtTxmMjx0vw2CVbIRzPMQq3d2xT3ZjYDwhM5pYH2NwoicSHgTynGQmZIe6s5Sg/pubhtml">Copy my version</a> or get <a class="reference external" href="https://www.electricrcaircraftguy.com/2013/09/">the original</a>.</p>
-<div class="figure align-default" id="id3">
+<div class="figure align-default" id="id4">
 <img alt="_images/gabriel.png" src="_images/gabriel.png" />
-<p class="caption"><span class="caption-text">Credit Gabriel Staples</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Credit Gabriel Staples</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="calculator-prop-tip-speed">

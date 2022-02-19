@@ -29,7 +29,7 @@ Realistically, it doesn't matter where you start as long as the entire system pr
 Top considerations
 -------------------------------
 
-`Edit or copy the database <https://docs.google.com/spreadsheets/d/1YstO3VJ9B9zDzrYRbpEi_BPGdjQJ1OCQykE5NOksd8k/edit?usp=sharing>`_
+`Edit or copy the source <https://docs.google.com/spreadsheets/d/1YstO3VJ9B9zDzrYRbpEi_BPGdjQJ1OCQykE5NOksd8k/edit?usp=sharing>`_
 
 .. raw:: html
 
@@ -108,12 +108,86 @@ The tradeoff game
 
 TBD: Todo: insert table showing how a change in one variable impacts the system. For example, more volts results in less amps for the same power. More amps results in more heat. Etc. 
 
+`Edit or copy the source <https://docs.google.com/spreadsheets/d/1YstO3VJ9B9zDzrYRbpEi_BPGdjQJ1OCQykE5NOksd8k/edit?usp=sharing>`_
 
+.. raw:: html
 
-.. note:: Before investing time and money, however, a logical first step could include figuring out what it will take to get your butt into the sky. . . 
+   <!-- Table sorter -->
+   <link href="tablesorter/theme.default.css" rel="stylesheet">
+   <script src="tablesorter/jquery.tablesorter.min.js"></script>
+   <script src="tablesorter/jquery.tablesorter.widgets.min.js"></script>
+      <table class="table tablesorter">
+         <thead id="table-head"></thead>
+         <tbody id="table-body"></tbody>
+      </table>
+   <!-- Table -->
+
+   <!-- MDB ESSENTIAL -->
+   <script type="text/javascript" src="js/mdb.min.js"></script>
+   <!-- Google API -->
+   <script src="https://apis.google.com/js/api.js"></script>
+   <!-- easyData -->
+   <script type="text/javascript" src="js/easyData-google-sheets.js"></script>
+
+   <!-- easyData - Creating table -->
+   <script>
+   {
+      {
+         const API_KEY = "AIzaSyDhOS3VJZ66Utl0lnHbSK8gH0BXz-wxRoU";
+   
+
+         function displayResult2(response) {
+         let tableHead = "";
+         let tableBody = "";
+
+         response.result.values.forEach((row, index) => {
+            if (index === 0) {
+               tableHead += "<tr>";
+               row.forEach((val) => (tableHead += "<th>" + val + "</th>"));
+               tableHead += "</tr>";
+            } else {
+               tableBody += "<tr>";
+               row.forEach((val) => (tableBody += "<td>" + val + "</td>"));
+               tableBody += "</tr>";
+            }
+         });
+
+         document.getElementById("table-head").innerHTML = tableHead;
+         document.getElementById("table-body").innerHTML = tableBody;
+
+         $('table').tablesorter({
+                  widgets        : ['zebra', 'columns'],
+                  usNumberFormat : false,
+                  sortReset      : true,
+                  sortRestart    : true
+         });
+         }
+
+         function loadData() {
+         // Spreadsheet ID
+         // from https://docs.google.com/spreadsheets/d/1YstO3VJ9B9zDzrYRbpEi_BPGdjQJ1OCQykE5NOksd8k/edit?usp=sharing
+         const spreadsheetId = "1YstO3VJ9B9zDzrYRbpEi_BPGdjQJ1OCQykE5NOksd8k";
+         const range = "!A:B";
+         getPublicValues({ spreadsheetId, range }, displayResult2);
+         }
+
+         window.addEventListener("load", (e) => {
+         initOAuthClient({ apiKey: API_KEY });
+         });
+
+         document.addEventListener("gapi-loaded", (e) => {
+         loadData();
+         });
+      }
+   }
+   </script>
+
 
 Calculator: Kilowatts to goal
 ============================================
+
+Before investing time and money, a logical first step should include figuring out what it will take to get your butt into the sky. . . 
+
 
 Method 1: Focus on efficiency
 --------------------------------------------
