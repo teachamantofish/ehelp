@@ -23,6 +23,8 @@ Default Theme
 	padding: 0;
 }
 
+th { font-size: 14px;}
+
 .tablesorter-default tfoot th,
 .tablesorter-default tfoot td {
 	border: 0;

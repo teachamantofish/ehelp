@@ -106,9 +106,7 @@ Top considerations
 The tradeoff game
 ---------------------------------
 
-TBD: Todo: insert table showing how a change in one variable impacts the system. For example, more volts results in less amps for the same power. More amps results in more heat. Etc. 
-
-`Edit or copy the source <https://docs.google.com/spreadsheets/d/1YstO3VJ9B9zDzrYRbpEi_BPGdjQJ1OCQykE5NOksd8k/edit?usp=sharing>`_
+`Edit or copy the source <https://docs.google.com/spreadsheets/d/1wz0NomceuzE7MOYdM12XAd1OOk6Vs2e6YXAksoCgd4c/edit?usp=sharing>`_
 
 .. raw:: html
 
@@ -163,10 +161,8 @@ TBD: Todo: insert table showing how a change in one variable impacts the system.
          });
          }
 
-         function loadData() {
-         // Spreadsheet ID
-         // from https://docs.google.com/spreadsheets/d/1YstO3VJ9B9zDzrYRbpEi_BPGdjQJ1OCQykE5NOksd8k/edit?usp=sharing
-         const spreadsheetId = "1YstO3VJ9B9zDzrYRbpEi_BPGdjQJ1OCQykE5NOksd8k";
+         function loadDhttps://docs.google.com/spreadsheets/d/1wz0NomceuzE7MOYdM12XAd1OOk6Vs2e6YXAksoCgd4c/edit?usp=sharing
+         const spreadsheetId = "1wz0NomceuzE7MOYdM12XAd1OOk6Vs2e6YXAksoCgd4c";
          const range = "!A:B";
          getPublicValues({ spreadsheetId, range }, displayResult2);
          }
