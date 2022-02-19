@@ -15,13 +15,14 @@ Default Theme
 /* header */
 .tablesorter-default th,
 .tablesorter-default thead td {
-	font: bold 11px Arial, Sans-serif;
+	font: bold 12px Arial, Sans-serif;
 	color: #000;*/
 	background-color: #fff;
 	border-collapse: collapse;
 	border-bottom: #ccc 2px solid;
 	padding: 0;
 }
+
 .tablesorter-default tfoot th,
 .tablesorter-default tfoot td {
 	border: 0;
