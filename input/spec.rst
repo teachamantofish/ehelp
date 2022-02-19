@@ -85,7 +85,6 @@ Top considerations
          }
 
          function loadData() {
-         // Spreadsheet ID
          // from https://docs.google.com/spreadsheets/d/1YstO3VJ9B9zDzrYRbpEi_BPGdjQJ1OCQykE5NOksd8k/edit?usp=sharing
          const spreadsheetId = "1YstO3VJ9B9zDzrYRbpEi_BPGdjQJ1OCQykE5NOksd8k";
          const range = "!A:B";
@@ -161,7 +160,8 @@ The tradeoff game
          });
          }
 
-         function loadDhttps://docs.google.com/spreadsheets/d/1wz0NomceuzE7MOYdM12XAd1OOk6Vs2e6YXAksoCgd4c/edit?usp=sharing
+         function loadData() {
+         //from https://docs.google.com/spreadsheets/d/1wz0NomceuzE7MOYdM12XAd1OOk6Vs2e6YXAksoCgd4c/edit?usp=sharing
          const spreadsheetId = "1wz0NomceuzE7MOYdM12XAd1OOk6Vs2e6YXAksoCgd4c";
          const range = "!A:B";
          getPublicValues({ spreadsheetId, range }, displayResult2);
