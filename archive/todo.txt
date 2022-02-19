@@ -2,9 +2,6 @@
 working systems
 ===================
 
-
-TBD: List power trains in use. Create sortable table based on community input 
-
 TBD: 
 
 * 14s set up coupled to a 75/300A controller coupled to a 120100 80 to 85kv and a 40D18P propeller will get you between 200 and 250 fpm climb (Paul Martin).
@@ -93,12 +90,6 @@ reset css: https://stackoverflow.com/questions/43629317/reset-all-css-for-one-el
 
 https://www.iconsdb.com/gray-icons/gray-cloud-icons.html
 
-How to build
-================================
-
-xxx
-
-3d printing and cf compression molding
 
 Sources
 ============================
@@ -111,10 +102,45 @@ Contacts
 nikita: 1 604 725 5889
 
 
-web/domain
-=================================
-
-https://www.youtube.com/watch?v=qJSM8oCB3mU
-
 
 40/torque cinstant
+
+================
+
+e: Does a 12S liPo balance charger exist?
+
+by john61ct » Aug 23 2019 6:06pm
+12S or higher turns out to be pretty rare among good quality makers. Graupner Polaron Pro is one, most excellent.
+
+Lesser makes:
+
+SkyRC PC1260
+Chargery C4012B
+Thunder Power TP1225HVC
+Ultra Power UP1200AC DUO 12S or
+UP2400-12S
+EV-Peak A9
+
+Google for reviews, especially on RCgroups.com
+
+Alternatives (have you already got the pack?):
+
+A. 12S assuming usual LI chemistry, 43-44V nominal, 48-50V charging.
+
+So, not a very high voltage.
+
+25Ah capacity, so should be charged at a current rate of 5-8A, or 400W.
+
+Not a lot of power required either.
+
+Save a lot on the charger,
+
+use dedicated balancing gadgets rather than relying on a charger to do it.
+
+B. Put in a BMS that balances "well", e.g. with adjustable start-balance-voltage and a decent balance current rate, well over 1A anyway.
+
+Most chargers are actually much slower than that.
+
+C. Build the pack with a midpoint tap, and split the balance leads, then many dozens of "duo" chargers available, in effect two 6S pack in series internally.
+
+=======================

@@ -29,22 +29,79 @@ Realistically, it doesn't matter where you start as long as the entire system pr
 Top considerations
 -------------------------------
 
-.. list-table:: 
-   :widths: 30 70 
-   :header-rows: 1
+`Edit or copy the database <https://docs.google.com/spreadsheets/d/1YstO3VJ9B9zDzrYRbpEi_BPGdjQJ1OCQykE5NOksd8k/edit?usp=sharing>`_
 
-   * - What?
-     - So What?
-   * - Total power is power minus heat. Heat is bad. 
-     - Design for less heat: higher volts, less amps, larger wires, lots of headroom in all components, cooling, etc.
-   * - Higher voltage is more efficient as electrical losses (heat) is proportional to the square of the current.
-     - Choose the highest voltage your willing to work with and carry. In Europe, 60v is a mandated max. Higher voltage increases the ability of current to go through your body. Higher voltages mean you have fewer battery choices. 
-   * - Torque increases proportionally with the current consumed.  
-     - Current is equivalent to amps. Amps create heat. Design requires balancing volts and amps via your choice of motor and prop. 
-   * - Speed increases proportionally with the operating voltage. Engine power increases approximately proportionally with the speed. The highest power can only be used at maximum speed.
-     - However, large, slow propellers are more efficient. You're limited by a keel and ground. Tip speed should also stay below .8 mach. 
+.. raw:: html
 
-.. todo: insert tradeoff diagram
+   <!-- Table sorter -->
+   <link href="tablesorter/theme.default.css" rel="stylesheet">
+   <script src="tablesorter/jquery.tablesorter.min.js"></script>
+   <script src="tablesorter/jquery.tablesorter.widgets.min.js"></script>
+      <table class="table tablesorter">
+         <thead id="table-head"></thead>
+         <tbody id="table-body"></tbody>
+      </table>
+   <!-- Table -->
+
+   <!-- MDB ESSENTIAL -->
+   <script type="text/javascript" src="js/mdb.min.js"></script>
+   <!-- Google API -->
+   <script src="https://apis.google.com/js/api.js"></script>
+   <!-- easyData -->
+   <script type="text/javascript" src="js/easyData-google-sheets.js"></script>
+
+   <!-- easyData - Creating table -->
+   <script>
+   {
+      {
+         const API_KEY = "AIzaSyDhOS3VJZ66Utl0lnHbSK8gH0BXz-wxRoU";
+   
+
+         function displayResult2(response) {
+         let tableHead = "";
+         let tableBody = "";
+
+         response.result.values.forEach((row, index) => {
+            if (index === 0) {
+               tableHead += "<tr>";
+               row.forEach((val) => (tableHead += "<th>" + val + "</th>"));
+               tableHead += "</tr>";
+            } else {
+               tableBody += "<tr>";
+               row.forEach((val) => (tableBody += "<td>" + val + "</td>"));
+               tableBody += "</tr>";
+            }
+         });
+
+         document.getElementById("table-head").innerHTML = tableHead;
+         document.getElementById("table-body").innerHTML = tableBody;
+
+         $('table').tablesorter({
+                  widgets        : ['zebra', 'columns'],
+                  usNumberFormat : false,
+                  sortReset      : true,
+                  sortRestart    : true
+         });
+         }
+
+         function loadData() {
+         // Spreadsheet ID
+         // from https://docs.google.com/spreadsheets/d/1YstO3VJ9B9zDzrYRbpEi_BPGdjQJ1OCQykE5NOksd8k/edit?usp=sharing
+         const spreadsheetId = "1YstO3VJ9B9zDzrYRbpEi_BPGdjQJ1OCQykE5NOksd8k";
+         const range = "!A:B";
+         getPublicValues({ spreadsheetId, range }, displayResult2);
+         }
+
+         window.addEventListener("load", (e) => {
+         initOAuthClient({ apiKey: API_KEY });
+         });
+
+         document.addEventListener("gapi-loaded", (e) => {
+         loadData();
+         });
+      }
+   }
+   </script>
 
 The tradeoff game
 ---------------------------------
@@ -135,3 +192,28 @@ Putting it all together
 ============================
 
 TBD
+
+From Joe Stapleton: 
+
+You really can't use KV (no load RPM per volt) to try and determine prop RPM directly. KV is simply the inverse of KT the torque constant. KT tells you how much torque your motor will produce per amp. Applying a specific torque to your prop will generate a specific thrust, irrespective of airspeed. All that happens as your airspeed increases if you keep the torque/current the same is the RPM increases and therefore the power since power = torque x RPM.
+
+What you need to make any meaningful prediction is the torque to thrust curve for your prop, this is available from reputable prop manufactures such as e-prop.
+
+To try an illustrate the relationship between KV, KT, torque, current, voltage and thrust please look at the example e-prop curves below I just picked some random 2 blade family. If you look at the lowest blue lines on both charts these represent the lowest pitch prop in that family. So say you decide you want 40kg of thrust from this prop, you read across the top chart and see you need to spin it at ~2800RPM. Now look at the lower chart and see that at 2800RPM you need ~25Nm of torque.
+
+.. figure:: images/kvvskt.png
+
+So say we want use a 50KV motor, we convert from RPM/V to SI units (Radians per second per volt) then invert it to get KT. In one step you can do this by KT = 9.55/KV = 9.55/50 = 0.19Nm/A, i.e. for every amp we put through the motor it will produce 0.19Nm of torque.
+
+KV= RPM/V
+
+1/KV (in SI) = KT
+
+80kv 
+9.55/80 = .12
+
+
+
+So we can now calculate the phase current we need to produce 25Nm of torque which will spin our prop at 2800RPM and generate 40kg of thrust, simply 25/0.19 = 131A. Finally at 2800RPM our motor will be generating a back EMF of 2800/50 = 56V. So we need a battery of at least 56V to do this otherwise the system will never reach this RPM. If we are planning to fly then we need a higher voltage as the prop RPM will increase with airspeed.
+
+Hopefully it is obvious that this is all true whether the motor is 1000kg electric train or a 10 gram rc model motor. This is why the continuous current, max voltage / max RPM of the motor are also important.
