@@ -30,7 +30,7 @@ templates_path = ['../templates']
 # further.  For a list of options available for each theme, see the documentation.
 
 html_theme_options = {
-    'canonical_url': 'https://teachamantofish.github.io/ehelp/index.html',
+    'canonical_url': 'https://www.electricharness.com',
     'logo_only': False,
     'display_version': True,
     'prev_next_buttons_location': 'top',
