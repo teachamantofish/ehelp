@@ -152,12 +152,6 @@ Unfortunately, comparing motors based on published specs is as difficult as walk
    }
    </script>
 
-
-
-.. raw:: html
-
-    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQhR018PYGnwq3c4SutTPxaxsnW6ntWMzfDsuU8Agrequ80ewUuX2cIUdyqLT0PZ_8bVPueNUx7XuHA/pubhtml?widget=true&amp;headers=false" width="100%" height="800px" frameBorder="no"></iframe>
-
 Motor spec reality check
 ===================================
 
