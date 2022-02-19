@@ -472,74 +472,7 @@
 <div class="section" id="the-tradeoff-game">
 <h3>The tradeoff game<a class="headerlink" href="#the-tradeoff-game" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://docs.google.com/spreadsheets/d/1wz0NomceuzE7MOYdM12XAd1OOk6Vs2e6YXAksoCgd4c/edit?usp=sharing">Edit or copy the source</a></p>
-<!-- Table sorter -->
-<link href="tablesorter/theme.default.css" rel="stylesheet">
-<script src="tablesorter/jquery.tablesorter.min.js"></script>
-<script src="tablesorter/jquery.tablesorter.widgets.min.js"></script>
-   <table class="table tablesorter">
-      <thead id="table-head"></thead>
-      <tbody id="table-body"></tbody>
-   </table>
-<!-- Table -->
-
-<!-- MDB ESSENTIAL -->
-<script type="text/javascript" src="js/mdb.min.js"></script>
-<!-- Google API -->
-<script src="https://apis.google.com/js/api.js"></script>
-<!-- easyData -->
-<script type="text/javascript" src="js/easyData-google-sheets.js"></script>
-
-<!-- easyData - Creating table -->
-<script>
-{
-   {
-      const API_KEY = "AIzaSyDhOS3VJZ66Utl0lnHbSK8gH0BXz-wxRoU";
-
-
-      function displayResult2(response) {
-      let tableHead = "";
-      let tableBody = "";
-
-      response.result.values.forEach((row, index) => {
-         if (index === 0) {
-            tableHead += "<tr>";
-            row.forEach((val) => (tableHead += "<th>" + val + "</th>"));
-            tableHead += "</tr>";
-         } else {
-            tableBody += "<tr>";
-            row.forEach((val) => (tableBody += "<td>" + val + "</td>"));
-            tableBody += "</tr>";
-         }
-      });
-
-      document.getElementById("table-head").innerHTML = tableHead;
-      document.getElementById("table-body").innerHTML = tableBody;
-
-      $('table').tablesorter({
-               widgets        : ['zebra', 'columns'],
-               usNumberFormat : false,
-               sortReset      : true,
-               sortRestart    : true
-      });
-      }
-
-      function loadData() {
-      //from https://docs.google.com/spreadsheets/d/1wz0NomceuzE7MOYdM12XAd1OOk6Vs2e6YXAksoCgd4c/edit?usp=sharing
-      const spreadsheetId = "1wz0NomceuzE7MOYdM12XAd1OOk6Vs2e6YXAksoCgd4c";
-      const range = "!A:B";
-      getPublicValues({ spreadsheetId, range }, displayResult2);
-      }
-
-      window.addEventListener("load", (e) => {
-      initOAuthClient({ apiKey: API_KEY });
-      });
-
-      document.addEventListener("gapi-loaded", (e) => {
-      loadData();
-      });
-   }
-}
-</script></div>
+</div>
 </div>
 <div class="section" id="calculator-kilowatts-to-goal">
 <h2>Calculator: Kilowatts to goal<a class="headerlink" href="#calculator-kilowatts-to-goal" title="Permalink to this headline">¶</a></h2>
