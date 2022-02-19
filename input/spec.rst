@@ -23,7 +23,8 @@ You'll often hear that system design starts with the prop. However, system compo
 Realistically, it doesn't matter where you start as long as the entire system produces the desired result. For example: 
 
 * *Batteries*: How much weight you're willing to have on board determines available power. Do you want to stay under 60 volts due to a wider array of available products or for safety reasons? Or should you choose 24S (88-100V) system so you push less amps and produce less heat for the same power?
-* *Motors*: Motors must be rated for the voltage you choose. They'll need to be able to drive your propeller at enough thrust while handling the continuous amperage during climb without overheating. In other words, they must be spec'd to handle the battery input power while delivering enough output power to the prop.
+* *Motor*: Motors must be rated for the voltage you choose. They'll need to be able to drive your propeller at enough thrust while handling the continuous amperage during climb without overheating. In other words, they must be spec'd to handle the battery input power while delivering enough output power to the prop.
+* * *Electronic speed controller*: Your ESC receives power form the batteries, input from the throttle, and controls the motor. It's connections to the batteries and motor allows it to send data back to an LCD screen (telemetry) such as RPM, current, voltage, charge remaining, etc.
 * *Propeller*: The prop pushes you into the sky with thrust. Larger diameters and slower speeds are more efficient, but the motor must be capable of turning the prop at the required speed and torque. Ground, feet, and keel limit prop size, and within the standard 36-44 inch range there are hundreds of choices (diameter, pitch, blade number, and material). Volts determine speed, but amps determine torque.
 
 Top considerations
