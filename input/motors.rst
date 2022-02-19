@@ -14,67 +14,55 @@ Motor specification wrestling
 
 You don't have to do it naked, but you do have to do it. Data sources are sketchy,
 
-
+* Max voltage: 
 * Continuous current: How many amps the motor can handle for the number of minutes specified by the manufacturer until it overheats. Varies widely. You may need "continuous" for your climb duration. It's a good idea to design a system that's operates around 50-70% of max current during climb to reduce heat and allow for power headroom. 
 * Max current: How many burst amps you can draw at full throttle. Design  a system that does not exceed the max current for the short time specified by the manufacturer (often 60 seconds).
+* Max power: TBD
+* Max torque: TBD
 * N and P numbers: something like “36N30P”. The number before the letter N is the quantity of electromagnets in the stator, and the number before P is the quantity of permanent magnets in the motor.  Lower KV motors have more permanent magnets to increase torque.
 * Dimensions: TBD
 * Internal resistance: Lower is better since resistance = heat. 
-* Max torque: TBD
 * No load current: TBD
-* Max power: TBD
 
 Other items you might care about are beyond the scope of this document, including thickness of the magnet laminations, magnet type, number of poles, wire pressure test, max temps for wire and magnets, etc. 
 
+.. raw:: html
 
-.. list-table:: 
-   :widths: 10 10 30 50 
-   :header-rows: 1
+   <!--
 
-   * - Parameter
-     - Typical range
-     - Definition
-     - Design considerations
-   * - Price
-     - 400-2500
-     - Personal choice. 
-     - Could be worth starting out with a cheaper motor and working up. 
-   * - Weight
-     - 3.1-12 lbs
-     - Personal choice. 
-     - Weight doesn't impact performance much, but the mass is hanging off the end of your harness (with a support strap).
-   * - Rated voltage
-     - 44-100V
-     - Maximum value either as volts or S rating. (``S number x 3.7volts`` for LiPOs)
-     - Higher voltages result in lower current and less heat and spin the prop faster (``Kv x volts = RPM``).
-   * - Kv
-     - 50-150
-     - Number of revolutions per volt Kv stands the *constant velocity*.
-     - tbd
-   * - tbd
-     - tbd
-     - tbd
-     - tbd
-   * - tbd
-     - tbd
-     - tbd
-     - tbd
-   * - tbd
-     - tbd
-     - tbd
-     - tbd
-   * - tbd
-     - tbd
-     - tbd
-     - tbd
-   * - tbd
-     - tbd
-     - tbd
-     - tbd
-   * - tbd
-     - tbd
-     - tbd
-     - tbd
+   .. list-table:: 
+      :widths: 10 10 30 50 
+      :header-rows: 1
+
+      * - Parameter
+         - Typical range
+         - Definition
+         - Design considerations
+      * - Price
+         - 400-2500
+         - Personal choice. 
+         - Could be worth starting out with a cheaper motor and working up. 
+      * - Weight
+         - 3.1-12 lbs
+         - Personal choice. 
+         - Weight doesn't impact performance much, but the mass is hanging off the end of your harness (with a support strap).
+      * - Rated voltage
+         - 44-100V
+         - Maximum value either as volts or S rating. (``S number x 3.7volts`` for LiPOs)
+         - Higher voltages result in lower current and less heat and spin the prop faster (``Kv x volts = RPM``).
+      * - Kv
+         - 50-150
+         - Number of revolutions per volt Kv stands the *constant velocity*.
+         - tbd
+      * - tbd
+         - tbd
+         - tbd
+         - tbd
+      * - tbd
+         - tbd
+         - tbd
+         - tbd
+      -->
 
 Motor database
 ================================
@@ -90,6 +78,81 @@ Unfortunately, comparing motors based on published specs is as difficult as walk
 * Contribute. 
 
 `Edit or copy the database <https://docs.google.com/spreadsheets/d/1O1r8choAQuhgh6FGf203ebjBLAv3VeXi2KZuJlWuQi4/edit?usp=sharing>`_
+
+
+
+.. raw:: html
+
+   <!-- Table sorter -->
+   <link href="tablesorter/theme.default.css" rel="stylesheet">
+   <script src="tablesorter/jquery.tablesorter.min.js"></script>
+   <script src="tablesorter/jquery.tablesorter.widgets.min.js"></script>
+      <table class="table tablesorter">
+         <thead id="table-head"></thead>
+         <tbody id="table-body"></tbody>
+      </table>
+   <!-- Table -->
+
+   <!-- MDB ESSENTIAL -->
+   <script type="text/javascript" src="js/mdb.min.js"></script>
+   <!-- Google API -->
+   <script src="https://apis.google.com/js/api.js"></script>
+   <!-- easyData -->
+   <script type="text/javascript" src="js/easyData-google-sheets.js"></script>
+
+   <!-- easyData - Creating table -->
+   <script>
+   {
+      {
+         const API_KEY = "AIzaSyDhOS3VJZ66Utl0lnHbSK8gH0BXz-wxRoU";
+   
+
+         function displayResult2(response) {
+         let tableHead = "";
+         let tableBody = "";
+
+         response.result.values.forEach((row, index) => {
+            if (index === 0) {
+               tableHead += "<tr>";
+               row.forEach((val) => (tableHead += "<th>" + val + "</th>"));
+               tableHead += "</tr>";
+            } else {
+               tableBody += "<tr>";
+               row.forEach((val) => (tableBody += "<td>" + val + "</td>"));
+               tableBody += "</tr>";
+            }
+         });
+
+         document.getElementById("table-head").innerHTML = tableHead;
+         document.getElementById("table-body").innerHTML = tableBody;
+
+         $('table').tablesorter({
+                  widgets        : ['zebra', 'columns'],
+                  usNumberFormat : false,
+                  sortReset      : true,
+                  sortRestart    : true
+         });
+         }
+
+         function loadData() {
+         // from https://docs.google.com/spreadsheets/d/1O1r8choAQuhgh6FGf203ebjBLAv3VeXi2KZuJlWuQi4/edit?usp=sharing
+         const spreadsheetId = "1O1r8choAQuhgh6FGf203ebjBLAv3VeXi2KZuJlWuQi4";
+         const range = "!A:M";
+         getPublicValues({ spreadsheetId, range }, displayResult2);
+         }
+
+         window.addEventListener("load", (e) => {
+         initOAuthClient({ apiKey: API_KEY });
+         });
+
+         document.addEventListener("gapi-loaded", (e) => {
+         loadData();
+         });
+      }
+   }
+   </script>
+
+
 
 .. raw:: html
 

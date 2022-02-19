@@ -20,7 +20,7 @@
   
   
   
-    <link rel="canonical" href="https://teachamantofish.github.io/ehelp/index.htmlspec.html"/>
+    <link rel="canonical" href="https://www.electricharness.comspec.html"/>
   
 
 <script type="text/javascript">
@@ -136,7 +136,6 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Specing out a System</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#decision-path">Decision path</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#top-considerations">Top considerations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#the-tradeoff-game">The tradeoff game</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#calculator-kilowatts-to-goal">Calculator: Kilowatts to goal</a><ul>
@@ -382,9 +381,9 @@
             
   <div class="section" id="specing-out-a-system">
 <span id="spec"></span><h1>Specing out a System<a class="headerlink" href="#specing-out-a-system" title="Permalink to this headline">¶</a></h1>
-<div class="figure align-default" id="id3">
+<div class="figure align-default" id="id2">
 <a class="reference internal image-reference" href="_images/uc2.gif"><img alt="_images/uc2.gif" src="_images/uc2.gif" style="width: 150.0px; height: 112.4px;" /></a>
-<p class="caption"><span class="caption-text">Under construction</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Under construction</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 <p>Navigating a working system is difficult and time consuming. Until the eharness harness idea is more widespread, design principles will remain relatively inaccessible while advice is scattered across various Facebook pages and forums with pioneers helping where they can. With luck, the eharness paradigm will gain enough traction that the hang gliding community can emulate aspects of <a class="reference external" href="https://openppg.com/">OpenPPG</a> and create its own easy-to-traverse path.</p>
 <p>Until then, moving forward is a bit of work.</p>
@@ -395,7 +394,11 @@
 <p>Realistically, it doesn’t matter where you start as long as the entire system produces the desired result. For example:</p>
 <ul class="simple">
 <li><p><em>Batteries</em>: How much weight you’re willing to have on board determines available power. Do you want to stay under 60 volts due to a wider array of available products or for safety reasons? Or should you choose 24S (88-100V) system so you push less amps and produce less heat for the same power?</p></li>
-<li><p><em>Motors</em>: Motors must be rated for the voltage you choose. They’ll need to be able to drive your propeller at enough thrust while handling the continuous amperage during climb without overheating. In other words, they must be spec’d to handle the battery input power while delivering enough output power to the prop.</p></li>
+<li><p><em>Motor</em>: Motors must be rated for the voltage you choose. They’ll need to be able to drive your propeller at enough thrust while handling the continuous amperage during climb without overheating. In other words, they must be spec’d to handle the battery input power while delivering enough output power to the prop.</p></li>
+<li><ul>
+<li><p><em>Electronic speed controller</em>: Your ESC receives power form the batteries, input from the throttle, and controls the motor. It’s connections to the batteries and motor allows it to send data back to an LCD screen (telemetry) such as RPM, current, voltage, charge remaining, etc.</p></li>
+</ul>
+</li>
 <li><p><em>Propeller</em>: The prop pushes you into the sky with thrust. Larger diameters and slower speeds are more efficient, but the motor must be capable of turning the prop at the required speed and torque. Ground, feet, and keel limit prop size, and within the standard 36-44 inch range there are hundreds of choices (diameter, pitch, blade number, and material). Volts determine speed, but amps determine torque.</p></li>
 </ul>
 <div class="section" id="top-considerations">
@@ -468,11 +471,12 @@
       });
    }
 }
-</script></div>
-<div class="section" id="the-tradeoff-game">
-<h3>The tradeoff game<a class="headerlink" href="#the-tradeoff-game" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference external" href="https://docs.google.com/spreadsheets/d/1wz0NomceuzE7MOYdM12XAd1OOk6Vs2e6YXAksoCgd4c/edit?usp=sharing">Edit or copy the source</a></p>
-</div>
+</script><--
+The tradeoff game
+---------------------------------
+
+`Edit or copy the source <https://docs.google.com/spreadsheets/d/1wz0NomceuzE7MOYdM12XAd1OOk6Vs2e6YXAksoCgd4c/edit?usp=sharing>`_
+--></div>
 </div>
 <div class="section" id="calculator-kilowatts-to-goal">
 <h2>Calculator: Kilowatts to goal<a class="headerlink" href="#calculator-kilowatts-to-goal" title="Permalink to this headline">¶</a></h2>
@@ -530,9 +534,9 @@
 <p>Paul Martin is apparently working on a prop calculator for hang gliders, but it’s not currently available.</p>
 </div>
 <p>Most online calculators are marginally helpful and either target commercial or RC aircraft. Gabriel Staples perhaps the provides the best open source calculator. <a class="reference external" href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSsKtTxmMjx0vw2CVbIRzPMQq3d2xT3ZjYDwhM5pYH2NwoicSHgTynGQmZIe6s5Sg/pubhtml">Copy my version</a> or get <a class="reference external" href="https://www.electricrcaircraftguy.com/2013/09/">the original</a>.</p>
-<div class="figure align-default" id="id4">
+<div class="figure align-default" id="id3">
 <img alt="_images/gabriel.png" src="_images/gabriel.png" />
-<p class="caption"><span class="caption-text">Credit Gabriel Staples</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Credit Gabriel Staples</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="calculator-prop-tip-speed">

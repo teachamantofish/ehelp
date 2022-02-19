@@ -104,12 +104,14 @@ Top considerations
    }
    </script>
 
-The tradeoff game
----------------------------------
+.. raw:: html
 
-`Edit or copy the source <https://docs.google.com/spreadsheets/d/1wz0NomceuzE7MOYdM12XAd1OOk6Vs2e6YXAksoCgd4c/edit?usp=sharing>`_
+   <--
+   The tradeoff game
+   ---------------------------------
 
-
+   `Edit or copy the source <https://docs.google.com/spreadsheets/d/1wz0NomceuzE7MOYdM12XAd1OOk6Vs2e6YXAksoCgd4c/edit?usp=sharing>`_
+   -->
 
 
 Calculator: Kilowatts to goal
