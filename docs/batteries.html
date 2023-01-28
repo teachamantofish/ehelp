@@ -5,7 +5,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Batteries &mdash; Electric Hang Gliding Harness</title>
@@ -42,9 +43,12 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -108,7 +112,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">Preflight</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Preflight</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="index.html">In the Beginning…</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="index.html#what">What?</a><ul>
@@ -150,7 +154,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Climbing Out</span></p>
+<p class="caption" role="heading"><span class="caption-text">Climbing Out</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Batteries</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#battery-considerations">Battery considerations</a><ul>
@@ -266,7 +270,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Scattered Cumies</span></p>
+<p class="caption" role="heading"><span class="caption-text">Scattered Cumies</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="ideas.html">Ideas and Experiments</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="ideas.html#prone-launch-configurations">Prone launch configurations</a></li>
@@ -330,63 +334,32 @@
         
         <div class="rst-content">
         
-         
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+         <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="toc.html" class="icon icon-home"></a> &raquo;</li>
-        
-      <li>Batteries</li>
-    
-    
+      <li><a href="toc.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Batteries</li>
       <li class="wy-breadcrumbs-aside">
-        
-            
-        
       </li>
-    
-  </ul>
-
-  
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="esc.html" class="btn btn-neutral float-right" title="Electronic Speed Controller" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="spec.html" class="btn btn-neutral float-left" title="Specing out a System" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="spec.html" class="btn btn-neutral float-left" title="Specing out a System" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="esc.html" class="btn btn-neutral float-right" title="Electronic Speed Controller" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
-  
   <hr/>
 </div>
 
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="batteries">
-<h1>Batteries<a class="headerlink" href="#batteries" title="Permalink to this headline">¶</a></h1>
-<div class="figure align-default" id="id1">
+  <section id="batteries">
+<h1>Batteries<a class="headerlink" href="#batteries" title="Permalink to this heading"></a></h1>
+<figure class="align-default" id="id1">
 <a class="reference internal image-reference" href="_images/uc3.gif"><img alt="_images/uc3.gif" src="_images/uc3.gif" style="width: 144.0px; height: 81.0px;" /></a>
-<p class="caption"><span class="caption-text">Under construction</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</div>
-<div class="section" id="battery-considerations">
-<h2>Battery considerations<a class="headerlink" href="#battery-considerations" title="Permalink to this headline">¶</a></h2>
+<figcaption>
+<p><span class="caption-text">Under construction</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<section id="battery-considerations">
+<h2>Battery considerations<a class="headerlink" href="#battery-considerations" title="Permalink to this heading"></a></h2>
 <p>Before you spec your system, you need to understand volts, amps, S rating, C rating, and kilowatts. Here’s a start:</p>
 <ul class="simple">
 <li><p><strong>Kwh or mAH</strong>: Available battery energy (how much gas is in the tank) is Kwh = volts * amps. (S rating * 3.7 * mAH). Divide available Kwh by how any Kw you need per minute to determine how long you can run your motor.</p></li>
@@ -406,74 +379,76 @@
 <li><p><a class="reference external" href="https://www.genstattu.com/bw/">https://www.genstattu.com/bw/</a></p></li>
 <li><p><a class="reference external" href="https://rightbattery.com/tag/p-rating/">https://rightbattery.com/tag/p-rating/</a></p></li>
 </ul>
-<div class="section" id="type">
-<h3>Type<a class="headerlink" href="#type" title="Permalink to this headline">¶</a></h3>
+<section id="type">
+<h3>Type<a class="headerlink" href="#type" title="Permalink to this heading"></a></h3>
 <p>LiPO batteries are currently the first choice for a number of reasons, including their energy density, high discharge rate, lifespan, and so on.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>It’s worth reading this <a class="reference external" href="./resources/batterycomparison.pdf">forum snippet</a> as well as the entire <a class="reference external" href="https://community.openppg.com/t/new-battery-option-better-power-density/2274/42">thread here</a>.</p>
 </div>
-<div class="section" id="lipo">
-<h4>LiPO<a class="headerlink" href="#lipo" title="Permalink to this headline">¶</a></h4>
+<section id="lipo">
+<h4>LiPO<a class="headerlink" href="#lipo" title="Permalink to this heading"></a></h4>
 <ul class="simple">
 <li><p>Premium: <a class="reference external" href="https://www.genstattu.com/6s-22-2-v-lipo-battery.html?sort=pricedesc">Tattu, Tattuplus (smart batteries)</a></p></li>
 <li><p>Bonkas (see OpenPPG)</p></li>
 <li><p>Budget batteries: Example: Zeee are about 1/2 the cost of Tattu.</p></li>
 </ul>
-</div>
-<div class="section" id="lipo-graphene">
-<h4>LiPO graphene<a class="headerlink" href="#lipo-graphene" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="lipo-graphene">
+<h4>LiPO graphene<a class="headerlink" href="#lipo-graphene" title="Permalink to this heading"></a></h4>
 <p>Existing graphene batteries are more hybrid LiPOs than anything else. As of 1/15/22, it does not appear they provide higher energy densities. They do offer increased durability, charge cylcles, and better performance in a number of areas. Do you own reseach.</p>
-</div>
-<div class="section" id="semi-solid-state-lipo">
-<h4>Semi solid state LiPO:<a class="headerlink" href="#semi-solid-state-lipo" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="semi-solid-state-lipo">
+<h4>Semi solid state LiPO:<a class="headerlink" href="#semi-solid-state-lipo" title="Permalink to this heading"></a></h4>
 <p>The technology is rapidly evolving. Manufacturer’s claim a higher energy density, lighter weight, higher discharge rates, and a longer cycle life. For example, a 7s 1kw Foxtech setup is around 3 lbs lighter than a Tattu 6s Lipo setup. The C rating is likely two low unless run in parallel.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.foxtechfpv.com/foxtech-diamond-6s-22000mah-semi-solid-state-li-ion-battery.html">Foxtech spec charts</a></p></li>
 <li><p>See also Welion, YANGDA Thunder Stone</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="size">
-<h3>Size<a class="headerlink" href="#size" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="size">
+<h3>Size<a class="headerlink" href="#size" title="Permalink to this heading"></a></h3>
 <p>Your flying consumes kilowatt hours: Kwh = volts X amps. For example, two 6s (22.2 volts) 22000mAH batteries will = about 1 Kw. How much and what kind of flying you can do with 1 Kwh can’t be known until you’ve gone through the steps in <a class="reference internal" href="spec.html#spec"><span class="std std-ref">Specing out a System</span></a>.</p>
-</div>
-<div class="section" id="weight">
-<h3>Weight<a class="headerlink" href="#weight" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="weight">
+<h3>Weight<a class="headerlink" href="#weight" title="Permalink to this heading"></a></h3>
 <p>There’s not usually a big weight difference per kilowatt across commercial offerings. However, weight matters, so check. The Tattu Plus has extra feature and is therefore heavier. The new semi solid state batteries are lighter but lower C ratings. And so on.</p>
-</div>
-<div class="section" id="price">
-<h3>Price<a class="headerlink" href="#price" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="price">
+<h3>Price<a class="headerlink" href="#price" title="Permalink to this heading"></a></h3>
 <p>Cheap batteries are a fire hazard, have short lifespans, and/or perform poorly. Choose wisely.</p>
-</div>
-</div>
-<div class="section" id="battery-calculators">
-<h2>Battery calculators<a class="headerlink" href="#battery-calculators" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="system-design">
-<h3>System design<a class="headerlink" href="#system-design" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="battery-calculators">
+<h2>Battery calculators<a class="headerlink" href="#battery-calculators" title="Permalink to this heading"></a></h2>
+<section id="system-design">
+<h3>System design<a class="headerlink" href="#system-design" title="Permalink to this heading"></a></h3>
 <p>Designing a power system is easier than choosing a brand. Simply use the calculator below or any <a class="reference external" href="ttps://power-calculation.com/battery-storage-calculator.php">online calculator</a>. The goal is to connect the 1 or more properly sized batteries in series and/or parallel to output the requisite voltage and current.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Live version coming soon! Until then, copy and use <a class="reference external" href="https://docs.google.com/spreadsheets/d/1ij-Vy3835dhY8Kqg17O_BWjjIVHlTOPBIy46ROsu4YE/edit?usp=sharing">the original here</a>.</p>
 </div>
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTfsWeI0qIlAbYbaXaNGYnleZmtXnAgD0Pvbtdmn-Gi2WE_WTBSEzz8cQO_yhCsmRrs5oKbHpNX5LJ6/pubhtml?widget=true&amp;headers=false" scrolling="no"  frameBorder="0" width="800px" height="440px"></iframe></div>
-<div class="section" id="price-vs-energy-density">
-<h3>Price vs energy density<a class="headerlink" href="#price-vs-energy-density" title="Permalink to this headline">¶</a></h3>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTfsWeI0qIlAbYbaXaNGYnleZmtXnAgD0Pvbtdmn-Gi2WE_WTBSEzz8cQO_yhCsmRrs5oKbHpNX5LJ6/pubhtml?widget=true&amp;headers=false" scrolling="no"  frameBorder="0" width="800px" height="440px"></iframe></section>
+<section id="price-vs-energy-density">
+<h3>Price vs energy density<a class="headerlink" href="#price-vs-energy-density" title="Permalink to this heading"></a></h3>
 <p>Given their cost and wide ranging pricing, it is worthwhile to compare brands and vendors. You can DIY or start by copying this <a class="reference external" href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSYhSRpC7a6drAYn5A5jjUZpGrIXOZs654n1BL1cOBiTSKUYMA2WfKppsEGFYbFlsEsGbAhAPfXNEyp/pubhtml">calculator spreadsheet</a>.</p>
-<div class="figure align-default" id="id2">
+<figure class="align-default" id="id2">
 <img alt="_images/batterycalcspreadsheet.png" src="_images/batterycalcspreadsheet.png" />
-<p class="caption"><span class="caption-text">Credit OpenPPG forum</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-</div>
-<div class="section" id="diy-battery-packs">
-<h2>DIY battery packs<a class="headerlink" href="#diy-battery-packs" title="Permalink to this headline">¶</a></h2>
+<figcaption>
+<p><span class="caption-text">Credit OpenPPG forum</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="diy-battery-packs">
+<h2>DIY battery packs<a class="headerlink" href="#diy-battery-packs" title="Permalink to this heading"></a></h2>
 <p>DIY battery packs may be extra work, but they can be 1/2 the cost, custom sizes, and created in a form factor compatible with the installation method. It’s worth checkout out this <a class="reference external" href="https://community.openppg.com/t/building-a-14sx15p-18650-battery-pack/2251/22">OpenPPG post</a> and Joe’s DIY hang glider harness pack below.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/utYveWc6Wrg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<div><em>Credit: Joe Stapelton</em></div></div>
-<div class="section" id="worthwhile-reading">
-<h2>Worthwhile reading<a class="headerlink" href="#worthwhile-reading" title="Permalink to this headline">¶</a></h2>
+<div><em>Credit: Joe Stapelton</em></div></section>
+<section id="worthwhile-reading">
+<h2>Worthwhile reading<a class="headerlink" href="#worthwhile-reading" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>Care, use, selection: <a class="reference external" href="https://www.rchelicopterfun.com/lipo-batteries.html">https://www.rchelicopterfun.com/lipo-batteries.html</a></p></li>
 <li><p>Forum discussion: <a class="reference external" href="https://endless-sphere.com/forums/viewtopic.php?t=110570">https://endless-sphere.com/forums/viewtopic.php?t=110570</a></p></li>
@@ -481,8 +456,8 @@
 <li><p>TBD add vid link: why choose a high C value battery.</p></li>
 <li><p>TBD add vid link: why high voltage is better</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -499,7 +474,7 @@
     <p>
     <img src="_images/dq1.jpg"  class="endimage"/>
       <span class="lastupdated">&nbsp;&nbsp;&nbsp;
-        Last updated on Feb 19, 2022.
+        Last updated on Jan 28, 2023.
         
       </span>
     </p>

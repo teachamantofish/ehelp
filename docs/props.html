@@ -5,7 +5,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Propellers &mdash; Electric Hang Gliding Harness</title>
@@ -42,9 +43,12 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -108,7 +112,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">Preflight</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Preflight</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="index.html">In the Beginning…</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="index.html#what">What?</a><ul>
@@ -150,7 +154,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Climbing Out</span></p>
+<p class="caption" role="heading"><span class="caption-text">Climbing Out</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="batteries.html">Batteries</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="batteries.html#battery-considerations">Battery considerations</a><ul>
@@ -266,7 +270,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Scattered Cumies</span></p>
+<p class="caption" role="heading"><span class="caption-text">Scattered Cumies</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="ideas.html">Ideas and Experiments</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="ideas.html#prone-launch-configurations">Prone launch configurations</a></li>
@@ -330,72 +334,41 @@
         
         <div class="rst-content">
         
-         
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+         <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="toc.html" class="icon icon-home"></a> &raquo;</li>
-        
-      <li>Propellers</li>
-    
-    
+      <li><a href="toc.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Propellers</li>
       <li class="wy-breadcrumbs-aside">
-        
-            
-        
       </li>
-    
-  </ul>
-
-  
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="structure.html" class="btn btn-neutral float-right" title="Structural-Mechanical" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="motors.html" class="btn btn-neutral float-left" title="Motors" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="motors.html" class="btn btn-neutral float-left" title="Motors" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="structure.html" class="btn btn-neutral float-right" title="Structural-Mechanical" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
-  
   <hr/>
 </div>
 
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="propellers">
-<span id="prop"></span><h1>Propellers<a class="headerlink" href="#propellers" title="Permalink to this headline">¶</a></h1>
-<div class="figure align-default" id="id1">
+  <section id="propellers">
+<span id="prop"></span><h1>Propellers<a class="headerlink" href="#propellers" title="Permalink to this heading"></a></h1>
+<figure class="align-default" id="id1">
 <a class="reference internal image-reference" href="_images/uc3.gif"><img alt="_images/uc3.gif" src="_images/uc3.gif" style="width: 144.0px; height: 81.0px;" /></a>
-<p class="caption"><span class="caption-text">Under construction</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">Under construction</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 <p>I’m going to punt here for a while. The topic is complex. This doc is very nascent.</p>
 <p>The content below includes some rules of thumb as well as links to docs authored by those who know more (and don’t often agree). It’s worth reading a <a class="reference external" href="https://aerotoolbox.com/thrust-cruise-speed/">prop overview</a> as well as what <a class="reference external" href="https://ppg.e-props.fr/efficient_prop/#tit03">e-props has to say</a>.</p>
 <p>Driveline design often starts with the prop. Your system needs to move a mass of air in the opposite direction. Bigger is better but you have to worry about toes, keel, and ground. Faster is <em>sometimes</em> better but there are limits. Prop pitch (the angle that determines the bite into the air) should be selected for your airspeed and either climb or cruise. The prop is going to slow your motor down, and it’s design must be compatible with the motor’s power and speed.</p>
 <p>Your driveline decisions about motor, power source, and propeller are intertwined. You’ll need to verify they work together to achieve your goals.</p>
-<div class="section" id="prop-database">
-<h2>Prop database<a class="headerlink" href="#prop-database" title="Permalink to this headline">¶</a></h2>
+<section id="prop-database">
+<h2>Prop database<a class="headerlink" href="#prop-database" title="Permalink to this heading"></a></h2>
 <p>In progress.</p>
 <p>There are hundreds of choices. It may not be worth doing this. Perhaps some good calculators and examples of working systems is enough.</p>
-</div>
-<div class="section" id="getting-started">
-<h2>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="getting-started">
+<h2>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this heading"></a></h2>
 <p>In general, you can do what other folks are doing or use your motor’s manufacturer recommendations.</p>
 <ul class="simple">
 <li><p>Slower speeds and bigger propellers produce more thrust.</p></li>
@@ -410,12 +383,12 @@
 <li><p>eCalc recommends props with their configurations.</p></li>
 </ul>
 <p>TBD: insert pitch/d diagram</p>
-</div>
-<div class="section" id="choosing-a-propeller">
-<h2>Choosing a propeller<a class="headerlink" href="#choosing-a-propeller" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="choosing-a-propeller">
+<h2>Choosing a propeller<a class="headerlink" href="#choosing-a-propeller" title="Permalink to this heading"></a></h2>
 <p>Choosing a propeller requires knowing how much thrust you need for a specific flying goal; for example, a 300 fpm climb at 24 mph. You’ll need to know some basic numbers about your wing and go through the basic calculations here TBD.</p>
-<div class="section" id="diameter">
-<h3>Diameter<a class="headerlink" href="#diameter" title="Permalink to this headline">¶</a></h3>
+<section id="diameter">
+<h3>Diameter<a class="headerlink" href="#diameter" title="Permalink to this heading"></a></h3>
 <p>Prop design is a rabbit hole this document avoids, and bigger is better for a variety of reasons too complex to go into here. Choose a prop that’s as large as you can make it safely. Most eHarness props are around 40”, with sizes ranging from 36” to 52”. Required steps:</p>
 <ol class="arabic simple">
 <li><p>Determine your size. Avoid creating hazards out of the ground, body, and keel.</p></li>
@@ -432,14 +405,14 @@
 </li>
 <li><p>Must watch 2:00 to 4:40: <a class="reference external" href="https://www.youtube.com/watch?v=6e4x2vj9H9U">Why choose a larger propeller</a>:</p></li>
 </ul>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/6e4x2vj9H9U?start=120" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-<div class="section" id="pitch">
-<h3>Pitch<a class="headerlink" href="#pitch" title="Permalink to this headline">¶</a></h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6e4x2vj9H9U?start=120" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></section>
+<section id="pitch">
+<h3>Pitch<a class="headerlink" href="#pitch" title="Permalink to this heading"></a></h3>
 <p>TBD: diameter to pitch ratio</p>
 <p>A quick aside on the prop pitch thing: I was running a fixed wing UAV development program for a while and we ended up settling on that same 3:2 diameter to pitch ratio for maximum endurance. That is usually about the highest pitch you can get without stalling the prop blades at zero airspeed. Pushing the pitch higher will continue to increase the specific thrust (grams of thrust per watt) even higher, but weird things start happening when the prop disc is stalling, or stalling unevenly with uneven airflow. 3:2 seemed to be the magic ratio for that vehicle, and it seems (according to eCalc) to be the magic ratio here as well.</p>
-</div>
-<div class="section" id="number-of-blades">
-<h3>Number of blades<a class="headerlink" href="#number-of-blades" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="number-of-blades">
+<h3>Number of blades<a class="headerlink" href="#number-of-blades" title="Permalink to this heading"></a></h3>
 <p>More blades may provide  more “bite” to the air which improves climbing performance. But increases in power also produce more drag. Drag is bad for speed, so two blades are better for cruising speed. Three is a nice blend of the two, sacrificing a little speed for better climb. That why you see two blades mostly on small planes with low power (by low I mean under 800 HP) engines.</p>
 <p>e-Props claims their <a class="reference external" href="https://aircraft.e-props.fr/efficient_prop/#tit02">3 blade props</a> deliver 3-6% more thrust at the same diameter.</p>
 <p>Resources:</p>
@@ -450,10 +423,10 @@
 <li><p><a class="reference external" href="https://ppg.e-props.fr/catalog.php">e-Props catalog</a></p></li>
 </ul>
 </div></blockquote>
-</div>
-</div>
-<div class="section" id="propeller-calculators">
-<h2>Propeller calculators<a class="headerlink" href="#propeller-calculators" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="propeller-calculators">
+<h2>Propeller calculators<a class="headerlink" href="#propeller-calculators" title="Permalink to this heading"></a></h2>
 <p>Use what you know. In this case, 30kg of thrust:</p>
 <ul>
 <li><p><a class="reference external" href="https://www.ecalc.ch/setupfinder.php">ecalc</a>: 38x17 to 40x22 2 blade; 39x19 or 20 3 blade</p></li>
@@ -475,63 +448,69 @@
 </div></blockquote>
 </li>
 </ul>
-</div>
-<div class="section" id="folding-props-diy-and-resources">
-<h2>Folding props DIY and resources<a class="headerlink" href="#folding-props-diy-and-resources" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="commercial">
-<h3>Commercial<a class="headerlink" href="#commercial" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="folding-props-diy-and-resources">
+<h2>Folding props DIY and resources<a class="headerlink" href="#folding-props-diy-and-resources" title="Permalink to this heading"></a></h2>
+<section id="commercial">
+<h3>Commercial<a class="headerlink" href="#commercial" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://icare-icarus.3dcartstores.com/RASA-CFK-3-Blades-Propeller-Folding-342225-MAG-CAD-BIG_p_852.html">Icarus folding props</a>. See also Reidar’s <a class="reference external" href="https://www.youtube.com/watch?v=-sIVpOLYoqg&amp;t=144s">video and commments</a></p></li>
 <li><p>MAGCAD 2 and 3 bladed folding props up to 36”. About 100 Euros per blade. New design in 2020. <a class="reference external" href="https://magcad.de/?tag=propeller">See magcad.de</a></p></li>
 <li><p><a class="reference external" href="https://www.geigerengineering.de/_Resources/Persistent/625177aac067c72b7020a8390f7c7de9d3d340e7/EDrive%20Flyer%20technische%20Merkmale%20V1_1.pdf">Geiger folding props (expensive)</a></p></li>
 </ul>
-<div class="figure align-default" id="id2">
+<figure class="align-default" id="id2">
 <a class="reference external image-reference" href="https://www.geigerengineering.de/en/avionics/downloads"><img alt="_images/geigerfolding.png" src="_images/geigerfolding.png" /></a>
-<p class="caption"><span class="caption-text">Credit: Geiger</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-<div class="section" id="folding-prop-hubs">
-<h3>Folding prop hubs<a class="headerlink" href="#folding-prop-hubs" title="Permalink to this headline">¶</a></h3>
+<figcaption>
+<p><span class="caption-text">Credit: Geiger</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="folding-prop-hubs">
+<h3>Folding prop hubs<a class="headerlink" href="#folding-prop-hubs" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="http://graal-aero.fr/hub_e.html">Open source design</a></p></li>
 <li><p>Magcad hub can be purchase separately. <a class="reference external" href="./resources/magcad3bladehub.pdf">See the drawings</a></p></li>
 <li><p><a class="reference external" href="https://www.youtube.com/watch?v=d3AuHhnzxZA">Magcad in action</a></p></li>
 </ul>
-<div class="figure align-default" id="id3">
+<figure class="align-default" id="id3">
 <a class="reference internal image-reference" href="_images/br_foldprop.png"><img alt="_images/br_foldprop.png" src="_images/br_foldprop.png" style="width: 342.5px; height: 192.5px;" /></a>
-<p class="caption"><span class="caption-text">Credit: Brendan</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-<div class="section" id="diy">
-<h3>DIY<a class="headerlink" href="#diy" title="Permalink to this headline">¶</a></h3>
+<figcaption>
+<p><span class="caption-text">Credit: Brendan</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="diy">
+<h3>DIY<a class="headerlink" href="#diy" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.youtube.com/watch?app=desktop&amp;v=wuhSRdffuDw&amp;t=295&amp;fbclid=IwAR1d04qJ8gJxdnokDxZHgMgBG0L7G1J2QcmDmnfWWiDHTK9bdoyb82HxvZg">Forward folding prop</a></p></li>
 <li><p><a class="reference external" href="https://www.youtube.com/watch?v=cyBJLpHkc7A">Charles Allen’s DIY project video</a></p></li>
 </ul>
-<div class="figure align-default" id="id4">
+<figure class="align-default" id="id4">
 <a class="reference external image-reference" href="https://www.youtube.com/watch?v=cyBJLpHkc7A"><img alt="_images/diyfoldingca.png" src="_images/diyfoldingca.png" /></a>
-<p class="caption"><span class="caption-text">Credit: Charles Allen</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-</div>
-<div class="section" id="propeller-innovation">
-<h2>Propeller innovation<a class="headerlink" href="#propeller-innovation" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="variable-pitch">
-<h3>Variable pitch<a class="headerlink" href="#variable-pitch" title="Permalink to this headline">¶</a></h3>
+<figcaption>
+<p><span class="caption-text">Credit: Charles Allen</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="propeller-innovation">
+<h2>Propeller innovation<a class="headerlink" href="#propeller-innovation" title="Permalink to this heading"></a></h2>
+<section id="variable-pitch">
+<h3>Variable pitch<a class="headerlink" href="#variable-pitch" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.facebook.com/groups/904566026835865/permalink/944285446197256">Passive variable pitch prop:</a></p></li>
 </ul>
-</div>
-<div class="section" id="contra-rotating-prop">
-<h3>Contra-rotating prop:<a class="headerlink" href="#contra-rotating-prop" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="contra-rotating-prop">
+<h3>Contra-rotating prop:<a class="headerlink" href="#contra-rotating-prop" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.crflight.com/?utm_source=unmannedsystemstechnology.com&amp;utm_medium=referral">Commercial offering</a></p></li>
 <li><p><a class="reference external" href="https://community.openppg.com/t/co-axial-motors-with-counter-rotating-props/114">PPG discussion:</a></p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="vendors">
-<h2>Vendors<a class="headerlink" href="#vendors" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="vendors">
+<h2>Vendors<a class="headerlink" href="#vendors" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>eProps: Extensive line of PPG props with 2-6 blades. Super light but smallest is 115cm: <a class="reference external" href="https://ppg.e-props.fr/index.php?cPath=1">https://ppg.e-props.fr/index.php?cPath=1</a></p></li>
 <li><p>Extensive line with 2-4 blades: <a class="reference external" href="https://ultraprops.com/">https://ultraprops.com/</a></p></li>
@@ -539,8 +518,8 @@
 <li><p><a class="reference external" href="https://www.aircraftinternational.com/Products/Propellers.aspx">Aircraft International (all types)</a></p></li>
 <li><p><a class="reference external" href="https://www.f3aunlimited.com/airplane-accessories/falcon-82mm-carbon-fiber-spinner-with-cnc-cooling">Propeller hub</a>. Functional but for tractor setups only.</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -557,7 +536,7 @@
     <p>
     <img src="_images/dq1.jpg"  class="endimage"/>
       <span class="lastupdated">&nbsp;&nbsp;&nbsp;
-        Last updated on Feb 19, 2022.
+        Last updated on Jan 28, 2023.
         
       </span>
     </p>

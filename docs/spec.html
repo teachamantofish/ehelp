@@ -5,7 +5,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Specing out a System &mdash; Electric Hang Gliding Harness</title>
@@ -42,9 +43,12 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -108,7 +112,7 @@
               
             
             
-              <p class="caption"><span class="caption-text">Preflight</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Preflight</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="index.html">In the Beginning…</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="index.html#what">What?</a><ul>
@@ -150,7 +154,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Climbing Out</span></p>
+<p class="caption" role="heading"><span class="caption-text">Climbing Out</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="batteries.html">Batteries</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="batteries.html#battery-considerations">Battery considerations</a><ul>
@@ -266,7 +270,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Scattered Cumies</span></p>
+<p class="caption" role="heading"><span class="caption-text">Scattered Cumies</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="ideas.html">Ideas and Experiments</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="ideas.html#prone-launch-configurations">Prone launch configurations</a></li>
@@ -330,66 +334,35 @@
         
         <div class="rst-content">
         
-         
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+         <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="toc.html" class="icon icon-home"></a> &raquo;</li>
-        
-      <li>Specing out a System</li>
-    
-    
+      <li><a href="toc.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Specing out a System</li>
       <li class="wy-breadcrumbs-aside">
-        
-            
-        
       </li>
-    
-  </ul>
-
-  
-  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      
-        <a href="batteries.html" class="btn btn-neutral float-right" title="Batteries" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="examples.html" class="btn btn-neutral float-left" title="Eharness Examples" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+  </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
+        <a href="examples.html" class="btn btn-neutral float-left" title="Eharness Examples" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="batteries.html" class="btn btn-neutral float-right" title="Batteries" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
   </div>
-  
   <hr/>
 </div>
 
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="specing-out-a-system">
-<span id="spec"></span><h1>Specing out a System<a class="headerlink" href="#specing-out-a-system" title="Permalink to this headline">¶</a></h1>
-<div class="figure align-default" id="id2">
+  <section id="specing-out-a-system">
+<span id="spec"></span><h1>Specing out a System<a class="headerlink" href="#specing-out-a-system" title="Permalink to this heading"></a></h1>
+<figure class="align-default" id="id2">
 <a class="reference internal image-reference" href="_images/uc2.gif"><img alt="_images/uc2.gif" src="_images/uc2.gif" style="width: 150.0px; height: 112.4px;" /></a>
-<p class="caption"><span class="caption-text">Under construction</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">Under construction</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 <p>Navigating a working system is difficult and time consuming. Until the eharness harness idea is more widespread, design principles will remain relatively inaccessible while advice is scattered across various Facebook pages and forums with pioneers helping where they can. With luck, the eharness paradigm will gain enough traction that the hang gliding community can emulate aspects of <a class="reference external" href="https://openppg.com/">OpenPPG</a> and create its own easy-to-traverse path.</p>
 <p>Until then, moving forward is a bit of work.</p>
 <p>Margins are thin with electric powered aircraft primarily due to battery low energy density. While HG trike and paramotor systems can carry several KWH of batteries, HG harness systems are limited by what a pilot is willing to carry (e.g. sub 2 KWHs). Powered flight time is measured in minutes–often 10 to 20. Couple these limitations with a wide range of wing specs and pilot weights, and it becomes apparent that optimizing the power train requires some minimal number crunching. At a 200 fpm climb, there’s a big altitude difference between 5 minutes and 10 minutes.</p>
-<div class="section" id="decision-path">
-<h2>Decision path<a class="headerlink" href="#decision-path" title="Permalink to this headline">¶</a></h2>
+<section id="decision-path">
+<h2>Decision path<a class="headerlink" href="#decision-path" title="Permalink to this heading"></a></h2>
 <p>You’ll often hear that system design starts with the prop. However, system component performance is delicately intertwined and a change in any component specification is likely to have ramifications for the rest of the power train. Your choice of batteries, motor, electronic speed controller, or prop must inform your choices across the system. Failure to balance and tune the design holistically can easily result in a dangerous or inadequate eharness system.</p>
 <p>Realistically, it doesn’t matter where you start as long as the entire system produces the desired result. For example:</p>
 <ul class="simple">
@@ -398,8 +371,8 @@
 <li><p><em>Electronic speed controller</em>: Your ESC receives power form the batteries, input from the throttle, and controls the motor. It’s connections to the batteries and motor allows it to send data back to an LCD screen (telemetry) such as RPM, current, voltage, charge remaining, etc.</p></li>
 <li><p><em>Propeller</em>: The prop pushes you into the sky with thrust. Larger diameters and slower speeds are more efficient, but the motor must be capable of turning the prop at the required speed and torque. Ground, feet, and keel limit prop size, and within the standard 36-44 inch range there are hundreds of choices (diameter, pitch, blade number, and material). Volts determine speed, but amps determine torque.</p></li>
 </ul>
-<div class="section" id="top-considerations">
-<h3>Top considerations<a class="headerlink" href="#top-considerations" title="Permalink to this headline">¶</a></h3>
+<section id="top-considerations">
+<h3>Top considerations<a class="headerlink" href="#top-considerations" title="Permalink to this heading"></a></h3>
 <p><a class="reference external" href="https://docs.google.com/spreadsheets/d/1YstO3VJ9B9zDzrYRbpEi_BPGdjQJ1OCQykE5NOksd8k/edit?usp=sharing">Edit or copy the source</a></p>
 <!-- Table sorter -->
 <link href="tablesorter/theme.default.css" rel="stylesheet">
@@ -473,13 +446,13 @@ The tradeoff game
 ---------------------------------
 
 `Edit or copy the source <https://docs.google.com/spreadsheets/d/1wz0NomceuzE7MOYdM12XAd1OOk6Vs2e6YXAksoCgd4c/edit?usp=sharing>`_
---></div>
-</div>
-<div class="section" id="calculator-kilowatts-to-goal">
-<h2>Calculator: Kilowatts to goal<a class="headerlink" href="#calculator-kilowatts-to-goal" title="Permalink to this headline">¶</a></h2>
+--></section>
+</section>
+<section id="calculator-kilowatts-to-goal">
+<h2>Calculator: Kilowatts to goal<a class="headerlink" href="#calculator-kilowatts-to-goal" title="Permalink to this heading"></a></h2>
 <p>Before investing time and money, a logical first step should include figuring out what it will take to get your butt into the sky…</p>
-<div class="section" id="method-1-focus-on-efficiency">
-<h3>Method 1: Focus on efficiency<a class="headerlink" href="#method-1-focus-on-efficiency" title="Permalink to this headline">¶</a></h3>
+<section id="method-1-focus-on-efficiency">
+<h3>Method 1: Focus on efficiency<a class="headerlink" href="#method-1-focus-on-efficiency" title="Permalink to this heading"></a></h3>
 <p><strong>Theoretical power x efficiency</strong>: This approach calculates the theoretical energy  to transport you to an altitude within a given time frame and then adjusts for power train efficiency. For example: If Joey Pilot with is Sport 3 Race and and gear weighs 300lbs, how many kilowatts of battery power will it take to climb at 200 fpm to 1000’?</p>
 <iframe src="resources/calculator_power.html" id="calctheory" scrolling="no"  frameBorder="0" width="900"></iframe><p><strong>Calculation walk-through</strong></p>
 <ol class="arabic simple">
@@ -506,54 +479,56 @@ The tradeoff game
 <li><p>By default, the calculator uses a common set up of 2 6s 22000mah batteries (22v) in series. That’s one string of batteries with a 44v and 22000mAH output.</p></li>
 </ul>
 </div></blockquote>
-</div>
-<div class="section" id="method-2-focus-on-lift-and-drag">
-<h3>Method 2: Focus on lift and drag<a class="headerlink" href="#method-2-focus-on-lift-and-drag" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="method-2-focus-on-lift-and-drag">
+<h3>Method 2: Focus on lift and drag<a class="headerlink" href="#method-2-focus-on-lift-and-drag" title="Permalink to this heading"></a></h3>
 <p><strong>Prop and thrust</strong>: This approach arrives at required Kwh to an altitude based on a desired climb rate and the amount of power it takes given the calculated drag and coefficient of lift.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Live version coming soon! Until then, copy and use <a class="reference external" href="https://docs.google.com/spreadsheets/d/1ij-Vy3835dhY8Kqg17O_BWjjIVHlTOPBIy46ROsu4YE/edit?usp=sharing">the original</a>.</p>
 </div>
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTNk3d16kUlG7Y17k-Ii-QV9PyIXVCnGImD2lEwtXD6sR2HUV1zLu5W5cmfS6Fer3r2_RfJyQ8oOVRR/pubhtml?widget=true&amp;headers=false"  scrolling="no"  frameBorder="0" width="700px" height="970px"></iframe></div>
-</div>
-<div class="section" id="calculator-battery-volts-amps">
-<h2>Calculator: Battery volts &amp; amps<a class="headerlink" href="#calculator-battery-volts-amps" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTNk3d16kUlG7Y17k-Ii-QV9PyIXVCnGImD2lEwtXD6sR2HUV1zLu5W5cmfS6Fer3r2_RfJyQ8oOVRR/pubhtml?widget=true&amp;headers=false"  scrolling="no"  frameBorder="0" width="700px" height="970px"></iframe></section>
+</section>
+<section id="calculator-battery-volts-amps">
+<h2>Calculator: Battery volts &amp; amps<a class="headerlink" href="#calculator-battery-volts-amps" title="Permalink to this heading"></a></h2>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Live version coming soon! Until then, copy and use <a class="reference external" href="https://docs.google.com/spreadsheets/d/1ij-Vy3835dhY8Kqg17O_BWjjIVHlTOPBIy46ROsu4YE/edit?usp=sharing">the original here</a>.</p>
 </div>
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTfsWeI0qIlAbYbaXaNGYnleZmtXnAgD0Pvbtdmn-Gi2WE_WTBSEzz8cQO_yhCsmRrs5oKbHpNX5LJ6/pubhtml?widget=true&amp;headers=false" scrolling="no"  frameBorder="0" width="800px" height="440px"></iframe></div>
-<div class="section" id="calculator-prop-diameter-and-pitch">
-<h2>Calculator: Prop diameter and pitch<a class="headerlink" href="#calculator-prop-diameter-and-pitch" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTfsWeI0qIlAbYbaXaNGYnleZmtXnAgD0Pvbtdmn-Gi2WE_WTBSEzz8cQO_yhCsmRrs5oKbHpNX5LJ6/pubhtml?widget=true&amp;headers=false" scrolling="no"  frameBorder="0" width="800px" height="440px"></iframe></section>
+<section id="calculator-prop-diameter-and-pitch">
+<h2>Calculator: Prop diameter and pitch<a class="headerlink" href="#calculator-prop-diameter-and-pitch" title="Permalink to this heading"></a></h2>
 <p>Prop selection is TBD and may remain beyond the scope of this document. One rule of thumb is you need at least 30kg of static thrust to achieve an adequate climb.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Paul Martin is apparently working on a prop calculator for hang gliders, but it’s not currently available.</p>
 </div>
 <p>Most online calculators are marginally helpful and either target commercial or RC aircraft. Gabriel Staples perhaps the provides the best open source calculator. <a class="reference external" href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSsKtTxmMjx0vw2CVbIRzPMQq3d2xT3ZjYDwhM5pYH2NwoicSHgTynGQmZIe6s5Sg/pubhtml">Copy my version</a> or get <a class="reference external" href="https://www.electricrcaircraftguy.com/2013/09/">the original</a>.</p>
-<div class="figure align-default" id="id3">
+<figure class="align-default" id="id3">
 <img alt="_images/gabriel.png" src="_images/gabriel.png" />
-<p class="caption"><span class="caption-text">Credit Gabriel Staples</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-<div class="section" id="calculator-prop-tip-speed">
-<h2>Calculator: Prop tip speed<a class="headerlink" href="#calculator-prop-tip-speed" title="Permalink to this headline">¶</a></h2>
+<figcaption>
+<p><span class="caption-text">Credit Gabriel Staples</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="calculator-prop-tip-speed">
+<h2>Calculator: Prop tip speed<a class="headerlink" href="#calculator-prop-tip-speed" title="Permalink to this heading"></a></h2>
 <p>Propeller efficiency reduces as the tip speed approaches the speed of sound.  Beyond 80% of the speed of sound, increasing RPM has little affect on thrust. Ideally, keep tip speeds below 70% of Mach. Optimum efficiency and less noise stems from tip speeds less than 700 feet per second or 475 mph. Excess tip speed results in air compression in front of the prop leading edge which rapidly degrades propeller performance.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Live version coming soon! Until then, copy and use <a class="reference external" href="https://docs.google.com/spreadsheets/d/1lHkmLChR1pkwir4u_RVsa-Cblb-_YRA0Q8wluVCTvjg/edit?usp=sharing">the original file</a>.</p>
 </div>
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSdRRNQ5p8I63P3KzY7_yGY3y2QXIBEb62x6NzK7YvKKBwAsrspDv7rdQSWbgb_y_NCxmxuhaAMcpYu/pubhtml?widget=true&amp;headers=false" scrolling="no"  frameBorder="0" width="450px" height="180px"></iframe></div>
-<div class="section" id="putting-it-all-together">
-<h2>Putting it all together<a class="headerlink" href="#putting-it-all-together" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSdRRNQ5p8I63P3KzY7_yGY3y2QXIBEb62x6NzK7YvKKBwAsrspDv7rdQSWbgb_y_NCxmxuhaAMcpYu/pubhtml?widget=true&amp;headers=false" scrolling="no"  frameBorder="0" width="450px" height="180px"></iframe></section>
+<section id="putting-it-all-together">
+<h2>Putting it all together<a class="headerlink" href="#putting-it-all-together" title="Permalink to this heading"></a></h2>
 <p>TBD</p>
 <p>From Joe Stapleton:</p>
 <p>You really can’t use KV (no load RPM per volt) to try and determine prop RPM directly. KV is simply the inverse of KT the torque constant. KT tells you how much torque your motor will produce per amp. Applying a specific torque to your prop will generate a specific thrust, irrespective of airspeed. All that happens as your airspeed increases if you keep the torque/current the same is the RPM increases and therefore the power since power = torque x RPM.</p>
 <p>What you need to make any meaningful prediction is the torque to thrust curve for your prop, this is available from reputable prop manufactures such as e-prop.</p>
 <p>To try an illustrate the relationship between KV, KT, torque, current, voltage and thrust please look at the example e-prop curves below I just picked some random 2 blade family. If you look at the lowest blue lines on both charts these represent the lowest pitch prop in that family. So say you decide you want 40kg of thrust from this prop, you read across the top chart and see you need to spin it at ~2800RPM. Now look at the lower chart and see that at 2800RPM you need ~25Nm of torque.</p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="_images/kvvskt.png" src="_images/kvvskt.png" />
-</div>
+</figure>
 <p>So say we want use a 50KV motor, we convert from RPM/V to SI units (Radians per second per volt) then invert it to get KT. In one step you can do this by KT = 9.55/KV = 9.55/50 = 0.19Nm/A, i.e. for every amp we put through the motor it will produce 0.19Nm of torque.</p>
 <p>KV= RPM/V</p>
 <p>1/KV (in SI) = KT</p>
@@ -561,8 +536,8 @@ The tradeoff game
 9.55/80 = .12</p>
 <p>So we can now calculate the phase current we need to produce 25Nm of torque which will spin our prop at 2800RPM and generate 40kg of thrust, simply 25/0.19 = 131A. Finally at 2800RPM our motor will be generating a back EMF of 2800/50 = 56V. So we need a battery of at least 56V to do this otherwise the system will never reach this RPM. If we are planning to fly then we need a higher voltage as the prop RPM will increase with airspeed.</p>
 <p>Hopefully it is obvious that this is all true whether the motor is 1000kg electric train or a 10 gram rc model motor. This is why the continuous current, max voltage / max RPM of the motor are also important.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -579,7 +554,7 @@ The tradeoff game
     <p>
     <img src="_images/dq1.jpg"  class="endimage"/>
       <span class="lastupdated">&nbsp;&nbsp;&nbsp;
-        Last updated on Feb 19, 2022.
+        Last updated on Jan 28, 2023.
         
       </span>
     </p>
