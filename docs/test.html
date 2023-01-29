@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Motors &mdash; Electric Hang Gliding Harness</title>
+
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <meta name="author" content="Ben Rogers" />
+  <meta name='robots' content='index,follow' />
+
+
+
+
+
+  <link rel="canonical" href="https://www.electricharness.commotors.html" />
+
+
+  <script type="text/javascript">
+    window.onload = function () {
+      Array.from(document.querySelectorAll('h2')).forEach(el => {
+        //Array.from(document.querySelectorAll('h2,h3')).forEach(el => {
+        const a = document.createElement('a')
+        a.innerText = ""
+        a.href = "mailto:ben.rogers@gmail.com"
+        a.target = "_blank"
+        a.title = "Send feedback"
+        a.classList.add("feedback");
+        el.appendChild(a)
+      });
+    }
+  </script>
+
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+
+
+  <script type="text/javascript" id="documentation_options" data-url_root="./"
+    src="_static/documentation_options.js"></script>
+  <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+  <script src="_static/jquery.js"></script>
+  <script src="_static/underscore.js"></script>
+  <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+  <script src="_static/doctools.js"></script>
+  <script src="_static/sphinx_highlight.js"></script>
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+
+
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme_overrides.css" type="text/css" />
+  <link rel="index" title="Index" href="genindex.html" />
+  <link rel="search" title="Search" href="search.html" />
+  <link rel="next" title="Propellers" href="props.html" />
+  <link rel="prev" title="Electronic Speed Controller" href="esc.html" />
+  <style>
+    .wy-nav-content {
+      max-width: 90%
+    }
+
+    td {
+      font-size: 130%
+    }
+  </style>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+
+  <div class="wy-grid-for-nav">
+
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+
+        <div class="wy-side-nav-search" style="background: #E7E7E7">
+
+          <div role="search">
+            <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+              <input type="text" name="q" placeholder="Search docs" />
+              <input type="hidden" name="check_keywords" value="yes" />
+              <input type="hidden" name="area" value="default" />
+            </form>
+          </div>
+        </div>
+
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      <div class="wy-nav-content">
+
+        <div class="rst-content">
+
+          <div role="navigation" aria-label="Page navigation">
+
+
+          </div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div itemprop="articleBody">
+
+
+              <h1>Working code</h1>
+              <section id="motor-database">
+
+                <p><a class="reference external"
+                    href="https://docs.google.com/spreadsheets/d/1O1r8choAQuhgh6FGf203ebjBLAv3VeXi2KZuJlWuQi4/edit?usp=sharing">Edit
+                    or copy the database</a></p>
+                <!-- Table sorter -->
+                <link href="tablesorter/theme.default.css" rel="stylesheet">
+                <script src="tablesorter/jquery.tablesorter.min.js"></script>
+                <script src="tablesorter/jquery.tablesorter.widgets.min.js"></script>
+                <table class="table tablesorter">
+                  <thead id="table-head"></thead>
+                  <tbody id="table-body"></tbody>
+                </table>
+                <!-- Table -->
+
+                <!-- MDB ESSENTIAL -->
+                <script type="text/javascript" src="js/mdb.min.js"></script>
+                <!-- Google API -->
+                <script src="https://apis.google.com/js/api.js"></script>
+                <!-- easyData -->
+                <script type="text/javascript" src="js/easyData-google-sheets.js"></script>
+
+                <!-- easyData - Creating table -->
+                <script>
+                  {
+                    {
+                      const API_KEY = "AIzaSyDhOS3VJZ66Utl0lnHbSK8gH0BXz-wxRoU";
+
+
+                      function displayResult2(response) {
+                        let tableHead = "";
+                        let tableBody = "";
+
+                        response.result.values.forEach((row, index) => {
+                          if (index === 0) {
+                            tableHead += "<tr>";
+                            row.forEach((val) => (tableHead += "<th>" + val + "</th>"));
+                            tableHead += "</tr>";
+                          } else {
+                            tableBody += "<tr>";
+                            row.forEach((val) => (tableBody += "<td>" + val + "</td>"));
+                            tableBody += "</tr>";
+                          }
+                        });
+
+                        document.getElementById("table-head").innerHTML = tableHead;
+                        document.getElementById("table-body").innerHTML = tableBody;
+
+                        $('table').tablesorter({
+                          widgets: ['zebra', 'columns'],
+                          usNumberFormat: false,
+                          sortReset: true,
+                          sortRestart: true
+                        });
+                      }
+
+                      function loadData() {
+                        // from https://docs.google.com/spreadsheets/d/1O1r8choAQuhgh6FGf203ebjBLAv3VeXi2KZuJlWuQi4/edit?usp=sharing
+                        const spreadsheetId = "1O1r8choAQuhgh6FGf203ebjBLAv3VeXi2KZuJlWuQi4";
+                        const range = "!A:M";
+                        getPublicValues({ spreadsheetId, range }, displayResult2);
+                      }
+
+                      window.addEventListener("load", (e) => {
+                        initOAuthClient({ apiKey: API_KEY });
+                      });
+
+                      document.addEventListener("gapi-loaded", (e) => {
+                        loadData();
+                      });
+                    }
+                  }
+                </script>
+
+              </section>
+
+
+              <h1>Broken code or problem with sheet sharing</h1>
+              <section id="motor-database">
+
+                <p><a class="reference external"
+                    href="https://docs.google.com/spreadsheets/d/1O1r8choAQuhgh6FGf203ebjBLAv3VeXi2KZuJlWuQi4/edit?usp=sharing">Edit
+                    or copy the database</a></p>
+                <!-- Table sorter -->
+                <link href="tablesorter/theme.default.css" rel="stylesheet">
+                <script src="tablesorter/jquery.tablesorter.min.js"></script>
+                <script src="tablesorter/jquery.tablesorter.widgets.min.js"></script>
+                <table class="table tablesorter">
+                  <thead id="table-head"></thead>
+                  <tbody id="table-body"></tbody>
+                </table>
+                <!-- Table -->
+
+                <!-- MDB ESSENTIAL -->
+                <script type="text/javascript" src="js/mdb.min.js"></script>
+                <!-- Google API -->
+                <script src="https://apis.google.com/js/api.js"></script>
+                <!-- easyData -->
+                <script type="text/javascript" src="js/easyData-google-sheets.js"></script>
+
+                <!-- easyData - Creating table -->
+                <script>
+                  {
+                    {
+                      const API_KEY = "AIzaSyDhOS3VJZ66Utl0lnHbSK8gH0BXz-wxRoU";
+
+
+                      function displayResult2(response) {
+                        let tableHead = "";
+                        let tableBody = "";
+
+                        response.result.values.forEach((row, index) => {
+                          if (index === 0) {
+                            tableHead += "<tr>";
+                            row.forEach((val) => (tableHead += "<th>" + val + "</th>"));
+                            tableHead += "</tr>";
+                          } else {
+                            tableBody += "<tr>";
+                            row.forEach((val) => (tableBody += "<td>" + val + "</td>"));
+                            tableBody += "</tr>";
+                          }
+                        });
+
+                        document.getElementById("table-head").innerHTML = tableHead;
+                        document.getElementById("table-body").innerHTML = tableBody;
+
+                        $('table').tablesorter({
+                          widgets: ['zebra', 'columns'],
+                          usNumberFormat: false,
+                          sortReset: true,
+                          sortRestart: true
+                        });
+                      }
+
+                      function loadData() {
+                        // the sheet ID is the ONLY change
+                        const spreadsheetId = "13TjBa0W4AJ3GwWZfhOYba3IDddCQI7ox6W3VpFw3wZY";
+                        const range = "!A:M";
+                        getPublicValues({ spreadsheetId, range }, displayResult2);
+                      }
+
+                      window.addEventListener("load", (e) => {
+                        initOAuthClient({ apiKey: API_KEY });
+                      });
+
+                      document.addEventListener("gapi-loaded", (e) => {
+                        loadData();
+                      });
+                    }
+                  }
+                </script>
+
+              </section>
+
+
+
+            </div>
+
+          </div>
+
+
+    </section>
+
+  </div>
+
+
+  <script type="text/javascript">
+    jQuery(function () {
+      SphinxRtdTheme.Navigation.enable(true);
+    });
+  </script>
+
+</body>
+
+</html>
